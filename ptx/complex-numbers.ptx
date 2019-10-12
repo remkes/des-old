@@ -1,0 +1,99 @@
+<section xml:id="complex-numbers">
+  <title>Complex Numbers</title>
+  <definition>
+    <statement>
+      <p>
+        We define the number <m>\imath</m> by the property <m>\imath^2 = -1</m>.
+        Then a <term>complex number</term>
+        is any expression <m>a + b \imath</m> where <m>a</m> and <m>b</m> are real numbers.
+        <m>a</m> is called the <term>real part</term>
+        and <m>b</m> is called the <term>imaginary part</term>.
+        The set of all complex number is written <m>\CC</m>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Addition and multiplication are extended from <m>\RR</m> by linearity and the distribution of multiplication.
+    Note in the multiplication we use the defining property that <m>\imath^2 = -1</m>.
+    <md>
+      <mrow>(a + b \imath) + (c + d \imath) \amp  = (a+b) + (c+d) \imath</mrow>
+      <mrow>(a + b \imath)(c + d \imath) \amp  = ac + bc \imath + ad \imath + bd \imath^2</mrow>
+      <mrow>\amp  = ac + (bc + ad) \imath + bd(-1) = (ac-bd) + (bc+ad) \imath</mrow>
+    </md>
+  </p>
+  <p>
+    <m>\CC</m> is identified with the cartesian plane,
+    where <m>1</m> is <m>(1,0)</m> and <m>\imath</m> is <m>(0,1)</m>.
+    The horizontal axis is called the real axis and the vertical axis is called the imaginary axis.
+    The number <m>a + bi</m> is treated as the coordinate <m>(a,b)</m> in the plane.
+    The inversion of a complex number (non-zero) is
+    <me>
+      \frac{1}{a+ b \imath } = \frac{a-b\imath}{a^2+b^2}
+    </me>.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        The <term>modulus</term> of a complex number
+        <m>a + b\imath</m> is its length as a vector <m>(a,b)</m>,
+        namely <m>|a+b\imath| = \sqrt{a^2 + b^2}</m>.
+      </p>
+    </statement>
+  </definition>
+  <definition>
+    <statement>
+      <p>
+        The <term>conjugation</term> of a complex number <m>a+b\imath</m> is <m>a-b\imath</m>.
+        It is indicated with a vertical bar <m>\overline{a+b\imath} = a-b\imath</m>.
+        Geometrically,
+        conjugation is reflection over the real axis (<m>x</m> axis) in the plane.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Complex numbers have many intriguing property.
+    The most important for us it the existence of roots of polynomial.
+  </p>
+  <theorem>
+    <title>Fundamental Theorem of Algebra</title>
+    <statement>
+      <p>
+        Let <m>p(x)</m> be a polynomial of degree <m>d</m> with real or complex coefficients.
+        Then <m>p(x)</m> has exactly <m>d</m> roots in the complex numbers
+        (though some may be repeated).
+        Equivalently,
+        <m>p(x)</m> factors completely over the complex numbers:
+        there are complex numbers <m>\alpha_1, \ldots, \alpha_d</m>,
+        not necessariliy distinct from each other, such that
+        <me>
+          p(x) = (x-\alpha_i)(x-\alpha_2)\ldots(x-\alpha_d)
+        </me>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Complex exponentials are understood by Euler's formula.
+  </p>
+  <proposition xml:id="prop-eulers-formula">
+    <title>Euler's Formula</title>
+    <statement>
+      <me>
+        e^{\imath \theta} = \cos \theta + i \sin \theta
+      </me>.
+    </statement>
+  </proposition>
+  <proof>
+    <p>
+      Even without a background in complex analysis, Euler's formula can be justified by looking at Taylor series.
+      <md>
+        <mrow>e^t \amp  = \sum_{n=0}^\infty \frac{t^n}{n!}</mrow>
+        <mrow>\sin t \amp  = \sum_{n=0}^\infty \frac{(-1)^n t^{2n+1}}{(2n+1)!}</mrow>
+        <mrow>\cos t \amp  = \sum_{n=0}^\infty \frac{(-1)^n t^{2n}}{(2n)!}</mrow>
+        <mrow>e^{\imath t} \amp  = \sum_{n=0}^\infty \frac{(\imath t)^n}{n!} = \sum_{n=0}^\infty \frac{\imath^n t^n}{n!}</mrow>
+        <mrow>\amp  = \sum_{n=0}^\infty \frac{\imath^{2n} t^{2n}}{{2n}!} + \sum_{n=0}^\infty \frac{\imath^{2n+1} t^{2n+1}}{(2n+1)!}</mrow>
+        <mrow>\amp  = \sum_{n=0}^\infty \frac{(-1)^n t^{2n}}{{2n}!} + \imath \sum_{n=0}^\infty \frac{(-1)^n t^{2n+1}}{(2n+1)!}</mrow>
+        <mrow>\amp  = \cos t + \imath \sin t</mrow>
+      </md>
+    </p>
+  </proof>
+</section>

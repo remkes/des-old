@@ -1,0 +1,298 @@
+<section xml:id="linear-des">
+  <title>Linear Equations and Integrating Factors</title>
+  <introduction>
+    <p>
+      First order linear equation have the general form
+      <me>
+        a(t) \frac{dy}{dt} + b(t) y = f(t)
+      </me>.
+    </p>
+    <p>
+      Here <m>a(t)</m>, <m>b(t)</m> and <m>f(t)</m> are various
+      (usually continuous)
+      functions.
+      If we avoid the values where <m>a(t) = 0</m>,
+      we can divide by <m>a(t)</m> to isolate the derivative,
+      giving the following more typical form. (Remember the denominators!
+      We have to pay attention to the roots of <m>a(t)</m> throughout the solution.)
+      <me>
+        \frac{dy}{dt} + P(t) y = Q(t)
+      </me>
+    </p>
+  </introduction>
+  <subsection xml:id="homogenoues">
+    <title>Homogeneous Solutions</title>
+    <p>
+      The linear DE is called homogeneous if <m>Q(t) = 0</m>.
+      In the homogeneous case,
+      the DE is relatively easy to solve as a seperable equation.
+      <md>
+        <mrow>\frac{dy}{dt} \amp  = -P(t) y</mrow>
+        <mrow>\frac{1}{y} dy \amp  = -P(t) dt</mrow>
+        <mrow>\int \frac{1}{y} dy \amp  = -\int P(t) dt</mrow>
+        <mrow>\ln |y| \amp  = -\int P(t) dt + c</mrow>
+        <mrow>y \amp  = c e^{-\int P(t)} dt</mrow>
+      </md>
+    </p>
+    <p>
+      I should make a couple of notes about this calculation.
+      <ul>
+        <li>
+          <p>
+            We are informal with the constant.
+            When we take exponents of each side of the equation,
+            we should have multiplication by <m>e^c</m>.
+            However, since this is still an undetermined constant,
+            we simply write <m>c</m> instead of <m>e^c</m>.
+            Also, when we drop the absolute value bars from <m>y</m>,
+            we should have a <m>\pm</m> term.
+            Again, since <m>c</m> can be either positive or negative,
+            we don't worry about that <m>\pm</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            We had a <m>y</m> in the denominator for this process,
+            which means that we have to be careful at points where <m>y=0</m>.
+            We use limits to figure out behaviour when <m>y</m> gets close to zero.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>P</m> is constant,
+            this is our most basic exponential equation with solution <m>y = ce^{-\alpha t}</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="superposition">
+    <title>Linear Operators and Superposition</title>
+    <p>
+      Recall from <xref ref="definition-linear-differential-operator">Definition</xref> the idea of linear operators.
+      If we write <m>L = \frac{d}{dt} + P(t)</m>,
+      we can write a second order DE as
+      <me>
+        L y = Q(t)
+      </me>.
+    </p>
+    <p>
+      This is a <em>linear</em> differential operator,
+      so it behaves linearly, that is,
+      it has the two linearity properties.
+      <md>
+        <mrow>L(y_1 + y_2) \amp  = Ly_1 + Ly_2</mrow>
+        <mrow>L(cy) \amp  = cL(y)</mrow>
+      </md>
+    </p>
+    <p>
+      Then consider both the homoegenous equation <m>Ly = 0</m> and a non-homogenous equation <m>Ly = Q(t)</m>.
+      If <m>f</m> is a solution to the non-homogenous equation,
+      then <m>Lf = Q(t)</m>,
+      and if <m>g</m> is a solution to the homogenous equation,
+      then <m>Lg = 0</m>.
+      By linearity, we can conclude that
+      <me>
+        L(f+\alpha g) = Lf + \alpha Lg = Q(t) + \alpha \cdot 0 = Q(t)
+      </me>.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          If we have a solution to <m>Ly=Q(t)</m>,
+          we can get other solutions by adding multiples of the solution to the homogeneous equation <m>Ly=0</m>.
+          The solution to <m>Ly = Q(t)</m> is called the
+          <term>particular solution</term>
+          and this process is called <term>superposition of solutions</term>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      For those who remember their linear algebra,
+      we can think of the solutions of a linear equation as a linear subspace of the vector space of differentiable functions
+      (on an appropriate domain).
+      In this sense the solution set of a linear equation is an offset span:
+      the non-homogenous solution is the offset and the basis of the span is any homogenous solution.
+      Superposition gives us the family-structure of solutions to linear equations.
+      Any multiple of a homogenous solutions can be added to the particular solution,
+      so the family is the particular solution plus any multiple of a homogeneous solutions:
+      <m>y_p + \alpha y_h</m>.
+      This <m>\alpha</m> is the parameter of the family.
+    </p>
+  </subsection>
+  <subsection xml:id="integrating-factors">
+    <title>Integrating Factors</title>
+    <p>
+      We know how to solve homogenous linear equations, since they are seperable.
+      Finding non-homogenous solutions is somewhat more difficult;
+      since these are not seperable equations, we need a new technique.
+    </p>
+    <p>
+      Let <m>L = \frac{d}{dt} + Q(t)</m> be as before,
+      and let <m>y_h</m> be a homogeneous solutions (a solution to <m>Ly = 0</m>).
+      The technique we will use is called
+      <em>variation of parameters</em>.
+      This technique says we should look for a particular solution of the type <m>y_p = g(t) y_h</m>.
+      Assuming that our solution has this special form,
+      we have to try to find this <m>g(t)</m>.
+      In order to do that, we put <m>g(t) y_h</m> into the equation.
+      <md>
+        <mrow>Ly_p(t) = L g(t) y(t) \amp  = Q(t)</mrow>
+        <mrow>g^\prime(t) y(t) + g(t) y^\prime(t) + g(t) P(t) y(t) \amp  = Q(t)</mrow>
+        <mrow>g^\prime(t) y(t) + g(t) \Big( y^\prime(t) + P(t) y(t) \Big) = g^\prime(t) + g(t) L y \amp  = Q(t)</mrow>
+        <mrow>g^\prime(t) y(t) + g(t) 0 \amp  = Q(t)</mrow>
+        <mrow>g^\prime(t) \amp  = \frac{Q(t)}{y(t)}</mrow>
+        <mrow>g(t) \amp  = \int \frac{Q(t)}{y(t)}</mrow>
+      </md>
+    </p>
+    <p>
+      We can put this back into our special form and use the fact that the homogeneous solution is <m>y = e^{-\int P(t)dt}</m>.
+      <md>
+        <mrow>y_p = g(t) y \amp  = \left( \int \frac{Q(t)}{e^{-\int P(t) dt}} dt \right) e^{-\int P(t) dt }</mrow>
+        <mrow>y_p \amp  = e^{-\int P(t) dt} \int e^{\int P(t) dt} Q(t) dt</mrow>
+      </md>
+    </p>
+    <definition>
+      <statement>
+        <p>
+          In solving a linear equation of the for <m>\frac{dy}{dt} + P(t) y = Q(t)</m>,
+          the expression <m>e^{\int P(t) dt}</m> is called an
+          <term>integrating factor</term>
+          and it is typically written <m>\mu(t)</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      We rearrange the expression using the integrating factor.
+      <md>
+        <mrow>e^{\int P(t) y} y_p \amp  = \int e^{\int P(t) dt} Q(t) dt</mrow>
+        <mrow>\frac{d}{dt} \left( e^{\int P(t) dt} y_p \right) \amp  = e^{\int P(t) dt} Q(t)</mrow>
+        <mrow>\frac{d}{dt} (\mu (t) y_p(t)) \amp  = \mu (t) Q(t)</mrow>
+        <mrow>y_p \amp  = \frac{\int \mu(t) Q(t) dt + c}{\mu (t)}</mrow>
+      </md>
+    </p>
+    <p>
+      Multiplying by the integrating factor turns the
+      <m>y_p^\prime(t) + P(t) y_p(t)</m> side of the equation into a product rule derivative,
+      which we can just integrate to solve.
+      The integrating factor turns a linear equation into something that can be directly solved by integration,
+      hence the name.
+      It is best to remember the process this way:
+      the original DE becomes a product rule derivative problem by multiplying both sides of the original DE by the integrating factor and then isolating <m>y_p</m>.
+    </p>
+    <p>
+      This variation of parameters is the first instance of a very common approach to solving DEs.
+      Often, working with no idea of what kind of function we are looking for is simply too open-ended and too difficult.
+      Therefore, we make a reasonable guess regarding the form of the solution.
+      Here, that guess was <m>y_p = g(t) y_h</m> where <m>g(t)</m> was some unknown function.
+      Then we put out special form back into the DE and try to find specific information about the parameter or unknown involved.
+    </p>
+  </subsection>
+  <subsection xml:id="linear-equations-examples">
+    <title>Examples</title>
+    <example xml:id="linear-example1">
+      <statement>
+        <me>
+          \frac{dy}{dt} + \frac{y}{t} = 2e^t
+        </me>
+        <p>
+          Since there is a <m>t</m> in the denominator,
+          we must avoid <m>t=0</m> in the domain of solutions.
+          We first look for the homogeneous solution.
+          <me>
+            y_h(t) = ce^{-\int \frac{1}{t}} dt = ce^{-\ln |t|} = \frac{c}{t}
+          </me>
+        </p>
+        <p>
+          Then the integrating factor is
+          <me>
+            \mu(t) = e^{\int \frac{1}{t} dt } = e^{\ln |t|} = t
+          </me>.
+        </p>
+        <p>
+          We use the integrating factor to get a new DE.
+          <md>
+            <mrow>\mu(t) \frac{dy}{dt} + \mu(t) \frac{y}{t} \amp  = \mu(t) 2e^t</mrow>
+            <mrow>t \frac{dy}{dt} + t \frac{y}{t} \amp  = t 2e^t</mrow>
+            <mrow>\frac{d}{dt} (t y) \amp  = 2te^t</mrow>
+            <mrow>ty \amp  = \int (2te^t) dt</mrow>
+            <mrow>ty \amp  = 2(te^t - e^t) + c</mrow>
+            <mrow>y \amp  = 2 \left( e^t - \frac{e^t}{t} \right) + \frac{c}{t}</mrow>
+          </md>
+        </p>
+        <p>
+          Notice that we actually get the the homogeneous pieces here from the constant of integration,
+          getting the whole linear family.
+          Also notice that <m>t=0</m> is excluded from the domain.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          (t^2-9) \frac{dy}{dt} + ty = 0
+        </me>
+        <p>
+          This is just a homogeneous DE. We note that <m>t \neq \pm 3</m> in the domain.
+          The solution to the homogeneous case is
+          <me>
+            y = e^{-\int P(t) dt} = e^{-\int \frac{t}{t^2-9} dt} = e^{ - \frac{1}{2} \ln |t^2-9| + c} = \frac{c}{\sqrt{t^2-9}}
+          </me>.
+        </p>
+        <p>
+          We should be careful with the absolute value in <m>\ln |f(t)|</m>.
+          The calculation can be done in two pieces,
+          when <m>f(t) > 0</m> and when <m>f(t) \lt 0</m>.
+          In the previous calculation, we were a little careless with this detail.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \frac{dy}{dt} + y = f(t)
+        </me>
+        <p>
+          To add some complication,
+          the non-homogeneous function here is going to be a step function.
+          <me>
+            f(t) = \left\{ \begin{matrix} 1 \amp  0 \leq t \leq 1 \\ 0 \amp  t > 1 \end{matrix} \right.
+          </me>
+        </p>
+        <p>
+          This is still allowed:
+          often the coefficients and functions involved in DEs are only piecewise continuous and/or piecewise differentiable.
+          We can still work with them.
+          The integrating factor is <m>\mu(t) = e^{\int 1 dt} = e^t</m>.
+          We have to work with two different intervals.
+          First look at <m>[0,1]</m>.
+          <me>
+            \frac{d}{dt} e^t y = e^t \implies e^ty = e^t + c_1 \implies y = 1 + c_1e^{-t}
+          </me>
+        </p>
+        <p>
+          Alternatively, look at <m>(1,\infty)</m>.
+          <me>
+            \frac{d}{dt} e^t y = 0 \implies e^ty = t + c_2 \implies y = c_2e^{-t}
+          </me>
+        </p>
+        <p>
+          We have two constants, but we want a continuous solution.
+          (It will fail to be differentiable at <m>t=1</m>, but that's alright.
+          There is a sudden change in the situation, so that's expected.)
+          Continuity at <m>1</m> means that <m>e-c_1 = c_2</m>.
+          The final solution is a continuous piecewise function.
+          <me>
+            y = \left\{ \begin{matrix} 1 - ce^{-t} \amp  t \in [0,1] \\ (e-c)e^{-t} \amp  t \in (1,\infty) \end{matrix} \right.
+          </me>
+        </p>
+        <p>
+          Even with this piecewise function,
+          we can still do initial value problems.
+          If <m>y(0) =0</m>,
+          we find that <m>c=1</m> and we get a specific solution.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>
