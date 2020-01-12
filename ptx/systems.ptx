@@ -1,0 +1,15 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="systems">
+  <title>Systems of Differential Equations</title>
+  <introduction>
+    <p>
+      So far, our differential equations involves one dependent variable and one independent variable
+      (typically time).
+      It's very common to have two or more variables which all depend on the same independent variable and whose derivatives interact with each other.
+      This interaction produces systems of differential equations involving those functions and their derivatives.
+      This chapter introduces qualitative analysis of systems of DEs and solutions to linear systems using Laplace transforms.
+    </p>
+  </introduction>
+  <xi:include  href="systems-key-examples.ptx" />
+  <xi:include  href="systems-qualitative-methods.ptx" />
+  <xi:include  href="linear-systems.ptx" />
+</chapter>
