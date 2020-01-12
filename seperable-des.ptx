@@ -1,0 +1,163 @@
+<section xml:id="seperable-des">
+  <title>Seperable Equations</title>
+  <definition>
+    <statement>
+      <p>
+        A <term>seperable equation</term>
+        is a DE which has the form
+        <me>
+          \frac{dy}{dt} = f(y) g(t)
+        </me>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    The method of solving seperable equations treats the <m>dt</m> and <m>dy</m> terms as independent infinitesimals,
+    a strange but historically reasonable treatment.
+    If we allow for these independent infinitesimals, we can seperate
+    (hence the name)
+    the DE into two pieces, one involving each variable.
+    <me>
+      \frac{1}{f(y)} dy = g(t) dt
+    </me>
+  </p>
+  <p>
+    Then, again acting somewhat strangely by modern notational conventions,
+    we integrate both sides with respect to their own variables.
+    <me>
+      \int \frac{1}{f(y)} dy = \int g(t) dt
+    </me>
+  </p>
+  <p>
+    The solution is then left implicit unless we can reasonable solve for <m>y</m>,
+    in which case we can write <m>y</m> as a conventional function of <m>t</m>.
+  </p>
+  <p>
+    If you are interested in the justification of this splitting procedure,
+    we could think of the operation alternatively,
+    writing <m>f(y(t))</m> to remember the independent variable.
+    If we bring the <m>f(y)</m> to the left side, we get the expression
+    <me>
+      \frac{1}{f(y(t))} \frac{dy}{dt} = g(t)
+    </me>.
+  </p>
+  <p>
+    Then we can integrate both sides with respect to <m>t</m>,
+    which is a reasonable and justified operation.
+    <me>
+      \int \frac{1}{f(y(t))} \frac{dy}{dt} dt = \int g(t) dt
+    </me>
+  </p>
+  <p>
+    Finally, we change of variables from <m>t</m> to <m>y</m> in the left side integral.
+    <me>
+      \int \frac{1}{f(y)} dy = \int g(t) dt
+    </me>
+  </p>
+  <p>
+    In theory, we should get two constants of integration,
+    one from each side.
+    However, we can move the left side constant to the ride side and have the difference of two arbitrary constants,
+    which is equivalent to one arbitrary constant.
+    Therefore, we will only write on constant of integration for seperable equations.
+  </p>
+  <p>
+    In general, mathematicians have a practice of being somewhat careless with this constant.
+    Since it doesn't need to be determined until we use an initial condition,
+    we often forgoe various operations on the constant.
+    For example, if we had <m>2(t+c)</m>,
+    we would often simplify this to <m>2t+c</m>,
+    since whether we figure out the constant from <m>c</m> or from <m>2c</m> later,
+    its value is still determined by the initial condition.
+    It's useful to become accustomed to this carelessness constants of integration.
+  </p>
+  <example>
+    <statement>
+      <md>
+        <mrow>\frac{dy}{dx} \amp  = \frac{\sin x}{y}</mrow>
+        <mrow>y dy \amp  = \sin x dx</mrow>
+        <mrow>\frac{y^2}{2} \amp  = - \cos x + c</mrow>
+        <mrow>y \amp  = \pm \sqrt{c - 2\cos x}</mrow>
+      </md>
+      <p>
+        It is interesting to note where the constant of integration ends up.
+        Since integration isn't the final step
+        (we have to also solve for <m>y</m>),
+        the constant moves around in the resulting algebra.
+        In DE, we can't just add <m>+c</m> at the very end of the process.
+      </p>
+      <figure xml:id="figure-direction-field6">
+        <caption>Direction Field for <m>\frac{dy}{dx}= \frac{\sin x}{y}</m></caption>
+        <image width="600%" source="images/figure16.png" />
+      </figure>
+      <figure xml:id="figure-direction-field8">
+        <caption>Direction Field with Solutions for <m>\frac{dy}{dx}=
+        \frac{\sin x}{y}</m></caption>
+        <image width="600%" source="images/figure17.png" />
+      </figure>
+      <p>
+        If we impose an initial condition of <m>y(0) = 1</m>,
+        we can determined the value of the constant of integration.
+        <md>
+          <mrow>1 \amp  = \sqrt{c - 2 \cos (0)} = \sqrt{c-2}</mrow>
+          <mrow>1 \amp  = c-2</mrow>
+          <mrow>c \amp  = 3</mrow>
+          <mrow>y \amp  = \sqrt{3 - 2 \cos x}</mrow>
+        </md>
+      </p>
+    </statement>
+  </example>
+  <p>
+    <xref ref="figure-direction-field6">Figure</xref>
+    shows the direction field and solution for this example.
+    Notice the strange domain issues with this implicit plot.
+    When <m>|c| \leq 2</m>, we have restricted domain solutions,
+    represented by the closed curves.
+    There are no solutions at all when <m>c \lt -2</m>.
+    We have solutions with domain <m>\RR</m> only for <m>c \geq 2</m>.
+    When <m>c = 2</m>, we get the strange crossed graph,
+    which is not always differentiable.
+    When <m>c=-2</m>. the
+    <q>solution</q>
+    is only defined at discrete points.
+  </p>
+  <figure xml:id="figure-direction-field7">
+    <caption>The Direction Field for <m>\frac{dy}{dx} = y^2-4</m>.</caption>
+    <image width="600%" source="images/figure18.png" />
+  </figure>
+  <figure xml:id="figure-direction-field7-curves">
+    <caption>The Integral Curves for <m>\frac{dy}{dx} = y^2-4</m>.</caption>
+    <image width="600%" source="images/figure19.png" />
+  </figure>
+  <example>
+    <statement>
+      <p>
+        This is an autonomous example.
+        <md>
+          <mrow>\frac{dy}{dx} \amp  = y^2 - 4</mrow>
+          <mrow>\int \frac{1}{y^2-4} dy \amp  = \int 1 dx</mrow>
+          <mrow>\frac{-1}{2} \arctanh \left( \frac{y}{2} \right) \amp  = x + c</mrow>
+          <mrow>\arctanh \left( \frac{y}{2} \right) \amp  = -2x + c</mrow>
+          <mrow>\frac{y}{2} \amp  = \tanh (-2x + c)</mrow>
+          <mrow>y \amp  = 2 \tanh (-2x + c)</mrow>
+        </md>
+      </p>
+      <p>
+        Since this is an autonomous equation,
+        we can look for steady (constant) singular solutions when the right side of the equation vanishes.
+        Here, <m>y=2</m> and <m>y=-2</m> are steady states.
+        Moreover, <m>y=2</m> is stable and <m>y=-2</m> is unstable.
+        This can be seen in the direction field and implicit plot in <xref ref="figure-direction-field7">Figure</xref>
+      </p>
+      <p>
+        It is also interesting to note that the output of <m>\tanh</m> is only <m>-1</m> to <m>1</m>,
+        so it is impossible to get <m>y \leq -2</m> or <m>y \geq 2</m>.
+        We should wonder if there are solutions in this range at all.
+        In the implicit plot, we could draw curves with these <m>y</m> values.
+        These other curves are found by doing the integral differently,
+        since both hyperbolic tangent and hyperbolic cotangent have the same anti-derivative.
+        <m>y=2 \coth (-2x + c)</m> is also a solution.
+      </p>
+    </statement>
+  </example>
+</section>

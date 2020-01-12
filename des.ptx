@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <docinfo>
+    <xi:include href="./macros.ptx" />
+    <latex-image-preamble>
+      \usepackage{tikz}
+      \usepackage{tkz-graph}
+      \usepackage{tkz-euclide}
+      \usetikzlibrary{patterns}
+      \usetikzlibrary{positioning}
+      \usetikzlibrary{matrix,arrows}
+      \usetikzlibrary{calc}
+      \usetikzlibrary{shapes}
+      \usetikzlibrary{through,intersections,decorations,shadows,fadings}
+      \usepackage{pgfplots}
+    </latex-image-preamble>
+  </docinfo>
+  <book>
+    <title>Course Notes for Differential Equations</title>
+    <xi:include href="./frontmatter.ptx" />
+    <xi:include href="./prelim.ptx" />
+    <xi:include href="./first-order-odes.ptx" />
+    <xi:include href="./second-order-odes.ptx" />
+    <xi:include href="./series-solutions.ptx" />
+    <xi:include href="./laplace-transforms.ptx" />
+    <xi:include href="./systems.ptx" />
+    <xi:include href="./pdes.ptx" />
+    <backmatter>
+    </backmatter>
+  </book>
+</pretext>
