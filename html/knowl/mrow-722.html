@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-24T10:54:49-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\calL^{-t} \left\{ \frac{k^2}{(s^2+k^2)^2} \right\} \amp  = \calL^{-1} \left\{ \frac{k}{s^2+k^2} \frac{k}{s^2+k^2} \right\}\\
+\amp  = \sin kt \star \sin kt\\
+\amp  = \int_0^t \sin ku \sin (kt-ku) du\\
+\amp  \text{ Using }  \left[ \sin A \sin B = \frac{1}{2} \cos (A-B) - \cos (A+B) \right]\\
+\calL^{-t} \left\{ \frac{k^2}{(s^2+k^2)^2} \right\} \amp  = \frac{1}{2} \int_0^t \cos (ku - kt + ku) - \cos (ku + kt - ku ) du\\
+\amp  = \frac{1}{2} \int_0^t \cos (2ku - 2t) - \cos (kt) du\\
+\amp  = \frac{1}{2} \left. \frac{\sin (2ku - kt)}{2k} \right|_0^t - \left. \frac{1}{2} u \cos (kt) \right|_0^t\\
+\amp  = \frac{\sin (2kt-kt) - \sin (-kt)}{4k} - \frac{t\cos kt}{2}\\
+\amp  = \frac{\sin (kt)}{2k} - \frac{t\cos kt}{2} = \frac{\sin kt - kt \cos kt}{2k}
+\end{align*}
+</div>
+<span class="incontext"><a href="laplace-algebraic.html#mjx-eqn:mrow-722">in-context</a></span>
+</body>
+</html>

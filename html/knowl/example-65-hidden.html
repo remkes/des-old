@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-24T10:54:49-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example example-like"><p>Consider a slightly different version of the square wave.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f(t) = \left\{ \begin{matrix} 1 \amp  t \in [2n, 2n+1) \\ -1 \amp  t \in [2n+1, 2n+2) \end{matrix} \right.
+\end{equation*}
+</div>
+<p>Using initial conditions \(y(0) = y^\prime(0)= 0\) we solve the equation \(y^{\prime \prime} + y = f(t)\text{.}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(s^2+1)Y \amp  = \frac{1}{1-e^{-2s}} \int_0^2 e^{-st} f(t) dt\\
+\amp  = \frac{1}{1-e^{-2s}} \left[ \int_0^1 e^{-st} dt - \int_1^2 e^{-st} dt \right]\\
+\amp  = \frac{1}{1-e^{-2s}} \left[ \left. \frac{e^{-st}}{-s} \right|_0^1 + \left. \frac{e^{-st}}{s} \right|_1^2 \right]\\
+\amp  = \frac{1}{1-e^{2s}} \left[ \frac{-e^{-s}}{s} + \frac{1}{s} + \frac{e^{-2s}}{s} - \frac{e^{-s}}{s} \right]\\
+\amp  = \frac{1-2s^{-s} + e^{-2s}}{s(s^2+1)} \frac{1}{1-e^{-2s}}\\
+\amp  = \frac{1}{s(s^2+1)} (1-2e^{-s} + e^{-2s}) ( 1 - e^{-2s} + e^{-4s} - e^{-6s} + e^{-8s} - \ldots )\\
+\amp  = \left( \frac{-s}{s+1} + \frac{1}{s} \right) (1 - 2e^{-s} + 2e^{-3s} - 2e^{-5s} + 2e^{-7s} - \ldots )\\
+y \amp  = 1 - \cos t - 2u_1(t) (1-\cos(t-1)) + 2u_3(t) (1-\cos(t-3))\\
+\amp  \hspace{1cm} - 2u_5 (t) (1-\cos(t-5)) + 2 u_7(t) (1 - \cos (t-7) ) - \ldots\\
+\amp  = 1 - \cos t + 2\sum_{k=0}^\infty (-1)^{k+1} u_{2k+1} (t) (1 - \cos(t-(2k+1)))
+\end{align*}
+</div>
+<p>As with the previous square wave solution in <a class="xref" data-knowl="./knowl/example-square-wave.html" title="Example 5.7.4">Example 5.7.4</a>, this solution involves an infinite series of shifts, each one slightly further along. Periodic functions always lead to an infinite series of shifts.</p></article></body>
+</html>

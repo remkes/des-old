@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-24T10:54:47-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+y^{\prime \prime} + 8 y^\prime + 3y \amp  = e^{-2t} \cos 2t\\
+L \amp  = \frac{d^2}{dt^2} + 8 \frac{d}{dt} + 3\\
+\amp  \text{ Solve the Homogeneous Case: }\\
+Ly \amp  = 0 \implies r^2 + 8r + 3 = 0\\
+r \amp  = -4 \pm \sqrt{13}\\
+y_h \amp  = Ae^{(-4+\sqrt{13})t} + B e^{(-4-\sqrt{13})t}\\
+\amp  \text{ Our Guess for Undetermined Coefficients: }\\
+y_p \amp  = e^{-2t} (C \cos 2t + D \sin 2t)\\
+y^\prime \amp  = e^{-2t} ( (-2C + 2D) \cos 2t + (-2D -2C)\sin 2t)\\
+y^{\prime\prime} \amp  = e^{-2t} ( (-8D) \cos 2t + (8C)\sin 2t)\\
+\amp  \text{ Solve for the Coefficients: }\\
+L y_p \amp  = e^{-2t} ((8D-13C) \cos 2t + (-8C -13D) \sin 2t) = e^{-2t} \cos 2t\\
+8D - 13 C \amp  = 1\\
+-8C - 13 D \amp  = 0\\
+D \amp  = \frac{-8C}{13}\\
+C \amp  = \frac{-13}{233} \implies D = \frac{8}{233}\\
+y_p \amp  = e^{-2t} \left( \frac{-13}{233} \cos 2t + \frac{8}{233} \sin 2t \right)\\
+y \amp  = Ae^{(-4+\sqrt{13})t} + B e^{(-4-\sqrt{13})t} + e^{-2t} \left( \frac{-13}{233} \cos 2t + \frac{8}{233} \sin 2t \right)
+\end{align*}
+</div>
+<span class="incontext"><a href="undetermined-coefficients.html#mjx-eqn:mrow-197">in-context</a></span>
+</body>
+</html>

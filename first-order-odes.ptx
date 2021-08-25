@@ -1,4 +1,5 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="first-order-odes">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"
+  xml:id="chapter-first-order-odes">
   <title>First Order Differential Equations</title>
   <xi:include  href="what-is-de.ptx" />
   <xi:include  href="qualitative-methods.ptx" />

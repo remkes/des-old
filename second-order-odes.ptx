@@ -1,4 +1,5 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="second-order-odes">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"
+  xml:id="chapter-second-order-odes">
   <title>Second Order Linear Differential Equations</title>
   <introduction>
     <p>

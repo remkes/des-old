@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-24T10:54:46-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.3</span><span class="period">.</span>
+</h6>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{dy}{dt} + \frac{y}{t} = 2e^t
+\end{equation*}
+</div>
+<p>Since there is a \(t\) in the denominator, we must avoid \(t=0\) in the domain of solutions. We first look for the homogeneous solution.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+y_h(t) = ce^{-\int \frac{1}{t}} dt = ce^{-\ln |t|} = \frac{c}{t}
+\end{equation*}
+</div>
+<p>Then the integrating factor is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mu(t) = e^{\int \frac{1}{t} dt } = e^{\ln |t|} = t\text{.}
+\end{equation*}
+</div>
+<p>We use the integrating factor to get a new DE.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\mu(t) \frac{dy}{dt} + \mu(t) \frac{y}{t} \amp  = \mu(t) 2e^t\\
+t \frac{dy}{dt} + t \frac{y}{t} \amp  = t 2e^t\\
+\frac{d}{dt} (t y) \amp  = 2te^t\\
+ty \amp  = \int (2te^t) dt\\
+ty \amp  = 2(te^t - e^t) + c\\
+y \amp  = 2 \left( e^t - \frac{e^t}{t} \right) + \frac{c}{t}
+\end{align*}
+</div>
+<p>Notice that we actually get the the homogeneous pieces here from the constant of integration, getting the whole linear family. Also notice that \(t=0\) is excluded from the domain.</p></article><span class="incontext"><a href="linear-des.html#linear-example1">in-context</a></span>
+</body>
+</html>

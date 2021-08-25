@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-24T10:54:47-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\amp  \text{ Our Guess for Undetermined Coefficients: }\\
+y_p \amp  = C \sin \gamma t + D \cos \gamma t\\
+y_p^\prime \amp  = C \gamma \cos \gamma t - D \gamma \sin \gamma t\\
+y_p^{\prime \prime} \amp  = - C \gamma^2 \cos \gamma t - D \gamma^2 \sin \gamma t\\
+\amp  \text{ Solve for the Coefficients: }\\
+Ly_p \amp  = (-C\gamma^2 - 2\lambda D \gamma + C \omega^2) \sin \gamma t + (-D\gamma^2 + 2\lambda C \gamma + D \omega^2) \cos \gamma t\\
+-C\gamma^2 - 2\lambda D\gamma + C \omega^2 \amp  = F\\
+-D\gamma^2 + 2\lambda C\gamma + D \omega^2 \amp  = 0\\
+\left[ \begin{matrix} \omega^2 - \gamma^2 \amp  -2\lambda \gamma\\
+2\lambda \gamma \amp  \omega^2 - \gamma^2 \end{matrix} \right] \left[ \begin{matrix} C\\
+D \end{matrix} \right] \amp  = \left[ \begin{matrix} F\\
+0 \end{matrix} \right]\\
+M \amp  = \left[ \begin{matrix} \omega^2 - \gamma^2 \amp  -2\lambda \gamma\\
+2\lambda \gamma \amp  \omega^2 - \gamma^2 \end{matrix} \right]\\
+\det M \amp  = (\omega^2 - \gamma^2)^2 + 4 \lambda^2 \gamma^2\\
+M^{-1} \amp  = \frac{1}{ \det M} \left[ \begin{matrix} \omega^2 - \gamma^2 \amp  2 \lambda \gamma\\
+-2 \lambda \gamma \amp  \omega^2 - \gamma^2 \end{matrix} \right]\\
+\left[ \begin{matrix} C\\
+D \end{matrix} \right] \amp  = \frac{1}{\det M} \left[ \begin{matrix} \omega^2 - \gamma^2 \amp  2 \lambda \gamma\\
+-2 \lambda \gamma \amp  \omega^2 - \gamma^2 \end{matrix} \right] \left[ \begin{matrix} F\\
+0 \end{matrix} \right]\\
+C \amp  = \frac{(\omega^2 - \gamma^2) F}{(\omega^2 - \gamma^2)^2 + 4 \lambda^2 \gamma^2}\\
+D \amp  = \frac{-2\gamma\lambda F}{(\omega^2 - \gamma^2)^2 + 4 \lambda^2 \gamma^2}\\
+y_p \amp  = \frac{(\omega^2 - \gamma^2) F\sin \gamma t - 2 \gamma \lambda F \cos \gamma t}{(\omega^2 - \gamma^2)^2 + 4 \lambda^2 \gamma^2}\\
+y \amp  = e^{-\lambda t} (A \cos \omega_d t + B \sin \omega_d t) + \frac{(\omega^2 - \gamma^2) F\sin \gamma t - 2 \gamma \lambda F \cos \gamma t}{(\omega^2 - \gamma^2) + 4 \lambda^2 \gamma^2}
+\end{align*}
+</div>
+<span class="incontext"><a href="resonance.html#mjx-eqn:mrow-250">in-context</a></span>
+</body>
+</html>

@@ -1,4 +1,5 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="series-solutions">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"
+  xml:id="chapterseries-solutions">
   <title>Series Solutions to Linear Differential Equations</title>
   <introduction>
     <p>

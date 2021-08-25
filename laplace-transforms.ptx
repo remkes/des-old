@@ -1,4 +1,5 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="laplace-transforms">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"
+  xml:id="chapter-laplace-transforms">
   <title>Laplace Transforms</title>
   <xi:include  href="laplace-transforms-definitions.ptx" />
   <xi:include  href="laplace-transforms-properties.ptx" />
