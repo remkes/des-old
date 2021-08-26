@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:49-06:00       *-->
+<!--*       on 2021-08-26T16:22:26-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,13 @@
 </head>
 <body>
 <article class="proposition theorem-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.8.2</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.7.3</span><span class="period">.</span>
 </h6>
-<ul class="disc">
-<li><p>The convolution is commutative: \(f \star g = g \star f\text{.}\)</p></li>
-<li><p>The convolution is associative: \((f \star g) \star h = f \star (g \star h)\text{.}\)</p></li>
-<li><p>The convolution is distributive: \(f \star (g \pm h) = f \star g \pm f \star h\text{.}\)</p></li>
-<li><p>The convolution respect constants. \(a (f \star g) = (af) \star g = f \star (ag)\)</p></li>
-<li>
-<p>The Laplace transform turns convolutions into products:</p>
+<p>If \(f(t)\) is periodic with period \(T\text{,}\) and of exponential order, then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\calL \left\{ f \star g \right\} = F(s) G(s)
+\calL\{ f(t) \} = \frac{1}{1-e^{-sT}} \int_0^T e^{-st} f(t) dt\text{.}
 \end{equation*}
-</div>
-</li>
-</ul></article><span class="incontext"><a href="laplace-algebraic.html#proposition-6">in-context</a></span>
+</div></article><span class="incontext"><a href="laplace-periodic.html#proposition-6">in-context</a></span>
 </body>
 </html>

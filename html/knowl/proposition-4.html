@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:48-06:00       *-->
+<!--*       on 2021-08-26T16:22:26-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,17 +15,14 @@
 </head>
 <body>
 <article class="proposition theorem-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
 </h6>
+<p>The Laplace transform (like all reasonable operations in analysis) is linear.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\calL \{ e^{at} f(t) \} (s) \amp  = \int_0^\infty e^{at} f(t)
-e^{-st} dt\\
-\amp  = \int_0^\infty f(t) e^{at-st} dt = \int_0^\infty f(t)
-e^{(a-s)t} dt\\
-\amp  = \calL \{ f(t) \} (s-a)
+\calL \{ f+ g \} \amp  = \calL \{ f \} + \calL \{ g \}\\
+\calL \{ c f(t)\} \amp  = c \calL \{ f \}
 \end{align*}
-</div>
-<p>Multiplication by \(e^{at}\) in the \(t\) domain results in a shift by \(a\) in the \(s\) domain. This also adjust the domain of \(s\text{,}\) reflected the fact that multiplication by \(e^{at}\) adjusts the exponential order.</p></article><span class="incontext"><a href="laplace-transforms-properties.html#proposition-4">in-context</a></span>
+</div></article><span class="incontext"><a href="laplace-transforms-properties.html#proposition-4">in-context</a></span>
 </body>
 </html>

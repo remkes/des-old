@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:48-06:00       *-->
+<!--*       on 2021-08-26T16:22:25-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,25 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>This is a second order recurrence relation. Here are the first few terms. (We must be careful to use the isolated expressions to find \(c_2\) and \(c_3\text{,}\) and then the standard recurrence relation for \(c_n\) where \(n \geq 4\)).</p>
+<p>The remaining terms are determined by the recurrence relation.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-c_0 \amp  = c_0\\
-c_1 \amp  = c_1\\
-c_2 \amp  = \frac{c_0}{2}\\
-c_3 \amp  = 0\\
-c_4 \amp  = \frac{-c_2(1)}{4} = \frac{c_0}{(2)(4)}\\
-c_5 \amp  = 0\\
-c_6 \amp  = \frac{-c_4(3)}{6} = \frac{-c_0(3)}{(6)(4)(2)}\\
-c_7 \amp  = 0\\
-c_8 \amp  = \frac{-c_6(5)}{8} = \frac{c_0(5)(3)}{(8)(6)(4)(2)}\\
-c_9 \amp  = 0\\
-c_{10} \amp  = \frac{-c_8(7)}{10} = \frac{-c_0(7)(5)(3)}{(10)(8)(6)(4)(2)}\\
-c_{2n+1} \amp  = 0\\
-c_{2n} \amp  = \frac{(-1)^n (3)(5)(7)\ldots (2n-3)}{(2)(4)(6)(8) \ldots (2n)} c_0 = \frac{(-1)^n (2n-3)!}{(2)(4)(6) \ldots (2n-4) 2^n n!} c_0\\
-\amp  = \frac{((-1)^n (2n-3)!}{2^{n-2} (n-2)! 2^n n!} c_0 = \frac{((-1)^n (2n-3)!}{2^{2n-2} n! (n-2)!} c_0
+c_{n_2} (n+2) (n+1) - c_n n(n-1) - 2c_n n + k(k+1) c_n \amp  = 0\\
+c_{n_2} (n+2) (n+1) + (-n^2 + n - 2n + k(k+1)) c_n \amp  = 0\\
+c_{n_2} (n+2) (n+1) + (-n^2 - n + k^2 +k ) c_n \amp  = 0\\
+c_{n_2} (n+2) (n+1) + (k-n)(k+n+1) c_n \amp  = 0\\
+c_{n+2} \amp  = \frac{-c_n (k-n)(k+n+1)}{(n+1)(n+2)}
 \end{align*}
 </div>
-<span class="incontext"><a href="ordinary-points.html#p-363">in-context</a></span>
+<span class="incontext"><a href="legendre.html#p-363">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:50-06:00       *-->
+<!--*       on 2021-08-26T16:22:27-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,10 +15,10 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>A method for the the calculation of coefficients comes from the orthogonality property. Assume that \(f(x)\) is expressed as a Fourier series.</p>
+<p>The coefficients \(T_n\) in the full solution to the heat equation must be the Fourier coefficients of the initial function \(f(x)\text{.}\) Now we know how to calculate these coefficients. Since this is a sine series, we expect that \(f\) is odd, and we extend it to \((-\pi,\pi)\) as an odd function. Then we integrate to find the coefficients.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-f(x) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos (nx) + \sum_{n=1}^\infty b_n \sin (nx)
+T_n = \frac{2}{\pi} \int_0^\pi f(x) \sin nx dx
 \end{equation*}
 </div>
 <span class="incontext"><a href="fourier-series.html#p-685">in-context</a></span>

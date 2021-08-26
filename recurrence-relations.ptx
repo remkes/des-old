@@ -1,36 +1,45 @@
-<section xml:id="recurrence-relations">
+<section xml:id="section-recurrence-relations">
   <title>Recurrence Relations</title>
   <p>
-    A sequence <m>\{a_n\}_{n=1}^\infty</m> of real numbers is called a
-    <em>linear recurrence relation</em>
-    if each term <m>a_n</m> is a linear function of the previous <m>k</m> terms <m>a_{n-1}, \ldots a_{n-k}</m>.
-    <m>k</m> is called the <em>order</em>
-    of the recurrence relation.
-    Since terms depends on previous terms,
-    the first <m>k</m> terms of the sequence must be explicitly defined.
+    Recurrence relations may be review or may be a new definition for
+    you. Let me give the definition.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A sequence <m>\{a_n\}_{n=1}^\infty</m> of real numbers is
+        called a <term>linear recurrence relation</term> if each term
+        <m>a_n</m> is a linear function of the previous <m>k</m> terms
+        <m>a_{n-1}, \ldots a_{n-k}</m>. <m>k</m> is called the
+        <em>order</em> of the recurrence relation. Since terms
+        depends on previous terms, the first <m>k</m> terms of the
+        sequence must be explicitly defined.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    The most famous example is the Fibonacci sequence, which is a
+    second order linear recurrence relation. Its terms, <m>f_n</m>,
+    start with <m>f_1 = f_2 = 1</m> and then obey the linear
+    recurrence <m>f_n = f_{n-1} + f_{n-2}</m>.
   </p>
   <p>
-    The most famous example is the Fibonacci sequence,
-    which is a second order linear recurrence relation.
-    Its terms, <m>f_n</m>, start with
-    <m>f_1 = f_2 = 1</m> and then obey the linear recurrence <m>f_n = f_{n-1} + f_{n-2}</m>.
-  </p>
-  <p>
-    If we are given a recurrence relation relation,
-    we don't have a direct way to calculate the term <m>a_n</m> without calculating all the previous terms.
-    <em>Solving</em> a recurrence relation is the term for finding a fixed formula
-    <m>a_n = f(n)</m> that describes the <m>n</m>th term of the sequence.
-    These can be easy or difficult to find.
-    The fixed formula for Fibonnaci is
+    If I am given a recurrence relation relation, I don't have a
+    direct way to calculate the term <m>a_n</m> without calculating
+    all the previous terms. <em>Solving</em> a recurrence relation is
+    the term for finding a fixed formula <m>a_n = f(n)</m> that
+    describes the <m>n</m>th term of the sequence. These can be easy
+    or difficult to find. The fixed formula for Fibonnaci is
     <me>
       f_n = \frac{(1+\sqrt{5})^n - (1-\sqrt{5})^n}{2^n \sqrt{5}}
     </me>.
   </p>
   <p>
     The coefficients of a Taylor series are sequences of real numbers.
-    In our use of Taylor series,
-    sequences of coefficients will be presented as recurrence relations.
-    We will want to solve the recurrence relations to give a closed formula for the coefficients,
-    in order to understand the resulting Taylor series.
+    In the use of Taylor series in this course, sequences of
+    coefficients will be presented as recurrence relations. I will
+    want to solve the recurrence relations to give a closed formula
+    for the coefficients, in order to understand the resulting Taylor
+    series.
   </p>
 </section>

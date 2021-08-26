@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:47-06:00       *-->
+<!--*       on 2021-08-26T16:22:25-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Before we start, we need two starting terms, \(c_0\) and \(c_1\text{.}\) This works out very well, since \(c_0 = y(0)\) and \(c_1 = y^\prime(0)\text{.}\) The initial seed terms for our recurrence relation are exactly initial conditions for the DE. We can either leave them as variables \(a\) and \(b\text{,}\) or set them to specific values.</p>
+<p>As before, to match the homogeneous \(=0\text{,}\) we need all these coefficients to be zero. The second coefficient is isolated, so we have \(c_2=0\text{.}\) For the rest, we have \(c_0\) and \(c_1\) unknown and a recurrence relation.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(n+2)(n+1)c_{n+2} + c_{n-1} \amp  = 0\\
+c_{n+2} \amp  = \frac{-c_{n-1}}{(n+2)(n+1)}\\
+c_{n+3} \amp  = \frac{-c_n}{(n+3)(n+2)}
+\end{align*}
+</div>
 <span class="incontext"><a href="ordinary-points.html#p-343">in-context</a></span>
 </body>
 </html>

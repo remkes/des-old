@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:46-06:00       *-->
+<!--*       on 2021-08-26T16:22:24-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>In solving a linear equation of the for \(\frac{dy}{dt} + P(t) y = Q(t)\text{,}\) the expression \(e^{\int P(t) dt}\) is called an <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">integrating factor</dfn> and it is typically written \(\mu(t)\text{.}\)</p>
+<p>We use the integrating factor to get a new DE.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\mu(t) \frac{dy}{dt} + \mu(t) \frac{y}{t} \amp  = \mu(t) 2e^t\\
+t \frac{dy}{dt} + t \frac{y}{t} \amp  = t 2e^t\\
+\frac{d}{dt} (t y) \amp  = 2te^t\\
+ty \amp  = \int (2te^t) dt\\
+ty \amp  = 2(te^t - e^t) + c\\
+y \amp  = 2 \left( e^t - \frac{e^t}{t} \right) + \frac{c}{t}
+\end{align*}
+</div>
 <span class="incontext"><a href="linear-des.html#p-182">in-context</a></span>
 </body>
 </html>

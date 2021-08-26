@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:50-06:00       *-->
+<!--*       on 2021-08-26T16:22:27-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,11 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>If \(f\) is periodic and piecewise continuous on \(\RR\) with period \(2T\text{,}\) the there exists \(a_n\) and \(b_n\) such that</p>
+<p>Let \(n, m \in \NN\text{,}\) with the possibility that \(m=0\) to account for the constant term.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-f(x) = \frac{a_0}{2} + \sum_{n=1}^\infty a_n \cos \left( \frac{n\pi x}{T} \right) + \sum_{n=1}^\infty b_n \sin \left( \frac{n\pi x}{T} \right)\text{.}
-\end{equation*}
+\begin{align*}
+\int_{-\pi}^{\pi} \cos (mx) \cos (nx) dx \amp  = \pi \delta_{mn}\\
+\int_{-\pi}^{\pi} \sin (mx) \sin (nx) dx \amp  = \pi \delta_{mn}\\
+\int_{-\pi}^{\pi} \cos (mx) \sin (nx) dx \amp  = 0
+\end{align*}
 </div>
 <span class="incontext"><a href="fourier-series.html#p-674">in-context</a></span>
 </body>

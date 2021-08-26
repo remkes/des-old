@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:47-06:00       *-->
+<!--*       on 2021-08-26T16:22:24-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,29 +15,12 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>This example lacks initial values. I've skipped over some of the algebra for the sake of brevity.</p>
+<p>Let's start with the SOCCLDE describing an underdamped harmonic system. (Underdamped is necessary to allow for the possibility of resonance, as we will see in the calculations). Recall that for harmonic systems, the coefficients can be identified as mass \(m\text{,}\) spring constant \(k\text{,}\) coefficient of friction \(b\) and forcting \(f(t)\text{.}\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-y^{\prime \prime} + 8 y^\prime + 3y \amp  = e^{-2t} \cos 2t\\
-L \amp  = \frac{d^2}{dt^2} + 8 \frac{d}{dt} + 3\\
-\amp  \text{ Solve the Homogeneous Case: }\\
-Ly \amp  = 0 \implies r^2 + 8r + 3 = 0\\
-r \amp  = -4 \pm \sqrt{13}\\
-y_h \amp  = Ae^{(-4+\sqrt{13})t} + B e^{(-4-\sqrt{13})t}\\
-\amp  \text{ Our Guess for Undetermined Coefficients: }\\
-y_p \amp  = e^{-2t} (C \cos 2t + D \sin 2t)\\
-y^\prime \amp  = e^{-2t} ( (-2C + 2D) \cos 2t + (-2D -2C)\sin 2t)\\
-y^{\prime\prime} \amp  = e^{-2t} ( (-8D) \cos 2t + (8C)\sin 2t)\\
-\amp  \text{ Solve for the Coefficients: }\\
-L y_p \amp  = e^{-2t} ((8D-13C) \cos 2t + (-8C -13D) \sin 2t) = e^{-2t} \cos 2t\\
-8D - 13 C \amp  = 1\\
--8C - 13 D \amp  = 0\\
-D \amp  = \frac{-8C}{13}\\
-C \amp  = \frac{-13}{233} \implies D = \frac{8}{233}\\
-y_p \amp  = e^{-2t} \left( \frac{-13}{233} \cos 2t + \frac{8}{233} \sin 2t \right)\\
-y \amp  = Ae^{(-4+\sqrt{13})t} + B e^{(-4-\sqrt{13})t} + e^{-2t} \left( \frac{-13}{233} \cos 2t + \frac{8}{233} \sin 2t \right)
-\end{align*}
+\begin{equation*}
+m y^{\prime \prime} + b y^{\prime} + ky = f(t)
+\end{equation*}
 </div>
-<span class="incontext"><a href="undetermined-coefficients.html#p-274">in-context</a></span>
+<span class="incontext"><a href="resonance.html#p-274">in-context</a></span>
 </body>
 </html>

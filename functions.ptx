@@ -1,57 +1,68 @@
-<section xml:id="functions">
+<section xml:id="section-functions">
   <title>Functions</title>
+  <p>
+    This is a course about function, of course, since the solution of
+    a differential equation is a function. This preliminary section is
+    here to remind you of some definition and notations that will be
+    useful in the course. First, there is some useful notation for
+    sets of function on an interval. 
+  </p>
   <definition>
     <statement>
       <p>
         Let <m>A</m> be the <m>\RR</m> or an interval subset of <m>\RR</m>.
-        <ul>
-          <li>
-            <p>
-              <m>C(A)</m> is the set of continuous real-valued function on <m>A</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>C^1(A)</m> is the set of continuously differentiable functions on <m>A</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>C^n(A)</m> is the set of functions on <m>A</m> with <m>n</m> continuous derivatives.
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>C^\infty(A)</m> is the set of infinitly differentiable functions on <m>A</m>.
-            </p>
-          </li>
-        </ul>
       </p>
+      <p><ul>
+        <li>
+          <m>C(A)</m> is the set of continuous real-valued function on
+          <m>A</m>.
+        </li>
+        <li>
+          <m>C^1(A)</m> is the set of continuously differentiable
+          functions on <m>A</m>.
+        </li>
+        <li>
+          <m>C^n(A)</m> is the set of functions on <m>A</m> with
+          <m>n</m> continuous derivatives.
+        </li>
+        <li>
+          <m>C^\infty(A)</m> is the set of infinitly differentiable
+          functions on <m>A</m>.
+        </li>
+      </ul></p>
     </statement>
   </definition>
+  <p>
+    I cannot always expect continuous solutions to differential
+    equations. However, almost all of the solutions in this course
+    will be at least piecewise-continuous. That definition is worth
+    reviewing. 
+  </p>
   <definition>
     <statement>
       <p>
-        Let <m>A</m> be a subset of <m>\RR</m>.
-        A function <m>f:A \rightarrow \RR</m> is
-        <term>piecewise-continuous</term>
-        on <m>A</m> if it continous everywhere on <m>A</m> except for a set of isolated point.
-        Likewise, <m>f</m> is <term>piecewise-differentiable</term>
-        on <m>A</m> if it differentiable everywhere on <m>A</m> except for a set of isolated points.
-        Note that <m>A</m> is the domain of the function:
-        these piecewise functions can have jumps or break,
-        but they are defined on all of <m>A</m>.
-        They cannot have, for example,
-        asymptotes at these isolated points.
+        Let <m>A</m> be a subset of <m>\RR</m>.  A function <m>f:A
+        \rightarrow \RR</m> is <term>piecewise-continuous</term> on
+        <m>A</m> if it continous everywhere on <m>A</m> except for a
+        set of isolated point.  Likewise, <m>f</m> is
+        <term>piecewise-differentiable</term> on <m>A</m> if it
+        differentiable everywhere on <m>A</m> except for a set of
+        isolated points.  Note that <m>A</m> is the domain of the
+        function: these piecewise functions can have jumps or break,
+        but they are defined on all of <m>A</m>.  They cannot have,
+        for example, asymptotes at these isolated points.
       </p>
     </statement>
   </definition>
   <p>
-    We almost exclusively use the base <m>e</m> in this course,
-    since it is the easiest base for derivatives and integrals.
-    Since any other base <m>a^t</m> can be written <m>a^t = e^{\ln a t}</m>,
-    we will very frequently work with functions of the form
-    <m>e^{\alpha t}</m> for some <m>\alpha \in \RR</m>.
-    In this way, we cover all exponential bases.
+    There are many exponential functions in this course, since
+    exponential functions solve many important differential equations.
+    As in other calculus courses, I almost exclusively use the base
+    <m>e</m> in this course, since it is the easiest base for
+    derivatives and integrals.  Since any other base <m>a^t</m> can be
+    written <m>a^t = e^{\ln a t}</m>, I will very frequently work with
+    functions of the form <m>e^{\alpha t}</m> for some <m>\alpha \in
+    \RR</m>. You can expect that typical exponential function to have
+    this form. 
   </p>
 </section>

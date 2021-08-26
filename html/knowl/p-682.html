@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:50-06:00       *-->
+<!--*       on 2021-08-26T16:22:27-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,11 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>For the proof, we use the trig identities for products of \(\sin\) and \(\cos\text{,}\) such as</p>
+<p>If \(f\) is expressed as a Fourier series, then the Fourier coefficient \(a_n\) and \(b_n\) satisfy these equations.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\cos A \cos A = \frac{1}{2} \left( \cos(A-B) + \cos (A+B) \right)\text{.}
-\end{equation*}
+\begin{align*}
+a_n \amp  = \frac{1}{\pi} \int_{-\pi}^\pi f(x) \cos nx dx\\
+b_n \amp  = \frac{1}{\pi} \int_{-\pi}^\pi f(x) \sin nx dx\\
+a_0 \amp  = \frac{1}{\pi} \int_{-\pi}^\pi f(x) dx
+\end{align*}
 </div>
 <span class="incontext"><a href="fourier-series.html#p-682">in-context</a></span>
 </body>

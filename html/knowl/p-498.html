@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:48-06:00       *-->
+<!--*       on 2021-08-26T16:22:26-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,12 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>This is not a function, since \(\infty\) is not a valid output for a function. However, this does give us an intuition. We can think of \(\delta_a(t)\) as a thing which is zero away from \(t=a\) and has an infinitely tall spike at \(t=a\text{.}\) Often, this is defined by a limit.</p>
+<p>If we integrate \(f(t) \frac{\sqrt{a}}{\sqrt{\pi}} e^{-at^2}\text{,}\) we get a weighted average of \(f(t)\) values near \(a\text{.}\) In the limit, though, only the value at \(f(a)\) matters, since we multiply by zero everywhere else. This gives the most convenient proprety of \(\delta\)-function.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int_{-\infty}^\infty \delta_a (t) f(t) dt = f(a)
+\end{equation*}
+</div>
 <span class="incontext"><a href="distributions.html#p-498">in-context</a></span>
 </body>
 </html>

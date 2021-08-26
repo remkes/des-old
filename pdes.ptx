@@ -1,4 +1,5 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="pdes">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  
+  xml:id="chapter-pdes">
   <title>Partial Differential Equations</title>
   <introduction>
     <p>

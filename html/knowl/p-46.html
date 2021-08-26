@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:45-06:00       *-->
+<!--*       on 2021-08-26T16:22:23-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>A <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">differential equation</dfn> is any equation involving a function \(f(t)\) and its derivatives \(f^\prime(t)\text{,}\) \(f^{\prime \prime}(t)\text{,}\) etc. The highest derivative in the equation is called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">order</dfn> of the equation. A DE which involves partial derivatives is called a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">partial differential equation</dfn>; otherwise, it is called an <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">ordinary differtial equation</dfn>.</p>
-<span class="incontext"><a href="what-is-de.html#p-46">in-context</a></span>
+<p>There are a variety of way to justify Euler's formlua. One of the justifications only needs the known taylor series for \(e^x\) and the trig functions, which were developed in Calculus II. In ths following argument via talyor series, the number \(\imath\) can just be treated like any other constant. First I'll write the known taylor series for the three functions I need. Then I calculate \(e^{\imath t}\) via its taylor series. Various manipulations of the series, using linearity and splitting up the series into even and odd terms, leads to the final expression in the taylor series for sine a cosine, proving Euler's formula.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+e^t \amp  = \sum_{n=0}^\infty \frac{t^n}{n!}\\
+\sin t \amp  = \sum_{n=0}^\infty \frac{(-1)^n
+t^{2n+1}}{(2n+1)!}\\
+\cos t \amp  = \sum_{n=0}^\infty \frac{(-1)^n t^{2n}}{(2n)!}\\
+e^{\imath t} \amp  = \sum_{n=0}^\infty \frac{(\imath
+t)^n}{n!} = \sum_{n=0}^\infty \frac{\imath^n t^n}{n!}\\
+\amp  = \sum_{n=0}^\infty \frac{\imath^{2n} t^{2n}}{{2n}!} +
+\sum_{n=0}^\infty \frac{\imath^{2n+1} t^{2n+1}}{(2n+1)!}\\
+\amp  = \sum_{n=0}^\infty \frac{(-1)^n t^{2n}}{{2n}!} +
+\imath \sum_{n=0}^\infty \frac{(-1)^n t^{2n+1}}{(2n+1)!}\\
+\amp  = \cos t + \imath \sin t
+\end{align*}
+</div>
+<span class="incontext"><a href="section-complex-numbers.html#p-46">in-context</a></span>
 </body>
 </html>

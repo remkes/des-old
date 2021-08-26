@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:49-06:00       *-->
+<!--*       on 2021-08-26T16:22:26-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,11 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let's move on to a move involved harmonic system and assume that \(b^2 - 4mk \lt  0\text{,}\) so that we know to expect sinusoidal solutions.</p>
+<p>This example has a linear forcing term.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-my^{\prime \prime} + b y^\prime + ky = 0 \hspace{2cm} y(0) = 1 \hspace{1cm} y^\prime(0) = \frac{-b}{2m}
-\end{equation*}
+\begin{align*}
+y^{\prime \prime} + 4y \amp  = 4t^2 - 4t + 10\\
+y(0) \amp  = 0 \hspace{2cm} y^\prime(0) = 3\\
+s^2 Y - sy(0) - y^\prime(0) + 4Y \amp  = \calL \{ 4t^2 - 4t + 10 \}\\
+s^2 Y + 4sY -3 \amp  = \frac{8}{s^3} - \frac{4}{s^2} + \frac{10}{s}\\
+Y \amp  = \frac{8-4s+10s^2 + 3s^3}{s^3(s^2+4)}\\
+Y \amp  = \frac{2s^2-s+2}{s^3} + \frac{-2s+4}{s^2+4}\\
+\amp  = \frac{2}{s} - \frac{1}{s^2} + \frac{2}{s^3} - \frac{2s}{s^2+4} + \frac{4}{s^2+4}\\
+y \amp  = 2 - t + t^2 - 2 \cos 2t + 2 \sin 2t
+\end{align*}
 </div>
 <span class="incontext"><a href="laplace-linear-odes.html#p-528">in-context</a></span>
 </body>

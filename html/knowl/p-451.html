@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:48-06:00       *-->
+<!--*       on 2021-08-26T16:22:25-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,11 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(n \notin \ZZ\text{.}\) The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">Bessel function of the second kind</dfn> of order \(\nu\) are written \(Y_{\nu}\) and defined by this expression</p>
+<p>Here's a strange change of variables.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-Y_{\nu} = \frac{\cos (\nu \pi) J_{\nu}(t) - J_{-\nu}(t)}{\sin \nu \pi}\text{.}
-\end{equation*}
+\begin{align*}
+s \amp  = \frac{2}{\alpha} \sqrt{\frac{k}{m}} e^{\frac{-\alpha t}{2}}\\
+\frac{ds}{dt} \amp  = \frac{2}{\alpha} \frac{-\alpha}{2} \sqrt{ \frac{4k}{m\alpha^2}} e^{\frac{-\alpha t}{2}} = - \sqrt{\frac{k}{m}} e^{-\frac{\alpha t}{2}}\\
+\frac{d^2s}{dt^2} \amp  = \frac{\alpha}{2} \sqrt{\frac{k}{m}} e^{-\frac{\alpha t}{2}}\\
+\frac{dy}{dt} \amp  = \frac{dy}{ds} \frac{ds}{dt}\\
+\frac{d^2 y}{dt^2} \amp  = \frac{d}{dt} \left( \frac{dy}{ds} \frac{ds}{dt} \right)\\
+\amp  = \frac{d^2 s}{dt^2} \frac{dy}{ds} + \frac{ds}{dt} \frac{d}{dt} \frac{dy}{ds}\\
+\amp  = \frac{d^2 s}{dt^2} \frac{dy}{ds} + \frac{ds}{dt} \frac{d^2y}{ds^2} \frac{ds}{dt}\\
+\amp  = \frac{d^2 s}{dt^2} \frac{dy}{ds} + \left( \frac{ds}{dt} \right)^2 \frac{d^2 y}{ds^2}\\
+\amp  = \frac{\alpha}{2} \sqrt{\frac{k}{m}} e^{-\frac{\alpha t}{2}} \frac{dy}{ds} + \frac{k}{m} e^{-\alpha t} \frac{d^2 y}{ds^2}
+\end{align*}
 </div>
 <span class="incontext"><a href="bessel-functions.html#p-451">in-context</a></span>
 </body>

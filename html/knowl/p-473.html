@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:48-06:00       *-->
+<!--*       on 2021-08-26T16:22:26-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The restriction of exponential order is a fairly reasonable one: in differential equations and applied mathematics, we are rarely concerned with functions which grow faster than the exponential.</p>
+<p>The Laplace transform of \(t^n\) for \(n \in \ZZ\) involved factorials, so it is not surprising that \(t^\alpha\) for non-integer \(\alpha\) involves the extension of the factorial: the \(\Gamma\) function.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\calL \{ t^\alpha \} \amp  = \int_0^\infty e^{-st} t^{\alpha} dt\\
+\amp  = \int_0^\infty t^{(\alpha + a) - 1} e^{-st}\\
+u \amp  = st\\
+\amp  = \int_0^\infty \left( \frac{u}{s} \right)^{(\alpha+1)-1} e^{-u} \frac{du}{s}\\
+\amp  = \frac{1}{s^{\alpha +1}} \int_0^\infty u^{(\alpha+ 1)-1} e^{-u} du = \frac{\Gamma(\alpha +1)}{s^{\alpha +1}}
+\end{align*}
+</div>
 <span class="incontext"><a href="laplace-transforms-definitions.html#p-473">in-context</a></span>
 </body>
 </html>

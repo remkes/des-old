@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:46-06:00       *-->
+<!--*       on 2021-08-26T16:22:24-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,11 +15,11 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>This is a <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">linear</em> differential operator, so it behaves linearly, that is, it has the two linearity properties.</p>
+<p>We can put this back into our special form and use the fact that the homogeneous solution is \(y = e^{-\int P(t)dt}\text{.}\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-L(y_1 + y_2) \amp  = Ly_1 + Ly_2\\
-L(cy) \amp  = cL(y)
+y_p = g(t) y \amp  = \left( \int \frac{Q(t)}{e^{-\int P(t) dt}} dt \right) e^{-\int P(t) dt }\\
+y_p \amp  = e^{-\int P(t) dt} \int e^{\int P(t) dt} Q(t) dt
 \end{align*}
 </div>
 <span class="incontext"><a href="linear-des.html#p-175">in-context</a></span>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:48-06:00       *-->
+<!--*       on 2021-08-26T16:22:25-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>(Notice that we don't necessarily lose terms when taking derivatives; if \(r\) is not an integer, there are no constant terms in the series which go to zero under differentiation. If \(r\) is an integer, we should make a note to worry about derivatives setting constant terms to zero.)</p>
+<p>We have the recurrence relation (which is first order this time), so we start calculating terms.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+c_0 \amp  = c_0\\
+c_1 \amp  = c_0\\
+c_2 \amp  = \frac{c_1}{(4)(2)} = \frac{c_0}{(4)(2)}\\
+c_3 \amp  = \frac{c_2}{(7)(3)} = \frac{c_0}{(7)(4)(3)(2)}\\
+c_4 \amp  = \frac{c_3}{(10)(4)} = \frac{c_0}{(10)(7)(4)(4)(3)(2)}\\
+c_5 \amp  = \frac{c_4}{(13)(5)} = \frac{c_0}{(13)(10)(7)(4) (5)(4)(3)(2)}\\
+c_n \amp  = \frac{c_0}{n! (4)(7)(10) \ldots (3n-2)}\\
+y_1 \amp  = 1 + \sum_{n=1}^\infty \frac{t^n}{n! (4)(7)(10) \ldots (3n-2)}
+\end{align*}
+</div>
 <span class="incontext"><a href="regular-singular-points.html#p-403">in-context</a></span>
 </body>
 </html>

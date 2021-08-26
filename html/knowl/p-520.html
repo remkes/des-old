@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:48-06:00       *-->
+<!--*       on 2021-08-26T16:22:26-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Note this is a contour integral in \(\CC\text{,}\) a common object in the study of complex variables. The use of the distance to singularities makes sense in that discipline, since contour integrals depend on the location of singularities. For those with a background in complex variable, note that this is not a closed curve and the homotopy implications depend a great deal on the function \(F\text{.}\)</p>
-<span class="incontext"><a href="inverse-transforms.html#p-520">in-context</a></span>
+<p>We apply the Laplace transform, making use of the initial values when we transform the derivative.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\calL \{ y^{\prime \prime} + y \} \amp  = 0\\
+(s^2Y - sy(0) - y^\prime(0)) + Y \amp  = 0\\
+s^2Y - s + Y \amp  = 0\\
+(s^2+1)Y \amp  = s\\
+Y \amp  = \frac{s}{s^2 + 1}\\
+y \amp  = \calL^{-1} \left\{ \frac{s}{s^2+1} \right\} = \cos t
+\end{align*}
+</div>
+<span class="incontext"><a href="laplace-linear-odes.html#p-520">in-context</a></span>
 </body>
 </html>

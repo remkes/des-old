@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:47-06:00       *-->
+<!--*       on 2021-08-26T16:22:25-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,21 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let's set \(c_0 = 1\) and \(c_1 = 0\text{.}\) Then we use the recurrence relation to calculate some terms.</p>
+<p>This is a third order recurrence relation. However, we still have only two parameters, due to the condition that \(c_2=0\text{.}\) We calculate the coefficients.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-c_0 \amp  = 1\\
-c_1 \amp  = 0\\
-c_2 \amp  = \frac{-c_0}{(1)(2)} = \frac{-1}{2}\\
-c_3 \amp  = \frac{-c_1}{(2)(3)} = 0\\
-c_4 \amp  = \frac{-c_2}{(3)(4)} = \frac{1}{2\cdot 3 \cdot 4}\\
-c_5 \amp  = \frac{-c_3}{(4)(5)} = 0\\
-c_6 \amp  = \frac{-c_4}{(5)(6)} = \frac{-1}{2\cdot 3 \cdot 4 \cdot 5 \cdot 6 }\\
-c_7 \amp  = \frac{-c_5}{(6)(7)} = 0\\
-c_8 \amp  = \frac{-c_6}{(7)(8)} = \frac{1}{8!}\\
-c_9 \amp  = \frac{-c_7}{(8)(9)} = 0\\
-c_{2n} \amp  = \frac{(-1)^n}{(2n)!}\\
-c_{2n+1} \amp  = 0
+c_0 \amp  = c_0\\
+c_1 \amp  = c_1\\
+c_2 \amp  = 0\\
+c_3 \amp  = \frac{-c_0}{(3)(2)}\\
+c_4 \amp  = \frac{-c_1}{(4)(3)}\\
+c_5 \amp  = \frac{-c_2}{(5)(4)} = 0\\
+c_6 \amp  = \frac{-c_3}{(6)(5)} = \frac{c_0}{(6)(5)(3)(2)}\\
+c_7 \amp  = \frac{-c_4}{(7)(6)} = \frac{c_1}{(7)(6)(4)(3)}\\
+c_8 \amp  = \frac{-c_5}{(8)(7)} = 0\\
+c_9 \amp  = \frac{-c_6}{(9)(8)} = \frac{-c_0}{(9)(8)(6)(5)(3)(2)}\\
+c_{10} \amp  = \frac{-c_7}{(10)(9)} = \frac{-c_1}{(10)(9)(7)(6)(4)(3)}\\
+c_{11} \amp  = \frac{-c_8}{(11)(10)} = 0
 \end{align*}
 </div>
 <span class="incontext"><a href="ordinary-points.html#p-344">in-context</a></span>

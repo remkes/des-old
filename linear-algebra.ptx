@@ -1,28 +1,35 @@
-<section xml:id="linear-algebra">
+<section xml:id="section-linear-algebra">
   <title>Linear Algebra</title>
+  <p>
+    Linear algebra is a prerequisite for this course. Here, let me
+    remind you of some of the most important definition and ideas from
+    linear algebra. These are the idea that will show up most
+    frequently in the course. 
+  </p>
   <definition>
     <statement>
       <p>
-        A <term>vector space</term> over <m>\RR</m> is a set <m>V</m> with addition and scalar multiplication
-        (if <m>\alpha \in \RR</m> and <m>v in V</m>,
-        when <m>\alpha v</m> is defined and remains in <m>V</m>).
+        A <term>vector space</term> over <m>\RR</m> is a set <m>V</m>
+        with addition and scalar multiplication (if <m>\alpha \in
+        \RR</m> and <m>v in V</m>, when <m>\alpha v</m> is defined and
+        remains in <m>V</m>).
       </p>
     </statement>
   </definition>
   <example>
     <statement>
       <p>
-        <m>\RR^n</m> is a vector space.
-        The scalar multiplication is given by multiplying each component by the real number.
+        <m>\RR^n</m> is a vector space. The scalar multiplication is
+        given by multiplying each component by the real number.
       </p>
     </statement>
   </example>
   <example>
     <statement>
       <p>
-        If <m>A</m> is <m>\RR</m> or an interval subset,
-        then <m>C(A), C^n(A)</m> and <m>C^\infty(A)</m> are vector spaces.
-        Scalar multiplication is simply multiplying a constant by a scalar.
+        If <m>A</m> is <m>\RR</m> or an interval subset, then <m>C(A),
+        C^n(A)</m> and <m>C^\infty(A)</m> are vector spaces. Scalar
+        multiplication is simply multiplying a constant by a scalar.
       </p>
     </statement>
   </example>
@@ -30,75 +37,75 @@
     <statement>
       <p>
         Let <m>V</m> be a real vector space and Let <m>v_1, \ldots,
-        v_k \in V</m>.
-        A <term>linear combination</term>
-        of these vectors is a sum <m>\alpha_1v_1 + \alpha_2v_2 + \ldots + \alpha_kv_k</m> where <m>\alpha_i \in \RR</m>.
-        These vectors are called <term>linearly independent</term> if the equation
+        v_k \in V</m>. A <term>linear combination</term> of these
+        vectors is a sum <m>\alpha_1v_1 + \alpha_2v_2 + \ldots +
+        \alpha_kv_k</m> where <m>\alpha_i \in \RR</m>. These vectors
+        are called <term>linearly independent</term> if the equation
         <me>
           \alpha_1 v_1 + \alpha_2 v_2 + \ldots + \alpha_k v_k = 0
         </me>
-        has only the trivial solution,
-        where all <m>\alpha_i =0</m>.
-        Otherwise, the set of vectors is called
-        <term>linearly dependent</term>.
-        A maximal linearly independent set in <m>V</m> is called a bases.
-        The dimension of <m>V</m> is the number of vector in any bases.
+        has only the trivial solution, where all <m>\alpha_i =0</m>.
+        Otherwise, the set of vectors is called <term>linearly
+        dependent</term>. A maximal linearly independent set in
+        <m>V</m> is called a bases. The dimension of <m>V</m> is the
+        number of vector in any bases.
       </p>
     </statement>
   </definition>
   <example>
     <statement>
       <p>
-        The vector space <m>\RR^n</m> has dimension <m>n</m>.
-        The vectors spaces <m>C(A), C^n(A)</m> and
-        <m>C^\infty(A)</m> are all infinte dimensional.
+        The vector space <m>\RR^n</m> has dimension <m>n</m>. The
+        vectors spaces <m>C(A), C^n(A)</m> and <m>C^\infty(A)</m> are
+        all infinte dimensional.
       </p>
     </statement>
   </example>
   <definition>
     <statement>
       <p>
-        If <m>V_1</m> and <m>V_2</m> are vector spaces,
-        a <term>linear transformation</term>
-        <m>f:V_1 \rightarrow V_2</m> is a function which respects addition and scalar multiplication.
+        If <m>V_1</m> and <m>V_2</m> are vector spaces, a <term>linear
+        transformation</term> <m>f:V_1 \rightarrow V_2</m> is a
+        function which respects addition and scalar multiplication.
         <md>
-          <mrow>f(u+v) \amp  = f(u) + f(v)</mrow>
-          <mrow>f(\alpha v) = \alpha f(v)</mrow>
+          <mrow>  
+            f(u+v) \amp  = f(u) + f(v)
+          </mrow>
+          <mrow>
+            f(\alpha v) = \alpha f(v)
+          </mrow>
         </md>
       </p>
       <p>
-        If <m>V_1</m> and <m>V_2</m> are finite dimensional,
-        all linear transformations can be encoded by matrcies using matrix multiplication acting on vectors.
+        If <m>V_1</m> and <m>V_2</m> are finite dimensional, all
+        linear transformations can be encoded by matrcies using matrix
+        multiplication acting on vectors.
       </p>
     </statement>
   </definition>
   <definition>
     <statement>
       <p>
-        If <m>M</m> is a square matrix,
-        then the <term>determinant of <m>M</m></term>,
-        written <m>\det M</m>, is a real number with two properties:
-        <ul>
-          <li>
-            <p>
-              <m>|\det M|</m> is the effect of the transformation on the appropriate notion of size
-              (length, area, volume, hypervolume, etc).
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>\det M</m> is positive,
-              then <m>M</m> preserves orientation;
-              if <m>\det M</m> is negative,
-              then <m>M</m> reverses orientation.
-            </p>
-          </li>
-        </ul>
+        If <m>M</m> is a square matrix, then the <term>determinant of
+        <m>M</m></term>, written <m>\det M</m>, is a real number with
+        two properties.
       </p>
+      <p><ul>
+        <li>
+          <m>|\det M|</m> is the effect of the transformation on the
+          appropriate notion of size (length, area, volume,
+          hypervolume, etc).
+        </li>
+        <li>
+            If <m>\det M</m> is positive, then <m>M</m> preserves
+            orientation; if <m>\det M</m> is negative, then <m>M</m>
+            reverses orientation.
+        </li>
+      </ul></p>
       <p>
-        Please consult my linear algebra note
-        (or any other linear algebra reference)
-        for the details of calculating determinants.
+        Please consult my linear algebra notes (or any other linear
+        algebra reference) for the details of calculating
+        determinants.
       </p>
     </statement>
   </definition>
@@ -106,8 +113,9 @@
     <statement>
       <p>
         Let <m>f:V_1 \rightarrow V_2</m> be a linear transformation.
-        A vector <m>v \in V_1</m> is an <term>eigenvector</term>
-        for <m>f</m> with eigenvalue <m>\lambda</m> if <m>f(v) = \lambda v</m>.
+        A vector <m>v \in V_1</m> is an <term>eigenvector</term> for
+        <m>f</m> with eigenvalue <m>\lambda</m> if <m>f(v) = \lambda
+        v</m>.
       </p>
     </statement>
   </definition>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:47-06:00       *-->
+<!--*       on 2021-08-26T16:22:25-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,11 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Both \(P\) and \(Q\) are constant, so they analytic everywhere, even in \(\CC\text{.}\) Since there are no singular points, we expect solutions which have Taylor series defined for all of \(\RR\text{.}\) We can centre them at \(0\) for convenience. We assume the solution has a Taylor series.</p>
+<p>Let's set \(c_0 = 1\) and \(c_1 = 0\text{.}\) Then we use the recurrence relation to calculate some terms.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-y = \sum_{n=0}^\infty c_n t^n
-\end{equation*}
+\begin{align*}
+c_0 \amp  = 1\\
+c_1 \amp  = 0\\
+c_2 \amp  = \frac{-c_0}{(1)(2)} = \frac{-1}{2}\\
+c_3 \amp  = \frac{-c_1}{(2)(3)} = 0\\
+c_4 \amp  = \frac{-c_2}{(3)(4)} = \frac{1}{2\cdot 3 \cdot 4}\\
+c_5 \amp  = \frac{-c_3}{(4)(5)} = 0\\
+c_6 \amp  = \frac{-c_4}{(5)(6)} = \frac{-1}{2\cdot 3 \cdot 4 \cdot 5 \cdot 6 }\\
+c_7 \amp  = \frac{-c_5}{(6)(7)} = 0\\
+c_8 \amp  = \frac{-c_6}{(7)(8)} = \frac{1}{8!}\\
+c_9 \amp  = \frac{-c_7}{(8)(9)} = 0\\
+c_{2n} \amp  = \frac{(-1)^n}{(2n)!}\\
+c_{2n+1} \amp  = 0
+\end{align*}
 </div>
 <span class="incontext"><a href="ordinary-points.html#p-338">in-context</a></span>
 </body>

@@ -36,7 +36,7 @@
         type of equations.
       </li>
       <li>
-        <xref ref="section-series-solutions" /> is the first of two
+        <xref ref="chapter-series-solutions" /> is the first of two
         specialized techniques for solving second order ODEs. It uses
         the taylor series to express a function as an infinite series.
         In this form, there are special techniques to understand and
@@ -44,7 +44,7 @@
         equation. 
       </li>
       <li>
-        <xref ref="chaper-laplace-transforms" /> is the second of two
+        <xref ref="chapter-laplace-transforms" /> is the second of two
         specialized techniques for solving second order ODEs. This is
         a much strange technique than series solutions. I introduce
         the Laplace transform, which is a way of changing functions
@@ -54,93 +54,20 @@
         much more approachable. 
       </li>
       <li>
-        <xref ref="
+        <xref ref="chapter-systems" /> introduces solving a system of
+        more than one differential equations. This chapter mostly
+        relies on a qualitative analysis of systems of two equations,
+        but already that leads into useful and interesting
+        applications.
       </li>
       <li>
-        <xref ref="
+        <xref ref="chapter-pdes" /> is a brief introduction to partial
+        differential equations. I'll really just focus on two
+        equations, but they are two very important equations: the heat
+        equation and the wave equations. The point of this chapter is
+        to give a flavour and idea for the wide world of solving
+        partial differential equations. 
       </li>
     </ol></p>
-    <p>
-      This document is not meant to stand alone; instead, it is
-      designed to be the written reference material for a set of videos
-      or lectures. The main purpose of the document is to be a
-      record of the course content which is easier to use for reference
-      than the videos. There are some examples in the main body, but
-      most examples are presented as activities for the student to
-      first attempt and then compare with the posted solution.
-    </p>
-    <p>
-      For each week of the course, you are expected to watch the videos
-      for the week and do the activities and assignmnets presented in
-      this notes. In the activities, material labeled ``Extra
-      Practice'' or ``Challenge Problems' is optional material. 
-    </p>
-  </paragraphs>
-  <paragraphs>
-    <title>Other Resources</title>
-    <p>
-      In addition to the notes associated to each lecture, there are a
-      number of other resources which are distributed via the course
-      Moodle site. These resources have been developed to assist you,
-      so please make use of them.
-    </p>
-    <ul>
-      <li>
-        <p>
-          A set of pre-calculus notes and learning modules (current
-          unfinished).  If you struggled with the self-assessment or
-          are otherwise worried about your background mathematical
-          knowledge and skills, these resources are here to help you
-          learn or practice skills which are prerequisite to this
-          course.
-        </p>
-      </li>
-      <li>
-        <p>
-          A complete formula sheet. All of the basic formulas and
-          rules for calculation are included on this sheet. There are
-          sections on algebra, trigonometry, derivatives and
-          integrals.
-        </p>
-      </li>
-      <li>
-        <p>
-          A library of functions. This reference gives archetypical
-          examples of all of the elementary functions that we use in
-          calculus. There are also small example graphs, so that you
-          can develop a visual intuition for common functions.
-        </p>
-      </li>
-      <li>
-        <p>
-          A notation reference. Though many of the idea in the course
-          have been covered in high-school mathematics, often our
-          notations differ. This reference covers a number of
-          notations used in the course which may be unfamiliar.
-        </p>
-      </li>
-      <li>
-        <p>
-          A course outcomes sheet. This was originally developed as a
-          study aid for students. It summarizes the main definitions
-          and concepts of the course, as well as the types of
-          questions your will encounter on assignments and exams.  In
-          particular, it gives a guide to the material on the exam.
-          If you want to know whether a definition, topic or type of
-          problem might show up on the exam, consult this sheet.
-          There will be nothing on the exam that isn't referenced on
-          this sheet.
-        </p>
-      </li>
-    </ul>
-  </paragraphs>
-  <paragraphs>
-    <title>Perspectives and Philosophy</title>
-    <p>
-      In addition to the strictly mathematical material of the course, I
-      will try to share some ideas about the philosophy of mathematics,
-      the aesthetics of mathematics, and how our own worldview and
-      assumptions influence mathematical thought. 
-    </p>
   </paragraphs>
 </preface>

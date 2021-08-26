@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-24T10:54:46-06:00       *-->
+<!--*       on 2021-08-26T16:22:24-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,12 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Multiplying by the integrating factor turns the \(y_p^\prime(t) + P(t) y_p(t)\) side of the equation into a product rule derivative, which we can just integrate to solve. The integrating factor turns a linear equation into something that can be directly solved by integration, hence the name. It is best to remember the process this way: the original DE becomes a product rule derivative problem by multiplying both sides of the original DE by the integrating factor and then isolating \(y_p\text{.}\)</p>
+<p>This is just a homogeneous DE. We note that \(t \neq \pm 3\) in the domain. The solution to the homogeneous case is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+y = e^{-\int P(t) dt} = e^{-\int \frac{t}{t^2-9} dt} = e^{ - \frac{1}{2} \ln |t^2-9| + c} = \frac{c}{\sqrt{t^2-9}}\text{.}
+\end{equation*}
+</div>
 <span class="incontext"><a href="linear-des.html#p-184">in-context</a></span>
 </body>
 </html>
