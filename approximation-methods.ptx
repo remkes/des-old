@@ -1,18 +1,21 @@
-<section xml:id="approximation-methods">
+<section xml:id="section-approximation-methods">
   <title>Approximation Methods and Applications for First Order Equations</title>
   <p>
-    As this point,
-    many DE courses might include a section on approximation methods or a section on applications, or both.
-    We will be not spending any time on either of these.
+    At this point, many DE courses might include a section on
+    approximation methods or a section on applications, or both. I
+    will be not spending any time on either of these.
   </p>
   <p>
-    The applications are useful for motivation.
-    The approximation methods are interesting due to the fact,
-    observed previously, that many DEs are terribly difficult to solve.
-    The techniques we included above for first order equations cover only a small portion of all the possible equations and even then,
-    we have to rely on integrals for seperable and linear equations.
-    Integrals themselves are difficult and often only possible up to approximation.
-    Therefore, a huge part of the mathematics of differential equations is the study of approximation techniques.
-    Getting a sense of how these approximations are set up is an important insight into the field.
+    The applications are useful for motivation.  The approximation
+    methods are interesting due to the fact, observed previously, that
+    many DEs are terribly difficult to solve.  The techniques I
+    included above for first order equations cover only a small
+    portion of all the possible equations and even then, I have to
+    rely on integrals for seperable and linear equations.  Integrals
+    themselves are difficult and often only possible up to
+    approximation.  Therefore, a huge part of the mathematics of
+    differential equations is the study of approximation techniques.
+    Getting a sense of how these approximations are set up is an
+    important insight into the field.
   </p>
 </section>

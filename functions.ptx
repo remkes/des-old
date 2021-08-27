@@ -65,4 +65,43 @@
     \RR</m>. You can expect that typical exponential function to have
     this form. 
   </p>
+  <p>
+    In <xref ref="section-existence-and-uniqueness" />, it will be
+    necessary to talk about functions of two variables. The study of
+    those functions is covered in Calculus III, but since that course
+    is not prerequisite to this material, I should say a little bit
+    about such functions. A function <m>F(x,y)</m> of two variables is
+    an expression in the two variables; alternatively, it is a model
+    which depends on two different independent quantities. 
+  <p>
+  </p>
+    Such function inherent many properties of ordinary function by
+    treating each variable individually. That is, if I momentarily
+    pretent that <m>y</m> is just some constant, I can think of
+    <m>F(x,y)</m> as a single variable function of <m>x</m>; and
+    vice-versa when I think of <m>x</m> momentarily as a constant. 
+    This perspective gives the two properties that I will need in this
+    course. 
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A function <m>F(x,y)</m> of two variables is
+        <term>continuous</term> when it is continuous in each variable
+        independently. Likewise, it is differentiable if is
+        differentiable in each variable independently. Moreover, I can
+        actually take derivatives this way. I can pretend that <m>y</m>
+        is momentarily constant and differentiate in <m>x</m>; or vice
+        versa when I pretend that <m>x</m> is momentarily constant and
+        I differentiate in <m>y</m>. These derivatives are called
+        <term>partial derivatives</term>. The notation for partial
+        derivatives is an adjustment of the usual Leibniz notation.
+        <md>
+          <mrow>
+            \amp \frac{\del f}{\del x} \amp \amp \frac{del f}{\del y} 
+          </mrow>
+        </md>
+      </p>
+    </statement>
+  </definition>
 </section>

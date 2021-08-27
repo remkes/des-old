@@ -4,7 +4,7 @@
   <xi:include  href="what-is-de.ptx" />
   <xi:include  href="qualitative-methods.ptx" />
   <xi:include  href="stability-and-linearization.ptx" />
-  <xi:include  href="seperable-des.ptx" />
+  <xi:include  href="separable-des.ptx" />
   <xi:include  href="existence-and-uniqueness.ptx" />
   <xi:include  href="linear-des.ptx" />
   <xi:include  href="substitutions.ptx" />
