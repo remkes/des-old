@@ -33,8 +33,6 @@
     <me>
       f_n = \frac{(1+\sqrt{5})^n - (1-\sqrt{5})^n}{2^n \sqrt{5}}
     </me>.
-  </p>
-  <p>
     The coefficients of a Taylor series are sequences of real numbers.
     In the use of Taylor series in this course, sequences of
     coefficients will be presented as recurrence relations. I will

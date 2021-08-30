@@ -8,20 +8,18 @@
       This is very valuable material, even for the purposes of applied
       mathematics. To be able to analyze a differential equation and
       determine whether or not a solution should exist and whether it
-      is unique is necessary for robust modelling with DEs.  I'm going
+      is unique is necessary for robust modelling with DEs. I'm going
       to deal only with first order equations where we can isolate the
       derivative term, that is, equations of the following form.
       <me>
         \frac{dy}{dx} = F(x,y)
       </me>.
-    </p>
-    <p>
       The details of existence and uniqueness theorems rely on the
       properties of <m>F</m> as a function of two variables, which are
       very briefly summarized in <xref ref="section-functions" />. 
     </p>
   </introduction>
-  <subsection xml:id="existence">
+  <subsection xml:id="subsection-existence">
     <title>Existence</title>
     <p>
       Existence of solutions to first order DES is established by the
@@ -47,7 +45,7 @@
       This is a very local result: the small positive <m>\epsilon</m>
       only guarantees a tiny piece of a function as a solution.
       Existence (and later uniqueness) are only guaranteed very close
-      to the initial value of the function.  I do know that the
+      to the initial value of the function. I do know that the
       function is differentiable in this small inteval, but I don't
       know anything else: outside the interval, anything could happen
       with the solution.
@@ -70,7 +68,7 @@
         </md>
         <p>
           This DE satisfies the conditions of the theorem, so a
-          solutions exists.  However, there are two solutions:
+          solutions exists. However, there are two solutions:
           <m>y=0</m> and <m>y=x^3/27</m>. Peano's theorem ensure that
           a solution exists, but doesn't imply the uniqueness of a
           solution.
@@ -79,30 +77,30 @@
     </example>
     <example>
       <statement>
-        <me>
+        <md>
           <mrow>
             \amp y^\prime = \sqrt{|y|} \amp \amp y(0) = 0
           </mrow>
-        </me>
+        </md>
         <p>
           This <m>F</m> is also continuous near <m>(0,0)</m>, so a
-          solution exists by Peano's theorm.  This IVP is solved by
-          <m>y=0</m> and <m>y = x^2/4</m>.  It's obvious that
+          solution exists by Peano's theorm. This IVP is solved by
+          <m>y=0</m> and <m>y = x^2/4</m>. It's obvious that
           something else is needed to ensure uniqueness.
         </p>
       </statement>
     </example>
     <p>
       Before I move on to the next result, I could ask for the proof
-      of the Peano Existence Theorem.  Unforunately, that proof
-      doesn't fall within the scope of this course.  I would need to
+      of the Peano Existence Theorem. Unforunately, that proof
+      doesn't fall within the scope of this course. I would need to
       establish a number of new definitions and techniques from real
       analysis, as well as struggle through a bunch of tricky
-      <m>\epsilon</m> and <m>\delta</m> arguments.  It's interesting
+      <m>\epsilon</m> and <m>\delta</m> arguments. It's interesting
       stuff, but unforutnately not part of this course. 
     </p>
   </subsection>
-  <subsection xml:id="lipschitz">
+  <subsection xml:id="subsection-lipschitz">
     <title>Lipschitz Continuity</title>
     <p>
       In order to state the theorem about uniqueness, I need a new
@@ -119,21 +117,21 @@
       </statement>
     </definition>
     <p>
-      This is a strange kind of continuity.  The definition is
+      This is a strange kind of continuity. The definition is
       stronger than normal: Lipschitz continuity implies normal
-      continuity.  Moreover, the definition is global over <m>U</m>,
-      not just local like conventional continuity.  Therefore, the
+      continuity. Moreover, the definition is global over <m>U</m>,
+      not just local like conventional continuity. Therefore, the
       domain matters: a function might be Lipschitz continuous on a
       small set, but not on a larger one.
     </p>
     <p>
       As an interpretation, Lipschitz continuity is a control on the
-      global growth over the designated set.  For a Lipschitz
+      global growth over the designated set. For a Lipschitz
       continuous function, there is a linear function that bounds the
-      function on the designated set.  Unsurprisingly, this means that
-      the defintion usually only works on bounded sets.  For a more
+      function on the designated set. Unsurprisingly, this means that
+      the defintion usually only works on bounded sets. For a more
       visual interpretation, the definition compares <m>f</m> to some
-      other function function <m>g(x) = K|x|</m>.  The graph of
+      other function function <m>g(x) = K|x|</m>. The graph of
       <m>g</m> gives a cone in <m>\RR^2</m> and the <m>f</m> must stay
       inside this cone over an interval to be Lipschitz continuous.
       In this way, the definition limits the local growth of <m>f</m>
@@ -153,16 +151,16 @@
           </li>
           <li>
             <m>f(x) = x^2</m> is Lipschitz continuous on any
-            <em>bounded</em> interval.  Specifically, on <m>(-7,7)</m>
+            <em>bounded</em> interval. Specifically, on <m>(-7,7)</m>
             we can take <m>K=7</m>, since <m>-7x \leq x^2 \leq 7x</m>
-            on this interval.  However, <m>f(x) = x^2</m> is not
+            on this interval. However, <m>f(x) = x^2</m> is not
             Lipschitz continuous on all of <m>\RR</m>, since no linear
             function bounds it.
           </li>
           <li>
             <m>f(x) = x^{\frac{2}{3}}</m> is not Lipschitz continuous
             on <m>(-1,1)</m>, since its slope gets arbitrarily steep
-            near the origin.  This means that very close to <m>0</m>,
+            near the origin. This means that very close to <m>0</m>,
             it cannot be bounded by any linear function through
             <m>(0,0)</m>.
           </li>
@@ -171,19 +169,20 @@
     </example>
     <p>
       The previous example was not Lipschitz continuous at <m>0</m>,
-      and it also failed to be differentiable at that point.  I might
-      wonder if differentiability is a sufficient condition.  That
+      and it also failed to be differentiable at that point. I might
+      wonder if differentiability is a sufficient condition. That
       would be convenient, since we know how to check for
-      differentiability.  However, consider a strange example.
+      differentiability. However, consider a strange example.
     </p>
     <example>
       <statement>
-        <me>
-          f(X) = \left\{ \begin{matrix} x^{\frac{3}{2}} \sin \left(
-          \frac{1}{x} \right) \amp  x \in (0,1] \\ 0 \amp  x = 0
-          \end{matrix} \right.
-        </me>
         <p>
+          <me>
+            f(X) = \left\{ \begin{matrix} 
+              x^{\frac{3}{2}} \sin \left( \frac{1}{x} \right) \amp x \in
+              (0,1] \\ 0 \amp x = 0
+            \end{matrix} \right.
+          </me>
           This isn't Lipschitz continuous, but it is differentiable
           near zero, showing that differentiability isn't sufficient.
           However, there is some good news: this example is a strange
@@ -195,7 +194,7 @@
       <statement>
         <p>
           A function which is <m>C^1</m> at a point <m>a</m> in its
-          domain is also Lipschitz continuous at a.  
+          domain is also Lipschitz continuous at a.
         </p>
       </statement>
     </proposition>
@@ -207,15 +206,15 @@
       and if it is bounded.
     </p>
     <p>
-      Consider the <m>f(x) = x^2</m>.  The derivaitve is <m>2x</m>,
-      which is bounded locally near <m>0</m>.  <m>f(x) =
+      Consider the <m>f(x) = x^2</m>. The derivaitve is <m>2x</m>,
+      which is bounded locally near <m>0</m>. <m>f(x) =
       x^\frac{2}{3}</m> has derivative <m>\frac{2}{3}
-      x^{\frac{-1}{3}}</m> which is unbounded near 0.  The former
+      x^{\frac{-1}{3}}</m> which is unbounded near 0. The former
       function is Lipschitz continuous on finite intervals centred at
       the origin and the later is not.
     </p>
   </subsection>
-  <subsection xml:id="uniqueness">
+  <subsection xml:id="subsection-uniqueness">
     <title>Uniqueness</title>
     <p>
       The theorem for uniqueness is called the Picard-Lindelhöf thereom.
@@ -228,16 +227,18 @@
           If <m>F</m> is Lipschitz continuous in y and continuous is x
           on an open set <m>U</m> in <m>\RR^2</m> and if <m>(x_0,y_0)
           \in U</m> then the initial value problem
-          <me>
-            \frac{dy}{dx} = F(x,y) \hspace{2cm} y(x_0) = y_0
-          </me>
+          <md>
+            <mrow>
+              \amp \frac{dy}{dx} = F(x,y) \amp \amp y(x_0) = y_0
+            </mrow>
+          </md>
           has a unique solution <m>y=f(x)</m> defined on the domain
           <m>[x_0-\epsilon,x_0+\epsilon]</m> for some <m>\epsilon > 0</m>.
         </p>
       </statement>
     </theorem>
     <p>
-      All of the comments from the previous theorem apply here.  The
+      All of the comments from the previous theorem apply here. The
       result is very local, relies on topology, and the proof is
       beyond the scope of the course. Before moving to examples, let
       me make an important point about the direction of implication in
@@ -252,15 +253,15 @@
     </p>
     <example>
       <statement>
-        <me>
-          \frac{dy}{dx} = x \sqrt{y}
-        </me>
         <p>
-          Let me considered the same example as before.  This DE  had
-          multiple solutions for initial value <m>y(0) = 0</m>.  The
+          <me>
+            \frac{dy}{dx} = x \sqrt{y}
+          </me>
+          Let me considered the same example as before. This DE  had
+          multiple solutions for initial value <m>y(0) = 0</m>. The
           function <m>F(x,y) = x\sqrt{y}</m> has <m>y</m> deriavtive
           <m>\frac{\del F}{\del y} = \frac{x}{2\sqrt{y}}</m>, which is
-          unbounded near <m>0</m>.  Therefore, it is not Lipschitz
+          unbounded near <m>0</m>. Therefore, it is not Lipschitz
           continuous and doesn't satisfy the continious of the
           Picard-Lidenlhöf theorem, meaning that I can't be assured of
           a unique solution. (Again, the failure of Lipschitz
@@ -276,11 +277,9 @@
       <me>
         \frac{dy}{dx} = Q(x) - P(x) y
       </me>
-    </p>
-    <p>
       In this case, <m>F(x,y) = Q(x) - P(x)y</m> and the <m>y</m>
       derivative is <m>-P(x)</m>, which is bounded assuming that
-      <m>P</m> is continuous.  I can apply the Picard-Lindelhöf
+      <m>P</m> is continuous. I can apply the Picard-Lindelhöf
       theorem to conclude that linear equations have unique solutions
       whenever their coefficient functions <m>P</m> and <m>Q</m> are
       continuous. I can go into the next section of the course with

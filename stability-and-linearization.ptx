@@ -35,7 +35,7 @@
           diagram, trajectories points toward stable steady states.
           Similar, a steady state is <term>stable or attractive from
           above or below</term> if the trajectory above or below,
-          respectively, points towards the steady state.  If both
+          respectively, points towards the steady state. If both
           trajectories point away, the steady state is called
           <term>unstable</term>. Unstable steady states are also
           called <term>repellors</term>.
@@ -122,7 +122,7 @@
       stability: positive and the solution is unstabe, since
       exponential growth takes the solution away from the steady
       state; negative and the solution is stable, since exponential
-      decay takes the solution towards the steady state.  This can
+      decay takes the solution towards the steady state. This can
       also be seen in the phase line, since the sign of the derivative
       can indicate the trajectories on either side of the steady
       state. If <m>f^\prime(P) = 0</m>, then the stability is
@@ -133,15 +133,15 @@
     </p>
     <p>
       For now, there isn't much more I will do with this
-      linearization.  However, it is worth introducing here as a theme
-      since it is so central to applied mathematics.  Linear equations
+      linearization. However, it is worth introducing here as a theme
+      since it is so central to applied mathematics. Linear equations
       are almost always the first kind of DE that applied
       mathematicians try to use, typically since they have elegant and
-      accessible solutions.  Everything else gets simply referred to a
+      accessible solutions. Everything else gets simply referred to a
       <sq>non-linear</sq>; in many ways, <sq>non-linear</sq> is a
-      synonmy for annoying and complicated.  However, linear models
+      synonmy for annoying and complicated. However, linear models
       only go so far and often the non-linearity holds the key to
-      understanding a model.  Even so, I often want to understand the
+      understanding a model. Even so, I often want to understand the
       linear part first and then figure out how to add in the
       non-linearity in a reasonable fashion to add subtlety to a
       model.

@@ -30,12 +30,31 @@
       since heat cannot jump discontinuously.
       The local description that measures this heat difference is the concavity of the function.
       Moreover, concave down regions want to equalize downward and concave up regions want to equalize upwards,
-      as in <xref ref="figure-heat-equation">Figure</xref>.
+      as in <xref ref="figure-heat-equation" />.
       Therefore, the heat diffusion should be proportional to the concavity with a positive proportionality constant.
     </p>
     <figure xml:id="figure-heat-equation">
       <caption>Concavity and Heat Diffusion</caption>
-      <image width="1200%" source="images/figure40.png" />
+      <image xml:id="figure40" width="80%">
+        <asymptote>
+          size(10cm,6cm,IgnoreAspect);
+          import graph;
+          xaxis("$x$");
+          yaxis("$u$");
+
+          draw((0,3){E}..{E}(2,5){E}..{E}(4,3){E}..{E}(6,1){E}..{E}(8,3));
+
+          draw((0,3)--(8,3),dashed);
+
+          draw((2,5)--(2,3),Arrow);
+          draw((6,1)--(6,3),Arrow);
+
+          label("Concave down diffuses downard.",(3,5),N);
+          label("Concave up diffuses upward.",(6,1),S);
+          label("$u(x)$",(4,3),NE);
+          label("Equilibrium",(2,3),S);
+        </asymptote>
+      </image>
     </figure>
     <p>
       We translate these thermodynamic realities into a partial differential equation.
@@ -98,10 +117,10 @@
     <p>
       Like all of our assumptions about DEs, we simply put this back into the equation.
       <md>
-        <mrow>\frac{\del^2 u}{\del x^2} \amp  = X^{\prime \prime}(x) T(t)</mrow>
-        <mrow>\frac{\del u}{\del t} \amp  = T^{\prime}(t) X(x)</mrow>
-        <mrow>k X^{\prime \prime} T(t) \amp  = X(t) T^\prime(t)</mrow>
-        <mrow>\frac{X^{\prime \prime}(x)}{X(x)} \amp  = \frac{1}{k} \frac{T^\prime(t)}{T(t)}</mrow>
+        <mrow>\frac{\del^2 u}{\del x^2} \amp = X^{\prime \prime}(x) T(t)</mrow>
+        <mrow>\frac{\del u}{\del t} \amp = T^{\prime}(t) X(x)</mrow>
+        <mrow>k X^{\prime \prime} T(t) \amp = X(t) T^\prime(t)</mrow>
+        <mrow>\frac{X^{\prime \prime}(x)}{X(x)} \amp = \frac{1}{k} \frac{T^\prime(t)}{T(t)}</mrow>
       </md>
     </p>
     <p>
@@ -112,8 +131,8 @@
       This completes the seperation of variables,
       giving us two ordinary differential equations.
       <md>
-        <mrow>\frac{X^{\prime \prime}(x)}{X(x)} \amp  = \alpha</mrow>
-        <mrow>\frac{1}{k} \frac{T^\prime(t)}{T(t)} \amp  = \alpha</mrow>
+        <mrow>\frac{X^{\prime \prime}(x)}{X(x)} \amp = \alpha</mrow>
+        <mrow>\frac{1}{k} \frac{T^\prime(t)}{T(t)} \amp = \alpha</mrow>
       </md>
     </p>
     <p>
@@ -130,9 +149,32 @@
       but <m>X</m> solutions depend more carefully on the boundary conditions.
     </p>
     <figure xml:id="figure-seperable-solution1">
-      <caption>Seperated Solution with <m>n=5</m> at Various Points in
-      Time.</caption>
-      <image width="1200%" source="images/figure41.png" />
+      <caption>
+        Seperated Solution with <m>n=5</m> at Various Points in
+        Time.
+      </caption>
+      <image xml:id="figure41" width="80%">
+        <asymptote>
+          size(10cm,6cm,IgnoreAspect);
+          import graph;
+          xaxis("$x$");
+          yaxis("$u$");
+
+          real f1(real x) {return sin(5*x);}
+          real f2(real x) {return (1/2)*sin(5*x);}
+          real f3(real x) {return (1/4)*sin(5*x);}
+          real f4(real x) {return (1/8)*sin(5*x);}
+          real f5(real x) {return (1/(16))*sin(5*x);}
+          real f6(real x) {return (1/(32))*sin(5*x);}
+
+          draw(graph(f1,0,pi));
+          draw(graph(f2,0,pi));
+          draw(graph(f3,0,pi));
+          draw(graph(f4,0,pi));
+          draw(graph(f5,0,pi));
+          draw(graph(f6,0,pi));
+        </asymptote>
+      </image>
     </figure>
     <p>
       The <m>X</m> equation is a second order linear equation:
@@ -181,7 +223,7 @@
       In these solutions, we see sine waves decaying over time.
       The integer <m>n</m> gives the number of osscilations of the wave in on the rod,
       and the exponential terms give a decay in amplitude over time.
-      <xref ref="figure-seperable-solution1">Figure</xref>
+      <xref ref="figure-seperable-solution1" />
       shows the decay of a simple sine wave with <m>n=5</m>.
     </p>
     <p>
@@ -208,13 +250,36 @@
       of various seperable pieces.)
       The initial value <m>u(x,0)</m> also isn't a simple sine wave anymore,
       since it is the function <m>f(x) = 4\sin 3t + .6 \sin 5t</m>.
-      <xref ref="figure-seperable-solution2">Figure</xref>
+      <xref ref="figure-seperable-solution2" />
       shows the decay of this initial condition.
     </p>
     <figure xml:id="figure-seperable-solution2">
-      <caption>Decay of the Solution with Initial Condition <m>f(x) =
-      4 \sin 3t + 6 \sin 5t</m></caption>
-      <image width="1200%" source="images/figure42.png" />
+      <caption>
+        Decay of the Solution with Initial Condition <m>f(x) = 4 \sin
+        3t + 6 \sin 5t</m>
+      </caption>
+      <image xml:id="figure42" width="80%">
+        <asymptote>
+          size(10cm,6cm,IgnoreAspect);
+          import graph;
+          xaxis("$x$");
+          yaxis("$u$");
+
+          real f1(real x) {return (4*sin(3*x) + 6*sin(5*x));}
+          real f2(real x) {return (1/2)*(4*sin(3*x) + 6*sin(5*x));}
+          real f3(real x) {return (1/4)*(4*sin(3*x) + 6*sin(5*x));}
+          real f4(real x) {return (1/8)*(4*sin(3*x) + 6*sin(5*x));}
+          real f5(real x) {return (1/(16))*(4*sin(3*x) + 6*sin(5*x));}
+          real f6(real x) {return (1/(32))*(4*sin(3*x) + 6*sin(5*x));}
+
+          draw(graph(f1,0,pi));
+          draw(graph(f2,0,pi));
+          draw(graph(f3,0,pi));
+          draw(graph(f4,0,pi));
+          draw(graph(f5,0,pi));
+          draw(graph(f6,0,pi));
+        </asymptote>
+      </image>
     </figure>
     <p>
       In theory, we could add any number of the seperable solutions together.

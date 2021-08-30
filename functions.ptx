@@ -41,15 +41,15 @@
   <definition>
     <statement>
       <p>
-        Let <m>A</m> be a subset of <m>\RR</m>.  A function <m>f:A
+        Let <m>A</m> be a subset of <m>\RR</m>. A function <m>f:A
         \rightarrow \RR</m> is <term>piecewise-continuous</term> on
         <m>A</m> if it continous everywhere on <m>A</m> except for a
-        set of isolated point.  Likewise, <m>f</m> is
+        set of isolated point. Likewise, <m>f</m> is
         <term>piecewise-differentiable</term> on <m>A</m> if it
         differentiable everywhere on <m>A</m> except for a set of
-        isolated points.  Note that <m>A</m> is the domain of the
+        isolated points. Note that <m>A</m> is the domain of the
         function: these piecewise functions can have jumps or break,
-        but they are defined on all of <m>A</m>.  They cannot have,
+        but they are defined on all of <m>A</m>. They cannot have,
         for example, asymptotes at these isolated points.
       </p>
     </statement>
@@ -59,7 +59,7 @@
     exponential functions solve many important differential equations.
     As in other calculus courses, I almost exclusively use the base
     <m>e</m> in this course, since it is the easiest base for
-    derivatives and integrals.  Since any other base <m>a^t</m> can be
+    derivatives and integrals. Since any other base <m>a^t</m> can be
     written <m>a^t = e^{\ln a t}</m>, I will very frequently work with
     functions of the form <m>e^{\alpha t}</m> for some <m>\alpha \in
     \RR</m>. You can expect that typical exponential function to have

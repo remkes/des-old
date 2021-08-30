@@ -1,117 +1,151 @@
 <section xml:id="distributions">
   <title>Distributions</title>
   <p>
-    In the world of functional analysis and the use of transforms,
-    it turns out we can extend our notion of a function in strange and novel ways.
-    While I'm not going to give a formal definition,
-    these extensions are called distributions.
-    The basic idea is that a distribution may not be a well-defined function,
-    but it is something that behaves well in integration. (If the word <sq>distribution</sq> reminds you of probability and statistics,
-    that's a good intuition.
-    These distributions are very similar to distributions used in statistics).
+    In the world of functional analysis and the use of transforms, it
+    turns out we can extend our notion of a function in strange and
+    novel ways. While I'm not going to give a formal definition,
+    these extensions are called distributions. The basic idea is that
+    a distribution may not be a well-defined function, but it is
+    something that behaves well in integration. (If the word
+    <sq>distribution</sq> reminds you of probability and statistics,
+    that's a good intuition. These distributions are very similar to
+    distributions used in statistics).
   </p>
   <p>
-    The distribution we will be using in this section is the <m>\delta</m>-function.
-    (The name is terrible, since it is most certainly
-    <em>not</em> a function.)
+    The distribution we will be using in this section is the
+    <m>\delta</m>-function. (The name is terrible, since it is most
+    certainly <em>not</em> a function.)
   </p>
   <definition>
     <statement>
       <p>
         The <m>\delta</m>-function is a distribution with values
         <me>
-          \delta_a(t) = \left\{ \begin{matrix} \infty \amp  t = a \\ 0 \amp  t \neq a \end{matrix} \right.
+          \delta_a(t) = \left\{ \begin{matrix} \infty \amp t = a \\ 0
+          \amp t \neq a \end{matrix} \right.
         </me>
-      </p>
-      <p>
-        This is not a function,
-        since <m>\infty</m> is not a valid output for a function.
-        However, this does give us an intuition.
-        We can think of <m>\delta_a(t)</m> as a thing which is zero away from <m>t=a</m> and has an infinitely tall spike at <m>t=a</m>.
-        Often, this is defined by a limit.
+        This is not a function, since <m>\infty</m> is not a valid
+        output for a function. However, this does give us an
+        intuition. We can think of <m>\delta_a(t)</m> as a thing
+        which is zero away from <m>t=a</m> and has an infinitely tall
+        spike at <m>t=a</m>. Often, this is defined by a limit.
       </p>
     </statement>
   </definition>
   <p>
-    Let <m>b > 0</m> and consider the bell curve function <m>\frac{\sqrt{b}}{\sqrt{\pi}} e^{-b(t-a)^2}</m>.
-    All of these functions have integral <m>1</m>,
-    by design of the choice of the coefficient.
+    Let <m>b > 0</m> and consider the bell curve function
+    <m>\frac{\sqrt{b}}{\sqrt{\pi}} e^{-b(t-a)^2}</m>. All of these
+    functions have integral <m>1</m>, by design of the choice of the
+    coefficient.
     <me>
-      \int_{-\infty}^\infty \frac{\sqrt{b}}{\sqrt{\pi}} e^{-b(t-a)^2} dt = \frac{\sqrt{b}}{\sqrt{\pi}} \int_{-\infty}^\infty e^{-b(t-a)^2} dt = \frac{\sqrt{b}}{\sqrt{\pi}} \frac{ \sqrt{\pi}}{\sqrt{b}} = 1
+      \int_{-\infty}^\infty \frac{\sqrt{b}}{\sqrt{\pi}} e^{-b(t-a)^2}
+      dt = \frac{\sqrt{b}}{\sqrt{\pi}} \int_{-\infty}^\infty
+      e^{-b(t-a)^2} dt = \frac{\sqrt{b}}{\sqrt{\pi}} \frac{
+      \sqrt{\pi}}{\sqrt{b}} = 1
     </me>
   </p>
   <figure xml:id="figure-bell-curves">
     <caption>Narrower and Narrower Bell Curves</caption>
-    <image width="1100%" source="images/figure23.png" />
+    <image xml:id="figure23" width="90%">
+      <asymptote>
+        size(8cm,6cm,IgnoreAspect); 
+        import graph;
+        
+        xaxis(Ticks());
+        yaxis(Ticks());
+
+        real f1(real x) {return sqrt(1)*exp(-1*(x^2));}
+        draw(graph(f1,-1,1));
+
+        real f2(real x) {return sqrt(2)*exp(-2*(x^2));}
+        draw(graph(f2,-1,1));
+
+        real f3(real x) {return sqrt(3)*exp(-3*(x^2));}
+        draw(graph(f3,-1,1));
+
+        real f4(real x) {return sqrt(4)*exp(-4*(x^2));}
+        draw(graph(f4,-1,1));
+
+        real f5(real x) {return sqrt(5)*exp(-5*(x^2));}
+        draw(graph(f5,-1,1));
+
+        real f6(real x) {return sqrt(6)*exp(-6*(x^2));}
+        draw(graph(f6,-1,1));
+
+        real f7(real x) {return sqrt(7)*exp(-7*(x^2));}
+        draw(graph(f7,-1,1));
+
+        real f8(real x) {return sqrt(8)*exp(-8*(x^2));}
+        draw(graph(f8,-1,1));
+
+        real f9(real x) {return sqrt(9)*exp(-9*(x^2));}
+        draw(graph(f9,-1,1));
+
+        real f10(real x) {return sqrt(10)*exp(-10*(x^2));}
+        draw(graph(f10,-1,1));
+      </asymptote>
+    </image>
   </figure>
   <p>
-    These functions are all bell curves,
-    but they become taller and narrower at <m>b</m> increases.
-    <xref ref="figure-bell-curves">Figure</xref>
+    These functions are all bell curves, but they become taller and
+    narrower at <m>b</m> increases. <xref ref="figure-bell-curves" />
     shows the progression of these bell curves.
   </p>
   <p>
     Then we could define <m>\delta_a(t)</m> as
     <me>
-      \delta_a(t) = \lim_{b \rightarrow \infty} \frac{\sqrt{b}}{\sqrt{\pi}} e^{b(t-a)^2}
+      \delta_a(t) = \lim_{b \rightarrow \infty}
+      \frac{\sqrt{b}}{\sqrt{\pi}} e^{b(t-a)^2}
     </me>.
-  </p>
-  <p>
-    The delta function is the limit of these functions.
-    The intuition before,
-    of an infinitely narrow and infinitely tall spike, fits this limit process,
-    since the bell curves are becoming taller and narrower with each step.
-    The value of the integral is unchanged for the entire limit process.
-    Since integration works well with limits,
-    the integral of the delta function should be 1.
+    The delta function is the limit of these functions. The intuition
+    before, of an infinitely narrow and infinitely tall spike, fits
+    this limit process, since the bell curves are becoming taller and
+    narrower with each step. The value of the integral is unchanged
+    for the entire limit process. Since integration works well with
+    limits, the integral of the delta function should be 1.
     <me>
       \int_{-\infty}^\infty \delta_a(t) dt = 1
     </me>
-  </p>
-  <p>
-    We said that distribution worked well with integration and we just defined the integral of <m>\delta_a</m> over <m>\RR</m>.
-    Now we can think about integrating products <m>f(t) \delta_a(t)</m>.
+    We said that distribution worked well with integration and we just
+    defined the integral of <m>\delta_a</m> over <m>\RR</m>. Now we
+    can think about integrating products <m>f(t) \delta_a(t)</m>.
   </p>
   <p>
     If we integrate <m>f(t) \frac{\sqrt{a}}{\sqrt{\pi}} e^{-at^2}</m>,
-    we get a weighted average of <m>f(t)</m> values near <m>a</m>.
-    In the limit, though, only the value at <m>f(a)</m> matters,
-    since we multiply by zero everywhere else.
-    This gives the most convenient proprety of <m>\delta</m>-function.
+    we get a weighted average of <m>f(t)</m> values near <m>a</m>. In
+    the limit, though, only the value at <m>f(a)</m> matters, since we
+    multiply by zero everywhere else. This gives the most convenient
+    proprety of <m>\delta</m>-function.
     <me>
       \int_{-\infty}^\infty \delta_a (t) f(t) dt = f(a)
     </me>
+    In some sense, the <m>\delta</m>-functions are the nicest possible
+    functions to integrate, since their integrals are just evaluations
+    of functions.
   </p>
   <p>
-    In some sense,
-    the <m>\delta</m>-functions are the nicest possible functions to integrate,
-    since their integrals are just evaluations of functions.
-  </p>
-  <p>
-    Since the <m>\delta</m>-function,
-    and distributions in general,
+    Since the <m>\delta</m>-function, and distributions in general,
     work well with integration, we can take their Laplace transforms.
-    The Laplace transform for the <m>\delta</m>-function is very easy to calculate.
+    The Laplace transform for the <m>\delta</m>-function is very easy
+    to calculate.
     <me>
-      \calL \{ \delta_a(t) \} (s) = \int_0^\infty \delta_a (t) e^{-st} dt = \left\{ \begin{matrix} 0 \amp  a \lt  0 \\ 1 \amp  a = 0 \\ e^{-as} \amp  a \geq 0 \end{matrix} \right.
+      \calL \{ \delta_a(t) \} (s) = \int_0^\infty \delta_a (t) e^{-st}
+      dt = \left\{ \begin{matrix} 0 \amp a \lt  0 \\ 1 \amp a = 0 \\
+      e^{-as} \amp a \geq 0 \end{matrix} \right.
     </me>
+    Again, this is quite an odd result. We started with a
+    distribution which wasn't even a proper function, but it's Laplace
+    transform is a proper, well-behaved differentiable function.
   </p>
   <p>
-    Again, this is quite an odd result.
-    We started with a distribution which wasn't even a proper function,
-    but it's Laplace transform is a proper,
-    well-behaved differentiable function.
-  </p>
-  <p>
-    Before we end this section,
-    we can ask why we would define such a strange function.
-    Let's think about harmonic systems and forcing terms again.
-    The <m>\delta</m>-function can act as a forcing term;
-    if it does, it represents an instantaneous jolt to the system.
-    The standard image of a harmonic system is a mass on a spring.
-    In this image,
-    a <m>\delta</m>-function represents hitting the mass with a hammer at one moment in time.
-    The force only acts for an instant,
-    but it transfers some finite energy and causes a change in the system.
+    Before we end this section, we can ask why we would define such a
+    strange function. Let's think about harmonic systems and forcing
+    terms again. The <m>\delta</m>-function can act as a forcing
+    term; if it does, it represents an instantaneous jolt to the
+    system. The standard image of a harmonic system is a mass on a
+    spring. In this image, a <m>\delta</m>-function represents
+    hitting the mass with a hammer at one moment in time. The force
+    only acts for an instant, but it transfers some finite energy and
+    causes a change in the system.
   </p>
 </section>

@@ -35,8 +35,6 @@
       <me>
         F(t,y, y^\prime, \ldots, y^{(n)}) = 0
       </me>
-    </p>
-    <p>
       Often, if I can, I isolate the highest derivative.
       <me>
         y^{(n)} = F(t,y,y^\prime, \ldots, y^{(n-1)})
@@ -63,8 +61,6 @@
             a_n(t)y^{(n)} + a_{n-1}(t)y^{(n-1)} + \ldots + a_1(t)
             y^\prime + a_0(t) y = f(t)
           </me>.
-        </p>
-        <p>
           In addition, a linear equation is called
           <term>homogenous</term> if the <m>f(t)</m> term is simply
           <m>f(t) = 0</m>.
@@ -130,8 +126,6 @@
           <me>
             \frac{df}{dt} = \alpha f(t)
           </me>.
-        </p>
-        <p>
           For many differential equations, I seek a translation of
           their meaning. The translation of this simple equation is
           that the rate of change is propotional to the current value.
@@ -241,10 +235,10 @@
     </p>
     <example>
       <statement>
-        <me>
-          \frac{d^2f}{dt^2} + 9 f = 0
-        </me>
         <p>
+          <me>
+            \frac{d^2f}{dt^2} + 9 f = 0
+          </me>
           This is solved by <m>\sin 3t</m> and also by <m>\cos 3t</m>.
           Moreover, any linear combination <m>a\sin 3t + b \cos 3t</m>
           is a solution. In a second order equation, I expect two
@@ -256,10 +250,10 @@
     </example>
     <example>
       <statement>
-        <me>
-          \frac{dy}{dt} = t \sqrt{y}
-        </me>
         <p>
+          <me>
+            \frac{dy}{dt} = t \sqrt{y}
+          </me>
           This is solved by <m>y = (\frac{t^2}{4} + c)^2</m>, which is
           a nice family with one real parameter. However, this is
           also solved by <m>y=0</m>, even though it isn't in the
@@ -279,19 +273,19 @@
     </definition>
     <example>
       <statement>
-        <me>
-          t \frac{dy}{dt} = 4y
-        </me>
         <p>
+          <me>
+            t \frac{dy}{dt} = 4y
+          </me>
           This is solved by <m>y = ct^4</m>, which is another
           reasonable family. However, there is a strange, singular
           solution.
           <me>
-            y(t) = \left\{ \begin{matrix} -t^4 \amp  t \leq 0 \\ t^4
-            \amp  t>0 \end{matrix} \right.
+            y(t) = \left\{ \begin{matrix} 
+              -t^4 \amp t \leq 0 \\ 
+              t^4 \amp t>0 
+            \end{matrix} \right.
           </me>
-        </p>
-        <p>
           The derivatives of this function line up at the origin, so
           the function is of class <m>C^1</m> (actually <m>C^3</m>, if
           you work it out).
@@ -300,10 +294,10 @@
     </example>
     <example>
       <statement>
-        <me>
-          \frac{dy}{dx} = \frac{-x}{y}
-        </me>
         <p>
+          <me>
+            \frac{dy}{dx} = \frac{-x}{y}
+          </me>
           The curve <m>x^2 + y^2 = c</m> solves this equation
           implicitly. I could break this up into two functions, but
           its much more natural to leave it as an implicit locus, in
@@ -355,10 +349,10 @@
     </p>
     <example>
       <statement>
-        <me>
-          \frac{dy}{dt} = e^{-t^2} \implies y = \int e^{-t^2}dt + C
-        </me>
         <p>
+          <me>
+            \frac{dy}{dt} = e^{-t^2} \implies y = \int e^{-t^2}dt + C
+          </me>
           This integrand is a <m>C^\infty</m> function, so the
           anti-derivative exists, but there is no name for it in the
           elementary functions. This is not uncommon. Often I will

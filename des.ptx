@@ -8,13 +8,11 @@
     <xi:include href="./frontmatter.ptx" />
     <xi:include href="./prelim.ptx" />
     <xi:include href="./first-order-odes.ptx" />
-    <!--
     <xi:include href="./second-order-odes.ptx" />
     <xi:include href="./series-solutions.ptx" />
     <xi:include href="./laplace-transforms.ptx" />
     <xi:include href="./systems.ptx" />
     <xi:include href="./pdes.ptx" />
-    -->
     <backmatter>
     </backmatter>
   </book>

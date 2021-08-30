@@ -123,7 +123,7 @@
         </asymptote>
       </image>
     </figure>
-    <figure xml:id="figure-direction-field8">
+    <figure xml:id="figure-direction-field6-curves">
       <caption>
           Direction Field with Solutions for <m>\frac{dy}{dt}=
           \frac{\sin t}{y}</m>
@@ -160,28 +160,26 @@
         Here is a separable DE, which I solve with the method
         described above, separating the variables, integrating both
         sides, and solving for the dependent variable. 
-      </p>
-      <md>
-        <mrow>
-          \frac{dy}{dt} \amp  = \frac{\sin t}{y}
-        </mrow>
-        <mrow>
-          y \frac{dy}{dt} \amp  = \sin t 
-        </mrow>
-        <mrow>
-          \int y \frac{dy}{dt} dt \amp  = \sin t dt
-        </mrow>
-        <mrow>
-          \int y dy \amp  = \sin t dt
-        </mrow>
-        <mrow>
-          \frac{y^2}{2} \amp  = - \cos t + c
-        </mrow>
-        <mrow>
-          y \amp  = \pm \sqrt{c - 2\cos t}
-        </mrow>
-      </md>
-      <p>
+        <md>
+          <mrow>
+            \frac{dy}{dt} \amp = \frac{\sin t}{y}
+          </mrow>
+          <mrow>
+            y \frac{dy}{dt} \amp = \sin t 
+          </mrow>
+          <mrow>
+            \int y \frac{dy}{dt} dt \amp = \sin t dt
+          </mrow>
+          <mrow>
+            \int y dy \amp = \sin t dt
+          </mrow>
+          <mrow>
+            \frac{y^2}{2} \amp = - \cos t + c
+          </mrow>
+          <mrow>
+            y \amp = \pm \sqrt{c - 2\cos t}
+          </mrow>
+        </md>
         It is interesting to note where the constant of integration
         ends up. Since integration isn't the final step (we have to
         also solve for <m>y</m>), the constant moves around in the
@@ -194,20 +192,18 @@
         thus a unique solution.
         <md>
           <mrow>
-            1 \amp  = \sqrt{c - 2 \cos (0)} = \sqrt{c-2}
+            1 \amp = \sqrt{c - 2 \cos (0)} = \sqrt{c-2}
           </mrow>
           <mrow>
-            1 \amp  = c-2
+            1 \amp = c-2
           </mrow>
           <mrow>
-            c \amp  = 3
+            c \amp = 3
           </mrow>
           <mrow>
-            y \amp  = \sqrt{3 - 2 \cos t}
+            y \amp = \sqrt{3 - 2 \cos t}
           </mrow>
         </md>
-      </p>
-      <p>
         <xref ref="figure-direction-field6" /> shows the direction
         field and for this example and <xref
         ref="figure-direction-field6-curves" /> shows several solution
@@ -293,27 +289,25 @@
         autonomous example, so the right side integral is trivial. 
         <md>
           <mrow>
-            \frac{dy}{dt} \amp  = y^2 - 4
+            \frac{dy}{dt} \amp = y^2 - 4
           </mrow>
           <mrow>
-            \int \frac{1}{y^2-4} dy \amp  = \int 1 dt
+            \int \frac{1}{y^2-4} dy \amp = \int 1 dt
           </mrow>
           <mrow>
-            \frac{-1}{2} \arctanh \left( \frac{y}{2} \right) \amp  = t
+            \frac{-1}{2} \arctanh \left( \frac{y}{2} \right) \amp = t
             + c
           </mrow>
           <mrow>
-            \arctanh \left( \frac{y}{2} \right) \amp  = -2t + c
+            \arctanh \left( \frac{y}{2} \right) \amp = -2t + c
           </mrow>
           <mrow>
-            \frac{y}{2} \amp  = \tanh (-2t + c)
+            \frac{y}{2} \amp = \tanh (-2t + c)
           </mrow>
           <mrow>
-            y \amp  = 2 \tanh (-2t + c)
+            y \amp = 2 \tanh (-2t + c)
           </mrow>
         </md>
-      </p>
-      <p>
         Since this is an autonomous equation, I should look for steady
         singular solutions when the right side of the equation
         vanishes. On the graph, the steady state solutions should be
