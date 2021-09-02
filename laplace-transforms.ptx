@@ -10,4 +10,5 @@
   <xi:include  href="laplace-periodic.ptx" />
   <xi:include  href="laplace-algebraic.ptx" />
   <xi:include  href="laplace-examples.ptx" />
+  <xi:include  href="laplace-activity.ptx" />
 </chapter>

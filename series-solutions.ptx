@@ -7,4 +7,5 @@
   <xi:include  href="issues.ptx" />
   <xi:include  href="regular-singular-points.ptx" />
   <xi:include  href="bessel-functions.ptx" />
+  <xi:include  href="series-solutions-activity.ptx" />
 </chapter>

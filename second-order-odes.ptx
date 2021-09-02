@@ -5,6 +5,7 @@
   <xi:include  href="undetermined-coefficients.ptx" />
   <xi:include  href="resonance.ptx" />
   <xi:include  href="variation-parameters.ptx" />
+  <xi:include  href="second-order-activity.ptx" />
 </chapter>
 
 

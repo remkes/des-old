@@ -5,4 +5,5 @@
   <xi:include  href="heat-equation.ptx" />
   <xi:include  href="fourier-series.ptx" />
   <xi:include  href="heat-equation-boundary.ptx" />
+  <xi:include  href="pdes-activity.ptx" />
 </chapter>

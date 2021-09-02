@@ -4,4 +4,5 @@
   <xi:include  href="systems-key-examples.ptx" />
   <xi:include  href="systems-qualitative-methods.ptx" />
   <xi:include  href="linear-systems.ptx" />
+  <xi:include  href="systems-activity.ptx" />
 </chapter>
