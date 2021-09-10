@@ -98,7 +98,7 @@
         derivatives is an adjustment of the usual Leibniz notation.
         <md>
           <mrow>
-            \amp \frac{\del f}{\del x} \amp \amp \frac{del f}{\del y} 
+            \amp \frac{\del f}{\del x} \amp \amp \frac{\del f}{\del y} 
           </mrow>
         </md>
       </p>

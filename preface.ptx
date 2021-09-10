@@ -27,7 +27,7 @@
       <li>
         <xref ref="chapter-second-order-odes" /> is the study of
         second order ordinary differential equations. Going to second
-        order equations means that we can address acceleration (which
+        order equations means that I can address acceleration (which
         is a second derivative). The motivating example is harmonic
         oscillation: from simple springs and pendulums to more
         complicated applictions inlcuding friction and damping. Second

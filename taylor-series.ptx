@@ -11,12 +11,12 @@
     <statement>
       <p>
         A function is <term>analytic</term> if it can be expressed as
-        a <term>Taylor series</term>.
+        a <term>taylor series</term>.
         <me>
           f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
         </me>
-        A Taylor series is centered at a point <m>\alpha</m>; if
-        <m>\alpha = 0</m> I call it a <term>McLaurin series</term>.
+        A taylor series is centered at a point <m>\alpha</m>; if
+        <m>\alpha = 0</m> I call it a <term>mcLaurin series</term>.
         A series defines a function on some domain
         <m>(\alpha-R,\alpha+R)</m> for some number <m>R \geq 0</m>,
         which is called a <term>radius of convergence</term>. If
@@ -29,13 +29,13 @@
   <p>
     I use the ratio or root tests to calculate the radius of
     convergence of a series. After some manipulation of those tests,
-    (if the coefficients are non-zer) the radius of convergence is
+    (if the coefficients are non-zero) the radius of convergence is
     given by the formula
     <me>
       R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
       \right| = \lim_{n \rightarrow \infty} \frac{1}{\sqrt[n]{|c_n|}}
     </me>.
-    Inside the radius of convergence, the behaviour of a Taylor series
+    Inside the radius of convergence, the behaviour of a taylor series
     is very reasonable. I can add and subtract terms when the
     indices match. I can multiply series like polynomials, though
     the calculation gets arduous. I can even divide using long
@@ -55,7 +55,7 @@
       \sum_{n=0}^\infty c_n x_n = c_0 + c_1 x + c_2 x^2 +
       \sum_{n=3}^\infty c_n x_n
     </me>
-    Inside the radius of convergence, the calculus of Taylor series is
+    Inside the radius of convergence, the calculus of taylor series is
     well behaved. I can integrate and differentiate term-wise.
     <md>
       <mrow>
@@ -72,8 +72,8 @@
     In particular, I know that integrals and derivatives are always
     defined. This shows that analytic functions are necessarily
     <m>C^\infty</m> on the domain given by the radius of convergence.
-    (This is, in fact, an equivalence: any <m>C^\infty</m> function
-    has a Taylor series with some radius <m>R</m>).
+    This is, in fact, an equivalence: any <m>C^\infty</m> function
+    has a taylor series with some radius <m>R</m>.
   </p>
   <p>
     Evaluating the derivatives of a series at the centre point

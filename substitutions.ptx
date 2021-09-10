@@ -22,17 +22,17 @@
   <subsection xml:id="subsection-homogeneous">
     <title>Homogeneous DEs</title>
     <p>
-      The first substitution is for a class of terribly named DEs
-      called homogenous equations. Unfortunately, this is a terrible
-      term: this homogeneous has <em>nothing</em> to do with the
+      The first substitution is for a class of DEs called homogenous
+      equations. Unfortunately, this is a terrible term: this
+      <sq>homogeneous</sq> has <em>nothing</em> to do with the
       previous use of the term for linear equations. The word here
       comes from a different use of the term in algebra. This is
-      deeply confusing and unfortunately, but it is the situation. In
+      deeply confusing and unfortunate, but it is the situation. In
       any case, a homogenous DE has the following form.
       <me>
         \frac{dy}{dt} = f \left( \frac{y}{t} \right)
       </me>
-      The substitution is the relatively obvious replacement <m>v =
+      The substitution that simplifies these equations is <m>v =
       \frac{y}{t}</m>. The right side of the equation easily turns
       into <m>f(v)</m>, but the transformation of the left side is
       trickier. Let me do some algebra to try to demonstrate it.
@@ -47,7 +47,7 @@
         </mrow>
       </md>
       Now I have an expression that I can use to replace the left
-      side. Changing both the left and the right sides give a new
+      side. Changing both the left and the right sides gives a new
       differential equation in the new function <m>v(t)</m>.
       <me>
         v + t \frac{dv}{dt} = f(v) 
@@ -66,8 +66,8 @@
         <p>
           This example is already a separable equation, so I don't
           really need the technique of substitution. However is it a
-          nice, relatively easy example to show how substitution
-          works.
+          nice, relatively easy example to show how this kind of
+          substitution works.
           <md>
             <mrow>
               \frac{dy}{dt} \amp = \frac{t}{y}
@@ -125,12 +125,10 @@
     <example>
       <statement>
         <p>
-          <md>
-            <mrow>
-              \frac{dy}{dt} \amp = \frac{-y^2 - yt }{t^2} =
-              \frac{-y^2}{t^2} - \frac{y}{t}
-            </mrow>
-          </md>
+          <me>
+            \frac{dy}{dt} = \frac{-y^2 - yt }{t^2} = \frac{-y^2}{t^2}
+            - \frac{y}{t}
+          </me>
           This is a homogeneous equation, so I set up the
           substitution. 
           <md>
@@ -192,7 +190,7 @@
               v \amp = \frac{2}{ct^2 -1}
             </mrow>
           </md>
-          Finally, after <m>v</m> is isolate, the substitution can be
+          Finally, after <m>v</m> is isolated, the substitution can be
           reversed to find the final answer. 
           <md>
             <mrow>
@@ -210,17 +208,17 @@
     <title>Bernoulli Equations</title>
     <p>
       The other substitution I want to present is for a class of DEs
-      called Bernoulli equations. These equations are almost linear,
+      called Bernoulli equations. These equations are nearly linear,
       but they have an extra <m>y^n</m> term. They are written in a
       form very similar to the form for linear DEs. 
       <me>
         \frac{dy}{dt} + P(t) y = Q(t) y^n
       </me>.
       The substitution that simplifies a Bernoulli equation is <m>v =
-      y^{1-n}</m>.
-      Be careful: this is <m>y^{1-n}</m>, not <m>y^{n-1}</m>.
-      It's a very easy mistake to get this exponent wrong.
-      I transform the DE by looking at the following derivations.
+      y^{1-n}</m>. Be careful: this is <m>y^{1-n}</m>, not
+      <m>y^{n-1}</m>. It's a very easy mistake to get this exponent
+      wrong. I transform the DE by looking at the following
+      derivations.
       <md>
         <mrow>
           \frac{dv}{dt} \amp = (1-n) y^{1-n-1} \frac{dy}{dt} =
@@ -291,16 +289,16 @@
         <p>
           <md>
             <mrow>
-              \frac{dy}{dt} \amp = y(ty^3 -1) = ty^4 - y
+              \frac{dy}{dt} \amp = y(ty^3 -1) = -y + ty^4 
             </mrow>
             <mrow>
-              \frac{dy}{dt} + y \amp = ty^4
+              \frac{dy}{dt} + y \amp = ty^4 
             </mrow>
             <mrow>
-              v \amp = y^{-3}
+              n = 4
             </mrow>
             <mrow>
-              \frac{dv}{dt} - 3v \amp = -3t
+              v = y^{1-4} = y^{-3} 
             </mrow>
             <mrow>
               P(t) \amp = -3
@@ -308,6 +306,19 @@
             <mrow>
               Q(t) \amp = -3t
             </mrow>
+          </md>
+          These are the setup pieces. I can now write the associated
+          linear DEs. 
+          <md>
+            <mrow>
+              \frac{dv}{dt} - 3v \amp = -3t
+            </mrow>
+          </md>
+          Now I solve the linear DE in the standard method, by
+          calculating the integrating factor, multiplying by the
+          integrating factor and treating the left side of the
+          equation as a product rule derivative. 
+          <md>
             <mrow>
               \mu(t) \amp = e^{\int P(t) dt} = e^{-3t}
             </mrow>
@@ -327,6 +338,10 @@
               v = \amp t + \frac{1}{3} + ce^{3t} = \frac{3t + 1 +
               ce^{3t}}{3}
             </mrow>
+          </md>
+          Now I reverse the substitution and try to solve for the
+          original function. 
+          <md>
             <mrow>
               y^{-3} \amp = \frac{3t + 1 + ce^{3t}}{3}
             </mrow>

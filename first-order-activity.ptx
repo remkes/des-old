@@ -1,27 +1,491 @@
 <section xml:id="section-first-order-activity">
   <title>Activities for First Order ODEs</title>
   <subsection xml:id="subsection-activity-phase-lines">
-    <title></title>
+    <title>Phase Lines</title>
     <activity>
       <statement>
         <p>
+          Draw the phase line for this autonomous DE. (You can use a
+          computer to find approximate roots if necessary). Determine
+          the stability of the solutions. 
+          <me>
+            \frac{dp}{dt} = (p-3)(p-6)(p-10) 
+          </me>
         </p>
       </statement>
       <solution>
         <p>
+          The roots of <m>(p-3)(p-6)(p-10)</m> are <m>3</m>, <m>6</m>
+          and <m>10</m> without any calculation, since the right side
+          is already given in factored form. For <m>p-2</m>, the right
+          side is negative, so the trajectory is on <m>(0,3)</m> is
+          downward. For <m>p=5</m>, the right side is positive, so the
+          trajectory on <m>(3,6)</m> is upward. For <m>p=7</m>, the
+          right side is negative, so the trajectory is downward on
+          <m>(6,10)</m>. For <m>p = 11</m>, the right side is
+          positive, so the trajectory is upward on <m>(10,
+          \infty)</m>. <xref ref="figure-activity-phase-line-1" />
+          shows the phase line. 
+          <figure xml:id="figure-activity-phase-line-1">
+            <caption>
+              A Line Diagram for <m> \frac{dp}{dt} =
+              (p-3)(p-6)(p-10)</m>
+            </caption>
+            <image xml:id="figure52" width="90%">
+              <asymptote>
+                size(12cm,0,IgnoreAspect);
+                dot("$0$",(0,0),N);
+                dot("$3$",(2,0),N);
+                dot("$6$",(4,0),N);
+                dot("$10$",(6,0),N);
+                dot("$\infty$",(8,0),N);
+                draw((2,0)--(0,0),MidArrow);
+                draw((2,0)--(4,0),MidArrow);
+                draw((6,0)--(4,0),MidArrow);
+                draw((6,0)--(8,0),MidArrow);
+              </asymptote>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw the phase line for this autonomous DE. (You can use a
+          computer to find approximate roots if necessary). Determine
+          the stability of the solutions. 
+          <me>
+            \frac{dp}{dt} = (p-2)^4(p-4)^7(p-6)^9 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The roots of <m>(p-2)^4(p-4)^7(p-6)^9</m> are <m>2</m>,
+          <m>4</m> and <m>6</m> without any calculation, since the
+          right side is already in factored form. For <m>p=1</m>, the
+          right side is positive, so the trajectory is upward on
+          <m>(0,2)</m>. For <m>p=3</m>, the right side is positive, so
+          the trajectory is upward on <m>(2,4)</m>. For <m>p=5</m>,
+          the right side is negative, so the trajectory is downward on
+          <m>(4,6)</m>. for <m>p=7</m>, the right side is positive, so
+          the trajectory is upward on <m>(6,\infty)</m>. <xref
+          ref="figure-activity-phase-line-2" /> shows the phase line. 
+          <figure xml:id="figure-activity-phase-line-2">
+            <caption>
+              A Line Diagram for <m>\frac{dp}{dt} =
+              (p-2)^4(p-4)^7(p-6)^9</m>
+            </caption>
+            <image xml:id="figure53" width="90%">
+              <asymptote>
+                size(12cm,0,IgnoreAspect);
+                dot("$0$",(0,0),N);
+                dot("$2$",(2,0),N);
+                dot("$4$",(4,0),N);
+                dot("$6$",(6,0),N);
+                dot("$\infty$",(8,0),N);
+                draw((0,0)--(2,0),MidArrow);
+                draw((2,0)--(4,0),MidArrow);
+                draw((6,0)--(4,0),MidArrow);
+                draw((6,0)--(8,0),MidArrow);
+              </asymptote>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw the phase line for this autonomous DE. (You can use a
+          computer to find approximate roots if necessary). Determine
+          the stability of the solutions. 
+          <me>
+            \frac{dp}{dt} = \frac{1}{10} (p^4-15p^3+74p^2-138p+82)
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The roots of <m>\frac{1}{10} (p^4-15p^3+74p^2-138p+82)</m>
+          must be calculated by computer. Approximate values are <m>p
+          = 1.16</m>, <m>2.18</m>, <m>4.64</m>, and <m>7.03</m>. There
+          are four roots, so that are a non-repeated roots; therefore,
+          the sign of the right side must change whever I cross a
+          root. I start positive, so the trajectories are positive,
+          negative, positive, negative, and positive. <xref
+          ref="figure-activity-phase-line-3" /> shows the phase line. 
+          <figure xml:id="figure-activity-phase-line-3">
+            <caption>
+              A Line Diagram for <m>\frac{dp}{dt} = \frac{1}{10}
+              (p^4-15p^3+74p^2-138p+82)</m>
+            </caption>
+            <image xml:id="figure54" width="90%">
+              <asymptote>
+                size(12cm,0,IgnoreAspect);
+                dot("$0$",(0,0),N);
+                dot("$1.16$",(2,0),N);
+                dot("$2.18$",(4,0),N);
+                dot("$4.64$",(6,0),N);
+                dot("$7.03$",(8,0),N);
+                dot("$\infty$",(10,0),N);
+                draw((0,0)--(2,0),MidArrow);
+                draw((4,0)--(2,0),MidArrow);
+                draw((4,0)--(6,0),MidArrow);
+                draw((8,0)--(6,0),MidArrow);
+                draw((8,0)--(10,0),MidArrow);
+              </asymptote>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw the phase line for this autonomous DE. (You can use a
+          computer to find approximate roots if necessary). Determine
+          the stability of the solutions. 
+          <me>
+            \frac{dp}{dt} = (p-7)^2 \sinh (p-3) 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The roots of <m>(p-7)^2 \sinh (p-3)</m> are <m>p=3</m> and
+          <m>p=7</m>. The right side evaluated at <m>p=1</m> is
+          negative, so the trajectory on <m>(0,3)</m> is downward. The
+          right side evaluated at <m>p=5</m> is positive, so the
+          trajectory on <m>(3,7)</m> is upward. The right side
+          evaluated at <m>p=7</m> is positive, so the trajectory on
+          <m>(7, \infty)</m> is upward. <xref
+          ref="figure-activity-phase-line-4" /> shows the phase line. 
+          <figure xml:id="figure-activity-phase-line-4">
+            <caption>
+              A Line Diagram for <m>\frac{dp}{dt} = (p-7)^2 \sinh
+              (p-3)</m>
+            </caption>
+            <image xml:id="figure55" width="90%">
+              <asymptote>
+                size(12cm,0,IgnoreAspect);
+                dot("$0$",(0,0),N);
+                dot("$3$",(2,0),N);
+                dot("$7$",(4,0),N);
+                dot("$\infty$",(6,0),N);
+                draw((2,0)--(0,0),MidArrow);
+                draw((2,0)--(4,0),MidArrow);
+                draw((4,0)--(6,0),MidArrow);
+              </asymptote>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw the phase line for this autonomous DE. (You can use a
+          computer to find approximate roots if necessary). Determine
+          the stability of the solutions. 
+          <me>
+            \frac{dp}{dt} = \left( \ln \left( \frac{p}{5} \right) \right)
+            \left( \cosh (p-2) - 1 \right) 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The roots of <m>\left( \ln \left( \frac{p}{5} \right)
+          \right) \left( \cosh (x-2) - 1 \right)</m> are <m>p=2</m>
+          and <m>p=5</m>. The right side is negative for <m>p=1</m>,
+          so the trajectory is downward on <m>(0,2)</m>. The right
+          side is negative for <m>p=3</m>, so the trajectory is
+          downward on <m>(2,5)</m>. The right side is positive for
+          <m>p=6</m>, so the trajectory is upward on
+          <m>(5,\infty)</m>. <xref ref="figure-activity-phase-line-5"
+          /> shows the phase line. 
+          <figure xml:id="figure-activity-phase-line-5">
+            <caption>
+              A Line Diagram for <m>$\frac{dp}{dt} = \left( \ln \left(
+              \frac{x}{5} \right) \right) \left( \cosh (x-2) - 1
+              \right)</m>
+            </caption>
+            <image xml:id="figure56" width="90%">
+              <asymptote>
+                size(12cm,0,IgnoreAspect);
+                dot("$0$",(0,0),N);
+                dot("$2$",(2,0),N);
+                dot("$5$",(4,0),N);
+                dot("$\infty$",(6,0),N);
+                draw((2,0)--(0,0),MidArrow);
+                draw((4,0)--(2,0),MidArrow);
+                draw((4,0)--(6,0),MidArrow);
+              </asymptote>
+            </image>
+          </figure>
         </p>
       </solution>
     </activity>
   </subsection>
-  <subsection xml:id="subsection-activity-">
-    <title></title>
+  <subsection xml:id="subsection-activity-direction-fields">
+    <title>Direction Fields</title>
     <activity>
       <statement>
         <p>
+          Draw a direction field for this DE. Describe the general
+          form domain, and range of the solutions based on the
+          direction field.
+          <me>
+            \frac{dy}{dx} = \frac{1}{x^2 + y^2 + 1}
+          </me>
         </p>
       </statement>
       <solution>
         <p>
+          The slope field for <m>\frac{dy}{dx} = \frac{1}{x^2 + y^2 +
+          1}</m> is in <xref ref="figure-activity-slope-field-1" />.
+          The solutions appear to be functions with slow growth
+          between two horizontal asymptotes. They resemble arctangent
+          functions. Their domains are <m>\RR</m> and their ranges
+          seem to be fixed between the asymptotes.
+          <figure xml:id="figure-activity-slope-field-1">
+            <caption>
+              A Slope Field for <m>\frac{dy}{dx} = \frac{1}{x^2 + y^2
+              + 1}</m>
+            </caption>
+            <image xml:id="figure57" width="80%">
+              <asymptote>
+                size(10cm,0);
+                import contour;
+                import stats;
+                import graph;
+
+                xlimits( -1, 5);  
+                ylimits( -2, 2);  
+                yaxis("$y$");
+                xaxis("$x$");
+
+                path vector(pair z) {return (0,0)--(1/(sqrt(1 +
+                (1/((z.x)^2 + (z.y)^2 +1))^2)), (1/((z.x)^2 + (z.y)^2
+                +1))/(sqrt(1 + (1/((z.x)^2 + (z.y)^2 +1))^2)));}
+
+                add(vectorfield(vector,(-4,-4),(4,4)));
+              </asymptote>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw a direction field for this DE. Describe the general
+          form domain, and range of the solutions based on the
+          direction field.
+          <me>
+            \frac{dy}{dx} = (x+4)(y-2)
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The slope field for <m>\frac{dy}{dx} = (x+4)(y-2)</m> is in
+          <xref ref="figure-activity-slope-field-2" />. The function
+          approach then diverge away from the line <m>y=2</m>. It's
+          not clear is they have vertical asymptotes or just fast
+          growth. They might resemble quartic functions if they do not
+          have asymptotes, where the vertex of the quartic is on the
+          line <m>x=-4</m>. Their domains seem to be <m>\RR</m> and
+          the ranges are likely bounded below or above, depending on a
+          starting position. Note that <m>y-2</m> is also a singular
+          solution that I can see in the slope field.
+          <figure xml:id="figure-activity-slope-field-2">
+            <caption>
+              A Slope Field for <m>\frac{dy}{dx} = (x+4)(y-2)</m>
+            </caption>
+            <image xml:id="figure58" width="80%">
+              <asymptote>
+                size(10cm,0);
+                import contour;
+                import stats;
+                import graph;
+
+                yaxis("$y$");
+                xaxis("$x$");
+
+                path vector(pair z) {return (0,0)--(1/(sqrt(1 +
+                ((z.x+4)*(z.y-2))^2)), ((z.x+4)*(z.y-2))/(sqrt(1 +
+                ((z.x+4)*(z.y-2))^2)));}
+
+                add(vectorfield(vector,(-8,-2),(2,6)));
+              </asymptote>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw a direction field for this DE. Describe the general
+          form domain, and range of the solutions based on the
+          direction field.
+          <me>
+            \frac{dy}{dx} = \frac{x}{y^3}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The slope field for <m>\frac{dy}{dx} = \frac{x}{y^3}</m> is
+          in <xref ref="figure-activity-slope-field-3" />. First, the
+          functions are undefined when <m>y-0</m>, so there is a family
+          above the <m>x</m> axis and a family below the <m>x</m>
+          axis. I can see from the slope field that these mirror
+          each other. In the first and fourth quadrants, the functions
+          diverge away from the <m>x</m> axis and look to approach
+          horizontal asymptotes as <m>x \rightarrow \infty</m> (though
+          this may simply be very slow growth). Their domains look
+          like <m>(a, \infty)</m>, where <m>a</m> is a starting point
+          on the <m>x</m> axis, and their ranges seem to be <m>(0, \pm
+          h)</m>, where <m>h</m> is the <m>y</m> value of the
+          asymptotes. For the second and third quadrants, the
+          functions start from horizontal asymptotes and diverge
+          toward the <m>x</m> axis. Their domains seem to be
+          <m>(-\infty, -a)</m>, where <m>-a</m> is a point on the
+          <m>x</m> axis, and their ranges seem to be <m>(0, \pm h)</m>
+          where <m>h</m> is the height of the asymptote. If I connect
+          the positive and negative pieces, I get horizontal
+          quartic-like paths.
+          <figure xml:id="figure-activity-slope-field-3">
+            <caption>
+              A Slope Field for <m>\frac{dy}{dx} = \frac{x}{y^3}</m>
+            </caption>
+            <image xml:id="figure59" width="80%">
+              <asymptote>
+                size(10cm,0);
+                import contour;
+                import stats;
+                import graph;
+
+                yaxis("$y$");
+                xaxis("$x$");
+
+                path vector(pair z) {return (0,0)--(1/(sqrt(1 +
+                ((z.x)/((z.y)^3))^2)), ((z.x)/((z.y)^3))/(sqrt(1 +
+                ((z.x)/((z.y)^3))^2)));}
+
+                add(vectorfield(vector,(-4,-4),(-0.5,-0.5)));
+                add(vectorfield(vector,(-4,0.5),(-0.5,4)));
+                add(vectorfield(vector,(0.5,-4),(4,-0.5)));
+                add(vectorfield(vector,(0.5,0.5),(4,4)));
+              </asymptote>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw a direction field for this DE. Describe the general
+          form domain, and range of the solutions based on the
+          direction field.
+          <me>
+            \frac{dy}{dx} = y \ln x
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The slope field for <m>\frac{dy}{dx} = y \ln x</m> is in
+          <xref ref="figure-activity-slope-field-4" />. The solutions
+          have domain <m>(0, \infty)</m> to satisfy the <m>\ln x</m>
+          inclusion in the equation. They are mirrored above and belod
+          the <m>x</m> axis. They look to start descending steelply
+          from the <m>y</m> axis, reach a max or min at <m>y = \pm
+          h</m>, then diverge away from the axis again. They have
+          vertical asymptotes at <m>x=0</m>. Their ranges seem to be
+          <m>(\pm h, \pm \infty)</m>. Note I can also see the
+          <m>y=0</m> singular solution in the slope field.
+          <figure xml:id="figure-activity-slope-field-4">
+            <caption>
+              A Slope Field for <m>\frac{dy}{dx} = y \ln x</m>
+            </caption>
+            <image xml:id="figure60" width="80%">
+              <asymptote>
+                size(10cm,0);
+                import contour;
+                import stats;
+                import graph;
+
+                xlimits( -1, 5);  
+                ylimits( -2, 2);  
+                yaxis("$y$");
+                xaxis("$x$");
+
+                path vector(pair z) {return (0,0)--(1/(sqrt(1 +
+                ((z.y)*(log(z.x)))^2)), ((z.y)*(log(z.x)))/(sqrt(1 +
+                ((z.y)*(log(z.x)))^2)));}.
+
+                add(vectorfield(vector,(0.5,-4),(6,4)));
+              </asymptote>
+            </image>
+          </figure>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Draw a direction field for this DE. Describe the general
+          form domain, and range of the solutions based on the
+          direction field.
+          <me>
+            \frac{dy}{dx} = x^2 + y^2
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The slope field for <m>\frac{dy}{dx} = x^2 + y^2</m> is in
+          <xref ref="figure-activity-slope-field-5" />. The solutions
+          look to be steep function starting at one vertical asymptote
+          and ending at another (unless, again, the asymptotes are
+          just rapid growth). The function that passes through the
+          origin looks either like a tangent function or a high power
+          odd polynomial <m>x^{2n+1}</m>. The later is perhaps more
+          likely, since there is a zero tangent at the origin.
+          However, other function in the family lack this horizontal
+          tangent. In any case, the range is clearly unbounded and the
+          domain is either unbounded or fixed between the two vertical
+          asymptotes.
+          <figure xml:id="figure-activity-slope-field-5">
+            <caption>
+              A Slope Field for <m>\frac{dy}{dx} = x^2 + y^2</m>
+            </caption>
+            <image xml:id="figure61" width="80%">
+              <asymptote>
+                size(10cm,0);
+                import contour;
+                import stats;
+                import graph;
+
+                xlimits( -1, 5);  
+                ylimits( -2, 2);  
+                yaxis("$y$");
+                xaxis("$x$");
+
+                path vector(pair z) {return (0,0)--(1/( sqrt(1 +
+                ((z.x)^2 + (z.y)^2)^2)), ((z.x)^2 + (z.y)^2)/(sqrt(1 +
+                ((z.x)^2 + (z.y)^2)^2)));}
+
+                add(vectorfield(vector,(-4,-4),(4,4)));
+              </asymptote>
+            </image>
+          </figure>
         </p>
       </solution>
     </activity>

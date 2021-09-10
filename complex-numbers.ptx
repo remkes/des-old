@@ -78,8 +78,8 @@
   </theorem>
   <p>
     Complex exponentials are understood by Euler's formula. This is
-    particular important to use, since complex numbers will naturall
-    appear in exponential functions in this course. 
+    particularly important for us, since the complex numbers in this
+    course will naturally appear in exponents. 
   </p>
   <proposition xml:id="prop-eulers-formula">
     <title>Euler's Formula</title>
@@ -94,13 +94,13 @@
       There are a variety of way to justify Euler's formlua. One of
       the justifications only needs the known taylor series for
       <m>e^x</m> and the trig functions, which were developed in
-      Calculus II. In ths following argument via talyor series, the
+      Calculus II. In the following argument via talyor series, the
       number <m>\imath</m> can just be treated like any other
       constant. First I'll write the known taylor series for the three
       functions I need. Then I calculate <m>e^{\imath t}</m> via its
       taylor series. Various manipulations of the series, using
       linearity and splitting up the series into even and odd terms,
-      leads to the final expression in the taylor series for sine a
+      leads to the final expression in the taylor series for sine and
       cosine, proving Euler's formula. 
       <md>
         <mrow>
