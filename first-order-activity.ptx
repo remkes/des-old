@@ -17,7 +17,7 @@
         <p>
           The roots of <m>(p-3)(p-6)(p-10)</m> are <m>3</m>, <m>6</m>
           and <m>10</m> without any calculation, since the right side
-          is already given in factored form. For <m>p-2</m>, the right
+          is already given in factored form. For <m>p=2</m>, the right
           side is negative, so the trajectory is on <m>(0,3)</m> is
           downward. For <m>p=5</m>, the right side is positive, so the
           trajectory on <m>(3,6)</m> is upward. For <m>p=7</m>, the
@@ -490,6 +490,661 @@
       </solution>
     </activity>
   </subsection>
+  <subsection xml:id="subsection-activity-separable">
+    <title>Separable Equations</title>
+    <activity>
+      <statement>
+        <p>
+          Solve this separable differential equation.
+          <me>
+            \frac{dy}{dx} = x^2 y 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First, I bring the <m>y</m> expression to the left side of
+          the equation. 
+          <me>
+            \frac{1}{y} \frac{dy}{dx}  = x^2 
+          </me>
+          Then I integrate. Using the standard substitution for
+          separable equations, the left integral can be treated as an
+          integral in <m>y</m>.
+          <me>
+            \int \frac{1}{y} dy = \int x^2 dx 
+          </me>
+          These are both immediate integral: a logarithm integral and
+          a power rule integral. 
+          <me>
+            \ln |y| = \frac{x^3}{3} + c 
+          </me>
+          After integrating, I try to solve for <m>y</m>. 
+          <me>
+            y = ce^{\frac{x^3}{3}} 
+          </me>
+          I was successful solving for <m>y</m> and producing a
+          function which solves the DE.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this separable differential equation.
+          <me>
+            \frac{dy}{dx} = \frac{\cos x}{e^y} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First, I bring the <m>y</m> expression to the left side of
+          the equation. 
+          <me>
+            e^y \frac{dy}{dx} = \cos x 
+          </me>
+          Then I integrate. Using the standard substitution for
+          separable equations, the left integral can be treated as an
+          integral in <m>y</m>.
+          <me>
+            \int e^y dy = \int \cos x dx 
+          </me>
+          These are immediate integrals from the tables of
+          antiderivatives. 
+          <me>
+            e^y = \sin x + c 
+          </me>
+          After integrating, I try to solve for <m>y</m>. 
+          <me>  
+            y = \ln (\sin x + c)
+          </me>
+          I was successful solving for <m>y</m> and producing a
+          function which solves the DE. Note that there are sone
+          strict domain restriction for this function. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this separable differential equation.
+          <me>
+            \frac{dy}{dx} = \frac{x^3}{y^3} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First, I bring the <m>y</m> expression to the left side of
+          the equation. 
+          <me>
+            y^3 \frac{dy}{dx} = x^3 
+          </me>
+          Then I integrate. Using the standard substitution for
+          separable equations, the left integral can be treated as an
+          integral in <m>y</m>.
+          <me>  
+            \int y^3 dy = \int x^3 dx 
+          </me>
+          These are both power rule integrals. 
+          <me>
+            \frac{y^4}{4} = \frac{x^4}{4} + c 
+          </me>
+          After integrating, I try to solve for <m>y</m>. 
+          <me>
+            y^4 = x^4 + c \implies y = \sqrt[4]{x^4 + c} 
+          </me>
+          I was successful solving for <m>y</m> and producing a
+          function which solves the DE.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this separable differential equation.
+          <me>
+            \frac{dy}{dx} = x^2 (y^2 +1) 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First, I bring the <m>y</m> expression to the left side of
+          the equation. 
+          <me>
+            \frac{1}{y^2 + 1} \frac{dy}{dx} = x^2 
+          </me>
+          Then I integrate. Using the standard substitution for
+          separable equations, the left integral can be treated as an
+          integral in <m>y</m>.
+          <me>
+            \int \frac{1}{y^2 + 1} dy = \int x^2 dx 
+          </me>
+          The left is an arctangent integral, and the right is a power
+          rule integral. 
+          <me>
+            \arctan y = \frac{x^3}{3} + c 
+          </me>
+          After integrating, I try to solve for <m>y</m>. 
+          <me>
+            y = \tan \left( \frac{x^3}{3} + c \right) 
+          </me>
+          I was successful solving for <m>y</m> and producing a
+          function which solves the DE.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this separable differential equation.
+          <me>
+            \frac{dy}{dx} = e^x \sqrt{4-y^2} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First, I bring the <m>y</m> expression to the left side of
+          the equation. 
+          <me>
+            \frac{1}{\sqrt{4-y^2}} \frac{dy}{dx} = e^x 
+          </me>
+          Then I integrate. Using the standard substitution for
+          separable equations, the left integral can be treated as an
+          integral in <m>y</m>.
+          <me>
+            \int \frac{1}{\sqrt{4-y^2}} dy = \int e^x dx 
+          </me>
+          The left is an arcsin integral, and the right is a simple
+          exponential integral. 
+          <me>
+            \frac{1}{2} \arcsin \left( \frac{y}{2} \right) = e^x + c 
+          </me>
+          After integrating, I try to solve for <m>y</m>. 
+          <me>
+            \arcsin \left( \frac{y}{2} \right) = 2e^x + c \implies
+            \frac{y}{2} = \sin (2e^x + c) \implies y = 2 \sin (2e^x +
+            c) 
+          </me>
+          I was successful solving for <m>y</m> and producing a
+          function which solves the DE.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this separable differential equation.
+          <me>
+            \frac{dy}{dx} = \frac{y^2 -2y - 15}{x} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First, I bring the <m>y</m> expression to the left side of
+          the equation. 
+          <me>
+            \frac{1}{y^2 - 2y - 15} \frac{dy}{dx} = x 
+          </me>
+          Then I integrate. Using the standard substitution for
+          separable equations, the left integral can be treated as an
+          integral in <m>y</m>.
+          <me>
+            \int \frac{1}{y^2 - 2y = 15} = \int x dx 
+          </me>
+          The left is a partial fractions integral; I asked a computer
+          for the solution. The right is a power rule integral. 
+          <me>
+            \frac{1}{8} \ln |y-5| - \frac{1}{8} \ln |y-3| = x^2 + c 
+          </me>
+          After integrating, I try to solve for <m>y</m>. However, I
+          don't see any way to pull the <m>y</m> out of both the
+          logarithm terms. Therefore, I'll leave the solution
+          implicit. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this separable differential equation.
+          <me>
+            \frac{dy}{dx} = \frac{x^4 + 9x^3 - 7x^2 - 3x + 1}{y}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First, I bring the <m>y</m> expression to the left side of
+          the equation. 
+          <me>
+            y \frac{dy}{dx} = x^4 + 9x^3 - 7x^2 + 3x + 1 
+          </me>
+          Then I integrate. Using the standard substitution for
+          separable equations, the left integral can be treated as an
+          integral in <m>y</m>.
+          <me>
+            \int y dy = \int x^4 + 9x^3 - 7x^2 - 3x + 1 dx
+          </me>
+          These are power polynomial integrals, solve by linearity and
+          the power rule. 
+          <me>
+            \frac{y^2}{2} = \frac{x^5}{5} + \frac{9x^4}{4} -
+            \frac{7x^3}{3} - \frac{3x^2}{2} + 2x + c 
+          </me>
+          After integrating, I try to solve for <m>y</m>. 
+          <me>
+            y = \sqrt{\frac{2x^5}{5} + \frac{9x^4}{2} -
+            \frac{14x^3}{3} - 3x^2 + 2x + c} 
+          </me>
+          I was successful solving for <m>y</m> and producing a
+          function which solves the DE.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this separable differential equation.
+          <me>
+            \frac{dy}{dx} = \frac{e^{-x^2}}{\cos y} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First, I bring the <m>y</m> expression to the left side of
+          the equation. 
+          <me>
+            \cos y \frac{dy}{dx} = e^{-x^2} 
+          </me>
+          Then I integrate. Using the standard substitution for
+          separable equations, the left integral can be treated as an
+          integral in <m>y</m>.
+          <me>
+            \int \cos y dy = \int e^{-x^2} dx 
+          </me>
+          This is a simple trig integral on the left. The left is an
+          integral without an elementary solution. Therefore, I'll
+          just leave it as it is. 
+          <me>
+            \sin y = \int e^{-x^2} ex 
+          </me>
+          After integrating, I try to solve for <m>y</m>. 
+          <me>
+            y = \arcsin \left( \int e^{-x^2} dx \right) 
+          </me>
+          This is a solution, a function. It is defined by an
+          integral, which makes it more difficult to work with and
+          understand, but it is a solution. 
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="subsection-activity-first-order-linear">
+    <title>First Order Linear Equations</title>
+    <activity>
+      <statement>
+        <p>
+          Solve this linear equation.
+          <me>
+            \frac{dy}{dt} + y = 4e^{-t} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I follow the standard procedure. First I'll label the
+          coefficient functions.
+          <md>
+            <mrow>
+              \amp P(t) = 1 
+              \amp \amp Q(t) = 4e^{-t} 
+            </mrow>
+          </md>
+          Then I'll calculate the integrating factor. (Note that I
+          don't need a constant of integration for the integrating
+          factor). 
+          <me>
+            \mu(t) = e^{\int 1 dt} = e^t
+          </me>
+          Then I multiply the original equation by the integrating
+          factor. 
+          <me>
+            e^t \frac{dy}{dx} + e^t y = 4e^{-t} e^t = 4 
+          </me>
+          The left side becomes a product rule derivative.
+          <me>
+            \frac{d}{dt} \left( e^t y \right) = 4 
+          </me>
+          Then I integrate. 
+          <me>
+            e^t y = 4t + c 
+          </me>
+          Then I solve for <m>y</m>. If I want to, I can isolate the
+          particular solution <m>y_p</m> and the homogeneous solution
+          <m>y_h</m>; the homogeneous solution has the paramater and
+          the particular solution does not. 
+          <md>
+            <mrow>
+              y \amp = 4te^{-t} + ce^{-t} 
+            </mrow>
+            <mrow>
+              y_p \amp = 4te^{-t} 
+            </mrow>
+            <mrow>
+              y_h \amp = e^{-t} 
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this linear equation.
+          <me>
+            \frac{dy}{dt} + \frac{4y}{t} = t^2 + 3t + 4 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I follow the standard procedure. First I'll label the
+          coefficient functions.
+          <md>
+            <mrow>
+              \amp P(t) = \frac{4}{t} 
+              \amp \amp Q(t) = t^2 + 3t + 4 
+            </mrow>
+          </md>
+          Then I'll calculate the integrating factor. (Note that I
+          don't need a constant of integration for the integrating
+          factor). 
+          <me>
+            \mu(t) = e^{\int \frac{4}{t} dt} = e^{4 \ln t} = t^4 
+          </me>
+          Then I multiply the original equation by the integrating
+          factor. 
+          <me>
+            t^4 \frac{dy}{dt} + t^4 \frac{4y}{t} = t^4(t^2 + 3t + 4)
+          </me>
+          The left side becomes a product rule derivative.
+          <me>
+            \frac{d}{dt} (t^4 y) = t^6 + 3t^5 + 4t^4 
+          </me>
+          Then I integrate. 
+          <me>
+            t^4 y = \frac{t^7}{7} + \frac{t^6}{2} + \frac{4t^5}{5} + c
+          </me>
+          Then I solve for <m>y</m>. If I want to, I can isolate the
+          particular solution <m>y_p</m> and the homogeneous solution
+          <m>y_h</m>; the homogeneous solution has the paramater and
+          the particular solution does not. 
+          <md>
+            <mrow>
+              y \amp = \frac{t^3}{7} + \frac{t^2}{2} + \frac{4t}{5} +
+              \frac{c}{t^4} 
+            </mrow>
+            <mrow>
+              y_p \amp = \frac{t^3}{7} + \frac{t^2}{2} + \frac{4t}{5} 
+            </mrow>
+            <mrow>
+              y_h \amp = \frac{1}{t^4}
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this linear equation.
+          <me>
+            \frac{dy}{dt} + 3t^2y = t^2 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I follow the standard procedure. First I'll label the
+          coefficient functions.
+          <md>
+            <mrow>
+              \amp P(t) = 3t^2
+              \amp \amp Q(t) = t^2  
+            </mrow>
+          </md>
+          Then I'll calculate the integrating factor. (Note that I
+          don't need a constant of integration for the integrating
+          factor). 
+          <me>
+            \mu(t) = e^{\int 3t^3 dt} = e^{t^3}
+          </me>
+          Then I multiply the original equation by the integrating
+          factor. 
+          <me>
+            e^{t^3} \frac{dy}{dt} + e^{t^3} 3t^2 y = e^{t^3} t^2
+          </me>
+          The left side becomes a product rule derivative.
+          <me>
+            \frac{d}{dt} \left( e^{t^3} y \right) = e^{t^3}{t^2}
+          </me>
+          Then I integrate. The right integral is a substitution
+          integral with <m>u = t^3</m>; I haven't shown the steps. 
+          <me>
+            e^{t^3} y = \frac{e^{t^3}}{3} = c 
+          </me>
+          Then I solve for <m>y</m>. If I want to, I can isolate the
+          particular solution <m>y_p</m> and the homogeneous solution
+          <m>y_h</m>; the homogeneous solution has the paramater and
+          the particular solution does not. 
+          <md>
+            <mrow>
+              y \amp = \frac{1}{3} + ce^{-t^3} 
+            </mrow>
+            <mrow>
+              y_p \amp = \frac{1}{3} 
+            </mrow>
+            <mrow>
+              y_h \amp = e^{-t^3} 
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this linear equation.
+          <me>
+            \frac{dy}{dt} + (\cos t) y = 4 \cos t
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I follow the standard procedure. First I'll label the
+          coefficient functions.
+          <md>
+            <mrow>
+              \amp P(t) = \cos t 
+              \amp \amp Q(t) = 4 \cos t
+            </mrow>
+          </md>
+          Then I'll calculate the integrating factor. (Note that I
+          don't need a constant of integration for the integrating
+          factor). 
+          <me>
+            \mu(t) = e^{\int \cos t dt } e^{\sin t}
+          </me>
+          Then I multiply the original equation by the integrating
+          factor. 
+          <me>
+            e^{\sin t} \frac{dy}{dt} + e^{\sin t} \cos t y = e^{\sin
+            t} 4 \cos t 
+          </me>
+          The left side becomes a product rule derivative.
+          <me>
+            \frac{d}{dt} \left( e^{\sin t} y \right) = e^{\sin t} 4
+            \cos t 
+          </me>
+          Then I integrate. The right side is a substitution with <m>u
+          = \sin y</m>, but I haven't shown the steps. 
+          <me>
+            e^{\sin t} y = 4e^{\sin t} + c 
+          </me>
+          Then I solve for <m>y</m>. If I want to, I can isolate the
+          particular solution <m>y_p</m> and the homogeneous solution
+          <m>y_h</m>; the homogeneous solution has the paramater and
+          the particular solution does not. 
+          <md>
+            <mrow>
+              y \amp = 4 + ce^{-\sin t} 
+            </mrow>
+            <mrow>
+              y_p \amp = 4
+            </mrow>
+            <mrow>
+              y_h \amp = e^{-\sin t} 
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this linear equation. (Hint: when you get a hyperbolic
+          inverse tangent, look up how to write it as a logarithm.) 
+          <me>
+            \frac{dy}{dt} + \frac{2y}{1-t^2} = (1-t)^2 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I follow the standard procedure. First I'll label the
+          coefficient functions.
+          <md>
+            <mrow>
+              \amp P(t) = \frac{2}{1-t^2} 
+              \amp \amp Q(t) = (1-t)^2 
+            </mrow>
+          </md>
+          Then I'll calculate the integrating factor. (Note that I
+          don't need a constant of integration for the integrating
+          factor). 
+          <me>
+            \mu(t) = e^{\int \frac{2}{1-t^2} dt} = e^{2 \arctanh t}
+          </me>
+          I'm going to make use of a nice alternative definition of
+          the hyperbolic arctangent. 
+          <me>
+            \arctanh x = \frac{1}{2} \ln \left( \frac{1 + x}{1 - x}
+            \right) \implies \mu (t) = e^{2 \ln \left(
+            \frac{1+t}{1-t} \right)} = \frac{1 + t}{1 - t} 
+          </me>
+          Then I multiply the original equation by the integrating
+          factor. 
+          <me>
+            \frac{1+t}{1-t} \frac{dy}{dt} +  \frac{1+t}{1-t}
+            \frac{y}{1-t^2} = \frac{1+t}{1-t} (1-t)^2 
+          </me>
+          The left side becomes a product rule derivative.
+          <me>
+            \frac{d}{dt} \left( \frac{1+t}{1-t} y \right) = (1+t)(1-t)
+            = 1-t^2 
+          </me>
+          Then I integrate. 
+          <me>
+            \frac{1+t}{1-t} y = t - t^3 + c 
+          </me>
+          Then I solve for <m>y</m>. If I want to, I can isolate the
+          particular solution <m>y_p</m> and the homogeneous solution
+          <m>y_h</m>; the homogeneous solution has the paramater and
+          the particular solution does not. 
+          <md>
+            <mrow>
+              y \amp = (t-t^3) \frac{1-t}{1+t} + c \frac{1-t}{1+t} 
+            </mrow>
+            <mrow>
+              y_p \amp = \frac{(t-t^3)(1-t)}{1+t} 
+            </mrow>
+            <mrow>
+              y_h \amp = \frac{1-t}{1+t} 
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this linear equation.
+          <me>
+            \frac{dy}{dt} + (\tan t) y = e^t{t^2 -1}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I follow the standard procedure. First I'll label the
+          coefficient functions.
+          <md>
+            <mrow>
+              \amp P(t) = \tan t
+              \amp \amp Q(t) = e^t (t^2 - 1) 
+            </mrow>
+          </md>
+          Then I'll calculate the integrating factor. (Note that I
+          don't need a constant of integration for the integrating
+          factor). 
+          <me>
+            \mu(t) = e^{\int \tan t dt} = e^{-\ln (\cos t)} = (\cos
+            t)^{-1} = \sec t 
+          </me>
+          Then I multiply the original equation by the integrating
+          factor. 
+          <me>
+            \sec t \frac{dy}{dt} + (\sec t)(\tan t) y = \sec t e^t
+            (t^2 - 1) 
+          </me>
+          The left side becomes a product rule derivative.
+          <me>
+            \frac{d}{dt} \left( y \sec t \right) = \sec t e^t (t^2 -
+            1) 
+          </me>
+          Then I integrate. 
+          <me>
+            y \sec t = \int \sec t e^t (t^2 - 1) dt + c 
+          </me>
+          Then I solve for <m>y</m>. If I want to, I can isolate the
+          particular solution <m>y_p</m> and the homogeneous solution
+          <m>y_h</m>; the homogeneous solution has the paramater and
+          the particular solution does not. Here, I'm going to leave
+          the integral as is on the right side and expression the
+          solution in terms of that integral. 
+          <md>
+            <mrow>
+              y \amp = \cos t \int \sec t e^t (t^2 - 1) dt + c \cos t 
+            </mrow>
+            <mrow>
+              y_p \amp = \cos t \int \sec t e^t (t^2 - 1) dt 
+            </mrow>
+            <mrow>
+              y_h \amp = \cos t 
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <!--
   <subsection xml:id="subsection-activity-first-order-something">
     <title></title>
     <activity>
@@ -503,13 +1158,5 @@
       </solution>
     </activity>
   </subsection>
-  <subsection xml:id="subsection-first-order-concepts">
-    <title>Conceptual Review Questions</title>
-    <p>
-      <ul>
-        <li>
-        </li>
-      </ul>
-    </p>
-  </subsection>
+  -->
 </section>

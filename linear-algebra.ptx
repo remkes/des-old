@@ -10,7 +10,7 @@
       <p>
         A <term>vector space</term> over <m>\RR</m> is a set <m>V</m>
         with addition and scalar multiplication (if <m>\alpha \in
-        \RR</m> and <m>v in V</m>, when <m>\alpha v</m> is defined and
+        \RR</m> and <m>v \in V</m>, when <m>\alpha v</m> is defined and
         remains in <m>V</m>).
       </p>
     </statement>

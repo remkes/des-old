@@ -104,29 +104,29 @@
       cosine, proving Euler's formula. 
       <md>
         <mrow>
-          e^t \amp \sum_{n=0}^\infty \frac{t^n}{n!}
+          e^t \amp = \sum_{n=0}^\infty \frac{t^n}{n!}
         </mrow>
         <mrow>
-          \sin t \amp \sum_{n=0}^\infty \frac{(-1)^n
+          \sin t \amp = \sum_{n=0}^\infty \frac{(-1)^n
           t^{2n+1}}{(2n+1)!}
         </mrow>
         <mrow>
-          \cos t \amp \sum_{n=0}^\infty \frac{(-1)^n t^{2n}}{(2n)!}
+          \cos t \amp = \sum_{n=0}^\infty \frac{(-1)^n t^{2n}}{(2n)!}
         </mrow>
         <mrow>
-          e^{\imath t} \amp \sum_{n=0}^\infty \frac{(\imath
+          e^{\imath t} \amp = \sum_{n=0}^\infty \frac{(\imath
           t)^n}{n!} = \sum_{n=0}^\infty \frac{\imath^n t^n}{n!}
         </mrow>
         <mrow>
-          \amp \sum_{n=0}^\infty \frac{\imath^{2n} t^{2n}}{{2n}!} +
+          \amp = \sum_{n=0}^\infty \frac{\imath^{2n} t^{2n}}{{2n}!} +
           \sum_{n=0}^\infty \frac{\imath^{2n+1} t^{2n+1}}{(2n+1)!}
         </mrow>
         <mrow>
-          \amp \sum_{n=0}^\infty \frac{(-1)^n t^{2n}}{{2n}!} +
+          \amp = \sum_{n=0}^\infty \frac{(-1)^n t^{2n}}{{2n}!} +
           \imath \sum_{n=0}^\infty \frac{(-1)^n t^{2n+1}}{(2n+1)!}
         </mrow>
         <mrow>
-          \amp \cos t + \imath \sin t
+          \amp = \cos t + \imath \sin t
         </mrow>
       </md>
     </p>
