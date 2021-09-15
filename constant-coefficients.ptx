@@ -4,13 +4,14 @@
     <definition>
       <statement>
         <p>
-          A <term>second order linear differential equation</term> is
-          an equation of the form
+          Let <m>a(t)</m>, <m>b(t)</m>, <m>c(t)</m> and <m>f(t)</m> be
+          functions. A <term>second order linear differential
+          equation</term> is an equation of the form
           <me>
             a(t) \frac{d^2y}{dt^2} + b(t) \frac{dy}{dt} + c(t) y = f(t)
           </me>.
-          As with the first order case, this is called homogeneous if
-          <m>f(t) = 0</m>.
+          As with the first order case, this is called
+          <term>homogeneous</term> if <m>f(t) = 0</m>.
         </p>
       </statement>
     </definition>
@@ -31,79 +32,100 @@
       </statement>
     </definition>
     <p>
-      Even though we look to linear equations for solvable second
-      order DEs, linear equations are still very tricky, particularly
-      if the coefficient functions are complicated.  We need to
+      General second order equations are usually impossible to solve
+      with direct methods; I will focus almost exclusively on second
+      order linear differential equations in this course. Even though,
+      however, present substantial challenge in general. I need to 
       restrict even further, to the simplest case where the
       coefficient functions are constant.
     </p>
     <definition>
       <statement>
         <p>
-          A <term>second order constant coefficient linear
-          operator</term> has the form
+          Let <m>a,b,c \in \RR</m>. A <term>second order constant
+          coefficient linear operator</term> has the form
           <me>
             L = a \frac{d^2}{dt^2} + b \frac{d}{dt} + c
           </me>.
           The corresponding homogeneous equation is <m>Ly=0</m> and
           the corresponding non-homogeneous equation is
-          <m>Ly=f(t)</m>.  To avoid writing a lengthy name over and
+          <m>Ly=f(t)</m>.  o avoid writing a lengthy name over and
           over again, I'll write SOCCLDE for a second order constant
-          coefficient linear differential equation.  
+          coefficient linear differential equation. Note that though
+          the coefficients of the linear equation are constant, the
+          function in the non-homogenous equation, <m>f(t)</m>, does
+          not need to be a constant. 
         </p>
       </statement>
     </definition>
     <p>
       Second order constant coefficient linear differential equations,
       even with their very restricted form, are quite important for
-      applied mathematics.  They give models to understand both
-      harmonic motion and alternating current electric curcuits.  The
-      harmonic motion interpretation is our starting point.
+      applied mathematics. They give models to understand both
+      harmonic motion and alternating current electric curcuits, among
+      other applications. I'm going to start with harmonic motion and
+      use that application to explain and motivate the those theory of
+      SOCCLDEs. Harmonic motion (in one dimension) can describe a
+      variety of phenomena: an object attached to a spring, a pendulum
+      or swing, a shock in a bicycle or car, a string on a musical
+      instrument, the sway of structures in wind, a trampoline, a
+      drum, etc. 
     </p>
   </introduction>
   <subsection xml:id="subsection-harmonic-motion">
     <title>Harmonic Motion</title>
     <p>
-      Hooke's Law for a position function <m>x(t)</m> in a harmonic
-      system is the equation <m>F = -kx(t)</m>.  We interpret this
-      equation in terms of Newton's law of motion.
+      I want to consider a system with one dimension of movement
+      described by a function <m>x(t)</m>. In harmonic motion, the
+      system has some rest state where there are no forces; by
+      convention, the rest state will always be at <m>x=0</m> and will
+      be a steady state of the system. If the system is disturbed from
+      its rest, there is an elastic force that wants to return the
+      system to its rest state. Hooke's Law gives the elastic for: 
+      <m>F = -kx(t)</m>. Then, using Newton's first law, I can write
+      this force as <m>F = ma = m \frac{d^2 x}{dt^2}</m>. Equating
+      these two expressions for the elastic force produces a
+      differential equation. 
       <md>
         <mrow>
           F \amp = -k x(t)
         </mrow>
         <mrow>
-          m a(t) + k x(t) \amp = 0
+          F \amp = ma = m \frac{d^2 x}{dt^2} 
+        </mrow>
+        <mrow>
+          -kx(t) = m \frac{d^2 x}{dt^2} 
         </mrow>
         <mrow>
           m\frac{d^2 x}{dt^2} + k x(t) \amp = 0
         </mrow>
       </md>
-      This gives us a homogeneous SOCCLDE with <m>a=m</m>, <m>b=0</m>
-      and <m>c=k</m>.  This is the simplest possible spring and there
+      This is homogeneous SOCCLDE with <m>a=m</m>, <m>b=0</m>
+      and <m>c=k</m>. If there are no other forces involved, this is
+      the simplest possible situation for harmomic motion and there
       are two solutions.
       <md>
         <mrow>
-          x_1(t) = \sin \left( \sqrt{\frac{k}{m}} x \right) \amp 
-          x_2(t) = \cos \left( \sqrt{\frac{k}{m}} x \right)
+          x_1(t) \amp = \sin \left( \sqrt{\frac{k}{m}} x \right) 
+        </mrow>
+        <mrow>
+          x_2(t) \amp = \cos \left( \sqrt{\frac{k}{m}} x \right)
         </mrow>
       </md>
-      Since we can solve the homogeneous case, superposition applies
-      and we can get a general solution.
+      Since I know these two homogeneous solution, I can use
+      superposition to produce a general solution by taking any linear
+      combination of these two solutions. For any two numbers <m>A,B
+      \in \RR</m>, this is the general solution:
       <me>
         x(t) = A \sin \left( \sqrt{\frac{k}{m}} t \right) + B \cos
         \left( \sqrt{\frac{k}{m}} t \right)
-      </me>
-      Note there are two parameters and the solution is a <em>linear
-      combination</em> of the two independent solutions.  That's
-      expected for a second order equation.  We expect two linearly
-      independent solutiolns (neither is a constant multiple of the
-      other) and the full family of homogeneous solutions is all
-      linear combinations of the two solutions.
+      </me>.
     </p>
     <p>
-      As an aside: the sums of <m>\sin</m> and <m>\cos</m> can be
-      expressed as a single sinusoidal wave.  We are helped by a
-      relatively obscure but useful identity (if <m>a \geq 0)</m>.
+      As an aside: if I want, If a sine and cosine function share the
+      same period, I can express the sums of the two trig functions as
+      a single way. There is a relatively obscure but useful trig
+      identity that show how to accomplish this. 
       <md>
         <mrow>
           \amp a \sin t + b \cos t = \sqrt{a^2+b^2} \sin (t + \phi)
@@ -111,78 +133,90 @@
           \left( \frac{b}{\sqrt{a^2+b^2}} \right)
         </mrow>
       </md>
-      This identity lets us see linear combinations of sine and cosine
-      as a single wave.  In particular, the amplitude of a linear
-      combination is the pythagorian combination <m>\sqrt{a^2+b^2}</m>
-      of the original amplitudes and frequency is altered, though the
-      wave is shifted.
+      This identity shows me that combinations of sine and cosine, at
+      least when they share a period, are still just a single
+      sinusoidal wve wave.  This is very useful for the general
+      solution to simple harmonic motion: even the linear combination
+      will still produce the expected behaviour of sinusoidal
+      oscillations.
     </p>
     <p>
-      Hooke's Law is a nice starting point for understanding harmonic
-      motion.  However, these SOCCLDEs have no <m>b</m> term.  We can
-      wonder: what should <m>b</m> be?  This <m>b</m> is a coefficient
+      Hooke's Law is the starting point for understanding harmonic
+      motion.  However, these SOCCLDEs have no <m>b</m> term.  I should
+      wonder: what could <m>b</m> be?  This <m>b</m> is a coefficient
       of the first derivative, the velocity of the system.  Velocity
       causes friction in the system, and the greater the velocity the
       greater the friction.  Hooke's law was an idealization which
       ignored friction; by adding in a non-zero <m>b</m> coefficient,
-      we account for friction in the harmonic system.  Again, we set
-      up Hooke's law as a force quation using Newton's laws of
-      motion.
+      I account for friction in the harmonic system.  Again, I will
+      set up Hooke's law as a force quation using Newton's laws of
+      motion, but now include a friction term. 
       <md>
         <mrow>
           F \amp = -k x(t) - b \frac{dx}{dt}
         </mrow>
         <mrow>
-          m a(t) + b \frac{dx}{dt} + k x(t) \amp = 0
+          F \amp = m \frac{d^2 x}{dt^2} 
+        </mrow>
+        <mrow>
+          m \frac{d^2 x}{dt^2} \amp = -k x(t) - b \frac{dx}{dt}
         </mrow>
         <mrow>
           m\frac{d^2 x}{dt^2} + b \frac{dx}{dt} + k x(t) \amp = 0
         </mrow>
       </md>
       Harmonic systems with friction are called <em>damped harmonic
-      systems</em>.  What do we expect out of such systems?  The
-      undamped system is a sine or cosine wave, which just oscillates
-      forever.  We expect that the friction should cause the
-      oscillations to eventually slow down.  Therefore, we expect
-      decay in the amplitude of the sine way.
+      systems</em>; systems without friction are <em>undamped</em>.
+      The solution to the undamped system was never ending sinusoidal
+      oscillation. This makes sense from the perspective of
+      conservation of energy: without friction to remove energy from
+      the system, the oscillations will continue for ever.  Frication
+      removes energy, so I that friction should cause the oscillations
+      to eventually slow down. I expect the solutions to show decay in
+      the amplitude of the sine wave.
     </p>
     <p>
-      Now consider the non-homogeneous system.  If we have <m>L = m
-      \frac{d^2x}{dt^2} + b \frac{dx}{dt} + k x</m> where <m>m</m> is
-      mass, <m>b</m> is the coefficient of friction and <m>k</m> is
-      the spring constant, then what is the interpretation of
-      <m>f(t)</m> in <m>Lx(t) = f(t)</m>?  The term <m>Lx(t)</m>
-      represents the force, since we derived it using Newton's law.
-      Therefore, this must be an equation of forces and <m>f(t)</m>
-      must be some external force on the system.  The homogenous
-      equation gives the behaviour of the system on its own, and the
-      non-homogenous equation add the complication of external
-      forces.
+      Having used friction to interpret the constant <m>b</m>, the
+      only piece that remains to interpret is the function <m>f(t)</m>
+      in a non-homogeneous SOCCLDe. In the harmonic motion
+      intepretation so far, all these terms in the equation are terms
+      of force. If the equation is to make any sense, <m>f(t)</m> must
+      also be a force. However, <m>f(t)</m> doesn't directly relate to
+      the position at all: the dependent variable <m>x</m> doesn't
+      show up. Therefore, <m>f(t)</m> must be a force which is not
+      dependent on the current position, velocity or acceleration of
+      the system. The only option is an external form on the system.
+      In this way, homogenous equations represent a system free of
+      external forces and non-homogeneous equations represent a system
+      under the influence of an external force. 
     </p>
   </subsection>
   <subsection xml:id="subsection-curcuits">
     <title>Alternating Current Circuits</title>
     <p>
-      The second major interpretations of SOCCLDEs is as alternating
-      current circuits.  The DE that will result is exactly the same,
+      Before moving on to actual solution techinques, I want to talk
+      about the second major interpretations of SOCCLDEs: alternating
+      current circuits.  The DE that will result is exactly the same
+      as that for harmonic motion,
       but the interpretation of each of the coefficients is quite
-      different.  Instead of a position function <m>x(t)</m>, we will
-      have a charge function <m>q(t)</m> and the movement of that
-      charge will constitute current.  For our purposes, we will have
-      four components to a circuit: resistors, capacitors, inductors
-      and an external electro-motive force.  Let's quickly given an
-      account.
+      different.  Instead of a position function <m>x(t)</m>, the
+      system describes a charge function <m>q(t)</m>; the movement of that
+      charge will be the alternating current.  In this system, there
+      are four components to a circuit: resistors, capacitors, inductors
+      and an external electro-motive force.  Let me describe these
+      each in turn. 
     </p>
     <p><ul>
       <li>
         Resistors allow for energy leaving the system and they
         represent the resistance to energy flow.  The resistance is
-        written <m>R</m> and measured in ohms.  They act like friction
-        in the mechanical system in that they want to slow down the
-        flow of current.  They will result in a decrease in current
-        over time if there is no external forcing.  Resistors
+        written <m>R</m> and measured in ohms.  It acts like friction
+        in the mechanical system in that it wants to slow down the
+        flow of current.  Resistance will result in a decrease in current
+        over time, if there is no external forcing.  Resistors
         represent the devices powered by the circuit, whatever those
-        devices are.
+        devices are. As the parallel of friction, resistance should
+        show up as the coefficient of <m>\frac{dq}{dt}</m>. 
       </li>
       <li>
         Capacitors are storage devices for electrical energy in
@@ -190,9 +224,12 @@
         capacitance, which has units of farads (coloumbs per volt).
         They stabilize alternating current flow; as such, they can be
         see as controlling the natural way in which current flows.
-        They (up to a reciprocal) align with the spring constant,
-        which controlled the natural behaviour of the harmonic system
-        (before friction and external forces).
+        Thise idea (up to a reciprocal) aligns with the idae of spring
+        constant, which represented the stiffness of the spring and
+        controlled the natural behaviour of the harmonic system
+        (before friction and external forces). As the analogue of the
+        spring constant, capacitance should show up as the coefficient
+        of <m>x(t)</m>. 
       </li>
       <li>
         Inductors are storage devices for electrical energy in a
@@ -200,25 +237,46 @@
         inductance, which has units of henrys.  Inductors block
         alternating current; as such, they represent the difficulty of
         moving charge through the system.  In the harmonic system, the
-        difficult of moving the object was its mass.  Inductance takes
-        the place of the mass term.
+        difficult of moving the object was its mass (indeed, a simple
+        definition of mass is a measure of how difficult it is to move
+        an object). As the analogue of the mass, inductance should
+        show up as the coefficient of <m>\frac{d^2 x}{dt^2}</m>
       </li>
       <li>
         Electromotive forces are external forces to the system, from
         batteries or generators.  They are written <m>E(t)</m> and
         have units of volts.  Like the forces that add movement to a
         harmonic system, these electromotive forces add charge to a
-        circuit.
+        circuit. Matching up most directly with the harmonic system,
+        the electromotive force should be the non-homogeneous function
+        in a non-homogeneous DE. 
       </li>
       <li>
         To give a complete account of the units, charge is written
         <m>q</m> and measured in coloumbs.  The movement of charge is
         current, represented by the derivative <m>\frac{dq}{dt}</m>.
+        The SOCCLDE that models an alternating current is 
         <me>
           L \frac{d^2 q}{dt^2} + R \frac{dq}{dt} + \frac{1}{c} q = E(t)
-        </me>
+        </me>.
+        If there is no resistance and no electromotive force, the
+        solution is sinusoidal oscillation as before (hence
+        <em>alternating</em> current). Under resistance, where there is
+        energy leaving the system, I expect damped oscillations. 
       </li>
     </ul></p>
+    <p>
+      The parallel of harmonic motion/alternating currents is a great
+      example of a common occurence in applied mathematics and the
+      study of differential equations: the same differential equation
+      can describe a variety of seemingly unrelated systems. I find it
+      quite fascinating to think of alternating currents as an
+      electro-magnetic analogue of springs. Since alternating current
+      is so ubiquitous in the world, this mental model of what is
+      going on with electricity gives me a handle on the strange
+      system of power plants, wires, and devices that affect so much
+      of my life. 
+    </p>
   </subsection>
   <subsection xml:id="subsection-solving-soccldes">
     <title>Solving SOCCLDEs</title>
@@ -504,7 +562,7 @@
             y^{\prime \prime} - 2y^\prime + 5y \amp = 0 \amp \amp 
           </mrow>
           <mrow>
-            r^2 + 2r + 5 \amp = 0 \text{ (Characteristic \amp \amp 
+            r^2 + 2r + 5 \amp = 0 \amp \amp \text{ (Characteristic
             Equation) }
           </mrow>
           <mrow>
@@ -524,10 +582,7 @@
             y^\prime(0) \amp = 6 \amp \amp 
           </mrow>
           <mrow>
-            A \amp = 4 
-          </mrow>
-          <mrow>
-            B = 1 \amp \amp 
+            A \amp = 4 \amp \amp B = 1  
           </mrow>
           <mrow>
             y \amp = 4e^t \cos 2t + e^t \sin 2t \amp \amp 

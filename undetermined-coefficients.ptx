@@ -102,7 +102,6 @@
   <example>
     <statement>
       <p>
-        This example is from Roberts and Marion.
         <md>
           <mrow>
             y^{\prime \prime} - 3y^\prime + 2y \amp = t \amp \amp
@@ -113,12 +112,11 @@
             \amp \amp 
           </mrow>
           <mrow>
-            \amp \text \amp \amp \amp \amp { Solve the Homogeneous
-            Case: }
+            \amp \text{ Solve the Homogeneous Case: } \amp \amp \amp
+            \amp
           </mrow>
           <mrow>
-            Ly \amp = 0 \implies r^2 - 3r + \amp \amp \amp \amp  2 =
-            0
+            Ly \amp = 0 \implies r^2 - 3r + 2 = 0 \amp \amp \amp \amp 
           </mrow>
           <mrow>
             (r-2)(r-1) \amp = 0 \implies r = 1,2 \amp \amp \amp \amp 
@@ -131,7 +129,7 @@
             \amp \amp \amp \amp 
           </mrow>
           <mrow>
-            y_p \amp = \amp \amp \amp \amp  Ct + D
+            y_p \amp = Ct + D \amp \amp \amp \amp 
           </mrow>
           <mrow>
             y_p^\prime \amp = C \amp \amp \amp \amp 
@@ -144,10 +142,10 @@
             \amp 
           </mrow>
           <mrow>
-            L y_p \amp \amp \amp \amp  \amp = 0 - 3C + 2(Ct + D) = t
+            L y_p  \amp = 0 - 3C + 2(Ct + D) = t \amp \amp \amp \amp
           </mrow>
           <mrow>
-            2C \amp = 1 \implies C = \ \amp \amp \amp \amp frac{1}{2}
+            2C \amp = 1 \implies C = \frac{1}{2} \amp \amp \amp \amp
           </mrow>
           <mrow>
             -3C + 2D \amp = 0 \amp \amp \amp \amp 
@@ -171,7 +169,7 @@
             \frac{3}{2} \amp \amp 
           </mrow>
           <mrow>
-            y^\prime \ap  = 2Ae^{2t} + Be^t + \frac{1}{2} \amp \amp
+            y^\prime \amp = 2Ae^{2t} + Be^t + \frac{1}{2} \amp \amp
             \amp \amp 
           </mrow>
           <mrow>

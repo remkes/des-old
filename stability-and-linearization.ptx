@@ -47,7 +47,7 @@
             attractive from above</term> if <m>p(t)
             \rightarrow P</m> for initial values slighlty larger than
             <m>P</m>; likewise, the state is called <term>stable or
-            attractice from below</term> is <m>p(t) \rightarrow P</m>
+            attractive from below</term> is <m>p(t) \rightarrow P</m>
             for initial values slightly smaller than <m>P</m>. On the
             phase line, a partially stable state has one trajectory
             pointing towards the steady state and one pointing away. 
@@ -91,26 +91,26 @@
       <me>
         \frac{dp}{dt} = f(p)
       </me>
-      with steady stae<m>P</m>. I'll assume that <m>f(p)</m> is an
+      with steady state <m>P</m>. I'll assume that <m>f(p)</m> is an
       analytic function. I can define a new function <m>q(t) =
       p(t) - P</m>. I am essentially moving the steady state to zero
       with this new function. I can change the differential equation
       to reflect this new function <m>q(t)</m>. The derivative is the
       same: <m>\frac{dq}{dt} = \frac{dp}{dt}</m>, since the only
       difference is the subtraction of a constant. On the left, I can
-      replace <m>p</m> b <m>P+q</m>. That gives a new autonomous
+      replace <m>p</m> by <m>P+q</m>. That gives a new autonomous
       differential equation.
       <me>
         \frac{dq}{dt} = f(P + q)
       </me>
       As desired, <m>q=0</m> is now the steady state of this new DE.
-      Nw I'm going to expand the function <m>f</m> as a taylor series
-      centered at <m>P</m>. (Why would I want to
-      expand <m>f</m> as a taylor series? Well, because it
-      accomplishes the goal of this section, as you will see.) This is
-      a bit strange a subtle: the variable for this taylor series is
-      <m>q</m>, not <m>t</m>. Here is the result, just showing the
-      first two tersm of the taylor series. 
+      Now I'm going to expand the function <m>f</m> as a taylor series
+      centered at <m>P</m>. (Why would I want to expand <m>f</m> as a
+      taylor series? Well, because it accomplishes the goal of this
+      section, as you will see.) This is a bit strange and subtle: the
+      variable for this taylor series is <m>q</m>, not <m>t</m>. Here
+      is the result, just showing the first two terms of the taylor
+      series. 
       <me>
         \frac{dq}{dt} = f(P + q) = f(P) + f^\prime(P) (P + q - P) +
         \ldots 

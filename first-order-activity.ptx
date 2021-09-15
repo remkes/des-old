@@ -26,28 +26,29 @@
           positive, so the trajectory is upward on <m>(10,
           \infty)</m>. <xref ref="figure-activity-phase-line-1" />
           shows the phase line. 
-          <figure xml:id="figure-activity-phase-line-1">
-            <caption>
-              A Line Diagram for <m> \frac{dp}{dt} =
-              (p-3)(p-6)(p-10)</m>
-            </caption>
-            <image xml:id="figure52" width="90%">
-              <asymptote>
-                size(12cm,0,IgnoreAspect);
-                dot("$0$",(0,0),N);
-                dot("$3$",(2,0),N);
-                dot("$6$",(4,0),N);
-                dot("$10$",(6,0),N);
-                dot("$\infty$",(8,0),N);
-                draw((2,0)--(0,0),MidArrow);
-                draw((2,0)--(4,0),MidArrow);
-                draw((6,0)--(4,0),MidArrow);
-                draw((6,0)--(8,0),MidArrow);
-              </asymptote>
-            </image>
-          </figure>
         </p>
       </solution>
+        <figure xml:id="figure-activity-phase-line-1">
+          <caption>
+            A Phase Line Diagram for <m>\frac{dp}{dt} =
+            (p-3)(p-6)(p-10)</m>
+          </caption>
+          <image xml:id="figure52" width="80%">
+            <asymptote>
+              size(12cm,0,IgnoreAspect);
+              dot("$0$",(0,0),N);
+              dot("$3$",(2,0),N);
+              dot("$6$",(4,0),N);
+              dot("$10$",(6,0),N);
+              dot("$\infty$",(8,0),N);
+              draw((2,0)--(0,0),MidArrow);
+              draw((2,0)--(4,0),MidArrow);
+              draw((6,0)--(4,0),MidArrow);
+              draw((6,0)--(8,0),MidArrow);
+            </asymptote>
+          </image>
+        </figure>
+      <!-- </solution> -->
     </activity>
     <activity>
       <statement>
@@ -72,28 +73,29 @@
           <m>(4,6)</m>. for <m>p=7</m>, the right side is positive, so
           the trajectory is upward on <m>(6,\infty)</m>. <xref
           ref="figure-activity-phase-line-2" /> shows the phase line. 
-          <figure xml:id="figure-activity-phase-line-2">
-            <caption>
-              A Line Diagram for <m>\frac{dp}{dt} =
-              (p-2)^4(p-4)^7(p-6)^9</m>
-            </caption>
-            <image xml:id="figure53" width="90%">
-              <asymptote>
-                size(12cm,0,IgnoreAspect);
-                dot("$0$",(0,0),N);
-                dot("$2$",(2,0),N);
-                dot("$4$",(4,0),N);
-                dot("$6$",(6,0),N);
-                dot("$\infty$",(8,0),N);
-                draw((0,0)--(2,0),MidArrow);
-                draw((2,0)--(4,0),MidArrow);
-                draw((6,0)--(4,0),MidArrow);
-                draw((6,0)--(8,0),MidArrow);
-              </asymptote>
-            </image>
-          </figure>
         </p>
       </solution>
+        <figure xml:id="figure-activity-phase-line-2">
+          <caption>
+            A Line Diagram for <m>\frac{dp}{dt} =
+            (p-2)^4(p-4)^7(p-6)^9</m>
+          </caption>
+          <image xml:id="figure53" width="90%">
+            <asymptote>
+              size(12cm,0,IgnoreAspect);
+              dot("$0$",(0,0),N);
+              dot("$2$",(2,0),N);
+              dot("$4$",(4,0),N);
+              dot("$6$",(6,0),N);
+              dot("$\infty$",(8,0),N);
+              draw((0,0)--(2,0),MidArrow);
+              draw((2,0)--(4,0),MidArrow);
+              draw((6,0)--(4,0),MidArrow);
+              draw((6,0)--(8,0),MidArrow);
+            </asymptote>
+          </image>
+        </figure>
+      <!-- </solution> -->
     </activity>
     <activity>
       <statement>
@@ -116,30 +118,31 @@
           root. I start positive, so the trajectories are positive,
           negative, positive, negative, and positive. <xref
           ref="figure-activity-phase-line-3" /> shows the phase line. 
-          <figure xml:id="figure-activity-phase-line-3">
-            <caption>
-              A Line Diagram for <m>\frac{dp}{dt} = \frac{1}{10}
-              (p^4-15p^3+74p^2-138p+82)</m>
-            </caption>
-            <image xml:id="figure54" width="90%">
-              <asymptote>
-                size(12cm,0,IgnoreAspect);
-                dot("$0$",(0,0),N);
-                dot("$1.16$",(2,0),N);
-                dot("$2.18$",(4,0),N);
-                dot("$4.64$",(6,0),N);
-                dot("$7.03$",(8,0),N);
-                dot("$\infty$",(10,0),N);
-                draw((0,0)--(2,0),MidArrow);
-                draw((4,0)--(2,0),MidArrow);
-                draw((4,0)--(6,0),MidArrow);
-                draw((8,0)--(6,0),MidArrow);
-                draw((8,0)--(10,0),MidArrow);
-              </asymptote>
-            </image>
-          </figure>
         </p>
       </solution>
+        <figure xml:id="figure-activity-phase-line-3">
+          <caption>
+            A Line Diagram for <m>\frac{dp}{dt} = \frac{1}{10}
+            (p^4-15p^3+74p^2-138p+82)</m>
+          </caption>
+          <image xml:id="figure54" width="90%">
+            <asymptote>
+              size(12cm,0,IgnoreAspect);
+              dot("$0$",(0,0),N);
+              dot("$1.16$",(2,0),N);
+              dot("$2.18$",(4,0),N);
+              dot("$4.64$",(6,0),N);
+              dot("$7.03$",(8,0),N);
+              dot("$\infty$",(10,0),N);
+              draw((0,0)--(2,0),MidArrow);
+              draw((4,0)--(2,0),MidArrow);
+              draw((4,0)--(6,0),MidArrow);
+              draw((8,0)--(6,0),MidArrow);
+              draw((8,0)--(10,0),MidArrow);
+            </asymptote>
+          </image>
+        </figure>
+      <!-- </solution> -->
     </activity>
     <activity>
       <statement>
@@ -162,26 +165,27 @@
           evaluated at <m>p=7</m> is positive, so the trajectory on
           <m>(7, \infty)</m> is upward. <xref
           ref="figure-activity-phase-line-4" /> shows the phase line. 
-          <figure xml:id="figure-activity-phase-line-4">
-            <caption>
-              A Line Diagram for <m>\frac{dp}{dt} = (p-7)^2 \sinh
-              (p-3)</m>
-            </caption>
-            <image xml:id="figure55" width="90%">
-              <asymptote>
-                size(12cm,0,IgnoreAspect);
-                dot("$0$",(0,0),N);
-                dot("$3$",(2,0),N);
-                dot("$7$",(4,0),N);
-                dot("$\infty$",(6,0),N);
-                draw((2,0)--(0,0),MidArrow);
-                draw((2,0)--(4,0),MidArrow);
-                draw((4,0)--(6,0),MidArrow);
-              </asymptote>
-            </image>
-          </figure>
         </p>
       </solution>
+        <figure xml:id="figure-activity-phase-line-4">
+          <caption>
+            A Line Diagram for <m>\frac{dp}{dt} = (p-7)^2 \sinh
+            (p-3)</m>
+          </caption>
+          <image xml:id="figure55" width="90%">
+            <asymptote>
+              size(12cm,0,IgnoreAspect);
+              dot("$0$",(0,0),N);
+              dot("$3$",(2,0),N);
+              dot("$7$",(4,0),N);
+              dot("$\infty$",(6,0),N);
+              draw((2,0)--(0,0),MidArrow);
+              draw((2,0)--(4,0),MidArrow);
+              draw((4,0)--(6,0),MidArrow);
+            </asymptote>
+          </image>
+        </figure>
+      <!-- </solution> -->
     </activity>
     <activity>
       <statement>
@@ -206,27 +210,28 @@
           <m>p=6</m>, so the trajectory is upward on
           <m>(5,\infty)</m>. <xref ref="figure-activity-phase-line-5"
           /> shows the phase line. 
-          <figure xml:id="figure-activity-phase-line-5">
-            <caption>
-              A Line Diagram for <m>$\frac{dp}{dt} = \left( \ln \left(
-              \frac{x}{5} \right) \right) \left( \cosh (x-2) - 1
-              \right)</m>
-            </caption>
-            <image xml:id="figure56" width="90%">
-              <asymptote>
-                size(12cm,0,IgnoreAspect);
-                dot("$0$",(0,0),N);
-                dot("$2$",(2,0),N);
-                dot("$5$",(4,0),N);
-                dot("$\infty$",(6,0),N);
-                draw((2,0)--(0,0),MidArrow);
-                draw((4,0)--(2,0),MidArrow);
-                draw((4,0)--(6,0),MidArrow);
-              </asymptote>
-            </image>
-          </figure>
         </p>
       </solution>
+        <figure xml:id="figure-activity-phase-line-5">
+          <caption>
+            A Line Diagram for <m>$\frac{dp}{dt} = \left( \ln \left(
+            \frac{x}{5} \right) \right) \left( \cosh (x-2) - 1
+            \right)</m>
+          </caption>
+          <image xml:id="figure56" width="90%">
+            <asymptote>
+              size(12cm,0,IgnoreAspect);
+              dot("$0$",(0,0),N);
+              dot("$2$",(2,0),N);
+              dot("$5$",(4,0),N);
+              dot("$\infty$",(6,0),N);
+              draw((2,0)--(0,0),MidArrow);
+              draw((4,0)--(2,0),MidArrow);
+              draw((4,0)--(6,0),MidArrow);
+            </asymptote>
+          </image>
+        </figure>
+      <!-- </solution> -->
     </activity>
   </subsection>
   <subsection xml:id="subsection-activity-direction-fields">
@@ -250,33 +255,34 @@
           between two horizontal asymptotes. They resemble arctangent
           functions. Their domains are <m>\RR</m> and their ranges
           seem to be fixed between the asymptotes.
-          <figure xml:id="figure-activity-slope-field-1">
-            <caption>
-              A Slope Field for <m>\frac{dy}{dx} = \frac{1}{x^2 + y^2
-              + 1}</m>
-            </caption>
-            <image xml:id="figure57" width="80%">
-              <asymptote>
-                size(10cm,0);
-                import contour;
-                import stats;
-                import graph;
-
-                xlimits( -1, 5);  
-                ylimits( -2, 2);  
-                yaxis("$y$");
-                xaxis("$x$");
-
-                path vector(pair z) {return (0,0)--(1/(sqrt(1 +
-                (1/((z.x)^2 + (z.y)^2 +1))^2)), (1/((z.x)^2 + (z.y)^2
-                +1))/(sqrt(1 + (1/((z.x)^2 + (z.y)^2 +1))^2)));}
-
-                add(vectorfield(vector,(-4,-4),(4,4)));
-              </asymptote>
-            </image>
-          </figure>
         </p>
       </solution>
+        <figure xml:id="figure-activity-slope-field-1">
+          <caption>
+            A Slope Field for <m>\frac{dy}{dx} = \frac{1}{x^2 + y^2
+            + 1}</m>
+          </caption>
+          <image xml:id="figure57" width="80%">
+            <asymptote>
+              size(10cm,0);
+              import contour;
+              import stats;
+              import graph;
+
+              xlimits( -1, 5);  
+              ylimits( -2, 2);  
+              yaxis("$y$");
+              xaxis("$x$");
+
+              path vector(pair z) {return (0,0)--(1/(sqrt(1 +
+              (1/((z.x)^2 + (z.y)^2 +1))^2)), (1/((z.x)^2 + (z.y)^2
+              +1))/(sqrt(1 + (1/((z.x)^2 + (z.y)^2 +1))^2)));}
+
+              add(vectorfield(vector,(-4,-4),(4,4)));
+            </asymptote>
+          </image>
+        </figure>
+      <!-- </solution> -->
     </activity>
     <activity>
       <statement>
@@ -301,30 +307,31 @@
           the ranges are likely bounded below or above, depending on a
           starting position. Note that <m>y-2</m> is also a singular
           solution that I can see in the slope field.
-          <figure xml:id="figure-activity-slope-field-2">
-            <caption>
-              A Slope Field for <m>\frac{dy}{dx} = (x+4)(y-2)</m>
-            </caption>
-            <image xml:id="figure58" width="80%">
-              <asymptote>
-                size(10cm,0);
-                import contour;
-                import stats;
-                import graph;
-
-                yaxis("$y$");
-                xaxis("$x$");
-
-                path vector(pair z) {return (0,0)--(1/(sqrt(1 +
-                ((z.x+4)*(z.y-2))^2)), ((z.x+4)*(z.y-2))/(sqrt(1 +
-                ((z.x+4)*(z.y-2))^2)));}
-
-                add(vectorfield(vector,(-8,-2),(2,6)));
-              </asymptote>
-            </image>
-          </figure>
         </p>
       </solution>
+        <figure xml:id="figure-activity-slope-field-2">
+          <caption>
+            A Slope Field for <m>\frac{dy}{dx} = (x+4)(y-2)</m>
+          </caption>
+          <image xml:id="figure58" width="80%">
+            <asymptote>
+              size(10cm,0);
+              import contour;
+              import stats;
+              import graph;
+
+              yaxis("$y$");
+              xaxis("$x$");
+
+              path vector(pair z) {return (0,0)--(1/(sqrt(1 +
+              ((z.x+4)*(z.y-2))^2)), ((z.x+4)*(z.y-2))/(sqrt(1 +
+              ((z.x+4)*(z.y-2))^2)));}
+
+              add(vectorfield(vector,(-8,-2),(2,6)));
+            </asymptote>
+          </image>
+        </figure>
+      <!-- </solution> -->
     </activity>
     <activity>
       <statement>
@@ -359,33 +366,34 @@
           where <m>h</m> is the height of the asymptote. If I connect
           the positive and negative pieces, I get horizontal
           quartic-like paths.
-          <figure xml:id="figure-activity-slope-field-3">
-            <caption>
-              A Slope Field for <m>\frac{dy}{dx} = \frac{x}{y^3}</m>
-            </caption>
-            <image xml:id="figure59" width="80%">
-              <asymptote>
-                size(10cm,0);
-                import contour;
-                import stats;
-                import graph;
-
-                yaxis("$y$");
-                xaxis("$x$");
-
-                path vector(pair z) {return (0,0)--(1/(sqrt(1 +
-                ((z.x)/((z.y)^3))^2)), ((z.x)/((z.y)^3))/(sqrt(1 +
-                ((z.x)/((z.y)^3))^2)));}
-
-                add(vectorfield(vector,(-4,-4),(-0.5,-0.5)));
-                add(vectorfield(vector,(-4,0.5),(-0.5,4)));
-                add(vectorfield(vector,(0.5,-4),(4,-0.5)));
-                add(vectorfield(vector,(0.5,0.5),(4,4)));
-              </asymptote>
-            </image>
-          </figure>
         </p>
       </solution>
+        <figure xml:id="figure-activity-slope-field-3">
+          <caption>
+            A Slope Field for <m>\frac{dy}{dx} = \frac{x}{y^3}</m>
+          </caption>
+          <image xml:id="figure59" width="80%">
+            <asymptote>
+              size(10cm,0);
+              import contour;
+              import stats;
+              import graph;
+
+              yaxis("$y$");
+              xaxis("$x$");
+
+              path vector(pair z) {return (0,0)--(1/(sqrt(1 +
+              ((z.x)/((z.y)^3))^2)), ((z.x)/((z.y)^3))/(sqrt(1 +
+              ((z.x)/((z.y)^3))^2)));}
+
+              add(vectorfield(vector,(-4,-4),(-0.5,-0.5)));
+              add(vectorfield(vector,(-4,0.5),(-0.5,4)));
+              add(vectorfield(vector,(0.5,-4),(4,-0.5)));
+              add(vectorfield(vector,(0.5,0.5),(4,4)));
+            </asymptote>
+          </image>
+        </figure>
+      <!-- </solution> -->
     </activity>
     <activity>
       <statement>
@@ -410,32 +418,33 @@
           vertical asymptotes at <m>x=0</m>. Their ranges seem to be
           <m>(\pm h, \pm \infty)</m>. Note I can also see the
           <m>y=0</m> singular solution in the slope field.
-          <figure xml:id="figure-activity-slope-field-4">
-            <caption>
-              A Slope Field for <m>\frac{dy}{dx} = y \ln x</m>
-            </caption>
-            <image xml:id="figure60" width="80%">
-              <asymptote>
-                size(10cm,0);
-                import contour;
-                import stats;
-                import graph;
-
-                xlimits( -1, 5);  
-                ylimits( -2, 2);  
-                yaxis("$y$");
-                xaxis("$x$");
-
-                path vector(pair z) {return (0,0)--(1/(sqrt(1 +
-                ((z.y)*(log(z.x)))^2)), ((z.y)*(log(z.x)))/(sqrt(1 +
-                ((z.y)*(log(z.x)))^2)));}.
-
-                add(vectorfield(vector,(0.5,-4),(6,4)));
-              </asymptote>
-            </image>
-          </figure>
         </p>
       </solution>
+        <figure xml:id="figure-activity-slope-field-4">
+          <caption>
+            A Slope Field for <m>\frac{dy}{dx} = y \ln x</m>
+          </caption>
+          <image xml:id="figure60" width="80%">
+            <asymptote>
+              size(10cm,0);
+              import contour;
+              import stats;
+              import graph;
+
+              xlimits( -1, 5);  
+              ylimits( -2, 2);  
+              yaxis("$y$");
+              xaxis("$x$");
+
+              path vector(pair z) {return (0,0)--(1/(sqrt(1 +
+              ((z.y)*(log(z.x)))^2)), ((z.y)*(log(z.x)))/(sqrt(1 +
+              ((z.y)*(log(z.x)))^2)));}.
+
+              add(vectorfield(vector,(0.5,-4),(6,4)));
+            </asymptote>
+          </image>
+        </figure>
+      <!-- </solution> -->
     </activity>
     <activity>
       <statement>
@@ -462,32 +471,33 @@
           tangent. In any case, the range is clearly unbounded and the
           domain is either unbounded or fixed between the two vertical
           asymptotes.
-          <figure xml:id="figure-activity-slope-field-5">
-            <caption>
-              A Slope Field for <m>\frac{dy}{dx} = x^2 + y^2</m>
-            </caption>
-            <image xml:id="figure61" width="80%">
-              <asymptote>
-                size(10cm,0);
-                import contour;
-                import stats;
-                import graph;
-
-                xlimits( -1, 5);  
-                ylimits( -2, 2);  
-                yaxis("$y$");
-                xaxis("$x$");
-
-                path vector(pair z) {return (0,0)--(1/( sqrt(1 +
-                ((z.x)^2 + (z.y)^2)^2)), ((z.x)^2 + (z.y)^2)/(sqrt(1 +
-                ((z.x)^2 + (z.y)^2)^2)));}
-
-                add(vectorfield(vector,(-4,-4),(4,4)));
-              </asymptote>
-            </image>
-          </figure>
         </p>
       </solution>
+        <figure xml:id="figure-activity-slope-field-5">
+          <caption>
+            A Slope Field for <m>\frac{dy}{dx} = x^2 + y^2</m>
+          </caption>
+          <image xml:id="figure61" width="80%">
+            <asymptote>
+              size(10cm,0);
+              import contour;
+              import stats;
+              import graph;
+
+              xlimits( -1, 5);  
+              ylimits( -2, 2);  
+              yaxis("$y$");
+              xaxis("$x$");
+
+              path vector(pair z) {return (0,0)--(1/( sqrt(1 +
+              ((z.x)^2 + (z.y)^2)^2)), ((z.x)^2 + (z.y)^2)/(sqrt(1 +
+              ((z.x)^2 + (z.y)^2)^2)));}
+
+              add(vectorfield(vector,(-4,-4),(4,4)));
+            </asymptote>
+          </image>
+        </figure>
+      <!-- </solution> -->
     </activity>
   </subsection>
   <subsection xml:id="subsection-activity-separable">
@@ -1144,19 +1154,230 @@
       </solution>
     </activity>
   </subsection>
-  <!--
-  <subsection xml:id="subsection-activity-first-order-something">
-    <title></title>
+  <subsection xml:id="subsection-activity-substitution-homogeneous">
+    <title>Substitution - Homogeneous Equations</title>
     <activity>
       <statement>
         <p>
+          Solve this homogeneous equation using substitution. 
+          <me>
+            \frac{dy}{dt} = \frac{y^3}{t^3} - 1 
+          </me>
         </p>
       </statement>
       <solution>
         <p>
+          I use the appropriate substitution: <m>v = \frac{y}{t}</m>.
+          The expression on the left becomes <m>f(v) = v^3 - 1</m>.
+          Then I can write the new differential equation in <m>v</m>.
+          <me>
+            \frac{dv}{dt} = \frac{f(v) - v}{t} = \frac{v^3 - 1 - v}{t} 
+          </me>
+          As expected, this is a separable equation. I proceed with
+          the steps to solve a separable equation.  
+          <me>
+            \frac{1}{v^3 - v - 1} \frac{dv}{dt} = t 
+          </me>
+          Then I integrate with the standard setup that turns the left
+          side into a integral in <m>v</m>. 
+          <me>
+            \int \frac{1}{v^3 - v - 1} dv = \int t dt
+          </me>
+          The right side is an easy power rule integral. On the left
+          side, I need partial fractions. I've asked a computer for
+          the partial fraction decomposition and the outcome of the
+          resulting integrals. 
+          <me>
+            \frac{1}{11} \ln |v-2| - \frac{1}{22} \ln |v^2 + 2v + 3| -
+            \frac{3}{11\sqrt{2}} \arctan \left( \frac{v+1}{\sqrt{2}}
+            \right) = \frac{t^2}{2} + c 
+          </me>
+          Solving on the left for <m>v</m> is clearly impossible, so
+          I'll have to leave this as an implicit solution. I can still
+          replace the original substitution, leaving an even more
+          complicated implicit expression for the function
+          <m>y(t)</m>. 
+          <me>
+            \frac{1}{11} \ln \left| \frac{y}{t} - 2 \right| -
+            \frac{1}{22} \ln \left | \frac{y^2}{t^2} + \frac{2y}{t} +
+            3 \right| - \frac{3}{11\sqrt{2}} \arctan \left(
+            \frac{\frac{y}{t}+1}{\sqrt{2}} \right) = \frac{t^2}{2} + c 
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this homogeneous equation using substitution. 
+          <me>
+            \frac{dy}{dt} = \frac{t}{t - y}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is a homogeneous equation, but it is a bit difficult to
+          immediately see it. However, if I divide numerator and
+          denominator by <m>t</m> on the right, the form will appear. 
+          <me>
+            \frac{dy}{dt} = \frac{1}{1- \frac{y}{t}} 
+          </me>
+          I use the appropriate substitution: <m>v = \frac{y}{t}</m>.
+          The expression on the left becomes <m>f(v) = \frac{1}{1-v}</m>.
+          Then I can write the new differential equation in <m>v</m>.
+          <me>
+            \frac{dv}{dt} = \frac{f(v) - v}{t} = \frac{\frac{1}{1-v} -
+            v}{t} = \frac{v - 1}{t(1-v)} = - t
+          </me>
+          As expected, this is a separable equation. However, this is
+          even better, since the dependent variable has entirely
+          disappeared. I can solve this just by integrating both sides
+          in <m>t</m>
+          <me>
+            v = \frac{-t^2}{2} + c 
+          </me>
+          Then I can reverse the substitution. 
+          <me>
+            \frac{y}{t} = \frac{-t^2}{2} + c 
+          </me>
+          Finally, I can isolate <m>y</m> to produce the solution.
+          <me>
+            y = \frac{-t^3}{2} + ct 
+          </me>
         </p>
       </solution>
     </activity>
   </subsection>
-  -->
+  <subsection xml:id="subsection-activity-bernoulli">
+    <title>Substitution - Bernoulli Equations</title>
+    <activity>
+      <statement>
+        <p>
+          Solve this Bernoulli equation by substitution.
+          <me>
+            \frac{dy}{dt} + \frac{y}{t} = \frac{y^3}{t^2} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          In this Bernoulli equation, <m>n=3</m>, so the substitution
+          is <m>v = y^{-2}</m>. The substitution produces a linear
+          equation.
+          <me>
+            \frac{dv}{dt} - \frac{2v}{t} = - \frac{2}{t^2}
+          </me>
+          I proceed with the usual steps for linear equations. I
+          identify the two coefficient functions.
+          <md>
+            <mrow>
+              \amp P(t) = \frac{-2}{t} 
+              \amp \amp Q(t) = \frac{-2}{t^2} 
+            </mrow>
+          </md>
+          Then I'll calculate the integrating factor. 
+          <me>
+            \mu(t) = e^{\int \frac{-2}{t} dt} = e^{-2\ln |t|} =
+            \frac{1}{t^2}
+          </me>
+          Then I multiply the original equation by the integrating
+          factor. 
+          <me>
+            \frac{1}{t^2} \frac{dv}{dt} = \frac{2v}{t^3} = -
+            \frac{2}{t^4}
+          </me>
+          The left side becomes a product rule derivative.
+          <me>
+            \frac{d}{dt} \left( \frac{1}{t^2} v \right) =
+            - \frac{2}{t^4}
+          </me>
+          Then I integrate. 
+          <me>
+            \frac{1}{t^2} v = \frac{2}{3t^3} + c 
+          </me>
+          Then I solve for <m>v</m>. 
+          <me>
+            v = \frac{2}{3t} + ct^2 
+          </me>
+          Then I can reverse the substitution.
+          <me>
+            \frac{1}{y^2} = \frac{2}{3t} + ct^2 = \frac{2 +
+            ct^3}{3t^2}
+          </me>
+          Finally, I can solve for <m>y</m>
+          <me>
+            y = \sqrt{\frac{3t^2}{2 + ct^3}}
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this Bernoulli equation by substitution.
+          <me>
+            \frac{dy}{dt} + \sin t y = t^2 y^4 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          In this Bernoulli equation, <m>n=4</m>, so the substitution
+          is <m>v = y^{-3}</m>. The substitution produces a linear
+          equation.
+          <me>
+            \frac{dv}{dt} -3 \sin t v = -3t^2 
+          </me>
+          I proceed with the usual steps for linear equations. I
+          identify the two coefficient functions.
+          <md>
+            <mrow>
+              \amp P(t) = -3 \sin t 
+              \amp \amp Q(t) = -3t^2 
+            </mrow>
+          </md>
+          Then I'll calculate the integrating factor. 
+          <me>
+            \mu(t) = e^{\int -3 \sin t dt} = e^{3 \cos t} = 
+          </me>
+          Then I multiply the original equation by the integrating
+          factor. 
+          <me>
+            e^{3 \cos t} \frac{dv}{dt} - 3e^{3 \cos t} \sin t v =
+            -3e^{3 \cos t} t^2 
+          </me>
+          The left side becomes a product rule derivative.
+          <me>
+            \frac{d}{dt} \left( e^{3 \cos t} v \right) = -3e^{3 \cos
+            t} t^2 
+          </me>
+          Then I integrate. 
+          <me>
+            v e^{3 \cos t} = \int -3e^{3 \cos t} t^2 dt 
+          </me>
+          I have to leave the integral on the right, since I don't
+          know any way to solve it with the techniques of elementary
+          functions. Likely, this solution to the integral is some
+          previously unknown function. However, I can solve for
+          <m>v</m>. 
+          <me>
+            v = e^{-3 \cos t} \int -3e^{3 \cos t} t^2 dt 
+          </me>
+          Then I can reverse the substitution.
+          <me>
+            \frac{1}{y^3} = e^{-3 \cos t} \int -3e^{3 \cos t} t^2 dt 
+          </me>
+          Finally, I can solve for <m>y</m>
+          <me>
+            y = \sqrt[3]{\frac{1}{e^{-3 \cos t} \int -3e^{3 \cos t}
+            t^2 dt}} 
+          </me>
+          This is an unwieldy solution; it would be quite difficult to
+          investigate the properties of this strangely defined
+          function. But it is a solution. 
+        </p>
+      </solution>
+    </activity>
+  </subsection>
 </section>
