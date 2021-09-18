@@ -1,15 +1,15 @@
 <section xml:id="section-undetermined-coefficients">
   <title>The Method of Undetermined Coefficients</title>
   <p>
-    In <xref ref="secdtion-constant-coefficients">, I presented the
+    In <xref ref="section-constant-coefficients" />, I presented the
     method for solving homogeneous SOCCLDEs. Now I want to move on to
     the non-homogeneous case. Recall, in the interpretation as
     harmonic systems, that the non-homogeneous term <m>f(t)</m> is an
     external force on the system. I understand how a harmonic system
     wants to act when left on its own, but now I want to understand
     how it acts when subjet to some external force.
-  <p>
   </p>
+  <p>
     There are two main techniques for solving the non-homogeneous
     case. This section introduces the first of those techniques:
     undetermined coefficients. The second method, variation of
@@ -238,7 +238,7 @@
           </mrow>
         </md>
         The force term is <m>e^{-2t} \cos (2t)</m>, which is a product
-        of an exponential and a sinuosoidal term.  one. The guess for
+        of an exponential and a sinuosoidal term one. The guess for
         undetermined coefficients has the same pattern. 
         <me>
           y_p = e^{-2t} (C \cos 2t + D \sin 2t)
@@ -249,6 +249,7 @@
           <mrow>
             y^\prime \amp = e^{-2t} ( (-2C + 2D) \cos 2t + (-2D
             -2C)\sin 2t)
+          </mrow>
           <mrow>
             y^{\prime\prime} \amp = e^{-2t} ( (-8D) \cos 2t + (8C)\sin
             2t)
@@ -312,64 +313,73 @@
     <statement>
       <p>
         In this example, the forcing term is similar to one of the
-        homogeneous solutions, so you will notice that we have
-        multiplied by <m>t</m> in our guess for the particular
-        solution. Again, I've skipped more of the algebra in this
-        example, particularly omitting the long derivatives and
-        calculation of <m>Ly_p</m>.
-        <md>
-          <mrow>
-            y^{\prime \prime} + 2y^\prime + 2y \amp = f(t) = 4e^{-t}
-            \sin t
-          </mrow>
-          <mrow>
-            \amp \text{ Solve the Homogeneous Case: }
-          </mrow>
-          <mrow>
-            r^2 + 2r + 2 \amp = 0 \implies r = -1 \pm \imath
-          </mrow>
-          <mrow>
-            y_h \amp = e^{-t} (A \sin t + B \cos t)
-          </mrow>
-          <mrow>
-            \amp \text{ Our Guess for Undetermined Coefficients: }
-          </mrow>
-          <mrow>
-            y_p \amp = te^{-t} (C \sin t + D \cos t )
-          </mrow>
-          <mrow>
-            y^{\prime} \amp = e^{-t} (C \sin t + D \cos t) +
-            te^{-t}((-C-D)\sin t + (-D+C)\cos t)
-          </mrow>
-          <mrow>
-            y^{\prime\prime} \amp = e^{-t} ((-2C-2D) \sin t + (-2D+2C)
-            \cos t) + te^{-t}((2D)\sin t + (-2C)\cos t)
-          </mrow>
-          <mrow>
-            \amp \text{ Solve for the Coefficients: }
-          </mrow>
-          <mrow>
-            L y_p \amp = e^{-t} ((-2D) \sin t + (2C) \cos t) = 4e^{-t}
-            \sin t
-          </mrow>
-          <mrow>
-            -2D \amp = 4 \implies D = -2
-          </mrow>
-          <mrow>
-            2C \amp = 0 \implies C = 0
-          </mrow>
-          <mrow>
-            y_p \amp = -2te^{-t} \cos t
-          </mrow>
-          <mrow>
-            y \amp = -2te^{-t} \cos t + e^{-t} (A \sin t + B \cos t)
-          </mrow>
-        </md>
-        In this result, we still have exponential decay, since the
-        exponential is asymptotically dominant in the <m>te^{-t}</m>
-        term. However, the trajectory and behaviour of the decay
-        differs, particular for small <m>t</m>, from the homogeneous
-        solutions.
+        homogeneous solutions. I multiplied by <m>t</m> in the guess
+        for the particular solution to account for this. Again, I've
+        skipped some of the algebra in this example, particularly
+        omitting the long derivatives and calculation of <m>Ly_p</m>.
+        <me>
+          y^{\prime \prime} + 2y^\prime + 2y = f(t) = 4e^{-t}
+          \sin t
+        </me>
+        <me>
+        First I solve the homogeneous case via the characteristic
+        equation.
+        </me>
+        <me>
+          r^2 + 2r + 2 = 0 \implies r = -1 \pm \imath
+        </me>
+        The complex roots of the characteristic equation lead to
+        exponentially damped sinusoidal solutions. This is the full
+        homogeneous solution.
+        <me>
+          y_h = e^{-t} (A \sin t + B \cos t)
+        </me>
+        <me>
+        Here is my guess for the particular solution. 
+        </me>
+        <me>
+          y_p = te^{-t} (C \sin t + D \cos t )
+        </me>
+        I need its derivatives to put into the differential equation.
+        <me>
+          y_p^{\prime} = e^{-t} (C \sin t + D \cos t) +
+          te^{-t}((-C-D)\sin t + (-D+C)\cos t)
+        </me>
+        <me>
+          y_p^{\prime\prime} = e^{-t} ((-2C-2D) \sin t + (-2D+2C)
+          \cos t) + te^{-t}((2D)\sin t + (-2C)\cos t)
+        </me>
+        <me>
+        I put the guess and its derivative into the DE. 
+        </me>
+        <me>
+          L y_p = e^{-t} ((-2D) \sin t + (2C) \cos t) = 4e^{-t}
+          \sin t
+        </me>
+        Comparing the coefficients of sine and cosine on the left and
+        the right produces a system of two equation. The first
+        equation gives the value of <m>D</m>. 
+        <me>
+          -2D = 4 \implies D = -2
+        </me>
+        The second equation gives the value of <m>C</m>.
+        <me>
+          2C = 0 \implies C = 0
+        </me>
+        I use the coefficients to write the particular solution.
+        <me>
+          y_p = -2te^{-t} \cos t
+        </me>
+        The general solution is the particular solution added to the
+        homogeneous solution. 
+        <me>
+          y = -2te^{-t} \cos t + e^{-t} (A \sin t + B \cos t)
+        </me>
+        In this result, the full solution still has exponential decay,
+        since the exponential is asymptotically dominant in the
+        <m>te^{-t}</m> term. However, the trajectory and behaviour of
+        the decay differs, particular for small <m>t</m>, from the
+        behavour of the homogeneous solution by itself.
       </p>
     </statement>
   </example>
