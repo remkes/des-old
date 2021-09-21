@@ -238,7 +238,7 @@
       </statement>
     </definition>
     <p>
-      Let me do some algebra again with this ne definition. First,
+      Let me do some algebra again with this new definition. First,
       I'll take the full expression for <m>y_p</m> I ended with above
       and move the first exponential to the right side. Then I can
       differentiate both sides and replace the integrating factor with

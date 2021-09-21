@@ -126,10 +126,8 @@
         <me>
           L = \frac{d^2}{dt^2} + 3 \frac{d}{dt} + 2 
         </me>.
-        <me>
         I first solve the homogeneous case using the characteristic
         equation, finding the roots and writing the general solution.
-        </me>
         <md>
           <mrow>
             Ly \amp = 0 \implies r^2 - 3r + 2 = 0 
@@ -222,10 +220,8 @@
         <me>
           L = \frac{d^2}{dt^2} + 8 \frac{d}{dt} + 3
         </me>.
-        <me>
         I first solve the homogeneous case using the characteristic
         equation, finding the roots and writing the general solution.
-        </me>
         <md>
           <mrow>
             Ly \amp = 0 \implies r^2 + 8r + 3 = 0
@@ -274,24 +270,24 @@
         </md>
         First I use the second equation to isolate <m>D</m>.
         <me>
-          D \amp = \frac{-8C}{13}
+          D = \frac{-8C}{13}
         </me>
         Then I substitute the value of <m>D</m> in the first equation
         and solve for <m>C</m>. Once I know <m>C</m>, I can use the
         previous equation to find <m>D</m> as well. 
         <me>
-          C \amp = \frac{-13}{233} \implies D = \frac{8}{233}
+          C = \frac{-13}{233} \implies D = \frac{8}{233}
         </me>
         Now that I have the coefficients, I know the particular
         solution. 
         <me>
-          y_p \amp = e^{-2t} \left( \frac{-13}{233} \cos 2t +
+          y_p = e^{-2t} \left( \frac{-13}{233} \cos 2t +
           \frac{8}{233} \sin 2t \right)
         </me>
         Finally, the general solution is the particular solution plus
         the homogeneous solution. 
         <me>
-          y \amp = Ae^{(-4+\sqrt{13})t} + B e^{(-4-\sqrt{13})t} +
+          y \= Ae^{(-4+\sqrt{13})t} + B e^{(-4-\sqrt{13})t} +
           e^{-2t} \left( \frac{-13}{233} \cos 2t + \frac{8}{233}
           \sin 2t \right)
         </me>
@@ -321,10 +317,8 @@
           y^{\prime \prime} + 2y^\prime + 2y = f(t) = 4e^{-t}
           \sin t
         </me>
-        <me>
         First I solve the homogeneous case via the characteristic
         equation.
-        </me>
         <me>
           r^2 + 2r + 2 = 0 \implies r = -1 \pm \imath
         </me>
@@ -334,9 +328,7 @@
         <me>
           y_h = e^{-t} (A \sin t + B \cos t)
         </me>
-        <me>
         Here is my guess for the particular solution. 
-        </me>
         <me>
           y_p = te^{-t} (C \sin t + D \cos t )
         </me>
@@ -349,9 +341,7 @@
           y_p^{\prime\prime} = e^{-t} ((-2C-2D) \sin t + (-2D+2C)
           \cos t) + te^{-t}((2D)\sin t + (-2C)\cos t)
         </me>
-        <me>
         I put the guess and its derivative into the DE. 
-        </me>
         <me>
           L y_p = e^{-t} ((-2D) \sin t + (2C) \cos t) = 4e^{-t}
           \sin t

@@ -126,13 +126,24 @@
       same period, I can express the sums of the two trig functions as
       a single way. There is a relatively obscure but useful trig
       identity that show how to accomplish this. 
-      <md>
-        <mrow>
-          \amp a \sin t + b \cos t = \sqrt{a^2+b^2} \sin (t + \phi)
-          \amp \amp \text{ where } \amp \amp \phi = \arcsin
-          \left( \frac{b}{\sqrt{a^2+b^2}} \right)
-        </mrow>
-      </md>
+    </p>
+    <proposition xml:id="proposition-wave-combination">
+      <statement>
+        The sum of a sine and cosine wave with the same frequency (but
+        possibly different amplitude) is still a sinusoidal wave. The
+        new amplitude is a pythagorean combination of the original
+        amplutide and the way is shifted by some angle <m>\phi</m>
+        Explicitly:
+        <md>
+          <mrow>
+            \amp a \sin t + b \cos t = \sqrt{a^2+b^2} \sin (t + \phi)
+            \amp \amp \text{ where } \amp \amp \phi = \arcsin
+            \left( \frac{b}{\sqrt{a^2+b^2}} \right)
+          </mrow>
+        </md>
+      </statement>
+    </proposition>
+    <p>
       This identity shows me that combinations of sine and cosine, at
       least when they share a period, are still just a single
       sinusoidal wve wave. This is very useful for the general

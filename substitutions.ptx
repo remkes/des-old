@@ -160,7 +160,7 @@
           </md>
           After partial fractions, I can proceed with the left
           integral. After the integral, there is a series of algebraic
-          steps to try to isolate <m>v</m>
+          steps to try to isolate <m>v</m>.
           <md>
             <mrow>
               \frac{1}{2} \int \frac{dv}{v+2} + \frac{-1}{2} \int
@@ -176,9 +176,6 @@
             </mrow>
             <mrow>
               \sqrt{1 + \frac{2}{v}} \amp = ct
-            </mrow>
-            <mrow>
-              \frac{1 + \sqrt{2}}{v} \amp = ct
             </mrow>
             <mrow>
               1 + \frac{2}{v} \amp = ct^2

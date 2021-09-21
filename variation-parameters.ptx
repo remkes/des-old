@@ -2,16 +2,16 @@
   <title>Variation of Parameters</title>
   <introduction>
     <p>
-      Undetermined coefficients is an effective and relatively efficient
-      way to solve for a particular
-      non-homogeneous solution of a SOLCCDE. Its limitation is its
-      scope: it only works for specific forcing terms. Variation of
-      parameters is a much more general method of finding particular
-      solutions. Its weakness is the reliance on difficult integrals
-      <mdash/> often I'll have to leave the solutions in a form which
-      involves unfinished integrals. In the examples, I'll often
-      stick to forcing terms which could have used undetermined
-      coefficients, just to make the integrals reasonable.
+      Undetermined coefficients is an effective and relatively
+      efficient way to solve for a particular non-homogeneous solution
+      of a SOLCCDE. Its limitation is its scope: it only works for
+      specific forcing terms. Variation of parameters is a much more
+      general method of finding particular solutions. Its weakness is
+      the reliance on difficult integrals <mdash/> often I'll have to
+      leave the solutions in a form which involves unfinished
+      integrals. In the examples, I'll often stick to forcing terms
+      which could have used undetermined coefficients, just to make
+      the integrals reasonable.
     </p>
   </introduction>
   <subsection xml:id="subsection-wronskians">
@@ -24,12 +24,13 @@
           to be the determinant of a matrix involving the <m>f_i</m>
           and their derivatives.
           <me>
-            W(f_1, f_2, \ldots, f_n) : = \left| \begin{matrix} f_1
-            \amp \ldots \amp f_n \\ f^\prime_1 \amp \ldots \amp
-            f^\prime_n \\ f^{\prime\prime}_1 \amp \ldots \amp
-            f^{\prime\prime}_n \\ \ldots \amp \ldots \amp \ldots \\
-            f^{(n-1)}_1 \amp \ldots \amp f^{(n-1)}_n \end{matrix}
-            \right|
+            W(f_1, f_2, \ldots, f_n) : = \left| \begin{matrix} 
+              f_1 \amp \ldots \amp f_n \\ 
+              f^\prime_1 \amp \ldots \amp f^\prime_n \\ 
+              f^{\prime\prime}_1 \amp \ldots \amp f^{\prime\prime}_n \\ 
+              \ldots \amp \ldots \amp \ldots \\
+              f^{(n-1)}_1 \amp \ldots \amp f^{(n-1)}_n 
+            \end{matrix} \right|
           </me>
         </p>
       </statement>
@@ -48,9 +49,10 @@
       two functions.  I'll write this determinant explicitly for your
       convenience. 
       <me>
-        W(f_1,f_2) = \left| \begin{matrix} f_1 \amp f_2 \\ f_1^\prime
-        \amp f_2^\prime \end{matrix} \right| = f_1 f_2^\prime - f_2
-        f_1^\prime
+        W(f_1,f_2) = \left| \begin{matrix} 
+          f_1 \amp f_2 \\ 
+          f_1^\prime \amp f_2^\prime 
+        \end{matrix} \right| = f_1 f_2^\prime - f_2 f_1^\prime
       </me>
     </p>
   </subsection>
@@ -66,7 +68,7 @@
       </me>.
       Let <m>y_1</m> and <m>y_2</m> be solutions to the homogeneous
       equation <m>Ly=0</m>.  The general solution to the homogeneous
-      equation is <m>Ay_1 + By_2</m>. The parameters are the constnat 
+      equation is <m>Ay_1 + By_2</m>. The parameters are the constant 
       <m>A</m> and <m>B</m>. To <sq>vary the parameters</sq> is to
       replace the constants with functions. That is, I look for a
       solution which has the form 
@@ -77,33 +79,54 @@
       instead of unknown constant.  Then I put this form of <m>y_p</m>
       into the differential equation to try to determine what the
       unknown functions might be.  A long and tedious calculation
-      ensues.
+      ensues. In this calculation, I calculate the derivative of
+      <m>y_p</m>, put them in the differential equation, and then
+      rearrange and group terms for the steps that will follow. 
       <md>
+        <mrow>
+          y^\prime _p \amp = u_1^\prime y_1 + u_1 y_1^\prime +
+          u_2^\prime y_2 + u_2 y_2^\prime 
+        </mrow>
+        <mrow>
+          y^{\prime \prime}_p \amp = u_1^{\prime \prime} y_1 + 2 u_1^\prime
+          y_1^\prime + u_1 y_1^{\prime \prime} + u_2^{\prime \prime}
+          y_2 + 2 u_2^\prime y_2^\prime + u_2 y_2^{\prime \prime} 
+        </mrow>
         <mrow>
           Ly_p \amp = u_1^{\prime \prime} y_1 + 2 u_1^\prime
           y_1^\prime + u_1 y_1^{\prime \prime} + u_2^{\prime \prime}
-          y_2 + 2 u_2^\prime y_2^\prime + u_2 y_2^{\prime \prime} + P
-          \left( u_1^\prime y_1 + u_1 y_1^\prime + u_2^\prime y_2 +
-          u_2 y_2^\prime \right)
+          y_2 + 2 u_2^\prime y_2^\prime + u_2 y_2^{\prime \prime} 
         </mrow>
         <mrow>
-          \amp Q \left( u_1 y_1 + u_2 y_2 \right) = f
+          \amp + P \left( u_1^\prime y_1 + u_1 y_1^\prime + u_2^\prime
+          y_2 + u_2 y_2^\prime \right) Q \left( u_1 y_1 + u_2 y_2
+          \right) = f
         </mrow>
         <mrow>
           \amp = u_1 \left( y_1^{\prime \prime} + Py_1^\prime + Q y_1
           \right) + u_2 \left( y_2^{\prime \prime} + Py_2^\prime + Q
           y_2 \right) + (y_1 u_1^{\prime \prime} + u_1^\prime
-          y_1^\prime) + (y_2 u_2^{\prime \prime} + u_2^\prime
-          y_2^\prime)
+          y_1^\prime) 
         </mrow>
         <mrow>
-          \amp + P \left( y_1 u_1^\prime + y_2 u_2^\prime \right) +
+          \amp + (y_2 u_2^{\prime \prime} + u_2^\prime y_2^\prime)
+          + P \left( y_1 u_1^\prime + y_2 u_2^\prime \right) +
           y_1^\prime u_1^\prime + y_2^\prime u_2^\prime = f
         </mrow>
+      </md>
+      The first two terms in brackets are precisely the differential
+      operators applied to the two homogeneous solutions. I can make
+      that replacement. But, by definition, the homogeneous solutions
+      are sent to zero by the differential operator, so both of those
+      terms vanish. 
+      <md>
         <mrow>
           \amp = u_1 (L y_1) + u_2 (L y_2) + \frac{d}{dt} \left( y_1
           u_1^\prime \right) + \frac{d}{dt} \left( y_2 u_2^\prime
-          \right) + P \left( y_1 u_1^\prime + y_2 u_2^\prime \right) +
+          \right) 
+        </mrow>
+        <mrow>
+          \amp + P \left( y_1 u_1^\prime + y_2 u_2^\prime \right) +
           \left( y_1^\prime u_1^\prime + y_2^\prime u_2^\prime \right)
           = f
         </mrow>
@@ -114,24 +137,29 @@
           y_2^\prime u_2^\prime \right) = f
         </mrow>
       </md>
-      So far, this doesn't look particularly useful.  Part of the
-      problem is that I have too much freedom in my choices. 
-      Choosing two entirely unknown functions is not limiting enough.
-      However, I could try to impose a 
-      reasonable restriction while still allowing for general
-      solutions.  I impose the restriction <m>y_1 u_1^\prime + y_2
-      u_2^\prime = 0</m>.  (Why this restriction?  Because it works,
-      and somewhere in matheamtical history, likely using a
-      strange combination of intuition and trial-and-error, some
-      clever mathematician figured out that it works.) This
-      restriction removes two terms from the previous equation and
-      leaves me with an easier equation.
+      The result, so far, is still a complicated differential
+      equations with three terms. I'm trying to determine the two
+      functions <m>u_1</m> and <m>u_2</m>, but I simply don't have
+      enough information here. What to do? Well, one possible problem
+      might be that the system is underdetermined. I took two entirely
+      unknown functions, <m>u_1</m> and <m>u_2</m>, and only imposed
+      on equation (the differential equation) on them. That might not
+      have anywhere near a unique solution for both functions.
+      If the system is underdetermined, I could try to solve the
+      system by imposing another constraint. I could try any
+      constraint, but I'd like to impose a constraint that makes the
+      system easier to solve. There is a term that shows up twice, in
+      brackets, in the previous equation. What if I simply impose the
+      constraint that sets that term equal to zero: <m>y_1 u_1^\prime
+      + y_2 u_2^\prime = 0</m>. This restriction removes two terms
+      from the previous equation and leaves me with a much easier
+      equation.
       <me>
         \left( y_1^\prime u_1^\prime + y_2^\prime u_2^\prime \right) =
         f
       </me>
-      If I remember the restriction, I now have a system of two
-      equations.
+      Along with the restriction itself , I now have a linear system
+      of two equations.
       <md>
         <mrow>
           y_1 u_1^\prime + y_2 u_2^\prime \amp = 0
@@ -140,11 +168,19 @@
           y_1^\prime u_1^\prime + y_2^\prime u_2^\prime \amp = f
         </mrow>
       </md>
-      I can express this system in matrix terminology.
+      I can express this system as a matrix.
       <me>
-        \begin{pmatrix}0\\f\end{pmatrix} = \left( \begin{matrix} y_1
-        \amp y_2 \\ y_1^\prime \amp y_2^\prime \end{matrix} \right)
-        \begin{pmatrix}u_1^\prime\\u_2^\prime\end{pmatrix}
+        \left( \begin{matrix}
+          0 \\
+          f
+        \end{matrix} \right) = \left( \begin{matrix} 
+          y_1 \amp y_2 \\ 
+          y_1^\prime \amp y_2^\prime 
+        \end{matrix} \right)
+        \left( \begin{matrix}
+          u_1^\prime \\
+          u_2^\prime
+        \end{matrix} \right)
       </me>
       Linear algebra then solves the system.  Conveniently, the
       determinant of the system is the Wronskian <m>W(y_1,y_2)</m>,
@@ -158,8 +194,9 @@
           u_2^\prime \amp = \frac{y_1 f}{W}
         </mrow>
       </md>
-      The solution gives the derivatives of <m>u_1</m> and
-      <m>u_2</m>. To find the actual functions, I integrate.
+      The solution of the system of two equations only solves for the
+      derivatives of <m>u_1</m> and <m>u_2</m>. To find the actual
+      functions, I integrate.
       <md>
         <mrow>
           u_1 \amp = - \int \frac{y_2 f}{W} dt
@@ -188,79 +225,110 @@
     <example>
       <statement>
         <p>
-          
+          Here is a differential equation that could be solved by
+          undetermined coefficients, since the forcing term is
+          exponential. However, I'll use variation of parameters to
+          demonstrate. 
           <me>
-            y^{\prime\prime} - 2y^{\prime} + 2y \amp = 2e^t
+            y^{\prime\prime} - 2y^{\prime} + 2y = 2e^t
           </me>
+          First I solve the homogeneous equation by finding the roots
+          of the characteristic equation.
           <me>
-            r^2 -2r +2 \amp = 0
+            r^2 -2r +2 = 0 \implies r = 1 \pm \imath
           </me>
+          The roots are complex with <m>\alpha = 1</m> and <m>\beta =
+          1</m>. Therefore, the solutions are products of exponentials
+          and sinusoidal functions. 
+          <md>
+            <mrow>
+              y_1 \amp = e^t \cos t
+            </mrow>
+            <mrow>
+              y_2 \amp = e^t \sin t
+            </mrow>
+          </md>
+          Then I calculate the Wronskian of the two linearly
+          independent homogeneous solutions.
+          <md>
+            <mrow>
+              y_1^\prime \amp = e^t \cos t - e^t \sin t
+            </mrow>
+            <mrow>
+              y_2^\prime \amp = e^t \sin t + e^t \cos t
+            </mrow>
+            <mrow>
+              W \amp = e^t \cos t (e^t \sin t + e^t \cos t) - e^t \sin
+              t (e^t \cos t - e^t \sin t)
+            </mrow>
+            <mrow>
+              \amp = e^{2t} (\cos t \sin t + \cos^2 t - \sin t \cos t
+              + \sin^2 t) = e^{2t}
+            </mrow>
+          </md>
+          Once I have the Wronskian, I use the integral forms to
+          calculate <m>u_1</m> and <m>u_2</m>. I don't have to repeat
+          the whole derivation from before; I can just use the general
+          result.
+          <md>
+            <mrow>
+              u_1 \amp = \int \frac{-y_2 f}{W} dt = -\int \frac{ e^t
+              \sin t 2e^t}{e^{2t}}dt
+            </mrow>
+            <mrow>
+              \amp = -2 \int \sin t dt = 2 \cos t
+            </mrow>
+            <mrow>
+              u_2 \amp = \int \frac{y_1 f}{W} dt = \int \frac{ e^t
+              \cos t 2e^t}{e^{2t}}dt
+            </mrow>
+            <mrow>
+              \amp = 2 \int \cos t dt = 2 \sin t
+            </mrow>
+          </md>
+          Then I can replace <m>u_1</m> and <m>u_2</m> in the
+          expression for the particular solution.
           <me>
-            r \amp = 1 \pm \imath
-          </me>
-          <me>
-            y_1 \amp = e^t \cos t
-          </me>
-          <me>
-            y_2 \amp = e^t \sin t
-          </me>
-          <me>
-            y_1^\prime \amp = e^t \cos t - e^t \sin t
-          </me>
-          <me>
-            y_2^\prime \amp = e^t \sin t + e^t \cos t
-          </me>
-          <me>
-            W \amp = e^t \cos t (e^t \sin t + e^t \cos t) - e^t \sin
-            t (e^t \cos t - e^t \sin t)
-          </me>
-          <me>
-            \amp = e^{2t} (\cos t \sin t + \cos^2 t - \sin t \cos t
-            + \sin^2 t) = e^{2t}
-          </me>
-          <me>
-            u_1 \amp = \int \frac{-y_2 f}{W} dt = -\int \frac{ e^t
-            \sin t 2e^t}{e^{2t}}dt
-          </me>
-          <me>
-            \amp = -2 \int \sin t dt = 2 \cos t
-          </me>
-          <me>
-            u_2 \amp = \int \frac{y_1 f}{W} dt = \int \frac{ e^t
-            \cos t 2e^t}{e^{2t}}dt
-          </me>
-          <me>
-            \amp = 2 \int \cos t dt = 2 \sin t
-          </me>
-          <me>
-            y_p \amp = 2\cos t e^t \cos t + 2 \sin t e^t \sin t =
+            y_p = 2\cos t e^t \cos t + 2 \sin t e^t \sin t =
             2e^t
           </me>
+          (I made use of <m>\sin^2 t + \cos^2 t = 1</m> in the
+          previous calculation). Finally, the full solution is the
+          particular solution plus the homogeneous solution.
           <me>
-            y \amp = 2e^t + Ae^t \cos t + B e^t \sin t
-          </mrow>
+            y = 2e^t + Ae^t \cos t + B e^t \sin t
+          </me>
         </p>
       </statement>
     </example>
     <example>
       <statement>
         <p>
+          This differential equation that could be also solved by
+          undetermined coefficients, since the forcing term is an
+          exponential multiplied by a polynomial. However, again, I'll
+          use variation of parameters to demonstrate. 
+          <me>
+            y^{\prime\prime} - 4y^{\prime} + 4y = (t+1)e^{2t}
+          </me>
+          First I solve the homogeneous equation by finding the roots
+          of the characteristic equation.
+          <me>
+            r^2 -4r +4 = 0 \implies r = 2
+          </me>
+          The root is real and repeated.  Therefore, the solutions are
+          exponential and exponential multiplied by <m>t</m>. 
           <md>
             <mrow>
-              y^{\prime\prime} - 4y^{\prime} + 4y \amp = (t+1)e^{2t}
-            </mrow>
-            <mrow>
-              r^2 -4r +4 \amp = 0
-            </mrow>
-            <mrow>
-              r \amp = 2
-            </mrow>
-            <mrow>
-              y_1 \mp = e^{2t}
+              y_1 \amp = e^{2t}
             </mrow>
             <mrow>
               y_2 \amp = te^{2t}
             </mrow>
+          </md>
+          Then I calculate the Wronskian of the two linearly
+          independent homogeneous solutions.
+          <md>
             <mrow>
               y_1^\prime \amp = 2e^{2t}
             </mrow>
@@ -271,6 +339,12 @@
               W \amp = e^{2t} (e^{2t} + 2te^{2t}) - te^{2t} 2e^{2t} =
               e^{4t}
             </mrow>
+          </md>
+          Once I have the Wronskian, I use the integral forms to
+          calculate <m>u_1</m> and <m>u_2</m>. I don't have to repeat
+          the whole derivation from before; I can just use the general
+          result.
+          <md>
             <mrow>
               u_1 \amp = \int \frac{-y_2 f}{W} dt = -\int
               \frac{te^{2t}(t+1)e^{2t}}{e^{4t}} dt
@@ -285,18 +359,20 @@
             <mrow>
               \amp = \int t+1 dt = \frac{t^2}{2} + t
             </mrow>
-            <mrow>
-              y_p \amp = \left( \frac{-t^3}{3} - \frac{t^2}{2} \right)
-              e^{2t} + \left( \frac{t^2}{2} + t \right) te^{2t}
-            </mrow>
-            <mrow>
-              \amp = \frac{t^3 e^{2t}}{6} + \frac{t^2e^2t}{2}
-            </mrow>
-            <mrow>
-              y \amp = \frac{t^3 e^{2t}}{6} + \frac{t^2e^2t}{2} +
-              Ae^{2t} + Bte^{2t}
-            </mrow>
           </md>
+          Then I can replace <m>u_1</m> and <m>u_2</m> in the
+          expression for the particular solution.
+          <me>
+            y_p = \left( \frac{-t^3}{3} - \frac{t^2}{2} \right)
+            e^{2t} + \left( \frac{t^2}{2} + t \right) te^{2t}
+            = \frac{t^3 e^{2t}}{6} + \frac{t^2e^2t}{2}
+          </me>
+          Finally, the full solution is the particular solution plus
+          the homogeneous solution.
+          <me>
+            y = \frac{t^3 e^{2t}}{6} + \frac{t^2e^2t}{2} +
+            Ae^{2t} + Bte^{2t}
+          </me>
         </p>
       </statement>
     </example>
@@ -305,22 +381,29 @@
         <p>
           This is (finally) an example that couldn't have used
           undetermined coefficients.
+          <me>
+            y^{\prime\prime} + 9y = \csc 3t
+          </me>
+          First I solve the homogeneous equation by finding the roots
+          of the characteristic equation.
+          <me>
+            r^2 + 9 = 0 \implies r = \pm 3\imath
+          </me>
+          The roots are complex, with <m>\alpha = 0</m> and <m>\beta =
+          3</m>.  Therefore, the solutions are just sinusoidal
+          functions. (There is no exponential growth or decay in
+          amplitude since <m>\alpha = 0</m>. 
           <md>
-            <mrow>
-              y^{\prime\prime} + 9y \amp = \csc 3t
-            </mrow>
-            <mrow>
-              r^2 + 9 \amp = 0
-            </mrow>
-            <mrow>
-              r \amp = \pm 3\imath
-            </mrow>
             <mrow>
               y_1 \amp = \cos 3t
             </mrow>
             <mrow>
               y_2 \amp = \sin 3t
             </mrow>
+          </md>
+          Then I calculate the Wronskian of the two linearly
+          independent homogeneous solutions.
+          <md>
             <mrow>
               y_1^\prime \amp = -3 \sin 3t
             </mrow>
@@ -330,6 +413,12 @@
             <mrow>
               W \amp = 3\cos^2 3t + 3 \sin^2 3t = 3
             </mrow>
+          </md>
+          Once I have the Wronskian, I use the integral forms to
+          calculate <m>u_1</m> and <m>u_2</m>. I don't have to repeat
+          the whole derivation from before; I can just use the general
+          result.
+          <md>
             <mrow>
               u_1 \amp = \int \frac{-y_2 f}{W} dt = -\int \frac{\sin
               3t \csc 3t}{3} dt = \frac{-1}{3} \int dt = \frac{-t}{3}
@@ -339,15 +428,19 @@
               \csc 3t}{3} dt = \frac{1}{3} \int \cot 3t = \frac{1}{9}
               \ln |\sin 3t|
             </mrow>
-            <mrow>
-              y_p \amp = \frac{-t}{3} \cos 3t + \frac{\sin 3t \ln
-              |\sin 3t|}{9}
-            </mrow>
-            <mrow>
-              y \amp = \frac{-t}{3} \cos 3t + \frac{\sin 3t \ln |\sin
-              3t|}{9} + A \cos 3t + B \sin 3t
-            </mrow>
           </md>
+          Then I can replace <m>u_1</m> and <m>u_2</m> in the
+          expression for the particular solution.
+          <me>
+            y_p = \frac{-t}{3} \cos 3t + \frac{\sin 3t \ln
+            |\sin 3t|}{9}
+          </me>
+          Finally, the full solution is the particular solution plus
+          the homogeneous solution.
+          <me>
+            y = \frac{-t}{3} \cos 3t + \frac{\sin 3t \ln |\sin
+            3t|}{9} + A \cos 3t + B \sin 3t
+          </me>
           One of the reasons that undetermined coefficients wouldn't
           have worked is that the form of the particular solution,
           <m>\ln |\sin 3t|</m>, is not a function likely to be
@@ -363,22 +456,27 @@
           integrals in the final solution.  We just have to live with
           these unexpressible function (or, I suppose, come up with
           new names for them.)
+          <me>
+            y^{\prime\prime} - y = \frac{1}{t}
+          </me>
+          First I solve the homogeneous equation by finding the roots
+          of the characteristic equation.
+          <me>
+            r^2 - 1 = 0 \implies r = \pm 1
+          </me>
+          The roots are real. Therefore, the solutions are
+          exponential functions.
           <md>
-            <mrow>
-              y^{\prime\prime} - y \amp = \frac{1}{t}
-            </mrow>
-            <mrow>
-              r^2 - 1 \amp = 0
-            </mrow>
-            <mrow>
-              r \amp = \pm 1
-            </mrow>
             <mrow>
               y_1 \amp = e^t
             </mrow>
             <mrow>
               y_2 \amp = e^{-t}
             </mrow>
+          </md>
+          Then I calculate the Wronskian of the two linearly
+          independent homogeneous solutions.
+          <md>
             <mrow>
               y_1^\prime \amp = e^t
             </mrow>
@@ -388,24 +486,34 @@
             <mrow>
               W \amp = -1 -1 = -2
             </mrow>
+          </md>
+          Once I have the Wronskian, I use the integral forms to
+          calculate <m>u_1</m> and <m>u_2</m>. I don't have to repeat
+          the whole derivation from before; I can just use the general
+          result.
+          <md>
             <mrow>
               u_1 \amp = \int \frac{-y_2 f}{W} dt = -\int \frac{
               e^{-t} \frac{1}{t}}{-2} = \frac{1}{2} \int
               \frac{e^{-t}}{t} dt
             </mrow>
             <mrow>
-              u_2 \  =nt \frac{y_1 f}{W} dt = \int \frac{ e^t
+              u_2 \amp = \int \frac{y_1 f}{W} dt = \int \frac{ e^t
               \frac{1}{t}}{-2} = \frac{-1}{2} \int \frac{e^t}{t} dt
             </mrow>
-            <mrow>
-              y_p \amp \frac{e^t}{2} \int \frac{e^{-t}}{t} dt -
-              \frac{e^{-t}}{2} \int \frac{e^t}{t} dt
-            </mrow>
-            <mrow>
-              y \amp \frac{e^t}{2} \int \frac{e^{-t}}{t} dt -
-              \frac{e^{-t}}{2} \int \frac{e^t}{t} dt + Ae^t + Be^{-t}
-            </mrow>
           </md>
+          Then I can replace <m>u_1</m> and <m>u_2</m> in the
+          expression for the particular solution.
+          <me>
+            y_p \frac{e^t}{2} \int \frac{e^{-t}}{t} dt -
+            \frac{e^{-t}}{2} \int \frac{e^t}{t} dt
+          </me>
+          Finally, the full solution is the particular solution plus
+          the homogeneous solution.
+          <me>
+            y \frac{e^t}{2} \int \frac{e^{-t}}{t} dt -
+            \frac{e^{-t}}{2} \int \frac{e^t}{t} dt + Ae^t + Be^{-t}
+          </me>
         </p>
       </statement>
     </example>
