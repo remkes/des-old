@@ -176,15 +176,15 @@
           m\frac{d^2 x}{dt^2} + b \frac{dx}{dt} + k x(t) \amp = 0
         </mrow>
       </md>
-      Harmonic systems with friction are called <em>damped harmonic
-      systems</em>; systems without friction are <em>undamped</em>.
-      The solution to the undamped system was never ending sinusoidal
-      oscillation. This makes sense from the perspective of
-      conservation of energy: without friction to remove energy from
-      the system, the oscillations will continue for ever. Frication
-      removes energy, so I that friction should cause the oscillations
-      to eventually slow down. I expect the solutions to show decay in
-      the amplitude of the sine wave.
+      Harmonic systems with friction are called <term>damped harmonic
+      systems</term>; systems without friction are
+      <term>undamped</term>.  The solution to the undamped system was
+      never ending sinusoidal oscillation. This makes sense from the
+      perspective of conservation of energy: without friction to
+      remove energy from the system, the oscillations will continue
+      for ever. Frication removes energy, so I that friction should
+      cause the oscillations to eventually slow down. I expect the
+      solutions to show decay in the amplitude of the sine wave.
     </p>
     <p>
       Having used friction to interpret the constant <m>b</m>, the
@@ -307,20 +307,20 @@
       One common strategy in DEs is to look at easier but similar
       equations and see if the type of solutions from the easier case
       can extend. The easier case, here, is first-order linear
-      equations. In particular, 
-       the homogeneous constant-coefficient first order case,
-      <m>\frac{dy}{dt} = \alphat</m>, is just the standard percentage
-      growth equation. The solution is an exponential function <m>y =
-      e^{\alphat}</m>. Therefore, I'm going to guess that exponential
-      functions might also solve the second-order case, at least for
-      homogeneous equations. I will simply assume that the solution 
-      to <m>Ly =0</m> has the form <m>y = e^{r t}</m> for some <m>r
-      \in \RR</m>. If there is such a solution, what must <m>r</m> be?
-      To find out, I'll put the assumed formed into the DE and
-      investigate. This is also a common strategy for DEs: assume
-      (hopefully with some justification) that the solution must have
-      a particular form, then put that form into the differential
-      equation and see what the details must be. 
+      equations. In particular, the homogeneous constant-coefficient
+      first order case, <m>\frac{dy}{dt} = \alpha y</m>, is just the
+      standard percentage growth equation. The solution is an
+      exponential function <m>y = e^{\alpha t}</m>. Therefore, I'm
+      going to guess that exponential functions might also solve the
+      second-order case, at least for homogeneous equations. I will
+      simply assume that the solution to <m>Ly =0</m> has the form
+      <m>y = e^{r t}</m> for some <m>r \in \RR</m>. If there is such a
+      solution, what must <m>r</m> be?  To find out, I'll put the
+      assumed formed into the DE and investigate. This is also a
+      common strategy for DEs: assume (hopefully with some
+      justification) that the solution must have a particular form,
+      then put that form into the differential equation and see what
+      the details must be.
     </p>
     <p>
       I'll calculate the derivative of the proposed solution so that I
@@ -399,7 +399,7 @@
       spring constnat <m>k</m>, the coefficient of friction <m>b</m>
       and the mass <m>m</m> are all positive numbers: all the constant
       coefficients in the DE are positive. Looking at the general form
-      of the characteristic equation again, if <m>a</m>, <m>b</m>h and
+      of the characteristic equation again, if <m>a</m>, <m>b</m> and
       <m>c</m> are positive, I can determine the sign of the roots. In
       the solution given by the quadratic forumla
       <me>
@@ -428,7 +428,7 @@
       that results from a surplus of friction. There is too much
       friction even to have oscillations: the system only displays
       exponential decay to equilibrium. These situations are called
-      <em>overdamped</em> harmonic systems.
+      <term>overdamped</term> harmonic systems.
     </p>
     <example>
       <statement>
@@ -486,7 +486,9 @@
       be a common trick for linear equations: multiply by the
       independent variable. The second solution is <m>te^{rt}</m>. I
       can demonstrate that this work by puting <m>t e^{rt}</m> into
-      the DE, simply verifying that it is a solution. 
+      the DE, simply verifying that it is a solution. (The fact that
+      <m>r = \frac{-b}{2a}</m> is necessary here; I use it in the
+      second last line of the algebra.) 
       <md>
         <mrow>
           y \amp = te^{rt}
@@ -509,10 +511,9 @@
         </mrow>
         <mrow>
           \amp = e^{rt} ( t \cdot 0 + 2a \frac{-b}{2a} + b ) = 0
-          \text{ Using }  r = \frac{-b}{2a}
         </mrow>
       </md>
-      Now there are two linearly indepedent solutions: <m>y_1 =
+      (Now there are two linearly indepedent solutions: <m>y_1 =
       e^{rt}</m> and <m>y_2 = te^{rt}</m>. I already understand the
       first, since it is similar to the case of two distinct real
       roots. For harmonic systems where the coefficients are all
@@ -529,7 +530,7 @@
       friction is exactly <m>b = \sqrt{4ac}</m> (since this leads to
       <m>b^2 - 4ac = 0</m>. This is the exact friction that allows
       for this one oscillation before exponential decay. These
-      systems are called <em>critically damped</em>. This is the
+      systems are called <term>critically damped</term>. This is the
       tipping point for friction: there is exactly enough friction to
       result in exponential decay.
     </p>
@@ -571,15 +572,17 @@
       two new constants.
       <md>
         <mrow>
-          \alpha = \frac{-b}{2a} \amp \beta = \frac{\sqrt{4ac-b^2}}{2a}
+          \amp \alpha = \frac{-b}{2a} \amp \amp \beta =
+          \frac{\sqrt{4ac-b^2}}{2a}
         </mrow>
       </md>
       Then the complex roots are described via these constants:
       <m>\alpha \pm \imath \beta</m>. The solutions to the DE are
       <me>
-        e^{(\alpha \pm \imath \beta)t} = e^{\alpha t} e^{\imath \beta t}
+        e^{(\alpha \pm \imath \beta)t} = e^{\alpha t} e^{\pm \imath
+        \beta t}
       </me>.
-      What do these complex functions means? The <m>e^{\alpha}</m>
+      What do these complex functions means? The <m>e^{\alpha t}</m>
       term is fine, it is just a real exponential. The complex
       exponential is understood through Euler's formula (<xref
       ref="prop-eulers-formula"  /> in <xref
@@ -590,7 +593,7 @@
       </me>
       These solutions are still problematic because they involve
       complex numbers. I am trying to solve a real system with real
-      coefficient and we want real solutions. To find them, I need to
+      coefficient and I want real solutions. To find them, I need to
       take clever linear combinations (over <m>\CC</m>!) of the two
       solutions.
       <md>
@@ -628,7 +631,7 @@
       be decay (<m>\alpha \lt 0</m> in harmonic systems since all the
       coefficient are positive). The total result is oscillations with
       exponentially declining amplitude. Such harmonic systems are
-      called <em>underdamped</em>.
+      called <term>underdamped</term>.
     </p>
     <example>
       <statement>
@@ -679,9 +682,9 @@
           solution of that system is <m>A = 4</m> and <m>B = 1</m>,
           which leads to a specific solution to the initial value
           problem. 
-          <m3>
+          <me>
             y = 4e^t \cos 2t + e^t \sin 2t 
-          </m3>
+          </me>
         </p>
       </statement>
     </example>

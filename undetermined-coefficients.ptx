@@ -287,11 +287,11 @@
         Finally, the general solution is the particular solution plus
         the homogeneous solution. 
         <me>
-          y \= Ae^{(-4+\sqrt{13})t} + B e^{(-4-\sqrt{13})t} +
+          y = Ae^{(-4+\sqrt{13})t} + B e^{(-4-\sqrt{13})t} +
           e^{-2t} \left( \frac{-13}{233} \cos 2t + \frac{8}{233}
           \sin 2t \right)
         </me>
-        It's useful to go back to our harmonic system interpretation
+        It is useful to go back to the harmonic system interpretation
         to understand these solutions. There are no oscillations in
         the homogeneous case here: sufficient friction gives
         exponential decay. However, there is oscillating forcing,
