@@ -1,7 +1,7 @@
 <section xml:id="section-second-order-activity">
   <title>Activities for Second Order ODEs</title>
   <subsection xml:id="subsection-activity-socclde-1">
-    <title></title>
+    <title>Homogeneous Equations</title>
     <activity>
       <statement>
         <p>
@@ -657,7 +657,7 @@
     </activity>
   </subsection>
   <subsection xml:id="subsection-second-variation-of-parameters">
-    <title></title>
+    <title>Variation of Parameters</title>
     <activity>
       <statement>
         <p>
@@ -702,13 +702,13 @@
             <mrow>
               W \amp = e^{ \left( \frac{-9 + \sqrt{33}}{2} \right) t}
               \left( \frac{-9 - \sqrt{33}}{2} \right) e^{ \left(
-              \frac{-9 - \sqrt{33}}{2} \right) t} - e^{ \left(
-              \frac{-9 - \sqrt{33}}{2} \right) t} \left( \frac{-9 +
-              \sqrt{33}}{2} \right) e^{ \left( \frac{-9 +
-              \sqrt{33}}{2} \right) t}
+              \frac{-9 - \sqrt{33}}{2} \right) t} 
             </mrow>
             <mrow>
-              \amp = \frac{-9}{2} e^{ 24t} 
+              \amp - e^{ \left( \frac{-9 - \sqrt{33}}{2} \right) t}
+              \left( \frac{-9 + \sqrt{33}}{2} \right) e^{ \left(
+              \frac{-9 + \sqrt{33}}{2} \right) t} = \frac{-9}{2} e^{
+              24t} 
             </mrow>
           </md>
           Then I can calculate the two <sq>varied parameter</sq>
@@ -717,8 +717,11 @@
             <mrow>
               u_1 = -\int \frac{y_2 f}{W} dt = - \int \frac{ e^{
               \left( \frac{-9 - \sqrt{33}}{2} \right) t} \ln (t+3}{
-              \frac{-9}{2} e^{24t}} dt = \frac{2}{9} \int e^{ \left(
-              \frac{-57 - \sqrt{33}}{2} \right) t} \ln (t+3) dt
+              \frac{-9}{2} e^{24t}} dt 
+            </mrow>
+            <mrow>
+              \amp = \frac{2}{9} \int e^{ \left( \frac{-57 -
+              \sqrt{33}}{2} \right) t} \ln (t+3) dt
             </mrow>
             <mrow>
               u_2 = \int \frac{y_1 f}{W} dt = \int \frac{ e^{ \left(
@@ -733,13 +736,14 @@
             <mrow>
               y \amp = A e^{ \left( \frac{-9 + \sqrt{33}}{2} \right)
               t} + B e^{ \left( \frac{-9 - \sqrt{33}}{2} \right) t}
+              + \frac{2}{9} e^{ \left( \frac{-9 + \sqrt{33}}{2}
+              \right) t} \int e^{ \left( \frac{-57 - \sqrt{33}}{2}
+              \right) t} \ln (t+3) dt 
             </mrow>
             <mrow>
-              \amp + \frac{2}{9} e^{ \left( \frac{-9 + \sqrt{33}}{2}
-              \right) t} \int e^{ \left( \frac{-57 - \sqrt{33}}{2}
-              \right) t} \ln (t+3) dt - \frac{2}{9} e^{ \left(
-              \frac{-9 - \sqrt{33}}{2} \right) t} \int e^{ \left(
-              \frac{-57 + \sqrt{33}}{2} \right) t} \ln (t+3) dt 
+              \amp - \frac{2}{9} e^{ \left( \frac{-9 - \sqrt{33}}{2}
+              \right) t} \int e^{ \left( \frac{-57 + \sqrt{33}}{2}
+              \right) t} \ln (t+3) dt
             </mrow>
           </md>
         </p>
@@ -819,8 +823,11 @@
             </mrow>
             <mrow>
               \amp - e^{-5t} \cos ( \sqrt{20} t) \int e^{5t} \sin
-              (\sqrt{20}t) \arctan t dt + e^{-5t} \sin ( \sqrt{20} t)
-              \int e^{5t} \cos (\sqrt{20} t) \arctan t dt 
+              (\sqrt{20}t) \arctan t dt 
+            </mrow>
+            <mrow>
+              \amp + e^{-5t} \sin ( \sqrt{20} t) \int e^{5t} \cos
+              (\sqrt{20} t) \arctan t dt 
             </mrow>
           </md>
         </p>

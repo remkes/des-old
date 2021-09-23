@@ -94,8 +94,11 @@
     </row>
     <row>
       <cell><m>k t^n \cos(at)</m> or <m>k t^n \sin(at)</m></cell>
-      <cell><m>\left(C_nt^n + \dots +C_0 \right)\cos(at) + \left(D_nt^n +
-        \dots + D_0 \right)\sin(at)</m></cell>
+      <cell><m>\left(C_nt^n + \dots +C_0 \right)\cos(at)</m></cell>
+    </row>
+    <row>
+      <cell></cell>
+      <cell><m>+ \left(D_nt^n + \dots + D_0 \right)\sin(at)</m></cell>
     </row>
     <row>
       <cell><m>ke^{at} \cos(bt)</m> or <m>ke^{at} \sin(bt)</m></cell>
@@ -103,9 +106,14 @@
     </row>
     <row>
       <cell><m>k t^n e^{at }\cos(bt)</m> or <m>k t^n e^{at}
-      \sin(bt)</m></cell>
-      <cell><m>\left(C_nt^n + \dots +C_0 \right)e^{at}\cos(bt)
-        + \left(D_nt^n + \dots + D_0 \right)e^{bt}\sin(bt)</m></cell>
+        \sin(bt)</m></cell>
+      <cell><m>\left(C_nt^n + \dots +C_0
+        \right)e^{at}\cos(bt)</m></cell>
+    </row>
+    <row>
+      <cell></cell>
+      <cell><m>+ \left(D_nt^n + \dots + D_0
+        \right)e^{bt}\sin(bt)</m></cell>
     </row>
   </tabular>
   <p>

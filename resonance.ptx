@@ -311,7 +311,10 @@
         <mrow>
           Ly_p \amp = (-C\gamma^2 - 2\lambda D \gamma + C \omega^2)
           \sin \gamma t + (-D\gamma^2 + 2\lambda C \gamma + D
-          \omega^2) \cos \gamma t = F \sin \gamma t 
+          \omega^2) \cos \gamma t 
+        </mrow>
+        <mrow>
+          \amp = F \sin \gamma t 
         </mrow>
       </md>
       Then I compare the coefficients to get two equations. 

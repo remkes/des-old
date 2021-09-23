@@ -27,7 +27,6 @@
           \infty)</m>. <xref ref="figure-activity-phase-line-1" />
           shows the phase line. 
         </p>
-      </solution>
         <figure xml:id="figure-activity-phase-line-1">
           <caption>
             A Phase Line Diagram for <m>\frac{dp}{dt} =
@@ -48,7 +47,7 @@
             </asymptote>
           </image>
         </figure>
-      <!-- </solution> -->
+      </solution>
     </activity>
     <activity>
       <statement>
@@ -71,10 +70,10 @@
           the trajectory is upward on <m>(2,4)</m>. For <m>p=5</m>,
           the right side is negative, so the trajectory is downward on
           <m>(4,6)</m>. for <m>p=7</m>, the right side is positive, so
-          the trajectory is upward on <m>(6,\infty)</m>. <xref
-          ref="figure-activity-phase-line-2" /> shows the phase line. 
+          the trajectory is upward on <m>(6,\infty)</m>. 
+          <xref ref="figure-activity-phase-line-2" /> shows the phase
+          line. 
         </p>
-      </solution>
         <figure xml:id="figure-activity-phase-line-2">
           <caption>
             A Line Diagram for <m>\frac{dp}{dt} =
@@ -95,7 +94,7 @@
             </asymptote>
           </image>
         </figure>
-      <!-- </solution> -->
+      </solution>
     </activity>
     <activity>
       <statement>
@@ -116,10 +115,10 @@
           are four roots, so that are a non-repeated roots; therefore,
           the sign of the right side must change whever I cross a
           root. I start positive, so the trajectories are positive,
-          negative, positive, negative, and positive. <xref
-          ref="figure-activity-phase-line-3" /> shows the phase line. 
+          negative, positive, negative, and positive. 
+          <xref ref="figure-activity-phase-line-3" /> shows the phase
+          line.
         </p>
-      </solution>
         <figure xml:id="figure-activity-phase-line-3">
           <caption>
             A Line Diagram for <m>\frac{dp}{dt} = \frac{1}{10}
@@ -142,7 +141,7 @@
             </asymptote>
           </image>
         </figure>
-      <!-- </solution> -->
+      </solution>
     </activity>
     <activity>
       <statement>
@@ -163,10 +162,10 @@
           right side evaluated at <m>p=5</m> is positive, so the
           trajectory on <m>(3,7)</m> is upward. The right side
           evaluated at <m>p=7</m> is positive, so the trajectory on
-          <m>(7, \infty)</m> is upward. <xref
-          ref="figure-activity-phase-line-4" /> shows the phase line. 
+          <m>(7, \infty)</m> is upward. 
+          <xref ref="figure-activity-phase-line-4" /> shows the phase
+          line.
         </p>
-      </solution>
         <figure xml:id="figure-activity-phase-line-4">
           <caption>
             A Line Diagram for <m>\frac{dp}{dt} = (p-7)^2 \sinh
@@ -185,7 +184,7 @@
             </asymptote>
           </image>
         </figure>
-      <!-- </solution> -->
+      </solution>
     </activity>
     <activity>
       <statement>
@@ -208,13 +207,13 @@
           side is negative for <m>p=3</m>, so the trajectory is
           downward on <m>(2,5)</m>. The right side is positive for
           <m>p=6</m>, so the trajectory is upward on
-          <m>(5,\infty)</m>. <xref ref="figure-activity-phase-line-5"
-          /> shows the phase line. 
+          <m>(5,\infty)</m>. 
+          <xref ref="figure-activity-phase-line-5" /> shows the phase
+          line. 
         </p>
-      </solution>
         <figure xml:id="figure-activity-phase-line-5">
           <caption>
-            A Line Diagram for <m>$\frac{dp}{dt} = \left( \ln \left(
+            A Line Diagram for <m>\frac{dp}{dt} = \left( \ln \left(
             \frac{x}{5} \right) \right) \left( \cosh (x-2) - 1
             \right)</m>
           </caption>
@@ -231,7 +230,7 @@
             </asymptote>
           </image>
         </figure>
-      <!-- </solution> -->
+      </solution>
     </activity>
   </subsection>
   <subsection xml:id="subsection-activity-direction-fields">
@@ -256,7 +255,6 @@
           functions. Their domains are <m>\RR</m> and their ranges
           seem to be fixed between the asymptotes.
         </p>
-      </solution>
         <figure xml:id="figure-activity-slope-field-1">
           <caption>
             A Slope Field for <m>\frac{dy}{dx} = \frac{1}{x^2 + y^2
@@ -282,7 +280,7 @@
             </asymptote>
           </image>
         </figure>
-      <!-- </solution> -->
+      </solution>
     </activity>
     <activity>
       <statement>
@@ -308,7 +306,6 @@
           starting position. Note that <m>y-2</m> is also a singular
           solution that I can see in the slope field.
         </p>
-      </solution>
         <figure xml:id="figure-activity-slope-field-2">
           <caption>
             A Slope Field for <m>\frac{dy}{dx} = (x+4)(y-2)</m>
@@ -331,7 +328,7 @@
             </asymptote>
           </image>
         </figure>
-      <!-- </solution> -->
+      </solution>
     </activity>
     <activity>
       <statement>
@@ -367,7 +364,6 @@
           the positive and negative pieces, I get horizontal
           quartic-like paths.
         </p>
-      </solution>
         <figure xml:id="figure-activity-slope-field-3">
           <caption>
             A Slope Field for <m>\frac{dy}{dx} = \frac{x}{y^3}</m>
@@ -393,7 +389,7 @@
             </asymptote>
           </image>
         </figure>
-      <!-- </solution> -->
+      </solution>
     </activity>
     <activity>
       <statement>
@@ -419,7 +415,6 @@
           <m>(\pm h, \pm \infty)</m>. Note I can also see the
           <m>y=0</m> singular solution in the slope field.
         </p>
-      </solution>
         <figure xml:id="figure-activity-slope-field-4">
           <caption>
             A Slope Field for <m>\frac{dy}{dx} = y \ln x</m>
@@ -444,7 +439,7 @@
             </asymptote>
           </image>
         </figure>
-      <!-- </solution> -->
+      </solution>
     </activity>
     <activity>
       <statement>
@@ -472,7 +467,6 @@
           domain is either unbounded or fixed between the two vertical
           asymptotes.
         </p>
-      </solution>
         <figure xml:id="figure-activity-slope-field-5">
           <caption>
             A Slope Field for <m>\frac{dy}{dx} = x^2 + y^2</m>
@@ -497,7 +491,7 @@
             </asymptote>
           </image>
         </figure>
-      <!-- </solution> -->
+      </solution>
     </activity>
   </subsection>
   <subsection xml:id="subsection-activity-separable">

@@ -1,6 +1,6 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"
   xml:id="chapter-first-order-odes">
-  <title>First Order Differential Equations</title>
+  <title>First Order DEs</title>
   <xi:include  href="what-is-de.ptx" />
   <xi:include  href="qualitative-methods.ptx" />
   <xi:include  href="stability-and-linearization.ptx" />

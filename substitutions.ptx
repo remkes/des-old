@@ -222,8 +222,10 @@
           (1-n)y^{-n} \frac{dy}{dt}
         </mrow>
         <mrow>
-          \amp = (1-n)y^{-n} \left( Q(t) y^n - P(t) y \right) = (1-n)
-          Q(t) - (1-n) P(t) y^{1-n}
+          \amp = (1-n)y^{-n} \left( Q(t) y^n - P(t) y \right) 
+        </mrow>
+        <mrow>
+          \amp = (1-n) Q(t) - (1-n) P(t) y^{1-n}
         </mrow>
         <mrow>
           \amp = (1-n) Q(t) - (1-n) P(t) v

@@ -342,12 +342,16 @@
           be in the denominator when I write this in the standard form.
           The solution to the homogeneous case is calcualted directly
           by integration.
-          <me>
-            y = e^{-\int P(t) dt} = e^{-\int \frac{t}{t^2-9} dt} = 
-            e^{ - \frac{1}{2} \ln |t^2-9| + c} = c \left( e^{\ln |t^2
-            - 9|} \right)^{-\frac{1}{2}} = \frac{c}{\sqrt{|t^2-9|}} =
-            \frac{c}{\sqrt{t^2-9}}
-          </me>.
+          <md>
+            <mrow>
+              y \amp = e^{-\int P(t) dt} = e^{-\int \frac{t}{t^2-9}
+              dt} = e^{ - \frac{1}{2} \ln |t^2-9| + c} 
+            </mrow>
+            <mrow>
+              \amp = c \left( e^{\ln |t^2 - 9|} \right)^{-\frac{1}{2}}
+              = \frac{c}{\sqrt{|t^2-9|}} = \frac{c}{\sqrt{t^2-9}}
+            </mrow>
+          </md>.
           Again, I treat the constant of integration informally,
           writing just <m>c</m> instead of the <m>e^c</m> that a more
           formal treatment would give. Also, in the last step, droping

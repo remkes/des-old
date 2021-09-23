@@ -442,7 +442,7 @@
           <m>y=e^{-t}</m>. The general solution is <m>y=Ae^t +
           Be^{-t}</m>. Initial conditions of <m>y(0) =
           1</m> and <m>y^\prime(0) = 0</m>, produce a system of two
-          equations for <m>A/\</m> and <m>B</m>,   (Since there are
+          equations for <m>A</m> and <m>B</m>,   (Since there are
           two unknowns in the general form, two initial conditions are
           required for a specific solution.) 
           In this case, the system is <m>A+B=1</m> and
