@@ -12,7 +12,7 @@
       <m>y^{\prime \prime} + y = 0</m> with initial conditions
       <m>y(0) = 1</m> and <m>y^\prime(0) = \imath</m>. Second order
       linear constant coefficient equations have unique solutions
-      (which you can assume here, even though we haven't proved it
+      (which you can assume here, even though I haven't proved it
       in the course). Use this fact about unique solutions to
       conclude an alternate proof for Euler's formula. (8) 
     </li>
@@ -38,7 +38,7 @@
           Consider any second order linear constant coefficient
           homogeneous differential equation where the characteristic
           equation has a repeated root <m>r</m>. Verify that the
-          initial solution <m>f = e^{rt}</m> satisfied the equation in
+          initial solution <m>f = e^{rt}</m> satisfies the equation in
           the previous part of this question. 
         </li>
       </ol></p>
@@ -53,19 +53,19 @@
       </md>
     </li>
     <li>
-      Solve this differential equation. (4) 
+      Solve this differential equation. (3) 
       <me>
         4 y^{\prime \prime} + 6y^\prime + 4y = 0 
       </me>
     </li>
     <li>
-      Solve this differential equation. (4) 
+      Solve this differential equation. (3) 
       <me>
         2 y^{\prime \prime} + 7y^\prime + y = 0 
       </me>
     </li>
     <li>
-      Solve this differential equation. Is this is resonant forcing
+      Solve this differential equation. Is this a resonant forcing
       term? (6) 
       <me>
         3 \frac{d^2 f}{dt^2}  + 2 \frac{df}{dt}  + 3f = 4 \sin \left(
@@ -73,7 +73,7 @@
       </me>
     </li>
     <li>
-      Solve this differential equation. Is this is resonant forcing
+      Solve this differential equation. Is this a resonant forcing
       term? (6) 
       <me>
         4 \frac{d^2 f}{dt^2}  + \frac{df}{dt}  + f = 6 \sin \left(
@@ -83,7 +83,8 @@
     <li>
       Solve this differential equation both by undetermined
       coefficients and by variation of parameters. Which method is
-      more efficient? (8) 
+      more efficient? (For variation of parameters, divide by 3 before
+      doing the calcluation.) (8) 
       <me>
         3 \frac{d^2 f}{dt^2}  - 6f = e^{-2t} 
       </me>
