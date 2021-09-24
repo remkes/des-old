@@ -118,7 +118,7 @@
       <p>
         Solve this DE. (4) 
         <me>
-          \frac{dy}{dx} + 3ty^2 = 0
+          \frac{dy}{dt} + 3ty^2 = 0
         </me>
       </p>
     </li>

@@ -1170,12 +1170,12 @@
           As expected, this is a separable equation. I proceed with
           the steps to solve a separable equation.  
           <me>
-            \frac{1}{v^3 - v - 1} \frac{dv}{dt} = t 
+            \frac{1}{v^3 - v - 1} \frac{dv}{dt} = \frac{1}{t}
           </me>
           Then I integrate with the standard setup that turns the left
           side into a integral in <m>v</m>. 
           <me>
-            \int \frac{1}{v^3 - v - 1} dv = \int t dt
+            \int \frac{1}{v^3 - v - 1} dv = \int \frac{1}{t} dt
           </me>
           The right side is an easy power rule integral. On the left
           side, I need partial fractions. I've asked a computer for
@@ -1184,7 +1184,7 @@
           <me>
             \frac{1}{11} \ln |v-2| - \frac{1}{22} \ln |v^2 + 2v + 3| -
             \frac{3}{11\sqrt{2}} \arctan \left( \frac{v+1}{\sqrt{2}}
-            \right) = \frac{t^2}{2} + c 
+            \right) = \ln |t| + c 
           </me>
           Solving on the left for <m>v</m> is clearly impossible, so
           I'll have to leave this as an implicit solution. I can still
@@ -1195,7 +1195,7 @@
             \frac{1}{11} \ln \left| \frac{y}{t} - 2 \right| -
             \frac{1}{22} \ln \left | \frac{y^2}{t^2} + \frac{2y}{t} +
             3 \right| - \frac{3}{11\sqrt{2}} \arctan \left(
-            \frac{\frac{y}{t}+1}{\sqrt{2}} \right) = \frac{t^2}{2} + c 
+            \frac{\frac{y}{t}+1}{\sqrt{2}} \right) = \ln |t| + c 
           </me>
         </p>
       </solution>
@@ -1278,7 +1278,7 @@
           Then I multiply the original equation by the integrating
           factor. 
           <me>
-            \frac{1}{t^2} \frac{dv}{dt} = \frac{2v}{t^3} = -
+            \frac{1}{t^2} \frac{dv}{dt} - \frac{2v}{t^3} = -
             \frac{2}{t^4}
           </me>
           The left side becomes a product rule derivative.
