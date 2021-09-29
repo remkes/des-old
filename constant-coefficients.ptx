@@ -106,10 +106,10 @@
       are two solutions.
       <md>
         <mrow>
-          x_1(t) \amp = \sin \left( \sqrt{\frac{k}{m}} x \right) 
+          x_1(t) \amp = \sin \left( \sqrt{\frac{k}{m}} t \right) 
         </mrow>
         <mrow>
-          x_2(t) \amp = \cos \left( \sqrt{\frac{k}{m}} x \right)
+          x_2(t) \amp = \cos \left( \sqrt{\frac{k}{m}} t \right)
         </mrow>
       </md>
       Since I know these two homogeneous solution, I can use
@@ -234,7 +234,7 @@
         capacitance, which has units of farads (coloumbs per volt).
         They stabilize alternating current flow; as such, they can be
         see as controlling the natural way in which current flows.
-        Thise idea (up to a reciprocal) aligns with the idae of spring
+        Thise idea (up to a reciprocal) aligns with the idea of spring
         constant, which represented the stiffness of the spring and
         controlled the natural behaviour of the harmonic system
         (before friction and external forces). As the analogue of the

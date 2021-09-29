@@ -715,7 +715,7 @@
           function using the homogeneous solutions and the Wronskian.
           <md>
             <mrow>
-              u_1 = -\int \frac{y_2 f}{W} dt = - \int \frac{ e^{
+              u_1 \amp = -\int \frac{y_2 f}{W} dt = - \int \frac{ e^{
               \left( \frac{-9 - \sqrt{33}}{2} \right) t} \ln (t+3}{
               \frac{-9}{2} e^{24t}} dt 
             </mrow>
@@ -724,7 +724,7 @@
               \sqrt{33}}{2} \right) t} \ln (t+3) dt
             </mrow>
             <mrow>
-              u_2 = \int \frac{y_1 f}{W} dt = \int \frac{ e^{ \left(
+              u_2 \amp = \int \frac{y_1 f}{W} dt = \int \frac{ e^{ \left(
               \frac{-9 + \sqrt{33}}{2} \right) t} \ln (t+3)}{
               \frac{-9}{2} e^{24t}} dt = \frac{-2}{9} \int e^{ \left(
               \frac{-57 + \sqrt{33}}{2} \right) t} \ln (t+3) dt 
