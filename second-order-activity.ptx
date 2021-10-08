@@ -96,7 +96,7 @@
             </me>
           </li>
           <li>
-            When we make the coefficient of <m>y^\prime</m> smaller,
+            When I make the coefficient of <m>y^\prime</m> smaller,
             it decreases the magnitude of the positive term <m>\sqrt{b^2 -
             4ac}</m> in the quadratic equation. Therefore, the roots
             become closer and closer together. For small changes in
@@ -247,7 +247,7 @@
       </statement>
       <solution>
         <p>
-          First I need the homoegeneous solution. I start by solving the
+          First I need the homogeneous solution. I start by solving the
           characteristic equation.
           <me>
             r^2 + 3r + 2 = 0 \implies r = -2, -1 
@@ -278,7 +278,7 @@
               49Ce^{-7t} - 21Ce^{-7t} + 2Ce^{-7t} \amp = e^{-7t} 
             </mrow>
             <mrow>
-              [49C + 21C + 2C] e^{-7t} = e^{-7t} 
+              [49C - 21C + 2C] e^{-7t} = e^{-7t} 
             </mrow>
           </md>
           This produces a system of linear equations. 
@@ -312,7 +312,7 @@
               y(0) \amp = \frac{1}{30} + A + B = 3 
             </mrow>
             <mrow>
-              y^\prime (0) \amp = \frac{-7}{3} - A - 2B = 0 \implies A
+              y^\prime (0) \amp = \frac{-7}{30} - A - 2B = 0 \implies A
               = \frac{-7}{30} - 2B
             </mrow>
             <mrow>
@@ -326,7 +326,7 @@
           </md>
           Now I can write the specific solution to this IVP.
           <me>
-            y_p = \frac{1}{3} e^{-7t} + \frac{37}{6} e^{-t} -
+            y_p = \frac{1}{30} e^{-7t} + \frac{37}{6} e^{-t} -
             \frac{16}{5} e^{-2t} 
           </me>
         </p>
@@ -348,7 +348,7 @@
       </statement>
       <solution>
         <p>
-          First I need the homoegeneous solution. I start by solving the
+          First I need the homogeneous solution. I start by solving the
           characteristic equation.
           <me>
             r^2 + 2r + 10 = 0 \implies r = -1 \pm \sqrt{-9} 
@@ -454,7 +454,7 @@
       </statement>
       <solution>
         <p>
-          First I need the homoegeneous solution. I start by solving the
+          First I need the homogeneous solution. I start by solving the
           characteristic equation.
           <me>
             r^2 + 4r + 8 = 0 \implies r = -2 \pm \sqrt{-4} 
@@ -516,7 +516,7 @@
           make the derivative reasonable to work with.)
           <me>
             y^\prime = \frac{4}{5} \sin (2t) + \frac{2}{5} \cos (2t) +
-            e^{-2t} \left( (-2A + 2B) \cos (2t) + (-2A - 2B) \sin (2t)
+            e^{-2t} \left[ (-2A + 2B) \cos (2t) + (-2A - 2B) \sin (2t)
             \right] 
           </me>
           Then I use the initial conditions. I get two equations, which
@@ -557,7 +557,7 @@
       </statement>
       <solution>
         <p>
-          First I need the homoegeneous solution. I start by solving the
+          First I need the homogeneous solution. I start by solving the
           characteristic equation.
           <me>
             r^2 + 6r + 18 = 0 \implies r = -3 \pm \sqrt{-9} 
@@ -676,7 +676,7 @@
             r^2 + 9r + 12 = 0 \implies r = \frac{-9 \pm \sqrt{33}}{2}
           </me>
           The roots are real.  Therefore, the homogeneous solutions
-          are exponential funciions. 
+          are exponential functions. 
           <me>
             y_h = A e^{ \left( \frac{-9 + \sqrt{33}}{2} \right) t} + 
             B e^{ \left( \frac{-9 - \sqrt{33}}{2} \right) t} 
@@ -707,7 +707,7 @@
             <mrow>
               \amp - e^{ \left( \frac{-9 - \sqrt{33}}{2} \right) t}
               \left( \frac{-9 + \sqrt{33}}{2} \right) e^{ \left(
-              \frac{-9 + \sqrt{33}}{2} \right) t} = \frac{-9}{2} e^{
+              \frac{-9 + \sqrt{33}}{2} \right) t} = -\sqrt{33} e^{
               24t} 
             </mrow>
           </md>
@@ -717,17 +717,17 @@
             <mrow>
               u_1 \amp = -\int \frac{y_2 f}{W} dt = - \int \frac{ e^{
               \left( \frac{-9 - \sqrt{33}}{2} \right) t} \ln (t+3}{
-              \frac{-9}{2} e^{24t}} dt 
+              -\sqrt{33} e^{24t}} dt 
             </mrow>
             <mrow>
-              \amp = \frac{2}{9} \int e^{ \left( \frac{-57 -
+              \amp = \frac{1}{\sqrt{33}} \int e^{ \left( \frac{-57 -
               \sqrt{33}}{2} \right) t} \ln (t+3) dt
             </mrow>
             <mrow>
               u_2 \amp = \int \frac{y_1 f}{W} dt = \int \frac{ e^{ \left(
               \frac{-9 + \sqrt{33}}{2} \right) t} \ln (t+3)}{
-              \frac{-9}{2} e^{24t}} dt = \frac{-2}{9} \int e^{ \left(
-              \frac{-57 + \sqrt{33}}{2} \right) t} \ln (t+3) dt 
+              -\sqrt{33} e^{24t}} dt = \frac{-1}{\sqrt{33}} \int e^{
+              \left( \frac{-57 + \sqrt{33}}{2} \right) t} \ln (t+3) dt
             </mrow>
           </md>
           These integrals are not solvable, so I just write the
@@ -736,14 +736,14 @@
             <mrow>
               y \amp = A e^{ \left( \frac{-9 + \sqrt{33}}{2} \right)
               t} + B e^{ \left( \frac{-9 - \sqrt{33}}{2} \right) t}
-              + \frac{2}{9} e^{ \left( \frac{-9 + \sqrt{33}}{2}
-              \right) t} \int e^{ \left( \frac{-57 - \sqrt{33}}{2}
-              \right) t} \ln (t+3) dt 
+              + \frac{1}{\sqrt{33}} e^{ \left( \frac{-9 +
+              \sqrt{33}}{2} \right) t} \int e^{ \left( \frac{-57 -
+              \sqrt{33}}{2} \right) t} \ln (t+3) dt 
             </mrow>
             <mrow>
-              \amp - \frac{2}{9} e^{ \left( \frac{-9 - \sqrt{33}}{2}
-              \right) t} \int e^{ \left( \frac{-57 + \sqrt{33}}{2}
-              \right) t} \ln (t+3) dt
+              \amp - \frac{1}{\sqrt{33}} e^{ \left( \frac{-9 -
+              \sqrt{33}}{2} \right) t} \int e^{ \left( \frac{-57 +
+              \sqrt{33}}{2} \right) t} \ln (t+3) dt
             </mrow>
           </md>
         </p>

@@ -100,7 +100,7 @@
       make the following guess for the particular solution.
       <md>
         <mrow>
-          y_p \amp = C \sin \gamma t + D \cos \gamma C
+          y_p \amp = C \sin \gamma t + D \cos \gamma t
         </mrow>
       </md>
         I'll take the derivatives of the particular solution, put them
@@ -109,11 +109,11 @@
       <md>
         <mrow>
           y_p^\prime \amp = \gamma C \cos \gamma t - \gamma D \sin
-          \gamma C
+          \gamma t
         </mrow>
         <mrow>
           y_p^{\prime \prime} \amp = -\gamma^2 C \sin \gamma t -
-          \gamma^2 D \cos \gamma C
+          \gamma^2 D \cos \gamma t
         </mrow>
         <mrow>
           Ly_p \amp = (-\gamma^2 C + \omega^2 C) \sin \gamma t +

@@ -20,7 +20,7 @@
       <p>
       Let <m>a</m>, <m>b</m>, and <m>c</m> be real constants and let 
       <me>
-        L - a \frac{d^2}{dt^2} + b \frac{d}{dt} + c
+        L = a \frac{d^2}{dt^2} + b \frac{d}{dt} + c
       </me>
       be a second order linear differential operator in the variable
       <m>t</m>. (8) 
