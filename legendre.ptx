@@ -4,26 +4,31 @@
     There is a nice example of series solutions which deserves its own
     section, since it leads to an important class of functions. Let
     <m>k \in \NN</m> and consider the differential equation <me>
-    (1-t^2)y^{\prime \prime} - 2ty^\prime + k(k+1)y=0 </me>. We need
+    (1-t^2)y^{\prime \prime} - 2ty^\prime + k(k+1)y=0 </me>. I need
     to divide by <m>1-t^2</m> to get this DE in standard form,
-    implying that <m>t = \pm1</m> are singular points. A solution
+    implying that <m>t = \pm 1</m> are singular points. A solution
     centered at <m>0</m> should have radius of convergence at least
-    <m>R=1</m>. We then apply the process of series solution.
+    <m>R=1</m>. 
     <md>
       <mrow>
         (1-t^2)y^{\prime \prime} - 2ty^\prime + k(k+1) y \amp =
         (1-t^2) \sum_{n=2}^\infty c_n n(n-1)t^{n-2}
       </mrow>
       <mrow>
-        \amp - 2t \sum_{n=1}^\infty c_n nt^{n-1} +k(k+1)
+        0 \amp - 2t \sum_{n=1}^\infty c_n nt^{n-1} +k(k+1)
         \sum_{n=0}^\infty c_n t^n
       </mrow>
+    </md>
+    I've taken the derivatives of the series and inserted them. Then I
+    multiply the powers of <m>t</m> into the sums. Then I'll follow
+    the standard steps: I'll shift to make the exponents match, pull
+    out initial terms to make the indices match, then combine the sums
+    into one. 
+    <md>
       <mrow>
-        \amp = \sum_{n=2}^\infty c_n n (n-1)t^{n-2} -
+        0 \amp = \sum_{n=2}^\infty c_n n (n-1)t^{n-2} -
         \sum_{n=2}^\infty c_n n(n-1) t^n
-      </mrow>
-      <mrow>
-        \amp - \sum_{n=1}^\infty 2c_n n t^n +
+        - \sum_{n=1}^\infty 2c_n n t^n +
         \sum_{n=0}^\infty k(k+1) c_n t^n
       </mrow>
       <mrow>
@@ -55,10 +60,10 @@
         n(n-1) - 2c_n n + k(k+1) c_n \right] t^n
       </mrow>
     </md>
-    We need all these coefficients to be zero. We leave <m>c_0</m>
-    and <m>c_1</m> as unknown parameters, since we haven't imposed
-    initial conditions. The first two isolated terms give special
-    relationships.
+    I need all these coefficients to be zero. I leave <m>c_0</m>
+    and <m>c_1</m> as unknown parameters, since I haven't imposed
+    initial conditions. The first two isolated terms (the constant and
+    the linear term) give unique equations for their coefficients.
     <md>
       <mrow>
         \left[ 2c_2 + k(k+1) c_0 \right] \amp = 0
@@ -77,6 +82,8 @@
       </mrow>
     </md>
     The remaining terms are determined by the recurrence relation.
+    I'll do some algebra with the complicated term inside the sum to
+    try to make the recurrence relation clear. 
     <md>
       <mrow>
         c_{n_2} (n+2) (n+1) - c_n n(n-1) - 2c_n n + k(k+1) c_n \amp =
@@ -94,7 +101,7 @@
         c_{n+2} \amp = \frac{-c_n (k-n)(k+n+1)}{(n+1)(n+2)}
       </mrow>
     </md>
-    This is an order two recurrence relation. We calculate
+    This is an order two recurrence relation. I calculate
     coefficients using this relation.
     <md>
       <mrow>
@@ -126,30 +133,30 @@
         (k-1)(k+2)(k-3)(k+4)(k-5)(k+6)}{7!}
       </mrow>
     </md>
-    The pattern continues and gives us two series, one for the
+    The pattern continues and gives two series, one for the
     <m>c_0</m> terms and one for the <m>c_1</m> terms.
   </p>
   <p>
-    We assumed that <m>k \in \NN</m>. Let's consider two cases:
+    I assumed that <m>k \in \NN</m>. Now I'll consider two cases: 
     <m>k</m> even or <m>k</m> odd. If <m>k</m> is odd, then the term
     involving <m>c_1</m> eventually has <m>(k-k)</m> in the numerator.
     That means the numerator will be zero: this recurrence
-    relationship eventually stop and we get a polynomial solution. If
+    relationship eventually stop and there is a polynomial solution. If
     <m>k</m> is even, then terms involving <m>c_0</m> eventually have
-    <m>(k-k)</m> in the numerator, and again we get a polynomial
-    solution. So, for any <m>k</m>, we find a polynomial solution.
-    (Note this extends the expected radius of convergence. We were
+    <m>(k-k)</m> in the numerator, and again there is a polynomial
+    solution. So, for any <m>k</m>, I find a polynomial solution.
+    (Note this extends the expected radius of convergence. I am 
     only guaranteed a radius of <m>R=1</m>, but polynomials converge
-    everywhere, so we get <m>R=\infty</m>).
+    everywhere, so <m>R=\infty</m>).
   </p>
   <p>
-    These special polynomial solutions are the solutions we're
+    These special polynomial solutions are the solutions I am 
     interested in. They are called Legendre Polynomials for <m>k \in
     \NN</m>. They are historically important special functions with
     several other important properties in addition to the property of
-    solving the Legendre DE. We'll calculate the first few. We have
-    the unknown <m>c_0</m> or <m>c_1</m> to consider; we'll always
-    choice <m>c_0</m> or <m>c_1</m> so that the polynomial goes
+    solving the Legendre DE. I'll calculate the first few. There is 
+    the unknown <m>c_0</m> or <m>c_1</m> to consider; I'll always
+    choose <m>c_0</m> or <m>c_1</m> so that the polynomial goes
     through the point <m>(1,1)</m>. (Which is equivalent to the
     initial condition <m>y(1) = 1</m>.) This convention leads to one
     of the important properties of the Legendre polynomials.
@@ -179,6 +186,10 @@
         k=3 \implies P_3(t) \amp = c_1 (t - \frac{5}{3}t^3)
         \amp \amp  \text{ choose }  c_1 = \frac{-3}{2}
       </mrow>
+    </md>
+    I'll not repeat all the details, but here are the next eight
+    polynomials. 
+    <md>
       <mrow>
         P_3(t) \amp = \frac{1}{2} (5t^3 -3t ) \amp \amp 
       </mrow>
@@ -232,15 +243,15 @@
     </image>
   </figure>
   <p>
-    We can notice a number of interesting properties. First, all the
+    I can notice a number of interesting properties. First, all the
     even <m>P_k</m> are even functions, all the odd are odd. The even
     one all pass through <m>(-1,1)</m> and <m>(1,1)</m>. All the odd
-    ones pass through <m>(-1,-1)</m> and <m>(1,1)</m>. We usually
-    only work with the Legendre polynomials on the domain
-    <m>[-1,1]</m>. We can notice interesting patterns in the
-    coefficients. We have powers of <m>2</m> in the denominators, but
-    some are skipped. Interesting patterns are also found in the
-    prime divisors of the numerators.
+    ones pass through <m>(-1,-1)</m> and <m>(1,1)</m>. (It is
+    conventional to only work with the Legendre polynomials on the
+    domain <m>[-1,1]</m>.) I can also notice interesting patterns in
+    the coefficients. There are powers of <m>2</m> in the
+    denominators, but some are skipped. Interesting patterns are also
+    found in the prime divisors of the numerators.
   </p>
   <p>
     Here's a list of further interesting properties.
@@ -266,7 +277,7 @@
     The <m>\delta_{kl}</m> in the second property is the Kronecker
     delta. It evalutes to <m>1</m> if <m>k=l</m> and to <m>0</m>
     otherwise. It's a very useful piece of notation. This second
-    property is an orthogonality property: if we define an inner
+    property is an orthogonality property: if I define an inner
     product of two functions as the integral of their product over
     <m>[-1,1]</m>, then the Legendre polynomials are all orthogonal to
     each other. In linear algebra language, they form an orthogonal
@@ -283,7 +294,7 @@
     other is quite typical for special functions.
   </p>
   <p>
-    As an interesting aside, let's very briefly detour to talk about
+    As an interesting aside, I'll very briefly detour to talk about
     generating functions.
   </p>
   <definition>
@@ -304,7 +315,7 @@
     <statement>
       <p>
         In some way, the function on the left relates to and accounts
-        for this sequences of integer squares.
+        for the sequences of integer squares.
         <md>
           <mrow>
             \amp \frac{t(t+1)}{(1-t)^3} = \sum_{n=0}^\infty n^2 t^n
@@ -317,8 +328,8 @@
   <example>
     <statement>
       <p>
-        This is the generativing function for squares with factorial
-        denominators.
+        Again, this strange polynomial/exponential function somehow
+        captures the sequence of squares divided by factorials. 
         <md>
           <mrow>
             \amp t(t+1)e^t = \sum_{n=0}^\infty \frac{n^2}{n!} t^n \amp
@@ -329,7 +340,7 @@
     </statement>
   </example>
   <p>
-    It turns out, if we briefly allow ourselves to consider functions
+    It turns out, if I briefly consider functions
     of two variables, that there are generating functions for Legendre
     polynomials. This relevant identity is
     <me>

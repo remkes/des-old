@@ -4,17 +4,18 @@
     <title>The <m>\Gamma</m> Function</title>
     <p>
       Before we get to a very interesting example of the method of
-      Frobenious, we need to define the <m>\Gamma</m> (gamma)function.
-      This is a ubiquitous and useful function which generalizes the
-      factorial.
+      Frobenious, we need to define the <m>\Gamma</m> function. (That
+      symbol is an upper case greek letter gamma, so read this name as
+      the <sq>gamma function</sq>.  This is a ubiquitous and useful
+      function which generalizes the factorial.
     </p>
     <definition>
       <statement>
         <p>
-          The <m>\Gamma</m> function is defined by this integral
+          The <m>\Gamma</m> function is defined by this integral.
           <me>
             \Gamma(t) = \int_0^\infty x^{t-1}e^{-x} dx
-          </me>.
+          </me>
           The <m>\Gamma</m> function is defined on all <m>\RR</m>
           except 0 and negative integers. It is continuous and
           differentiable on <m>(0, \infty)</m>.
@@ -23,7 +24,9 @@
     </definition>
     <p>
       There are several important properties of <m>\Gamma(t)</m>:
-      First, (as mentioned) it generalizes the factorial.
+      First, (as mentioned) it generalizes the factorial. The third
+      line below follows from the first two, which are provable
+      properties from the integral definition.
       <md>
         <mrow>
           \Gamma(a+1) \amp = a \Gamma(a)
@@ -35,16 +38,14 @@
           \Gamma(n) \amp = (n-1)! \text{ for }  n \in \NN
         </mrow>
       </md>
-    </p>
-    <p>
       Asymptotically, the factorial nature of the <m>\Gamma</m>
       functions means it grows faster than <m>e^t</m>.
     </p>
     <p>
       If the positive integer values of the <m>\Gamma</m> function
-      generalize the factorial, what can be expect for other values?
+      generalize the factorial, what can be expected for other values?
       The results are surprising. Look at the value of
-      <m>\Gamma(\frac{1}{2})</m> (in this calculation, we use a
+      <m>\Gamma(\frac{1}{2})</m> (in this calculation, I use a
       well-known result for the integral <m>e^{-u^2}</m>).
       <md>
         <mrow>
@@ -94,8 +95,9 @@
       piece of the mathematics of special functions.
     </p>
     <p>
-      Let <m>\nu \in \RR</m>. Bessel's equation of order <m>\nu</m>
-      is the equation
+      Let <m>\nu \in \RR</m> (this <m>\nu</m> is the greek letter nu,
+      not the roman letter <sq>v</sq>). Bessel's equation of order
+      <m>\nu</m> is the equation
       <me>
         t^2 y^{\prime \prime} + t y^\prime + (t^2 - \nu^2) y = 0
       </me>.
@@ -111,7 +113,7 @@
       </md>
     </p>
     <p>
-      We calculate the indicial equation.
+      I write and solve the indicial equation. 
       <md>
         <mrow>
           r(r-1) + r - \nu^2 \amp = 0
@@ -128,9 +130,9 @@
       </md>
     </p>
     <p>
-      We start with <m>r = \nu</m> first and assume that <m>\nu \geq
-      0</m> without loss of generality. We calculate the derivatives
-      of <m>y</m>.
+      The roots are a positive and negative pair. I'll start with <m>r
+      = \nu</m> first and assume that <m>\nu \geq 0</m> without loss
+      of generality. I calculate the derivatives of <m>y</m>.
       <md>
         <mrow>
           y \amp = \sum_{n=0}^\infty c_n t^{n+\nu}
@@ -145,49 +147,69 @@
       </md>
     </p>
     <p>
-      Then we proceed with a lengthly calculation.
+      Then I proceed with a lengthly calculation where I pull the
+      derivatives into the equation, distribute the <m>(t^2 -
+      \nu^2)</m> term, pull the powers of <m>t</m> into the sums,
+      shift the sums to make the exponents match, pull out initial
+      terms to make the starting indices match, and finally combine
+      the sums into one sum. It's a bit of a mess, but it is the same
+      steps that I've been using for a few sections. 
       <md>
         <mrow>
-          t^2 y^{\prime \prime} + t y^\prime + (t^2 - \nu^2) y \amp =
+          \amp t^2 y^{\prime \prime} + t y^\prime + (t^2 - \nu^2) y =
           0
         </mrow>
         <mrow>
-          t^2 \sum_{n=0}^\infty c_n(n+\nu)(n+\nu-1) + t
-          \sum_{n=0}^\infty c_n(n+\nu) t^{n+\nu- 1} + t^2
-          \sum_{n=0}^\infty c_n t^{n+\nu} - \nu^2 \sum_{n=0}^\infty
-          c_n t^{n+\nu} \amp = 0
+          \amp t^2 \sum_{n=0}^\infty c_n(n+\nu)(n+\nu-1) + t
+          \sum_{n=0}^\infty c_n(n+\nu) t^{n+\nu- 1} + t^2 
         </mrow>
         <mrow>
-          \sum_{n=0}^\infty c_n(n+\nu)(n+\nu-1) t^{n+\nu} +
-          \sum_{n=0}^\infty c_n(n+\nu) t^{n+\nu} + \sum_{n=0}^\infty
-          c_n t^{n+\nu+2} - \sum_{n=0}^\infty \nu^2 c_n t^{n+\nu} \amp
-          = 0
+          \amp \sum_{n=0}^\infty c_n t^{n+\nu} - \nu^2 \sum_{n=0}^\infty
+          c_n t^{n+\nu} = 0 
         </mrow>
         <mrow>
-          \sum_{n=0}^\infty c_n(n+\nu)(n+\nu-1) t^{n+\nu} +
-          \sum_{n=0}^\infty c_n(n+\nu) t^{n+\nu} + \sum_{n=2}^\infty
-          c_{n-2} t^{n+\nu} - \sum_{n=0}^\infty \nu^2 c_n t^{n+\nu}
-          \amp = 0
+          \amp \sum_{n=0}^\infty c_n(n+\nu)(n+\nu-1) t^{n+\nu} +
+          \sum_{n=0}^\infty c_n(n+\nu) t^{n+\nu} 
         </mrow>
         <mrow>
-          \nu(\nu-1) c_0 t^\nu + (\nu+1) \nu c_1 t^{\nu+1} + \nu c_0
-          t^\nu + (\nu+1)c_1t^{\nu+1} - \nu^2 c_0 t^\nu - \nu^2 c_1
-          t^{\nu+1} \amp
+          \amp + \sum_{n=0}^\infty c_n t^{n+\nu+2} - \sum_{n=0}^\infty
+          \nu^2 c_n t^{n+\nu} = 0
         </mrow>
         <mrow>
-          + \sum_{n=2}^\infty c_n(n+\nu)(n+\nu-1) t^{n+\nu} +
-          \sum_{n=2}^\infty c_n(n+\nu) t^{n+\nu} + \sum_{n=2}^\infty
-          c_{n-2} t^{n+\nu} - \sum_{n=2}^\infty \nu^2 c_n t^{n+\nu}
-          \amp = 0
+          \amp \sum_{n=0}^\infty c_n(n+\nu)(n+\nu-1) t^{n+\nu} +
+          \sum_{n=0}^\infty c_n(n+\nu) t^{n+\nu} 
         </mrow>
         <mrow>
-          \nu(\nu-1) c_0 t^\nu + (\nu+1) \nu c_1 t^{\nu+1} + \nu c_0
-          t^\nu + (\nu+1)c_1t^{\nu+1} - \nu^2 c_0 t^\nu - \nu^2 c_1
-          t^{\nu+1} \amp
+          \amp + \sum_{n=2}^\infty c_{n-2} t^{n+\nu} - \sum_{n=0}^\infty
+          \nu^2 c_n t^{n+\nu} = 0
         </mrow>
         <mrow>
-          + \sum_{n=2}^\infty \left[ c_n(n+\nu)(n+\nu-1) + c_n(n+\nu)
-          + c_{n-2} - \nu^2 c_n \right] t^{n+\nu} \amp = 0
+          \amp \nu(\nu-1) c_0 t^\nu + (\nu+1) \nu c_1 t^{\nu+1} + \nu c_0
+          t^\nu 
+        </mrow>
+        <mrow>
+          \amp + (\nu+1)c_1t^{\nu+1} - \nu^2 c_0 t^\nu - \nu^2 c_1
+          t^{\nu+1} 
+        </mrow>
+        <mrow>
+          \amp + \sum_{n=2}^\infty c_n(n+\nu)(n+\nu-1) t^{n+\nu} +
+          \sum_{n=2}^\infty c_n(n+\nu) t^{n+\nu} 
+        </mrow>
+        <mrow>
+          \amp + \sum_{n=2}^\infty c_{n-2} t^{n+\nu} - \sum_{n=2}^\infty
+          \nu^2 c_n t^{n+\nu} = 0
+        </mrow>
+        <mrow>
+          \amp \nu(\nu-1) c_0 t^\nu + (\nu+1) \nu c_1 t^{\nu+1} + \nu c_0
+          t^\nu 
+        </mrow>
+        <mrow>
+          \amp + (\nu+1)c_1t^{\nu+1} - \nu^2 c_0 t^\nu - \nu^2 c_1
+          t^{\nu+1} 
+        </mrow>
+        <mrow>
+          \amp + \sum_{n=2}^\infty \left[ c_n(n+\nu)(n+\nu-1) + c_n(n+\nu)
+          + c_{n-2} - \nu^2 c_n \right] t^{n+\nu} = 0
         </mrow>
       </md>
     </p>
@@ -223,15 +245,14 @@
       </md>
     </p>
     <p>
-      So <m>c_1 = 0</m> unless <m>\nu = \frac{-1}{2}</m>. However, we
-      assumed that we were dealing with <m>\nu</m> positive, so we
-      conclude that <m>c_1 = 0</m>. (We'll pay some special attention
-      to <m>\nu = \frac{-1}{2}</m> when we look at negative
-      <m>\nu</m>, and to half-integer values of <m>\nu</m> in
-      general.)
+      So <m>c_1 = 0</m> unless <m>\nu = \frac{-1}{2}</m>. However, I
+      assumed that <m>\nu</m> was positive, so I conclude that <m>c_1
+      = 0</m>. (I'll pay some special attention to <m>\nu =
+      \frac{-1}{2}</m> when I look at negative <m>\nu</m>, and to
+      half-integer values of <m>\nu</m> in general.)
     </p>
     <p>
-      Then we have the general recurrence relation, for <m>n \geq
+      Then I move on to the general recurrence relation, for <m>n \geq
       2</m>.
       <md>
         <mrow>
@@ -252,9 +273,7 @@
           c_{n+2} \amp = \frac{-c_n}{(n+2)(n+2+2\nu)}
         </mrow>
       </md>
-    </p>
-    <p>
-      These are the equations that calculate coefficients, so we start
+      These are the equations that calculate coefficients, so I start
       calculating.
       <md>
         <mrow>
@@ -285,32 +304,32 @@
     </p>
     <p>
       The constant <m>c_0</m> is still undetermined. By convention,
-      the choice for <m>c_0</m> is this strange value
+      the choice for <m>c_0</m> is the following strange value.
       <me>
         c_0 = \frac{1}{2^\nu \Gamma(1+\nu)}
-      </me>.
-      The properties of the <m>\Gamma</m> function allow us to
+      </me>
+      The properties of the <m>\Gamma</m> function allow me to
       simplify the denominator of the <m>c_n</m>.
       <me>
         c_{2n} = \frac{(-1)^n}{2^\nu \Gamma(1+\nu)} \frac{1}{2^{2n}n!
         (\nu+1) \ldots (\nu+n)} = \frac{(-1)^n}{2^{2n+v} n!
         \Gamma(1+n+\nu)}
       </me>
-      With this simplification, we can write the final solution for
+      With this simplification, I can write the final solution for
       positive <m>\nu</m>.
     </p>
     <definition>
       <statement>
         <p>
           The solution constructed above is written <m>J_\nu</m> and
-          called the Bessel function of the first kind of order
-          <m>\nu</m>.
+          called the <term>Bessel function of the first kind</term> of
+          order <m>\nu</m>.
           <me>
             J_{\nu} = \sum_{n=0}^\infty \frac{(-1)^n}{n!
             \Gamma(1+n+\nu)} \left( \frac{t}{2} \right)^{2n+\nu}
           </me>
-          It converges on <m>(0, \infty)</m>. It may not be defined
-          at 0 or negative numbers. In general, we are only
+          It converges on <m>(0, \infty)</m>. It may not be defined at
+          0 or negative numbers. In general, the applications are only
           interested in the Bessel function on the domain <m>(0,
           \infty)</m>. The Bessel functions of the first kind for
           <m>\nu \in \ZZ</m> are show in <xref
@@ -365,11 +384,12 @@
       </image>
     </figure>
     <p>
-      We could redo the same work for negative <m>\nu</m>, but it is
-      very similar (for <m>n = \frac{-1}{2}</m>, we would get a term
-      <m>(2\nu - 1) c_1</m>, so we would still conclude that <m>c_1 =
-      0</m>, hence all odd coefficients are <m>0</m>). In this way,
-      we find the rest of the Bessel functions of the first kind.
+      I could redo the same work for negative <m>\nu</m>, but it is
+      very similar. For <m> \neq \frac{-1}{2}</m>, and I would get an
+      equation of <m>(2\nu - 1) c_1 = 0</m>, so I would still conclude
+      that <m>c_1 = 0</m>, hence all odd coefficients are <m>0</m>. In
+      this way, I find the rest of the Bessel functions of the first
+      kind.
       <me>
         J_{-\nu} = \sum_{n=0}^\infty \frac{(-1)^n}{n! \Gamma(1+n-\nu)}
         \left( \frac{t}{2} \right)^{2n-\nu}
@@ -378,27 +398,28 @@
       <m>J_{-n}</m> gives an undefined denominator, hence doesn't
       define a series. In these cases, the method of Frobenius gives
       <m>J_{-n} = (-1)^n J_{n}</m>. This is not necessarily
-      surprising: in the method of Frobenius, is the roots of the
-      indicial equation differ by an integer, we may not have linearly
-      independent solution. If <m>\nu \notin \ZZ</m>, then we have
-      two linearly independent solutions, as we would expect with the
-      method of Frobenius.
+      surprising: in the Method of Frobenius, is the roots of the
+      indicial equation differ by an integer, there may not be linearly
+      independent solutions. If <m>\nu \notin \ZZ</m>, then there are
+      two linearly independent solutions, as expected with the
+      Method of Frobenius.
     </p>
     <definition>
       <statement>
         <p>
-          Let <m>n \notin \ZZ</m>. The <term>Bessel function of the
+          Let <m>n \notin \ZZ</m>. The <term>Bessel functions of the
           second kind</term> of order <m>\nu</m> are written
-          <m>Y_{\nu}</m> and defined by this expression
+          <m>Y_{\nu}</m> and defined by the following expression.
           <me>
             Y_{\nu} = \frac{\cos (\nu \pi) J_{\nu}(t) -
             J_{-\nu}(t)}{\sin \nu \pi}
-          </me>.
+          </me>
           This definition is a linear combination of Bessel functions
           of the first kind. For <m>\nu \in \ZZ</m>, this linear
-          combination have been just a multiple of the one solution we
-          know. To get around this, for <m>\nu \in \ZZ</m>, we define
-          the Bessel function of the second kind as a limit.
+          combination is just a multiple of the one solution (since
+          the Method of Frobenius only produced one solution).  To get
+          around this, for <m>\nu \in \ZZ</m>, the the Bessel function
+          of the second kind are defined as a limit.
           <me>
             Y_{\nu}(t) = \lim_{\alpha \rightarrow \nu} Y_{\alpha}(t)
           </me>
@@ -438,6 +459,12 @@
           s \amp = \frac{2}{\alpha} \sqrt{\frac{k}{m}}
           e^{\frac{-\alpha t}{2}}
         </mrow>
+      </md>
+      I want to know how to change the differential equation. This is
+      pretty difficult to do; I have to go through some derivative
+      acrobatics to make it work. First I differentiate the change of
+      variables function <m>s(t)</m>. 
+      <md>
         <mrow>
           \frac{ds}{dt} \amp = \frac{2}{\alpha} \frac{-\alpha}{2}
           \sqrt{ \frac{4k}{m\alpha^2}} e^{\frac{-\alpha t}{2}} = -
@@ -447,66 +474,109 @@
           \frac{d^2s}{dt^2} \amp = \frac{\alpha}{2} \sqrt{\frac{k}{m}}
           e^{-\frac{\alpha t}{2}}
         </mrow>
+      </md>
+      Now I want to find an expression for <m>\frac{d^2 y}{dt^2}</m>
+      in terms of some new function <m>x(s)</m> instead of
+      <m>y(t)</m>. The function I need is implicity defined as
+      follows. 
+      <me>
+        x(s(t)) = y(t)
+      </me>
+      This is implicit; <m>x</m> is the function that, when compsed
+      with the change of variables <m>s(t)</m>, give the original
+      function <m>y</m>. Since the composition is invertible, this
+      function will always exist (assuming reasonable
+      differentiability condition of <m>y</m>, which are already
+      required since it is the solution of a differential equation.)
+      There is a technical theorem in analysis called the
+      <term>Implicit Function Theorem</term> that guarantees existence
+      of functions like this. In any case, I want to differentiate
+      this new function. I need the chain rule to do so. 
+      <md>
         <mrow>
-          \frac{dy}{dt} \amp = \frac{dy}{ds} \frac{ds}{dt}
+          \frac{dx}{dt} \amp = \frac{dx}{ds} \frac{ds}{dt}
         </mrow>
+      </md>
+      Then I want to differentiate again. Here I need the produce rule
+      and the chain rule. After the derivatives, I bracket the result
+      in a useful way. 
+      <md>
         <mrow>
-          \frac{d^2 y}{dt^2} \amp = \frac{d}{dt} \left( \frac{dy}{ds}
+          \frac{d^2 x}{dt^2} \amp = \frac{d}{dt} \left( \frac{dx}{ds}
           \frac{ds}{dt} \right)
         </mrow>
         <mrow>
-          \amp = \frac{d^2 s}{dt^2} \frac{dy}{ds} + \frac{ds}{dt}
-          \frac{d}{dt} \frac{dy}{ds}
+          \amp = \frac{d^2 s}{dt^2} \frac{dx}{ds} + \frac{ds}{dt}
+          \frac{d}{dt} \frac{dx}{ds}
         </mrow>
         <mrow>
           \amp = \frac{d^2 s}{dt^2} \frac{dy}{ds} + \frac{ds}{dt}
           \frac{d^2y}{ds^2} \frac{ds}{dt}
         </mrow>
         <mrow>
-          \amp = \frac{d^2 s}{dt^2} \frac{dy}{ds} + \left(
-          \frac{ds}{dt} \right)^2 \frac{d^2 y}{ds^2}
-        </mrow>
-        <mrow>
-          \amp = \frac{\alpha}{2} \sqrt{\frac{k}{m}} e^{-\frac{\alpha
-          t}{2}} \frac{dy}{ds} + \frac{k}{m} e^{-\alpha t} \frac{d^2
-          y}{ds^2}
+          \amp = \frac{d^2 s}{dt^2} \frac{dx}{ds} + \left(
+          \frac{ds}{dt} \right)^2 \frac{d^2 x}{ds^2}
         </mrow>
       </md>
-    </p>
-    <p>
-      All this nonsense allows us to alter the original equation as
-      follows. (The change from the third to the fourth line involves
-      dividing by <m>m</m>, then dividing by <m>\alpha^2</m>, then
-      multiplying by 4.)
+      I can calculate the derivatives of the change of variables
+      <m>s(t)</m> and replace them in this expression. 
+      <md>
+        <mrow>
+          \amp = \frac{\alpha}{2} \sqrt{\frac{k}{m}} e^{-\frac{\alpha
+          t}{2}} \frac{dx}{ds} + \frac{k}{m} e^{-\alpha t} \frac{d^2
+          x}{ds^2}
+        </mrow>
+      </md>
+      Now, the function <m>x(s(t)) = y(t)</m> is the same as the
+      function <m>y(t)</m>, as a function of <m>t</m>; that was
+      exactly how it was defined. Therefore, I can replace <m>y</m>
+      and <m>y^{\prime \prime}</m> in the original equation with the
+      <m>t</m> derivatives of <m>x</m>. Let me do so, and proceed to do
+      some algebra with the result. 
       <md>
         <mrow>
           m y^{\prime \prime} + ke^{-\alpha t} \amp = 0
         </mrow>
         <mrow>
-          m \left(\frac{d^2 s}{dt^2} \frac{dy}{ds} + \left(
-          \frac{ds}{dt} \right)^2 \frac{d^2 y}{ds^2} \right) +
+          m \left(\frac{d^2 s}{dt^2} \frac{dx}{ds} + \left(
+          \frac{ds}{dt} \right)^2 \frac{d^2 x}{ds^2} \right) +
           ke^{-\alpha t} \amp = 0
         </mrow>
         <mrow>
           \frac{m\alpha}{2} \sqrt{\frac{k}{m}} e^{-\frac{\alpha t}{2}}
-          \frac{dy}{ds} + m \frac{k}{m} e^{-\alpha t} + k e^{-\alpha
-          t} y \amp = 0
-        </mrow>
-        <mrow>
-          \frac{2}{\alpha} \sqrt{\frac{k}{m}} e^{-\frac{\alpha t}{2}}
-          \frac{dy}{ds} + \frac{4}{\alpha^2} \frac{k}{m} e^{-\alpha t}
-          \frac{d^y}{ds^2} + \frac{4k}{m\alpha^2} e^{-\alpha t} y \amp
-          = 0
-        </mrow>
-        <mrow>
-          s^2 \frac{d^2y}{ds^2} + s \frac{dy}{ds} + s^2 y \amp = 0
+          \frac{dx}{ds} + m \frac{k}{m} e^{-\alpha t} + k e^{-\alpha
+          t} x \amp = 0
         </mrow>
       </md>
+      To write this in nicer way, I divide by <m>\alpha^2</m> and
+      multiply by <m>4</m>. 
+      <md>
+        <mrow>
+          \frac{2}{\alpha} \sqrt{\frac{k}{m}} e^{-\frac{\alpha t}{2}}
+          \frac{dx}{ds} + \frac{4}{\alpha^2} \frac{k}{m} e^{-\alpha t}
+          \frac{d^2 x}{ds^2} + \frac{4k}{m\alpha^2} e^{-\alpha t} y \amp
+          = 0
+        </mrow>
+      </md>
+      Then the coefifcient of the second derivative of precisely
+      <m>s(t)^2</m> and the coefficient of the first derivative is
+      precisely <m>s(t)</m>. 
+      <md>
+        <mrow>
+          s^2 \frac{d^2x}{ds^2} + s \frac{dx}{ds} + s^2 y \amp = 0
+        </mrow>
+      </md>
+      I have now produced a new differential equation for <m>x(t)</m>
+      in the new variable <m>s</m>. If I can solve this equation, then
+      by simply replace <m>s</m> with the change of variables
+      expression <m>s(t)</m>, I can recover <m>y(t) = x(s(t))</m>.
     </p>
     <p>
-      This is Bessel's equation with <m>\nu = 0</m>. It is solved by
-      Bessel's functions (of the first and second kind) for <m>\nu =
-      0</m>.
+      The differential equation I produced for <m>x(s)</m> just
+      happens to be Bessel's equation with <m>\nu = 0</m>. It is
+      solved by Bessel's functions (of the first and second kind) for
+      <m>\nu = 0</m>. I can write those solutions and replace <m>s</m>
+      with <m>s(t)</m> to find the original solution <m>y</m>
       <md>
         <mrow>
           y \amp = A J_0(s) + B Y_0(s)
@@ -518,17 +588,15 @@
           \right)
         </mrow>
       </md>
-    </p>
-    <p>
       These functions completely describe the behaviour of an aging
-      spring with exponential decay of the spring constant.
+      spring with exponential decay of the spring constant. 
     </p>
   </subsection>
   <subsection xml:id="subsection-bessel-functions-properties">
     <title>Properties of the Bessel Functions</title>
     <p>
-      We have some nice symmetry properties for integer orders. Let
-      <m>m \in \ZZ</m>.
+      The Bessel functions have some nice symmetry properties for
+      integer orders. Let <m>m \in \ZZ</m>.
       <md>
         <mrow>
           J_{-m}(t) \amp = (-1)^m J_m(t)
@@ -537,11 +605,9 @@
           J_m(-t) \amp = (-1)^m J_m(t)
         </mrow>
       </md>
-    </p>
-    <p>
-      We mentioned a functional equation for the Legendre polynomials.
-      We have one here as well; this one is true for arbitrary
-      <m>\nu</m>.
+      I mentioned a functional equation for the Legendre polynomials
+      in <xref ref="section-legendre" />.  I have one here
+      as well; this one is true for arbitrary <m>\nu</m>.
       <me>
         tJ_{\nu}^\prime(t) = \nu J_{\nu}(t) - t J_{\nu+1}(t)
       </me>
@@ -554,6 +620,11 @@
           \Gamma(\frac{3}{2} + n))} \left( \frac{t}{2} \right)^{2n +
           \frac{1}{2}}
         </mrow>
+      </md>
+      I know the values for half integer values of <m>\Gamma</m> from
+      above; I can replace the <m>\Gamma</m> function here with its
+      values. 
+      <md>
         <mrow>
           \Gamma \left( \frac{3}{2} + n \right) \amp =
           \frac{(2n+1)!}{2^{2n+1} n!} \sqrt{\pi}
@@ -563,6 +634,9 @@
           {\frac{(2n+1)!}{2^{2n+1}n!} \sqrt{\pi}} \left( \frac{t}{2}
           \right)^{2n + \frac{1}{2}}
         </mrow>
+      </md>
+      Then let me cancel some terms and do some simplifications. 
+      <md>
         <mrow>
           \amp = \sqrt{\frac{2}{\pi t}} \sum_{n=0}^\infty
           \frac{(-1)^n}{(2n+1)!} t^{2n+1}
@@ -570,30 +644,36 @@
         <mrow>
           \amp = \sqrt{\frac{2}{\pi t}} \sin t
         </mrow>
+      </md>
+      I could do the same for <m>\nu = \frac{-1}{2}</m>, with a
+      similar result. 
+      <md>
         <mrow>
           J_{-\frac{1}{2}} \amp = \sqrt{\frac{2}{\pi t}} \cos t
         </mrow>
       </md>
+      These special half-integer Bessel functions can actually be
+      expressed as elementary functions. The decay of the amplitude of
+      these waves is <m>\frac{1}{\sqrt{t}}</m> not <m>e^{-t}</m>; this
+      decay is much slower than exponential decay. The half-integer
+      Bessel functions are called <term>spherical Bessel
+      functions</term>.  The reason for that name is that they solve
+      the wave equation in spherical coordinates. The wave equation in
+      <m>\RR^3</m> is <m>\nabla^2 A + k^2 A = 0</m> for
+      <m>\nabla^2</m> the Laplacian.  (This is a construction from
+      multivariable calculus; feel free to disregard this notation if
+      you haven't taken Calculus III or Calculus IV) Changing to
+      spherical coordinates and restricting to the radial terms gives
+      Bessel's equation with half-integer order.
     </p>
     <p>
-      These special half-integer function can actually be expressed as
-      elementary functions. The decay of the amplitude of these waves
-      is <m>\frac{1}{\sqrt{t}}</m> not <m>e^{-t}</m>; this decay is
-      much slower than exponential decay. The half-integer Bessel
-      functions are called <em>spherical Bessel functions</em>. The
-      reason for that name is that they solve the wave equation in
-      spherical coordinates. The wave equation in <m>\RR^3</m> is
-      <m>\nabla^2 A + k^2 A = 0</m> for <m>\nabla^2</m> the Laplacian.
-      Changing to spherical coordinates and restricting to the radial
-      terms gives Bessel's equation with half-integer order.
-    </p>
-    <p>
-      We can think of these half-integer Bessel functions as the
+      I can think of these half-integer Bessel functions as the
       standing waves of spherical harmonic systems.
-      <m>J_{\frac{1}{2}}</m> is the first harmoinc, then we get higher
-      harmonics as we go. The typical image of these spherical waves
-      are the decaying amplitude ripples radiating from a stone
-      dropped in a pond.
+      <m>J_{\frac{1}{2}}</m> is the first harmoinc, then there are
+      higher harmonicsas well. The typical image of these spherical
+      waves are the decaying amplitude ripples radiating from a stone
+      dropped in a pond, or the standing wave of a drum head
+      resonating at a certain pitch.
     </p>
   </subsection>
 </section>
