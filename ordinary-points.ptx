@@ -377,11 +377,10 @@
           <md>
             <mrow>
               y = \amp c_0 \left[  1 + \sum_{n=n}^\infty \frac{(-1)^n
-              (1)(4)(7)\ldots(3n-2)}{(3n)!} t^{3n} \right] + c_1
-              \left[ t
+              (1)(4)(7)\ldots(3n-2)}{(3n)!} t^{3n} \right] 
             </mrow>
             <mrow>
-              \amp + \sum_{n=0}^\infty \frac{(-1)^n
+              \amp + c_1 \left[ t \sum_{n=0}^\infty \frac{(-1)^n
               (2)(5)(8)\ldots(n+2)}{(3n-1)!} t^{3n+1} \right]
             </mrow>
           </md>
