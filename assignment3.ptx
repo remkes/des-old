@@ -31,7 +31,7 @@
     </li>
     <li>
       <p>
-        Use Taylor series centred at <m>t=0</m> to solve the following
+        Use Taylor series centred at <m>t=0</m> to solved the following
         differential equation. (Make sure you verify that <m>t=0</m>
         is an ordinary point). (6) 
         <me>
@@ -41,7 +41,7 @@
     </li>
     <li>
       <p>
-        In the course note, I solve the equation
+        In the course notes, I solve the equation
         <me>
           y^{\prime \prime} + ty = 0 
         </me>.
