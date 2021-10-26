@@ -1,12 +1,10 @@
-<section xml:id="section-derivatives">
+<section xml:id="section-laplace-derivatives">
   <title>Laplace Transforms and Derivatives</title>
   <p>
-    This is a course on differential equations;
-    if Laplace transforms are useful,
-    we will need them to relate to derivatives.
-    Let's calculate what happens to a derivative of a function
-    (of exponential order)
-    in a Laplace transform.
+    This is a course on differential equations; if Laplace transforms
+    are useful, I will need them to relate to derivatives.  I will
+    calculate what happens to a derivative of a function (of
+    exponential order) in a Laplace transform.
     <md>
       <mrow>
         \calL \left\{ \frac{df}{dt} \right\} \amp = \int_0^\infty
@@ -23,18 +21,19 @@
     </md>
   </p>
   <p>
-    We can sumarize the result in a rule.
+    I can summarize the result in this rule.
     <me>
       \calL \{ f^\prime(t) \} (s) = -f(0) + sF(s)
     </me>.
     This is a lovely and convenient property. In the <m>s</m>-domain,
-    there is no more differentiation. We just have multiplication by
-    the <m>s</m> term and evaluation of the function at a point.
+    there is no more differentiation. Differentiation is replaced by
+    the much more approachable multiplication by the variable
+    <m>s</m>, along with evaluation of the original function at zero.
   </p>
   <p>
-    We can do a similar calculation for second derivatives. The
+    I can do a similar calculation for second derivatives. The
     calculation will involve two uses of integration by parts, though
-    we can make use of the previous calcullation to simplify the
+    I can make use of the previous calculation to simplify the
     work.
     <md>
       <mrow>
@@ -54,25 +53,27 @@
     Again, this is very convenient. The derivatives are completely
     removed in the <m>s</m>-domain, replaced with simple algebraic
     operations. The general result for any order of differentiation
-    is
+    is this rule.
     <me>
       \calL \left\{ \frac{d^n f}{dt^n} \right\} = s^n F(s) - s^{n-1}
       f(0) - s^{n-2} f^\prime(0) - s^{n-3} f^{\prime \prime}(0) -
       \ldots - f^{(n-1)}(0)
-    </me>.
-    This leads to the amazing use of Laplace transforms in solving
-    DEs. A Laplace transform change differentiation into simple
+    </me>
+    The understanding of Laplace transforms of derivative leads to
+    an amazing use of Laplace transforms in solving
+    DEs. A Laplace transform changes differentiation into simple
     algebraic operations; therefore, it should change some DEs into
     algebraic equations. Since algebraic equations are much easier to
-    solve than DEs, this is a huge advantage. However, we have one
-    problem. If we want to solve a DE, we want to solve it in the
-    <m>t</m>-domain. We can transform to the <m>s</m>-domain and
-    solve the algebraic equation, but we need to get back to the
-    <m>t</m>-domain to finish. For this, we need to invert the
-    transform, which we will defined in the next section.
+    solve than DEs, this is a huge advantage. However, I have one
+    problem. If we want to solve a DE, I want to solve it in the
+    <m>t</m>-domain. I can transform to the <m>s</m>-domain and
+    solve the algebraic equation, but I need to get back to the
+    <m>t</m>-domain to finish. For this, I need to invert the
+    transform, which is covered in <xref
+    ref="section-inverse-transforms" />. 
   </p>
   <p>
-    Before we move on, here are two other properties of the Laplace
+    Before I move on, here are two other properties of the Laplace
     transform which relate to derivatives. The first shows that
     integrals are also changed into something algebraic.
     <me>

@@ -1,12 +1,14 @@
 <section xml:id="section-laplace-algebraic">
   <title>Algebraic Properties of the Laplace Transform</title>
   <p>
-    We know that the Laplace transform is linear, but we said we would
-    return to the issue of product. To start, it is easier to think
-    in reverse: if we have a product <m>FG</m> in the <m>s</m>-domain,
-    where did it come from in the <m>t</m>-domain? Here is the
-    relevant calculation (the change in the order of integration near
-    the end is jutified by theorems in multivariable analysis).
+    The Laplace transform is linear, but it is not multiplicative. How
+    does it interact with product of function.  To start, it is easier
+    to think in reverse: if there is a product <m>FG</m> in the
+    <m>s</m>-domain, where did it come from in the <m>t</m>-domain?
+    Here is the relevant integration calculation, using a
+    substitution. (The change in the order of
+    integration near the end is jutified by theorems in real
+    analysis.)
     <md>
       <mrow>
         FG \amp = \int_0^\infty e^{-st} f(t) df \int_0^\infty e^{-su}
@@ -20,7 +22,7 @@
         g(u) du \right] du
       </mrow>
       <mrow>
-        v \amp = u+ t
+        v \amp = u + t
       </mrow>
       <mrow>
         \amp = \int_0^\infty f(t) \left[ \int_t^\infty e^{-sv} g(v-t)
@@ -42,7 +44,7 @@
   <definition>
     <statement>
       <p>
-        Let <m>f,g</m> be integrable function on <m>[0,\infty)</m>.
+        Let <m>f,g</m> be integrable functions on <m>[0,\infty)</m>.
         Their convoluiton is defined by this integral.
         <me>
           f \star g (t) = \int_0^t f(\tau) g(t-\tau) d \tau
@@ -87,9 +89,9 @@
     identity? That is, what function <m>g</m> satisfies
     <me>
       f \star g = \int_0^t f(\tau) g(t-\tau) d \tau = f(t)
-    </me>.
+    </me>?
     In this question, the integral needs to evaluate <m>f(\tau)</m> at
-    <m>\tau = t</m>. We know a <sq>function</sq> that does this:
+    <m>\tau = t</m>. I know a <sq>function</sq> that does this:
     <m>\delta_0</m>.
     <me>
       f \star \delta_0 = \int_0^t f(\tau) \delta_0 (t-\tau) d \tau = f(t)
@@ -114,77 +116,58 @@
       \int_0^\infty f \star g dt = \int_0^\infty f(t) dt \int_0^\infty
       g(t) dt
     </me>
-    Finally, it lets us understand inverse Lapalce transforms of
-    products.
-    <md>
-      <mrow>
-        \calL^{-t} \left\{ \frac{k^2}{(s^2+k^2)^2} \right\} \amp =
-        \calL^{-1} \left\{ \frac{k}{s^2+k^2} \frac{k}{s^2+k^2}
-        \right\}
-      </mrow>
-      <mrow>
-        \amp = \sin kt \star \sin kt
-      </mrow>
-      <mrow>
-        \amp = \int_0^t \sin ku \sin (kt-ku) du
-      </mrow>
-      <mrow>
-        \amp \text{ Using }  \left[ \sin A \sin B = \frac{1}{2} \cos
-        (A-B) - \cos (A+B) \right]
-      </mrow>
-      <mrow>
-        \calL^{-t} \left\{ \frac{k^2}{(s^2+k^2)^2} \right\} \amp =
-        \frac{1}{2} \int_0^t \cos (ku - kt + ku) - \cos (ku + kt - ku
-        ) du
-      </mrow>
-      <mrow>
-        \amp = \frac{1}{2} \int_0^t \cos (2ku - 2t) - \cos (kt) du
-      </mrow>
-      <mrow>
-        \amp = \frac{1}{2} \left. \frac{\sin (2ku - kt)}{2k}
-        \right|_0^t - \left. \frac{1}{2} u \cos (kt) \right|_0^t
-      </mrow>
-      <mrow>
-        \amp = \frac{\sin (2kt-kt) - \sin (-kt)}{4k} - \frac{t\cos
-        kt}{2}
-      </mrow>
-      <mrow>
-        \amp = \frac{\sin (kt)}{2k} - \frac{t\cos kt}{2} = \frac{\sin
-        kt - kt \cos kt}{2k}
-      </mrow>
-    </md>
-    In addition to differential equations,
-    sometimes we get integral equations in mathematics.
-    Laplace transforms and convolutions can help solve certain types of integral equations.
-    <md>
-      <mrow>
-        3t^2 - e^{-t} - \int_0^t f(u) e^{t-u} du \amp = f(t)
-      </mrow>
-      <mrow>
-        3t^2 - e^{-t} - f \star e^t \amp = f(t)
-      </mrow>
-      <mrow>
-        \frac{6}{s^3} - \frac{1}{s+1} - F(s) \frac{1}{s-1} \amp =
-        F(s)
-      </mrow>
-      <mrow>
-        \frac{6}{s^3} - \frac{1}{s+1} \amp = F(s) \left( 1 +
-        \frac{1}{s+1} \right)
-      </mrow>
-      <mrow>
-        \frac{6}{s^3} - \frac{1}{s+1} \amp = F(s) \left( \frac{s}{s-1}
-        \right)
-      </mrow>
-      <mrow>
-        F(s) \amp = \frac{6(s-1)}{s^4} - \frac{(s-1)}{s(s+1)}
-      </mrow>
-      <mrow>
-        \amp = \frac{6}{s^3} - \frac{6}{s^4} + \frac{1}{s} -
-        \frac{2}{s+1}
-      </mrow>
-      <mrow>
-        f \amp = 3t^2 - t^3 + 1 - 2e^{-t}
-      </mrow>
-    </md>
+    Finally, it lets me understand inverse Lapalce transforms of
+    products. I'll show an example.
   </p>
+  <example>
+    <statement>
+      <p>
+        In this example, I'll look at the inverse transform of a
+        two rational functions that transform back to sine functions.
+        <md>
+          <mrow>
+            \calL^{-t} \left\{ \frac{k^2}{(s^2+k^2)^2} \right\} \amp =
+            \calL^{-1} \left\{ \frac{k}{s^2+k^2} \frac{k}{s^2+k^2}
+            \right\}
+          </mrow>
+          <mrow>
+            \amp = \sin kt \star \sin kt
+          </mrow>
+        </md>
+        The inverse transformation goes to the convolution. What does
+        this convolution actually look like? I'll need a trig identity
+        to approach the integral. 
+        <md>
+          <mrow>
+            \sin kt \star \sin kt \amp = \int_0^t \sin ku \sin (kt-ku) du
+          </mrow>
+          <mrow>
+            \sin A \sin B \amp = \frac{1}{2} \cos
+            (A-B) - \cos (A+B) 
+          </mrow>
+          <mrow>
+            \sin kt \star \sin kt \amp = \frac{1}{2} \int_0^t \cos (ku
+            - kt + ku) - \cos (ku + kt - ku) du
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{2} \int_0^t \cos (2ku - 2t) - \cos (kt) du
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{2} \left. \frac{\sin (2ku - kt)}{2k}
+            \right|_0^t - \left. \frac{1}{2} u \cos (kt) \right|_0^t
+          </mrow>
+          <mrow>
+            \amp = \frac{\sin (2kt-kt) - \sin (-kt)}{4k} - \frac{t\cos
+            kt}{2}
+          </mrow>
+          <mrow>
+            \amp = \frac{\sin (kt)}{2k} - \frac{t\cos kt}{2} = \frac{\sin
+            kt - kt \cos kt}{2k}
+          </mrow>
+        </md>
+        This is the value of the convolution, hence the inverse
+        transform of the starting rational function.  
+      </p>
+    </statement>
+  </example>
 </section>
