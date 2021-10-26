@@ -19,16 +19,17 @@
       </statement>
     </proposition>
     <p>
-      As we will discover, the Laplace transform is not
-      multiplicative. The question of how we deal with products
-      (<m>\calL \{ fg \}</m>) will come later.
+      As I will demonstrate, the Laplace transform is not
+      multiplicative. There is no good, general way to deal with 
+      (<m>\calL \{ fg \}</m>), though particular product have
+      identities which I will show later. 
     </p>
     <p>
       Second, the asymptotic order of <m>f</m> was important to
       allowing the definition of the Laplace transform. However, all
-      the transforms we've seen so far are decaying functions. This
+      the transforms I've shown so far produce decaying functions. This
       is a general statment: for any function <m>f(t)</m> of
-      exponential order <m>c > 0</m>, we have
+      exponential order <m>c > 0</m>, it is true that
       <me>
         \lim_{s \rightarrow \infty} \calL \{ f(t) \} (s) = 0
       </me>.
@@ -36,8 +37,8 @@
       transform which doesn't have this limit, you've made a mistake.
     </p>
     <p>
-      For the same students who like linear algebra, this gives us a
-      specific understanding of the Laplace transform. Let
+      For same students who like linear algebra, I can use linear
+      algebra language to describe the Laplace transform. Let
       <m>EOF(0,\infty)</m> be the space of piecewise-continuous
       functions of exponential order defined on <m>(0, \infty)</m>
       (<m>EOF</m> for exponential order functions). Let <m>DF^+</m>
@@ -46,18 +47,18 @@
       <m>s \rightarrow \infty</m> (DF for decay functions). These are
       both linear spaces, since addition, subtraction and
       multiplication by constants preserve the properties of
-      definition. The the Laplace transform is a linear map
+      definition. The the Laplace transform is a linear
+      transformation between these vector spaces.
       <me>
         \calL : EOF(0,\infty) \rightarrow DF^+
-      </me>.
+      </me>
     </p>
   </subsection>
   <subsection xml:id="subsection-shifts">
     <title>Shifts</title>
     <p>
-      We said we'd return to Laplace transforms of products. We still
-      can't handle the general case, but there is a nice property for
-      multiplication by an exponential function.
+      One of the product that does work well for Laplace transforms is
+      multiplication by exponential functions.
     </p>
     <proposition>
       <statement>
@@ -84,14 +85,14 @@
       </statement>
     </proposition>
     <p>
-      Shifts are quite important in the whole theory.
-      We can also ask what happens when we shift in the <m>t</m> domain.
+      Shifts are quite important in the whole theory.  What happens
+      when the shift is in the <m>t</m> domain?
     </p>
     <definition>
       <statement>
         <p>
-          The <term>unit step function</term> <m>u_a(t)</m> if defined
-          as
+          The <term>unit step function</term> <m>u_a(t)</m> is a
+          piecewise function defined as follows. 
           <me>
             u_a(t) = \left\{ \begin{matrix} 0 \amp t \lt  a \\ 1 \amp
             t \geq a. \end{matrix} \right.
@@ -100,12 +101,13 @@
       </statement>
     </definition>
     <p>
-      The unit step function <m>u_a(t) f(t)</m> cancels any part of
+      The unit step function multiplied by some other function
+      (<m>u_a(t) f(t)</m>) cancels any part of
       <m>f</m> for <m>t\lt a</m>, but preserves <m>f</m> for <m>t \geq
-      a</m>. To define a shift of <m>f</m>, we can write <m>u_a(t)
+      a</m>. To define a shift of <m>f</m>, I can write <m>u_a(t)
       f(t-a)</m> to remove anything before <m>t=0</m> from <m>f</m>.
-      (Note that we're allowed piecewise continuous function for
-      Laplace transforms.) We calculate to find the result of this
+      (Remember that piecewise continuous functions work with
+      Laplace transforms.) I calculate to find the result of this
       shift in the <m>t</m>-domain.
       <md>
         <mrow>

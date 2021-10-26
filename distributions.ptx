@@ -1,20 +1,21 @@
 <section xml:id="distributions">
   <title>Distributions</title>
   <p>
-    In the world of functional analysis and the use of transforms, it
-    turns out we can extend our notion of a function in strange and
-    novel ways. While I'm not going to give a formal definition,
+    In analysis (the world of transformation, non-elementary
+    functions, etc.) I can extend the notion of a function in strange
+    and novel ways. While I'm not going to give a formal definition,
     these extensions are called distributions. The basic idea is that
     a distribution may not be a well-defined function, but it is
     something that behaves well in integration. (If the word
     <sq>distribution</sq> reminds you of probability and statistics,
     that's a good intuition. These distributions are very similar to
-    distributions used in statistics).
+    distributions used in statistics where, again, the ability to
+    integrate is the most important property).
   </p>
   <p>
-    The distribution we will be using in this section is the
+    The distribution I want to share in this section is the
     <m>\delta</m>-function. (The name is terrible, since it is most
-    certainly <em>not</em> a function.)
+    certainly <em>not</em> a function.) Here is the definition.
   </p>
   <definition>
     <statement>
