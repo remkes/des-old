@@ -75,7 +75,7 @@
           y^\prime(0) \amp = 4
         </mrow>
         <mrow>
-          y^{\prime \prime} + 4y^{\prime} + 4y \amp = \delta_4(t) 
+          y^{\prime \prime} + 4y^{\prime} + 4y \amp = 4\delta_0(t) 
         </mrow>
         <mrow>
           y(0) \amp = 0
