@@ -7,7 +7,7 @@
       <me>
         y^{\prime \prime} + P(t) y^\prime + Q(t) y = 0
       </me>
-      Recall that this differential equation has a regular point if
+      Recall that this differential equation has a ordinary point if
       <m>P(t)</m> and <m>Q(t)</m> are analytic at that point. I've
       dealt with solutions at ordinary points; now I will consider
       solutions at singular points. There are particular types of
@@ -24,7 +24,7 @@
           t_0</m>. The function has a <term>pole</term> of order
           <m>d \in \NN</m> at <m>t_0</m> if the limit
           <me>
-            lim_{t \rightarrow t_0} (t-t_0)^d f(t) 
+            \lim_{t \rightarrow t_0} (t-t_0)^d f(t) 
           </me>
           converges to a finite number, but does not converge for any
           integer exponent smaller than <m>d</m>. 
@@ -56,7 +56,7 @@
           A singular point <m>t_0</m> of this DE is called a
           <term>regular singular point</term> if the two functions
           <m>(t-t_0)P(t)</m> and <m>(t-t_0)^2 Q(t)</m> are analytic at
-          <m>t = 0</m>. Equivalently <m>P(t)</m> can be analytic or
+          <m>t = t_0</m>. Equivalently <m>P(t)</m> can be analytic or
           have a pole of order 1; and <m>Q(t)</m> can be analytic, have
           a pole or order 1, or have a pole of over 2. 
         </p>
@@ -212,12 +212,16 @@
       <md>
         <mrow>
           \sum_{n=0}^\infty c_n (n+r) (n+r-1) t^{n+r-2} + P(t)
-          \sum_{n=0}^\infty c_n (n+r) t^{n+r-1} + Q(t)
-          \sum_{n=0}^\infty c_n t^{n+r} \amp = 0
+          \sum_{n=0}^\infty c_n (n+r) t^{n+r-1} \amp 
         </mrow>
         <mrow>
-          \sum_{n=0}^\infty c_n (n+r) (n+r-1) t^{n+r-2} +
-          \left(\frac{p_{-1}}{t} + \sum_{n=0}^\infty p_n t^n \right)
+          + Q(t) \sum_{n=0}^\infty c_n t^{n+r} \amp = 0
+        </mrow>
+        <mrow>
+          \sum_{n=0}^\infty c_n (n+r) (n+r-1) t^{n+r-2} \amp 
+        </mrow>
+        <mrow>
+          + \left(\frac{p_{-1}}{t} + \sum_{n=0}^\infty p_n t^n \right)
           \sum_{n=0}^\infty c_n (n+r) t^{n+r-1} \amp
         </mrow>
         <mrow>
@@ -490,7 +494,11 @@
           In this example, I could have gone as far as the recurrence
           relation using an arbitrary <m>r</m> to avoid repetition.
           I do need to specify <m>r</m> once I get to the recurrence
-          relation.
+          relation. However, when <m>r</m> is an integer, I will often
+          have to return to the original differential equation and
+          repeat the calculation for each <m>r</m>, in order to keep
+          track of which terms are sent to zero in the series due to
+          taking derivatives. 
         </p>
       </statement>
     </example>

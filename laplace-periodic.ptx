@@ -5,7 +5,7 @@
     already discussed the sine and cosine transforms, but it is also
     true for arbitrary, even discontinuous periodic functions. Here
     are a couple examples of useful discontinuous periodic functions.
-    (Like the unit step function and the <m>delta</m>-function, these
+    (Like the unit step function and the <m>\delta</m>-function, these
     are both reasonable functions for applied mathematics even though
     they are discontinuous.) 
   </p>
@@ -57,7 +57,8 @@
         Let <m>f(t)</m> be the square wave, which has period 2.  Then
         I can use <m>f</m> as a forcing term and solve the following
         DE with a Laplace transform (I factor <m>1-e^{-2s}</m> as a
-        difference of squares in this calculation).
+        difference of squares in this calculation). Assume the initial
+        conditions are <m>y(0) = y^\prime(0) = 0</m>.
         <md>
           <mrow>
             y^\prime + by \amp  = f(t)

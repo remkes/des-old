@@ -1,4 +1,4 @@
-size(10cm,6cm,IgnoreAspect);
+size(12cm,8cm,IgnoreAspect);
 import graph;
 
 yaxis("$q$");

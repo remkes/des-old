@@ -1,4 +1,4 @@
-size(6cm,6cm,IgnoreAspect);
+size(12cm,12cm,IgnoreAspect);
 import graph;
 
 dot((-4,0));

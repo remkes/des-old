@@ -33,7 +33,7 @@
             s^2Y - s + Y \amp = 0
           </mrow>
         </md>
-        Now this is an algebrai equation. I solve for <m>Y</m>.
+        Now this is an algebraic equation. I solve for <m>Y</m>.
         <md>
           <mrow>
             (s^2+1)Y \amp = s

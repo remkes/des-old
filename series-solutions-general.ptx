@@ -5,10 +5,10 @@
       There is a common approach to solving that has already been
       helpful for second order equations: I assume the solution has a
       certain form (exponential for constant coefficient linear
-      equations) put that form into the differential equation, and
+      equations), put that form into the differential equation, and
       solve for the parameters of the chosen form. This chapter takes
       the same approach, using Taylor series as the certain form.
-      <xref ref="section-taylor-series">See</xref> for a review of Taylor
+      See <xref ref="section-taylor-series" /> for a review of Taylor
       series.
     </p>
     <p>

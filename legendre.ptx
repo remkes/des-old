@@ -263,7 +263,7 @@
         \int_{-1}^1 P_k(t) P_l(t) \amp = \frac{2}{2l+1} \delta_{kl}
       </mrow>
       <mrow>
-        (k+1)P_{k+1}(t) - (2k+1)tP_k(t) + k P_{k-1}(t) \amp = 0
+        0 \amp = (k+1)P_{k+1}(t) - (2k+1)tP_k(t) + k P_{k-1}(t) 
       </mrow>
       <mrow>
         (2k+1) P_k(t) \amp = \frac{d}{dt} \left( P_{k+1}(t) -

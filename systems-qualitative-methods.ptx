@@ -1,22 +1,22 @@
 <section xml:id="section-systems-qualitative-methods">
   <title>Qualitative Methods</title>
   <p>
-    For first order autonomous equations, we used a phase-line
+    For first order autonomous equations, I used a phase-line
     analysis to determine the steady states and the trajectories of
-    movement between the steady states. We analyzed the stability of
+    movement between the steady states. I analyzed the stability of
     the steady states, and the phase line gave a fairly complete
     picture of the behaviour of the system depending on an initial
     value. For systems of DEs, the same analysis applies; however,
-    for each function involved in the system, we get an additional
+    for each function involved in the system, I get an additional
     dimension of analysis. In this section, for ease of drawing the
-    analysis, we restrict to systems with two functions and two
+    analysis, I will restrict to systems with two functions and two
     equations.
   </p>
   <p>
-    Let's write <m>p(t)</m> and <m>q(t)</m> for the two functions. As
-    with phase-line analysis, we need autonomous equations. An
+    I'll write <m>p(t)</m> and <m>q(t)</m> for the two functions. As
+    with phase-line analysis, I need autonomous equations. An
     autonomous system does not involve the independent variable
-    explicitly, so it can be written in the form
+    explicitly, so it can be written in the following form.
     <md>
       <mrow>
         \frac{dp}{dt} \amp = f(p,q)
@@ -24,25 +24,25 @@
       <mrow>
         \frac{dq}{dt} \amp = g(p,q)
       </mrow>
-    </md>.
-    The qualititative analysis takes place in the plane, which we call
-    the phase-plane. The axes are the values of the functions
+    </md>
+    The qualititative analysis takes place in a two dimensional space
+    called the phase-plane. The axes are the values of the functions
     <m>p</m> and <m>q</m>, so that an isolated point represents a
-    starting value for <m>p</m> and <m>q</m>. We would like to
+    starting value for <m>p</m> and <m>q</m>. I would like to
     identify the steady states, look at the trajectories, and analyze
-    the stability of the steady states. We lay out the process.
+    the stability of the steady states. Here is the process. 
   </p>
   <p><ul>
     <li>
       Draw the locus <m>f = 0</m> (this is called the
-      <em>nullcline</em> of f). Do likewise for <m>g</m> (the
+      <term>nullcline</term> of f). Do likewise for <m>g</m> (the
       nullcline of <m>g</m>). Label where <m>f>0</m> and <m>f\lt
-      0</m> on either side of the nullcines, and likewise for
+      0</m> on either side of the nullclines, and likewise for
       <m>g</m>.
     </li>
     <li>
       The steady states exists at the intersections of the nullclines,
-      where for <m>f</m> and <m>g</m> are zero.
+      where both <m>f</m> and <m>g</m> are zero.
     </li>
     <li>
       Regions where <m>f>0</m> and <m>g>0</m> have growth in both
@@ -60,49 +60,55 @@
     </li>
     <li>
       The solution trajectories are paths in the plane which roughly
-      follow the arrows.
+      follow the arrows. Unlike the clear trajectories (upward or
+      downward) of the phase-line, this qualitative analysis now gives
+      hints for drawing curves in the phase plane. This is much more
+      open-ended, but still remarkably useful 
     </li>
   </ul></p>
   <p>
-    We want to know the stability of the steady states in the model.
-    Recall for phase-linea analysis that the stability of the steady
+    I want to know the stability of the steady states in the model.
+    Recall for phase-line analysis that the stability of the steady
     states was a relatively simple situation. There were only three
     cases: stable, unstable, and stable only from one side. For the
     phase-plane, there are many different behaviours for steady
     states. However, there are six frequent behaviours of steady
-    states which we classify in the following list.
+    states which I can classify in the following list.
   </p>
   <p><ul>
     <li>
       The steady state can be entirely attractive, where all the
       nearby trajectories tend towards the steady state. If the
       trajectories tend towards the steady state with relatively
-      little rotation, this is called a stable focus.
+      little rotation, the steady state is called a <term>stable
+      focus</term>. 
     </li>
     <li>
       The steady state can be entirevly repulsive, where all the
       nearby trajectories tend away from the steady state. If the
       trajetories tend directly away from the steady state with
-      relatively little rotation, this is called an unstable focus.
+      relatively little rotation, the steady state is called an
+      <term>unstable focus</term>.
     </li>
     <li>
       The steady state can be partially stable, where there is an axis
-      which is attractive and an axis which is respulsive. This is
-      called a saddle point.
+      which is attractive and an axis which is respulsive. This steady
+      state is called a <term>saddle point</term>.
     </li>
     <li>
       If the steady state is entirely attractive but the trajectories
-      spiral inwards, then the steady state is a stable node.
+      spiral inwards, then the steady state is a <term>stable
+      node</term>.
     </li>
     <li>
       Similarly, if the steady state is entirely repulsive and the
       trajectories spiral outwards, then the state state is an
-      unstable node.
+      <term>unstable node</term>.
     </li>
     <li>
       Finally, the steady state can be neither attracitve of repuslive
       and the nearby trajectories simply form periodic loops around
-      the steady state. This is called a centre.
+      the steady state. This is called a <term>centre</term>.
     </li>
   </ul></p>
   <p>
@@ -380,10 +386,13 @@
       </asymptote>
     </image>
   </figure>
+  <p>
+    I'll do some examples to demonstrate the process.
+  </p>
   <example>
     <statement>
       <p>
-        Let's start with Lokta-Volterra. In the above notation,
+        I'll start with Lokta-Volterra. In the above notation,
         Lokta-Volterra is described by two DEs, with these functions.
         <md>
           <mrow>
@@ -393,7 +402,7 @@
             g(p,q) \amp = cpq - dq
           </mrow>
         </md>
-        We need to graph the zero-loci of the right sides.
+        I need to graph the zero-loci of the right sides.
         <md>
           <mrow>
             ap - bpq \amp = 0 \implies p ( a - bq) = 0
@@ -402,7 +411,7 @@
             cpq - dq \amp = 0 \implies q (cp - d) = 0
           </mrow>
         </md>
-        The loci we get are the two axes <m>p=0</m> and <m>q=0</m>,
+        The loci are the two axes <m>p=0</m> and <m>q=0</m>,
         the horizontal line <m>q = \frac{a}{b}</m> and the vertical
         line <m>p = \frac{d}{c}</m>. There are four intersections
         points, <m>(0,0)</m>, <m>\left(\frac{d}{c},0\right)</m>,
@@ -418,135 +427,104 @@
       <p>
         The signs of <m>f(p,q)</m> and <m>g(p,q)</m> give the
         trajectory directions in each portion of the phase plane and
-        on the nullclines. We can use those directions to sketch an
+        on the nullclines. I can use those directions to sketch an
         idea of the trajectories of the system. For Lokta-Volterra,
         these directions show something which is vaguely circular or
         elliptical, as in <xref
         ref="figure-trajectories-lokta-voltera" />
       </p>
+      <figure xml:id="figure-nullclines-lokta-voltera">
+        <caption>The Nullclines for Lokta-Voltera</caption>
+        <image xml:id="figure24" width="80%">
+          <asymptote>
+            size(10cm,6cm,IgnoreAspect);
+            import graph;
+    
+            yaxis("$q$");
+            xaxis("$p$");
+    
+            draw((3,0)--(3,4));
+            draw((0,2)--(6,2));
+    
+            label("$q = \frac{a}{b}$",(6,2),E);
+            label("$p = \frac{d}{c}$",(3,4),N);
+    
+            dot("$\left(0,\frac{a}{b}\right)$",(0,2),W);
+            dot("$\left(\frac{d}{c},0\right)$",(3,0),S);
+            dot("$\left(\frac{d}{c},\frac{a}{b}\right)$",(3,2),NE);
+          </asymptote>
+        </image>
+      </figure>
+      <figure xml:id="figure-directions-lokta-voltera">
+        <caption>The Directions for Lokta-Voltera</caption>
+        <image xml:id="figure25" width="80%">
+          <asymptote>
+            size(10cm,6cm,IgnoreAspect);
+            import graph;
+    
+            yaxis("$q$");
+            xaxis("$p$");
+    
+            draw((3,0)--(3,4));
+            draw((0,2)--(6,2));
+    
+            label("$q = \frac{a}{b}$",(6,2),E);
+            label("$p = \frac{d}{c}$",(3,4),N);
+    
+            dot("$\left(0,\frac{a}{b}\right)$",(0,2),W);
+            dot("$\left(\frac{d}{c},0\right)$",(3,0),S);
+            dot("$\left(\frac{d}{c},\frac{a}{b}\right)$",(3,2),NE);
+    
+            draw((1,3)--(1.5,3.5),Arrow);
+            draw((5,3)--(5.5,2.5),Arrow);
+            draw((1,1)--(0.5,1.5),Arrow);
+            draw((5,1)--(4.5,0.5),Arrow);
+    
+            draw((2.5,3)--(3.5,3),Arrow);
+            draw((3.5,1)--(2.5,1),Arrow);
+            draw((1.5,1.5)--(1.5,2.5),Arrow);
+            draw((4.5,2.5)--(4.5,1.5),Arrow);
+          </asymptote>
+        </image>
+      </figure>
+      <figure xml:id="figure-trajectories-lokta-voltera">
+        <caption>The Trajectories for Lokta-Voltera</caption>
+        <image xml:id="figure26" width="80%">
+          <asymptote>
+            size(10cm,6cm,IgnoreAspect);
+            import graph;
+            
+            yaxis("$q$");
+            xaxis("$p$");
+    
+            draw((3,0)--(3,4));
+            draw((0,2)--(6,2));
+    
+            label("$q = \frac{a}{b}$",(6,2),E);
+            label("$p = \frac{d}{c}$",(3,4),N);
+    
+            dot("$\left(0,\frac{a}{b}\right)$",(0,2),W);
+            dot("$\left(\frac{d}{c},0\right)$",(3,0),S);
+            dot("$\left(\frac{d}{c},\frac{a}{b}\right)$",(3,2),NE);
+    
+            draw((1,3)--(1.5,3.5),Arrow);
+            draw((5,3)--(5.5,2.5),Arrow);
+            draw((1,1)--(0.5,1.5),Arrow);
+            draw((5,1)--(4.5,0.5),Arrow);
+    
+            draw((0.5,2){N}..{E}(3,3.5){E}..{S}(5.5,2){S}..{W}(3,0.5){W}..{N}(0.5,2));
+            draw((0.8,2){N}..{E}(3,3.2){E}..{S}(5.2,2){S}..{W}(3,0.8){W}..{N}(0.8,2));
+            draw((1.2,2){N}..{E}(3,2.8){E}..{S}(4.8,2){S}..{W}(3,1.2){W}..{N}(1.2,2));
+    
+            draw((2.5,3)--(3.5,3),Arrow);
+            draw((3.5,1)--(2.5,1),Arrow);
+            draw((1.5,1.5)--(1.5,2.5),Arrow);
+            draw((4.5,2.5)--(4.5,1.5),Arrow);
+          </asymptote>
+        </image>
+      </figure>
     </statement>
   </example>
-  <figure xml:id="figure-nullclines-lokta-voltera">
-    <caption>The Nullclines for Lokta-Voltera</caption>
-    <image xml:id="figure24" width="80%">
-      <asymptote>
-        size(10cm,6cm,IgnoreAspect);
-        import graph;
-
-        yaxis("$q$");
-        xaxis("$p$");
-
-        draw((3,0)--(3,4));
-        draw((0,2)--(6,2));
-
-        label("$q = \frac{a}{b}$",(6,2),E);
-        label("$p = \frac{d}{c}$",(3,4),N);
-
-        dot("$\left(0,\frac{a}{b}\right)$",(0,2),W);
-        dot("$\left(\frac{d}{c},0\right)$",(3,0),S);
-        dot("$\left(\frac{d}{c},\frac{a}{b}\right)$",(3,2),NE);
-      </asymptote>
-    </image>
-  </figure>
-  <figure xml:id="figure-directions-lokta-voltera">
-    <caption>The Directions for Lokta-Voltera</caption>
-    <image xml:id="figure25" width="80%">
-      <asymptote>
-        size(10cm,6cm,IgnoreAspect);
-        import graph;
-
-        yaxis("$q$");
-        xaxis("$p$");
-
-        draw((3,0)--(3,4));
-        draw((0,2)--(6,2));
-
-        label("$q = \frac{a}{b}$",(6,2),E);
-        label("$p = \frac{d}{c}$",(3,4),N);
-
-        dot("$\left(0,\frac{a}{b}\right)$",(0,2),W);
-        dot("$\left(\frac{d}{c},0\right)$",(3,0),S);
-        dot("$\left(\frac{d}{c},\frac{a}{b}\right)$",(3,2),NE);
-
-        draw((1,3)--(1.5,3.5),Arrow);
-        draw((5,3)--(5.5,2.5),Arrow);
-        draw((1,1)--(0.5,1.5),Arrow);
-        draw((5,1)--(4.5,0.5),Arrow);
-
-        draw((2.5,3)--(3.5,3),Arrow);
-        draw((3.5,1)--(2.5,1),Arrow);
-        draw((1.5,1.5)--(1.5,2.5),Arrow);
-        draw((4.5,2.5)--(4.5,1.5),Arrow);
-      </asymptote>
-    </image>
-  </figure>
-  <figure xml:id="figure-trajectories-lokta-voltera">
-    <caption>The Trajectories for Lokta-Voltera</caption>
-    <image xml:id="figure26" width="80%">
-      <asymptote>
-        size(10cm,6cm,IgnoreAspect);
-        import graph;
-        
-        yaxis("$q$");
-        xaxis("$p$");
-
-        draw((3,0)--(3,4));
-        draw((0,2)--(6,2));
-
-        label("$q = \frac{a}{b}$",(6,2),E);
-        label("$p = \frac{d}{c}$",(3,4),N);
-
-        dot("$\left(0,\frac{a}{b}\right)$",(0,2),W);
-        dot("$\left(\frac{d}{c},0\right)$",(3,0),S);
-        dot("$\left(\frac{d}{c},\frac{a}{b}\right)$",(3,2),NE);
-
-        draw((1,3)--(1.5,3.5),Arrow);
-        draw((5,3)--(5.5,2.5),Arrow);
-        draw((1,1)--(0.5,1.5),Arrow);
-        draw((5,1)--(4.5,0.5),Arrow);
-
-        draw((0.5,2){N}..{E}(3,3.5){E}..{S}(5.5,2){S}..{W}(3,0.5){W}..{N}(0.5,2));
-        draw((0.8,2){N}..{E}(3,3.2){E}..{S}(5.2,2){S}..{W}(3,0.8){W}..{N}(0.8,2));
-        draw((1.2,2){N}..{E}(3,2.8){E}..{S}(4.8,2){S}..{W}(3,1.2){W}..{N}(1.2,2));
-
-        draw((2.5,3)--(3.5,3),Arrow);
-        draw((3.5,1)--(2.5,1),Arrow);
-        draw((1.5,1.5)--(1.5,2.5),Arrow);
-        draw((4.5,2.5)--(4.5,1.5),Arrow);
-      </asymptote>
-    </image>
-  </figure>
-  <figure xml:id="figure-competition-example">
-    <caption>The Nullclines and Directions for a Competition
-    Example</caption>
-    <image xml:id="figure27" width="80%">
-      <asymptote>
-        size(10cm,10cm,IgnoreAspect);
-        import graph;
-
-        yaxis("$q$");
-        xaxis("$p$");
-
-        draw((60,400)--(100,0));
-        draw((0,200)--(200,160));
-
-        label("$q=-10p+1000$",(60,400),NE);
-        label("$q=\frac{-p}{5} + 200$",(0,200),W);
-
-        dot("$(81.6,183)$",(81.6,183),NE);
-
-        draw((40,90)--(60,130),Arrow);
-        draw((40,260)--(60,220),Arrow);
-        draw((140,90)--(120,130),Arrow);
-        draw((140,260)--(120,220),Arrow);
-
-        draw((75,280)--(75,240),Arrow);
-        draw((90,70)--(90,110),Arrow);
-        draw((30,193)--(50,193),Arrow);
-        draw((140,175)--(120,175),Arrow);
-      </asymptote>
-    </image>
-  </figure>
   <example>
     <statement>
       <p>
@@ -573,18 +551,49 @@
           </mrow>
         </md>
         Again, the axes <m>p=0</m> and <m>q=0</m> are nullclines. In
-        addition, we have the lines <m>p = \frac{-q}{10} + 100</m> an
-        <m>p - \frac{-5q} + 1000</m>. <xref
+        addition, the lines <m>p = \frac{-q}{10} + 100</m> an
+        <m>p - \frac{-5q} + 1000</m> are nullclines. <xref
         ref="figure-competition-example" /> shows the graph
         of the nullclines with the directions of movement added.
       </p>
       <p>
         The steady state is a stable focus. The trajectories are all
-        inwards towards the steady state. Therefore, we can conclude
+        inwards towards the steady state. Therefore, I can conclude
         that there is a stable equilibrium between the two competing
         species and that they populations will approach this
         equilibrium over time.
       </p>
+      <figure xml:id="figure-competition-example">
+        <caption>The Nullclines and Directions for a Competition
+        Example</caption>
+        <image xml:id="figure27" width="80%">
+          <asymptote>
+            size(10cm,10cm,IgnoreAspect);
+            import graph;
+    
+            yaxis("$q$");
+            xaxis("$p$");
+    
+            draw((60,400)--(100,0));
+            draw((0,200)--(200,160));
+    
+            label("$q=-10p+1000$",(60,400),NE);
+            label("$q=\frac{-p}{5} + 200$",(0,200),W);
+    
+            dot("$(81.6,183)$",(81.6,183),NE);
+    
+            draw((40,90)--(60,130),Arrow);
+            draw((40,260)--(60,220),Arrow);
+            draw((140,90)--(120,130),Arrow);
+            draw((140,260)--(120,220),Arrow);
+    
+            draw((75,280)--(75,240),Arrow);
+            draw((90,70)--(90,110),Arrow);
+            draw((30,193)--(50,193),Arrow);
+            draw((140,175)--(120,175),Arrow);
+          </asymptote>
+        </image>
+      </figure>
     </statement>
   </example>
 </section>

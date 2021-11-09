@@ -108,7 +108,7 @@
   <p>
     The convolution behaves well with differentiation.
     <me>
-      \frac{d}{dt} (f \star g) = \frac{df}{dt} \star g = g \star
+      \frac{d}{dt} (f \star g) = \frac{df}{dt} \star g + f \star
       \frac{dg}{dt}
     </me>
     It also behaves well with integration.

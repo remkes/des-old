@@ -56,7 +56,7 @@
       \sqrt{\pi}}{\sqrt{b}} = 1
     </me>
     These functions are all bell curves, but they become taller and
-    narrower at <m>b</m> increases. <xref ref="figure-bell-curves" />
+    narrower as <m>b</m> increases. <xref ref="figure-bell-curves" />
     shows the progression of these bell curves.
   </p>
   <figure xml:id="figure-bell-curves">

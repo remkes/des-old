@@ -99,7 +99,7 @@
               \right\} \amp = \calL \left\{ 7u_5(t) \right\} 
             </mrow>
             <mrow>
-              (s^2Y - sy(0) - y\prime(0)) \amp +2 (sY - y(0)) + 12Y =
+              (s^2Y - sy(0) - y^\prime(0)) \amp +2 (sY - y(0)) + 12Y =
               7\frac{e^{-5s}}{s} 
             </mrow>
             <mrow>
@@ -181,7 +181,7 @@
               u_6(t) \cos(2(t-6)) \right\} 
             </mrow>
             <mrow>
-              (s^2Y - sy(0) - y\prime(0)) \amp + 2 (sY - y(0)) + 9Y =
+              (s^2Y - sy(0) - y^\prime(0)) \amp + 2 (sY - y(0)) + 9Y =
               e^{-3s} \frac{2}{s^2 + 4} + e^{-6s} \frac{s}{s^2+4}
             </mrow>
             <mrow>
@@ -209,7 +209,7 @@
           <md>
             <mrow>
               Y \amp = e^{-3s} \frac{2}{41} \frac{2s+2}{(s+1)^2+8} -
-              e^{-3s} \frac{2}{41} \frac{1}{(s+1)^2+8} - e^{-3s}
+              e^{-3s} \frac{2}{41} \frac{3}{(s+1)^2+8} - e^{-3s}
               \frac{2}{41} \frac{2s}{s^2 + 4} 
             </mrow>
             <mrow>
@@ -223,7 +223,7 @@
             </mrow>
             <mrow>
               Y \amp = e^{-3s} \frac{4}{41} \frac{s+1}{(s+1)^2+8} -
-              e^{-3s} \frac{2}{41\sqrt{8}} \frac{\sqrt{8}}{(s+1)^2+8}
+              e^{-3s} \frac{6}{41\sqrt{8}} \frac{\sqrt{8}}{(s+1)^2+8}
               - e^{-3s} \frac{4}{41} \frac{s}{s^2 + 4} 
             </mrow>
             <mrow>
@@ -240,7 +240,7 @@
           <md>
             <mrow>
               y \amp = \frac{4}{41} u_3(t) e^{-(t-3)}
-              \cos(\sqrt{8}(t-3)) - \frac{2}{41\sqrt{8}} u_3(t)
+              \cos(\sqrt{8}(t-3)) - \frac{6}{41\sqrt{8}} u_3(t)
               e^{-(t-3)} \sin(\sqrt{8}(t-3))
             </mrow>
             <mrow>
@@ -289,20 +289,20 @@
               \right\} 
             </mrow>
             <mrow>
-              (s^2Y - sy(0) - y\prime(0)) \amp + 6(sY - y(0)) + 5Y =
+              (s^2Y - sy(0) - y^\prime(0)) \amp + 6(sY - y(0)) + 5Y =
               \frac{2}{s^3} + \frac{1}{s} + e^{-4s} 
             </mrow>
             <mrow>
-              (s^2 + 6s + 5)Y - 2s - 10 \amp = \frac{2}{s^3} +
+              (s^2 + 6s + 5)Y - 2s - 12 \amp = \frac{2}{s^3} +
               \frac{1}{s} + e^{-4s}
             </mrow>
             <mrow>
               (s+5)(s+1)Y \amp = \frac{2}{s^3} + \frac{1}{s} + e^{-4s}
-              + 2s + 10
+              + 2s + 12
             </mrow>
             <mrow>
               Y \amp = \frac{1}{(s+5)(s+1)} \left(  \frac{2}{s^3} +
-              \frac{1}{s} + e^{-4s} + 2s + 10 \right) 
+              \frac{1}{s} + e^{-4s} + 2s + 12 \right) 
             </mrow>
             <mrow>
               Y \amp = \frac{2}{s^3(s+5)(s+1)} + \frac{1}{s(s+5)(s+1)}
@@ -324,8 +324,8 @@
             <mrow>
               \amp  + \frac{1}{4} \frac{e^{-4s}}{s+1} - \frac{1}{4}
               \frac{e^{-4s}}{s+5} + \frac{5}{2} \frac{1}{s+5} -
-              \frac{1}{2} \frac{1}{s+1} + \frac{5}{2} \frac{1}{s+1} -
-              \frac{5}{2} \frac{1}{s+5} 
+              \frac{1}{2} \frac{1}{s+1} + 3 \frac{1}{s+1} -
+              3 \frac{1}{s+5} 
             </mrow>
           </md>
           I group like terms before going the inverse transform.
@@ -334,7 +334,7 @@
               Y \amp =  \frac{1}{4} \frac{e^{-4s}}{s+1} - \frac{1}{4}
               \frac{e^{-4s}}{s+5} + \frac{2}{5} \frac{1}{s^3} -
               \frac{12}{25} \frac{1}{s^2} - \frac{62}{125} \frac{1}{s}
-              + \frac{5}{4} \frac{1}{s+1} + \frac{27}{500}
+              + \frac{7}{4} \frac{1}{s+1} - \frac{223}{500}
               \frac{1}{s+5} 
             </mrow>
           </md>
@@ -343,7 +343,7 @@
             <mrow>
               y \amp = \frac{1}{4} u_4(t) e^{-(t-4)} - \frac{1}{4}
               u_4(t) e^{-5(t-4)} - \frac{1}{5} t^2 - \frac{12}{25} t -
-              \frac{62}{125} + \frac{5}{4} e^{-t} + \frac{27}{500}
+              \frac{62}{125} + \frac{7}{4} e^{-t} - \frac{223}{500}
               e^{-5t} 
             </mrow>
           </md>

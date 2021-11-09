@@ -3,7 +3,6 @@ import graph;
 xaxis("$x$");
 yaxis("$u$");
 
-
 draw((0,1)--(pi,1+pi),dashed);
 
 label("$u(0,t)=1$",(0,1),W);

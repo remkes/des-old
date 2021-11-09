@@ -12,7 +12,7 @@
               \calL \{ f+ g \} \amp = \calL \{ f \} + \calL \{ g \}
             </mrow>
             <mrow>\
-              calL \{ c f(t)\} \amp = c \calL \{ f \}
+              \calL \{ c f(t)\} \amp = c \calL \{ f \}
             </mrow>
           </md>
         </p>

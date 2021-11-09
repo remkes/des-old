@@ -160,12 +160,12 @@
           0
         </mrow>
         <mrow>
-          \amp t^2 \sum_{n=0}^\infty c_n(n+\nu)(n+\nu-1) + t
-          \sum_{n=0}^\infty c_n(n+\nu) t^{n+\nu- 1} + t^2 
+          \amp t^2 \sum_{n=0}^\infty c_n(n+\nu)(n+\nu-1)t^{n + \nu -
+          2} + t \sum_{n=0}^\infty c_n(n+\nu) t^{n+\nu- 1} 
         </mrow>
         <mrow>
-          \amp \sum_{n=0}^\infty c_n t^{n+\nu} - \nu^2 \sum_{n=0}^\infty
-          c_n t^{n+\nu} = 0 
+          \amp + t^2 \sum_{n=0}^\infty c_n t^{n+\nu} - \nu^2
+          \sum_{n=0}^\infty c_n t^{n+\nu} = 0
         </mrow>
         <mrow>
           \amp \sum_{n=0}^\infty c_n(n+\nu)(n+\nu-1) t^{n+\nu} +

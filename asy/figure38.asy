@@ -1,4 +1,4 @@
-size(10cm,10cm,IgnoreAspect);
+size(12cm,12cm,IgnoreAspect);
 import graph;
 xaxis(dashed);
 yaxis(dashed);
