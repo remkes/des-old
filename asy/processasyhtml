@@ -61,6 +61,11 @@ asy -f html figure58.asy
 asy -f html figure59.asy
 asy -f html figure60.asy
 asy -f html figure61.asy
+asy -f html figure62.asy
+asy -f html figure63.asy
+asy -f html figure64.asy
+asy -f html figure65.asy
+asy -f html figure66.asy
 
 # Copy and move files
 cp *.html ../images/

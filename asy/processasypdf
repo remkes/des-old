@@ -61,6 +61,11 @@ asy -f pdf figure58.asy
 asy -f pdf figure59.asy
 asy -f pdf figure60.asy
 asy -f pdf figure61.asy
+asy -f pdf figure62.asy
+asy -f pdf figure63.asy
+asy -f pdf figure64.asy
+asy -f pdf figure65.asy
+asy -f pdf figure66.asy
 
 # Copy and move files
 mv *.pdf ../images/

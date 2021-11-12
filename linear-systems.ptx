@@ -515,7 +515,7 @@
   <subsection xml:id="subsection-second-order-systems">
     <title>Second Order Systems</title>
     <p>
-      I used coupled spring as a motivating example is a linear
+      I used the coupled spring as a motivating example is a linear
       system. It is a second order system <ndash/> in fact, it will be
       the only example I'll consider of a second order system.
       <md>
@@ -538,8 +538,6 @@
       taking transforms, solving the system by isolating and
       replacing, using partial fractions, adjusting the numerators,
       and taking the inverse transform. 
-    </p>
-    <p>
       <md>
         <mrow>
           x_1^{\prime \prime} + 11 x_1 - 3x_2 \amp = 0
@@ -680,67 +678,77 @@
       you.
       <md>
         <mrow>
-          \amp x^\prime = ax + by \amp \amp y^\prime = cx + dy
+          x^\prime \amp = ax + by 
         </mrow>
-      </md>.
+        <mrow>
+          y^\prime \amp = cx + dy
+        </mrow>
+      </md>
       I can use a 2 by 2 matrix with coefficients <m>a,b,c,d</m> to
       analyze the behaviour. Then I can make the functions <m>x</m>
       and <m>y</m> the coordinates of a vector and write the system in
       terms of this matrix.
       <me>
-        \begin{pmatrix} x_1^\prime \\ x_2^\prime \end{pmatrix}
-        = \begin{matrix} a \amp b \\ c \amp d
-        \end{matrix} \right] \left[ \begin{matrix} x_1 \\ x_2
-        \end{matrix} \right]
+        \begin{pmatrix} 
+          x_1^\prime \\ 
+          x_2^\prime 
+        \end{pmatrix} = \begin{pmatrix} 
+          a \amp b \\ 
+          c \amp d
+        \end{pmatrix} \begin{pmatrix} 
+          x_1 \\ 
+          x_2
+        \end{pmatrix} 
       </me>
-      Let <m>v</m> be an eigenvectors of the matrix and let
+      Let <m>v</m> be an eigenvector of the matrix and let
       <m>\lambda</m> be the corresponding eigenvectors.
       <me>
-        \left[ \begin{matrix} x_1 \amp x_2 \end{matrix} \right] =
-        e^{\lambda t} v = \left[ \begin{matrix} e^{\lambda t} v_1 \\
-        e^{\lambda t} v_1 \end{matrix} \right]
+        \begin{pmatrix} 
+          x_1 \\
+          x_2 
+        \end{pmatrix} = e^{\lambda t} v = \begin{pmatrix} 
+          e^{\lambda t} v_1 \\
+          e^{\lambda t} v_1 
+        \end{pmatrix} 
       </me>
       To see why this is a solution, see what happens when the matrix
       acts on the vector.
       <md>
         <mrow>
-          \left[ \begin{matrix} a \amp b
+          \begin{pmatrix} 
+            a \amp b \\
+            c \amp d 
+          \end{pmatrix} \begin{pmatrix}
+            e^{\lambda t} v_1 \\
+            e^{\lambda t} v_2 
+          \end{pmatrix} \amp = e^{\lambda t} \begin{pmatrix} 
+            a \amp b
+            c \amp d 
+          \end{pmatrix} \begin{pmatrix} 
+            v_1
+            v_2 
+          \end{pmatrix} 
         </mrow>
         <mrow>
-          c \amp d \end{matrix} \right] \left[ \begin{matrix}
-          e^{\lambda t} v_1
+          \amp = e^{\lambda t} \lambda \begin{pmatrix} 
+            v_1
+            v_2 
+          \end{pmatrix} = \begin{pmatrix} 
+            \lambda e^{\lambda t} v_1
+            \lambda e^{\lambda t} v_2 
+          \end{pmatrix} 
         </mrow>
         <mrow>
-          e^{\lambda t} v_2 \end{matrix} \right] \amp = e^{\lambda t}
-          \left[ \begin{matrix} a \amp b
-        </mrow>
-        <mrow>
-          c \amp d \end{matrix} \right] \left[ \begin{matrix} v_1
-        </mrow>
-        <mrow>
-          v_2 \end{matrix} \right] = e^{\lambda t} \lambda \left[
-          \begin{matrix} v_1
-        </mrow>
-        <mrow>
-          v_2 \end{matrix} \right] = \left[ \begin{matrix} \lambda
-          e^{\lambda t} v_1
-        </mrow>
-        <mrow>
-          \lambda e^{\lambda t} v_2 \end{matrix} \right]
-        </mrow>
-        <mrow>
-          \amp = \left[ \begin{matrix} \dfrac{d}{dt}e^{\lambda
-          t} v_1
-        </mrow>
-        <mrow>
-          \dfrac{d}{dt} e^{\lambda t} v_2 \end{matrix} \right] =
-          \frac{d}{dt} \left[ \begin{matrix} e^{\lambda t} v_1
-        </mrow>
-        <mrow>
-          e^{\lambda t} v_2 \end{matrix} \right]
+          \amp = \begin{pmatrix} 
+            \dfrac{d}{dt}e^{\lambda t} v_1
+            \dfrac{d}{dt} e^{\lambda t} v_2 
+          \end{pmatrix} = \frac{d}{dt} \begin{pmatrix} 
+            e^{\lambda t} v_1
+            e^{\lambda t} v_2 ]
+          \end{pmatrix} 
         </mrow>
       </md>
-      If we allow for complex eigenvalues, the matrix has two
+      If I allow for complex eigenvalues, the matrix has two
       eigenvalues, wth two linearly independent eigenvectors, giving
       two linearly independent solutions of this type. If the
       eigenvalues are real, there are exponential growth/decay
@@ -756,10 +764,10 @@
       nullclines are both lines through the origin. Assuming they are
       not the same line (which would make the system redundant), the
       only steady state for a linear system in two equations is
-      <m>(0,0)</m>. As we've stated previously, there are six
+      <m>(0,0)</m>. As I've stated previously, there are six
       behaviours at the steady state for two-dimensional linear
       systems: stable and unstable foci, stable and unstable notes,
-      centres and saddles. We can identify each case simply by the
+      centres and saddles. I can identify each case simply by the
       eigenvalues.
     </p>
     <p><ul>
@@ -790,13 +798,13 @@
     </ul></p>
     <p>
       The eigenvalues become the coefficients of the exponential
-      solutions, which explains this list of behaviours. Only when we
-      have complex coefficients do we get sinusoidal behaviuors, as in
-      the spiral foci and the circular centre. When we have real
-      coefficients, we only get growth and decay. The real part, in
+      solutions, which explains this list of behaviours. Only complex
+      coefficients give sinusoidal behaviuors, as in the spiral foci
+      and the circular centre. When there are real coefficients, the
+      solutiosn only display growth and decay. The real part, in
       either case, is the growth or decay term. When the real part is
-      negative, we have decay, which is stability. When the real part
-      is positive, we have growth, which is instability.
+      negative, the solutions decay, which is stability. When the real
+      part is positive, the solutions grow, which is instability.
     </p>
     <p>
       Let <m>M</m> be the matrix and let Let <m>\alpha = \text{ tr }
@@ -804,7 +812,7 @@
       equation of the matrix can be written <m>\lambda^2 - \alpha
       \lambda + \beta = 0</m>. In addition, let <m>\delta</m> be the
       discriminant of the characteristic polynomial, <m>\delta =
-      \alpha^2 - 4\beta</m>. Then we can redo the previous list.
+      \alpha^2 - 4\beta</m>. Then I can redo the previous list.
     </p>
     <p><ul>
       <li>
@@ -829,7 +837,7 @@
       <li>
         If <m>\beta > 0</m>, <m>\alpha = 0</m> and <m>\delta \lt 0</m>
         then <m>(0,0)</m> is a centre.
-        </li>
+      </li>
     </ul></p>
   </subsection>
 </section>
