@@ -22,7 +22,7 @@
       <solution>
         <p>
           First I calcluate the nullcines. The nullclines here are
-          <m>p-0</m> (the q-axis), <m>q-0</m> (the p-axis), the
+          <m>p=0</m> (the q-axis), <m>q=0</m> (the p-axis), the
           horizontal line <m>q=4</m> and the vertical line <m>p=3</m>.
           Ignoring the axes, the only steady state is at
           <m>(4,3)</m>. 

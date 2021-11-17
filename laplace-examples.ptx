@@ -47,7 +47,7 @@
             e^{-2s} + e^{-4s} - e^{-6s} + e^{-8s} - \ldots )
           </mrow>
           <mrow>
-            \amp = \left( \frac{-s}{s+1} + \frac{1}{s} \right) (1 -
+            \amp = \left( \frac{-s}{s^2+1} + \frac{1}{s} \right) (1 -
             2e^{-s} + 2e^{-3s} - 2e^{-5s} + 2e^{-7s} - \ldots )
           </mrow>
         </md>
