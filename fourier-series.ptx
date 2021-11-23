@@ -153,7 +153,7 @@
         For the proof, I use the trig identities for products of
         <m>\sin</m> and <m>\cos</m>, such as
         <me>
-          \cos A \cos A = \frac{1}{2} \left( \cos(A-B) + \cos (A+B)
+          \cos A \cos B = \frac{1}{2} \left( \cos(A-B) + \cos (A+B)
           \right)
         </me>.
         I only show the proof of the first of the three statements.

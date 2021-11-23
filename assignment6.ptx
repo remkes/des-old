@@ -5,7 +5,7 @@
   <title>Assignment 6</title>
   <p><ol>
     <li>
-      Calcuulate the Fourier sine series for this function on the domain
+      Calculate the Fourier sine series for this function on the domain
       <m>(0, \pi)</m>. 
       <me>
         f(x) = 4 \delta_{\frac{\pi}{2}}(x) 
@@ -15,7 +15,7 @@
       of the heat equation using this initial condition. (8)
     </li>
     <li>
-      Calcuulate the Fourier sine series for this function on the domain
+      Calculate the Fourier sine series for this function on the domain
       <m>(0, \pi)</m>. 
       <me>
         f(x) = 3u_{\frac{\pi}{2}}(x) 
@@ -25,7 +25,7 @@
       of the heat equation using this initial condition. (8)
     </li>
     <li>
-      Calcuulate the Fourier sine series for this function on the domain
+      Calculate the Fourier sine series for this function on the domain
       <m>(0, \pi)</m>. 
       <me>
         f(x) = 2 \sin x - \frac{1}{4} \sin (3x) + \frac{1}{5} \sin
@@ -36,14 +36,25 @@
       of the heat equation using this initial condition. (8)
     </li>
     <li>
-      Consider trying to solve the heat equation as describe in this
-      course, but using the initial condition of <m>u(0,t) = 0</m> and
-      <m>u(\pi,t) = 300e^{-\frac{1}{20}t}</m>. Go through the
-      solution step and describe how this change affect the solution.
-      How is the Fourier series and its calculation altered by this?
-      (I don't want you actually complete solve the heat equation with
-      these boundary condition -- just investigate enough to comment
-      on how the process changes and what new challenges arise). (8) 
+      After the heat equation, the next most accessible PDE is the
+      wave equation. In one dimension, it again has a form
+      <m>u(x,t)</m>. In this case, instead of describing heat, it
+      describe the displacement of some wave in one-dimensional medium
+      (think of a guitar string, perhaps) depending on position and
+      time. Wave action is not diffusion: in this case, the concavity
+      represents a displacement, which pulls on nearby points to cause
+      an acceleration back to the equilibrium. This is a second
+      derivative, so the wave equation has second derivatives in both
+      space and time variables.
+      <me>
+        \frac{\del^2 u}{dt^2} = k \frac{\del^2 u}{del x^2}
+      </me>
+      Start the separation of variables as with the heat equation.
+      Comment on what changes in the process. It is still possible to
+      get to a point where Fourier series are useful. (You can assume
+      the same boundary conditions: constant zero at both ends of the
+      one dimensional object. Again, thinking of a guitar string, you
+      can assume the ends of the string are fixed.) 
     </li>
   </ol></p>
 </section>

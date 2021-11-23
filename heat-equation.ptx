@@ -107,10 +107,10 @@
     <title>Solving the Heat Equation</title>
     <p>
       The method of approach we use to solve the equation is a common
-      one for PDE and is called <em>seperation of variables</em>.  I
+      one for PDE and is called <em>separation of variables</em>.  I
       make the assumption (eventually justified!) that I can pull
       apart the two variables, <m>x</m> and <m>t</m>, and deal with
-      the seperately.  I assume that <m>u</m> is a product of two
+      the separately.  I assume that <m>u</m> is a product of two
       single variables functions. 
       <me>
         u(x,t) = T(t) X(x)
@@ -136,7 +136,7 @@
       all those involving <m>t</m> to the other.  Since the left is
       equal to the right and they involve different variables,
       both sides must be constant.  I'll call this constant
-      <m>\alpha</m>.  This completes the seperation of variables,
+      <m>\alpha</m>.  This completes the separation of variables,
       giving me two ordinary differential equations.
       <md>
         <mrow>
@@ -146,8 +146,8 @@
           \frac{1}{k} \frac{T^\prime(t)}{T(t)} \amp = \alpha
         </mrow>
       </md>
-      Now, to solve the heat equation with seperation of variables,
-      I solve these two ODEs seperately. The <m>T</m> solutions are easy.
+      Now, to solve the heat equation with separation of variables,
+      I solve these two ODEs separately. The <m>T</m> solutions are easy.
       <me>
         T^\prime(t) = \alpha k T(t) \implies T(t) = T(0) e^{\alpha kt}
       </me>
@@ -155,7 +155,7 @@
       The time function is just exponential growth/decay, but <m>X</m>
       solutions depend more carefully on the boundary conditions.
     </p>
-    <figure xml:id="figure-seperable-solution1">
+    <figure xml:id="figure-separable-solution1">
       <caption>
         Seperated Solution with <m>n=5</m> at Various Points in
         Time.
@@ -193,7 +193,7 @@
       <m>X(x) = 0</m>.  Therefore, to get solutions that actually mean
       somthing, <m>\alpha</m> cannot be positive.  If <m>\alpha =
       0</m> then the result must be<m>X = Ax + B</m>.  Again, the
-      boundary conditions give <m>A=B=0</m>, so we only get the zero
+      boundary conditions give <m>A=B=0</m>, so I only get the zero
       solution.  Therefore, only <m>\alpha \lt 0</m> gives interesting
       solutions.
     </p>
@@ -228,37 +228,37 @@
       In these solutions, I see sine waves decaying over time.  The
       integer <m>n</m> gives the number of osscilations of the wave in
       on the rod, and the exponential terms give a decay in amplitude
-      over time.  <xref ref="figure-seperable-solution1" /> shows the
+      over time.  <xref ref="figure-separable-solution1" /> shows the
       decay of a simple sine wave with <m>n=5</m>.
     </p>
     <p>
       Now I consider the initial conditions <m>u(x,0) = f(x)</m>.
       For each <m>n</m>,
-      the seperable solution is a sine wave <m>\sin (nx)</m>.
+      the separable solution is a sine wave <m>\sin (nx)</m>.
       This is great if <m>f(x)</m> happened to be such a sine wave,
       but I would like the theory to work with more general initial
       conditions.
       The key observation here is that the heat equation is linear:
       if there two solutions to the heat equation,
       their sum is also a solution.
-      Therefore, I could add up these seperable solutions.
+      Therefore, I could add up these separable solutions.
       For example, a possible solution could be this function.
       <me>
         u(x,t) = 4e^{-9kt} \sin 3t + 6e^{-25kt} \sin 5t
       </me>
     </p>
     <p>
-      This isn't strictly seperable anymore, but it is the sum of
-      seperable pieces.  (This justifies the original assumption!  I
-      don't get all possibility as seperable solutions, but I will get
+      This isn't strictly separable anymore, but it is the sum of
+      separable pieces.  (This justifies the original assumption!  I
+      don't get all possibility as separable solutions, but I will get
       all reasonable solutions as the <em>sum</em> of various
-      seperable pieces.) The initial value <m>u(x,0)</m> also isn't a
+      separable pieces.) The initial value <m>u(x,0)</m> also isn't a
       simple sine wave anymore, since it is the function <m>f(x) =
       4\sin 3t + .6 \sin 5t</m>.  <xref
-      ref="figure-seperable-solution2" /> shows the decay of this
+      ref="figure-separable-solution2" /> shows the decay of this
       initial condition.
     </p>
-    <figure xml:id="figure-seperable-solution2">
+    <figure xml:id="figure-separable-solution2">
       <caption>
         Decay of the Solution with Initial Condition <m>f(x) = 4 \sin
         3t + 6 \sin 5t</m>
@@ -287,7 +287,7 @@
       </image>
     </figure>
     <p>
-      In theory, I could add any number of the seperable solutions
+      In theory, I could add any number of the separable solutions
       together.  Therefore, in full generality, a solution could look
       like an arbitrary sum.
       <me>
