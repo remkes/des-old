@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:25-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>Having detoured briefly to some second order examples, let me return to first order constant coefficient linear system. I want to give a new understanding to the solutions of systems of two equations that I did before in the examples.  The general linear system with two equations has the following form, to remind you.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+x^\prime \amp = ax + by \\
+y^\prime \amp = cx + dy
+\end{align*}
+</div>
+<p class="continuation">I can use a 2 by 2 matrix with coefficients <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a,b,c,d\)</span> to analyze the behaviour. Then I can make the functions <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y\)</span> the coordinates of a vector and write the system in terms of this matrix.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} 
+x_1^\prime \\ 
+x_2^\prime 
+\end{pmatrix} = \begin{pmatrix} 
+a \amp b \\ 
+c \amp d
+\end{pmatrix} \begin{pmatrix} 
+x_1 \\ 
+x_2
+\end{pmatrix} 
+\end{equation*}
+</div>
+<p class="continuation">Let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(v\)</span> be an eigenvector of the matrix and let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\lambda\)</span> be the corresponding eigenvectors.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} 
+x_1 \\
+x_2 
+\end{pmatrix} = e^{\lambda t} v = \begin{pmatrix} 
+e^{\lambda t} v_1 \\
+e^{\lambda t} v_1 
+\end{pmatrix} 
+\end{equation*}
+</div>
+<p class="continuation">To see why this is a solution, see what happens when the matrix acts on the vector.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\begin{pmatrix} 
+a \amp b \\
+c \amp d 
+\end{pmatrix} \begin{pmatrix}
+e^{\lambda t} v_1 \\
+e^{\lambda t} v_2 
+\end{pmatrix} \amp = e^{\lambda t} \begin{pmatrix} 
+a \amp b
+c \amp d 
+\end{pmatrix} \begin{pmatrix} 
+v_1
+v_2 
+\end{pmatrix} \\
+\amp = e^{\lambda t} \lambda \begin{pmatrix} 
+v_1
+v_2 
+\end{pmatrix} = \begin{pmatrix} 
+\lambda e^{\lambda t} v_1
+\lambda e^{\lambda t} v_2 
+\end{pmatrix} \\
+\amp = \begin{pmatrix} 
+\dfrac{d}{dt}e^{\lambda t} v_1
+\dfrac{d}{dt} e^{\lambda t} v_2 
+\end{pmatrix} = \frac{d}{dt} \begin{pmatrix} 
+e^{\lambda t} v_1
+e^{\lambda t} v_2 ]
+\end{pmatrix} 
+\end{align*}
+</div>
+<p class="continuation">If I allow for complex eigenvalues, the matrix has two eigenvalues, wth two linearly independent eigenvectors, giving two linearly independent solutions of this type. If the eigenvalues are real, there are exponential growth/decay solutions. If the eigenvalues are complex, these are sinusoidal solutions.</p>
+<span class="incontext"><a href="section-linear-systems.html#p-503">in-context</a></span>
+</body>
+</html>

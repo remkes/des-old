@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:16-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>I use the appropriate substitution: <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(v = \frac{y}{t}\text{.}\)</span> The expression on the left becomes <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f(v) = v^3 - 1\text{.}\)</span> Then I can write the new differential equation in <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(v\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\frac{dv}{dt} = \frac{f(v) - v}{t} = \frac{v^3 - 1 - v}{t} 
+\end{equation*}
+</div>
+<p class="continuation">As expected, this is a separable equation. I proceed with the steps to solve a separable equation.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\frac{1}{v^3 - v - 1} \frac{dv}{dt} = \frac{1}{t}
+\end{equation*}
+</div>
+<p class="continuation">Then I integrate with the standard setup that turns the left side into a integral in <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(v\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\int \frac{1}{v^3 - v - 1} dv = \int \frac{1}{t} dt
+\end{equation*}
+</div>
+<p class="continuation">The right side is an easy power rule integral. On the left side, I need partial fractions. I've asked a computer for the partial fraction decomposition and the outcome of the resulting integrals.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\frac{1}{11} \ln |v-2| - \frac{1}{22} \ln |v^2 + 2v + 3| -
+\frac{3}{11\sqrt{2}} \arctan \left( \frac{v+1}{\sqrt{2}}
+\right) = \ln |t| + c 
+\end{equation*}
+</div>
+<p class="continuation">Solving on the left for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(v\)</span> is clearly impossible, so I'll have to leave this as an implicit solution. I can still replace the original substitution, leaving an even more complicated implicit expression for the function <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y(t)\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\frac{1}{11} \ln \left| \frac{y}{t} - 2 \right| -
+\frac{1}{22} \ln \left | \frac{y^2}{t^2} + \frac{2y}{t} +
+3 \right| - \frac{3}{11\sqrt{2}} \arctan \left(
+\frac{\frac{y}{t}+1}{\sqrt{2}} \right) = \ln |t| + c 
+\end{equation*}
+</div>
+</div></body>
+</html>

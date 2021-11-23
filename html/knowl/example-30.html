@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:15-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">2.7.1</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span>
+</h4>
+<p>This example is already a separable equation, so I don't really need the technique of substitution. However is it a nice, relatively easy example to show how this kind of substitution works.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\frac{dy}{dt} \amp = \frac{t}{y}\\
+v \amp = \frac{y}{t}\\
+f(v) \amp = \frac{1}{v}\\
+\frac{dv}{dt} \amp = \frac{\frac{1}{v} - v}{t}
+\end{align*}
+</div>
+<p class="continuation">This is the new seperable equation. I'll solve it in the conventional method.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\int \frac{v}{1-v^2} dv \amp = \ln |t| + c\\
+\frac{-1}{2} \ln |1-v^2| \amp = \ln |t| + C\\
+\frac{1}{\sqrt{1-v^2}} \amp = ct\\
+\sqrt{1-v^2} \amp = \frac{c}{t}\\
+1-v^2 \amp = \frac{c}{t^2}\\
+v^2 \amp = 1 - \frac{c}{t^2}\\
+v \amp = \pm \sqrt{ 1 - \frac{c}{t^2}}
+\end{align*}
+</div>
+<p class="continuation">After solving the separable equation, now I reverse the substitution and try to solve for the original function <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\frac{y}{t} \amp = \pm \sqrt{ 1 - \frac{c}{t^2}}\\
+y \amp = \pm t \sqrt{1 - \frac{c}{t^2}} = \pm \sqrt{t^2
+- c}
+\end{align*}
+</div></article><span class="incontext"><a href="section-substitutions.html#example-30">in-context</a></span>
+</body>
+</html>

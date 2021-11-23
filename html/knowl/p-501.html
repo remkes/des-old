@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:25-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>I used the coupled spring as a motivating example is a linear system. It is a second order system – in fact, it will be the only example I'll consider of a second order system.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+m_1x_1^{\prime \prime} \amp = - k_1x_1 + k_2(x_2 - x_1)\\
+m_2x_2^{\prime \prime} \amp = -k_2(x_2-x_1)
+\end{align*}
+</div>
+<p class="continuation">I'll set the constants <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m_1 = m_2 =1\text{,}\)</span> <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k_1=8\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k_2=3\text{.}\)</span> I'll also set the initial conditions <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x_1(0) =
+x_1^\prime(0) = 0\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x_2(0) = 1\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x_2^\prime(0)
+= 0\text{.}\)</span> These initial condition implies that the second spring (<span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x_2\)</span>) is pushed away from equilibrium. I don't have a phase-plane diagram here, since this is a second order system. (Our phase-plane diagram intepretation in the previous section was specific to first-order systems.) However, I can solve using Laplace transforms anyway. I follow the standard procedure, taking transforms, solving the system by isolating and replacing, using partial fractions, adjusting the numerators, and taking the inverse transform.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+x_1^{\prime \prime} + 11 x_1 - 3x_2 \amp = 0\\
+x_2^{\prime \prime} + 3 x_2 - 3x_1 \amp = 0\\
+s^2 X_1 + 11 X_1 - 3X_2 \amp = 0\\
+s^2 X_2 - s + 3X_2 - 3X_1 \amp = 0\\
+X_2 \amp = \frac{(s^2+11) X_1}{3}\\
+(s^2+3)X_2 - 3X_1 \amp = s\\
+(s^2+3)\left( \frac{s^2+11}{3} \right) - 3X_1 \amp = s\\
+\frac{s^4 + 14s^2+ 33 - 9}{3} X_1 \amp = s\\
+\frac{s^4 + 14s^2 + 24}{3} X_1 \amp = s\\
+X_1 \amp = \frac{3x}{s^4 + 14s^2 + 24} =
+\frac{3s}{(s^2+2)(s^2+12)}\\
+X_2 \amp = \frac{s^2+11}{3} \frac{3s}{(s^2+2)(s^2+12)} =
+\frac{s^3 + 11s}{(s^2+1)(s^2+12)}\\
+X_1 \amp = \frac{3s}{10(s^2+2)} - \frac{3s}{10(s^2+12)}\\
+X_2 \amp = \frac{9s}{10(s^2+2)} + \frac{s}{10(s^2+12)}\\
+x_1 \amp = \frac{3}{10} \cos \sqrt{2}t - \frac{3}{10} \cos
+\sqrt{12} t\\
+x_2 \amp = \frac{9}{10} \cos \sqrt{2}t + \frac{1}{10} \cos
+\sqrt{12} t
+\end{align*}
+</div>
+<p class="continuation">This seems like a reasonable solution: the behaviour of each spring is the superposition to two sinusoidal waves with different periods. This won't be a clear sine or cosinde way. It will be something that looks a little more erratic, but it will eventually repeat when both periods of both cosine functions have completed.</p>
+<span class="incontext"><a href="section-linear-systems.html#p-501">in-context</a></span>
+</body>
+</html>

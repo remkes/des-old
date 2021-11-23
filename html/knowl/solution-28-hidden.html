@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:16-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>In this Bernoulli equation, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n=4\text{,}\)</span> so the substitution is <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(v = y^{-3}\text{.}\)</span> The substitution produces a linear equation.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\frac{dv}{dt} -3 \sin t v = -3t^2 
+\end{equation*}
+</div>
+<p class="continuation">I proceed with the usual steps for linear equations. I identify the two coefficient functions.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\amp P(t) = -3 \sin t 
+\amp \amp Q(t) = -3t^2 
+\end{align*}
+</div>
+<p class="continuation">Then I'll calculate the integrating factor.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\mu(t) = e^{\int -3 \sin t dt} = e^{3 \cos t} = 
+\end{equation*}
+</div>
+<p class="continuation">Then I multiply the original equation by the integrating factor.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+e^{3 \cos t} \frac{dv}{dt} - 3e^{3 \cos t} \sin t v =
+-3e^{3 \cos t} t^2 
+\end{equation*}
+</div>
+<p class="continuation">The left side becomes a product rule derivative.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\frac{d}{dt} \left( e^{3 \cos t} v \right) = -3e^{3 \cos
+t} t^2 
+\end{equation*}
+</div>
+<p class="continuation">Then I integrate.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+v e^{3 \cos t} = \int -3e^{3 \cos t} t^2 dt 
+\end{equation*}
+</div>
+<p class="continuation">I have to leave the integral on the right, since I don't know any way to solve it with the techniques of elementary functions. Likely, this solution to the integral is some previously unknown function. However, I can solve for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(v\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+v = e^{-3 \cos t} \int -3e^{3 \cos t} t^2 dt 
+\end{equation*}
+</div>
+<p class="continuation">Then I can reverse the substitution.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\frac{1}{y^3} = e^{-3 \cos t} \int -3e^{3 \cos t} t^2 dt 
+\end{equation*}
+</div>
+<p class="continuation">Finally, I can solve for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y = \sqrt[3]{\frac{1}{e^{-3 \cos t} \int -3e^{3 \cos t}
+t^2 dt}} 
+\end{equation*}
+</div>
+<p class="continuation">This is an unwieldy solution; it would be quite difficult to investigate the properties of this strangely defined function. But it is a solution.</p>
+</div></body>
+</html>

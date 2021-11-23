@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:17-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">3.1.6</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span>
+</h4>
+<p>I'll start with a simple example.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y^{\prime\prime} - y = 0
+\end{equation*}
+</div>
+<p class="continuation">The characteristic equation is is <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(r^2 -1=0\)</span> which has roots <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(r = \pm 1\text{.}\)</span> The solutions are <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y=e^t\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y=e^{-t}\text{.}\)</span> The general solution is <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y=Ae^t +
+Be^{-t}\text{.}\)</span> Initial conditions of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y(0) =
+1\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y^\prime(0) = 0\text{,}\)</span> produce a system of two equations for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(A\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(B\text{,}\)</span>   (Since there are two unknowns in the general form, two initial conditions are required for a specific solution.) In this case, the system is <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(A+B=1\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(A-B=0\text{,}\)</span> which is solved by <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(A = B = \frac{1}{2}\text{.}\)</span> The final solution is <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\frac{1}{2} e^t + \frac{1}{2}
+e^{-t}\text{.}\)</span> This is just the exponential definition of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\cosh
+t\text{!}\)</span> Indeed, I could have prediced this solution if I tried to interpret the original DE. What does this DE ask? It asks: what function returns to itself after two derivatives?  The hyperbolic functions are the unique functions that have this behaviour, so they must be the solutions to this DE. (Hyperbolic sine is also a solution for a different set of initial condition.)</p>
+<p>I could have made different choices for the initial linearly independent solutions by taking <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y_1 = \cosh
+t\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y_2 = \sinh t\text{.}\)</span> The linearily independent solutions are not unique. This can be expressed nicely in linear algebra language. The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">solution space</dfn> for this DE is the span of two functions. Such a solution space may have many bases: many choices of two functions which span the space. The set <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\{e^t, e^{-t}\}\)</span> is one basis for the solution space. The set <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\{\cosh t, \sinh t\}\)</span> is another basis for the solution space.</p></article><span class="incontext"><a href="section-constant-coefficients.html#example-34">in-context</a></span>
+</body>
+</html>

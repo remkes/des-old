@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:19-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">4.2.4</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span>
+</h4>
+<p>This is the first example which has non-constant coefficients, since <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(Q = t\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y^{\prime \prime} + ty = 0
+\end{equation*}
+</div>
+<p class="continuation"><span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P=0\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(Q=t\text{,}\)</span> both of which are analytic everywhere, so I expect a series solution with infinite radius of convergence. I repeat the calculation from the previous example.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+y \amp = \sum_{n=0}^\infty c_n t^n\\
+y^\prime \amp = \sum_{n=1}^\infty c_n nt^{n-1}\\
+y^{\prime\prime} \amp = \sum_{n=2}^\infty c_n
+n(n-1)t^{n-2}\\
+y^{\prime \prime} + ty \amp = \sum_{n=2}^\infty c_n
+n(n-1)t^{n-2} + t\sum_{n=0}^\infty c_n t^n\\
+y^{\prime \prime} + ty \amp = \sum_{n=2}^\infty c_n
+n(n-1)t^{n-2} + \sum_{n=0}^\infty c_n t^{n+1}
+\end{align*}
+</div>
+<p class="continuation">I've brought the <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(t\)</span> into the second series, which I have to do before I have any hope of combining them. Here, I could try to shift indices, but that wouldn't help yet since the exponent are different. I have to make the exponents match first. I'll shift both series so that the exponents are both <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(t^n\text{.}\)</span> This is shifting the index of the first series down by two and the index of the second series up by one.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\amp = \sum_{n=0}^\infty c_{n+2} (n+2)(n+1) t^n +
+\sum_{n=1}^\infty c_{n-1} t^n
+\end{align*}
+</div>
+<p class="continuation">Now the exponents are the same, but the starting indices are not. Shifting would mess up the exponents. So, instead, I take out terms. I'll take out the <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(0\)</span>th term from the first series so that they both start at 1. After that, I can finally combine the series.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\amp = 2c_2 + \sum_{n=1}^\infty c_{n+2} (n+2)(n+1) t^n +
+\sum_{n=1}^\infty c_{n-1} t^n
+\end{align*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\amp = 2c_2 + \sum_{n=1}^\infty \left[ c_{n+2}
+(n+2)(n+1) + c_{n-1} \right] t^n = 0
+\end{align*}
+</div>
+<p class="continuation">Since the right side is zero, all these coefficients to be zero. The constnat coefficient on the left is just <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(2c_2=0\text{,}\)</span> which implies <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_2 = 0\text{.}\)</span> For the rest, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_0\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_1\)</span> are unknown and I can use the series to generate a recurrence relation.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+(n+2)(n+1)c_{n+2} + c_{n-1} \amp = 0\\
+c_{n+2} \amp = \frac{-c_{n-1}}{(n+2)(n+1)}\\
+c_{n+3} \amp = \frac{-c_n}{(n+3)(n+2)}
+\end{align*}
+</div>
+<p class="continuation">I shifted the recurrent relation in the last step, to make it a bit easier to read.  This is a third order recurrence relation, which might imply that three starting values are needed. However, there are still only two parameters. This isn't a problem, since I already calculated that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_2=0\text{,}\)</span> which is essentially the third starting value. To try to see a pattern in the recurrence relation, I calculate some  coefficients.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+c_0 \amp = c_0\\
+c_1 \amp = c_1\\
+c_2 \amp = 0\\
+c_3 \amp = \frac{-c_0}{(3)(2)}\\
+c_4 \amp = \frac{-c_1}{(4)(3)}\\
+c_5 \amp = \frac{-c_2}{(5)(4)} = 0\\
+c_6 \amp = \frac{-c_3}{(6)(5)} =
+\frac{c_0}{(6)(5)(3)(2)}\\
+c_7 \amp = \frac{-c_4}{(7)(6)} =
+\frac{c_1}{(7)(6)(4)(3)}\\
+c_8 \amp = \frac{-c_5}{(8)(7)} = 0\\
+c_9 \amp = \frac{-c_6}{(9)(8)} =
+\frac{-c_0}{(9)(8)(6)(5)(3)(2)}\\
+c_{10} \amp = \frac{-c_7}{(10)(9)} =
+\frac{-c_1}{(10)(9)(7)(6)(4)(3)}\\
+c_{11} \amp = \frac{-c_8}{(11)(10)} = 0
+\end{align*}
+</div>
+<p class="continuation">I see that there are three groups of terms. Like before, where I used an indexing trick to refer to even and odd terms, I can use a similar indexing trick to refer to these three groups of terms.</p>
+<ul class="disc">
+<li><p>Terms of the form <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_{3n+2}\)</span> are all zero, since they all relate back to <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_2\text{.}\)</span></p></li>
+<li><p>Terms of the form <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_{3n}\)</span> all involve <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_0\text{.}\)</span></p></li>
+<li><p>Terms of the form <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_{3n+1}\)</span> all involve <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_1\text{.}\)</span></p></li>
+</ul>
+<p>Expressing the coefficients in closed form is more difficult than before, but I still can intuite the general form. I use some factorial tricks to express the coefficients: the denominators are missing every third term, so if I mulitply numerator and denominator by those terms, I can write the denominator as a factorial.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+c_{3n} \amp = \frac{(-1)^n (1)(4)(7)\ldots(3n-2)}{(3n)!}
+c_0\\
+c_{3n+1} \amp = \frac{(-1)^n
+(2)(5)(8)\ldots(3n-1)}{(3n+1)!} c_1\\
+c_{3n+2} \amp = 0
+\end{align*}
+</div>
+<p class="continuation">Then I group the <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_1\)</span> terms into a series and the <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_2\)</span> terms into a series, to get a general solution.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+y = \amp c_0 \left[  1 + \sum_{n=n}^\infty \frac{(-1)^n
+(1)(4)(7)\ldots(3n-2)}{(3n)!} t^{3n} \right] \\
+\amp + c_1 \left[ t \sum_{n=0}^\infty \frac{(-1)^n
+(2)(5)(8)\ldots(n+2)}{(3n-1)!} t^{3n+1} \right]
+\end{align*}
+</div>
+<p class="continuation">If I need to, I can easily check that each of these series has infinite radius of convergence.</p>
+<p>I might wonder: what are these functions? These are two new, strange and unfamiliar functions. Unless I have the good fortune (as in the previous example) to recognize the resulting Taylor series, I simply treat the solutions as new functions. However, I still consider the DE solved, since Taylor series can be used to define new functions. I can know a great  deal about a function based on its Taylor series, so this is a sufficient threshold of information to consider the DE solved.</p></article><span class="incontext"><a href="ordinary-points.html#example-47">in-context</a></span>
+</body>
+</html>

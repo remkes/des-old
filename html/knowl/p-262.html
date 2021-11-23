@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:17-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>In this example, the forcing term is similar to one of the homogeneous solutions. I multiplied by <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(t\)</span> in the guess for the particular solution to account for this. Again, I've skipped some of the algebra in this example, particularly omitting the long derivatives and calculation of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(Ly_p\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y^{\prime \prime} + 2y^\prime + 2y = f(t) = 4e^{-t}
+\sin t
+\end{equation*}
+</div>
+<p class="continuation">First I solve the homogeneous case via the characteristic equation.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+r^2 + 2r + 2 = 0 \implies r = -1 \pm \imath
+\end{equation*}
+</div>
+<p class="continuation">The complex roots of the characteristic equation lead to exponentially damped sinusoidal solutions. This is the full homogeneous solution.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y_h = e^{-t} (A \sin t + B \cos t)
+\end{equation*}
+</div>
+<p class="continuation">Here is my guess for the particular solution.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y_p = te^{-t} (C \sin t + D \cos t )
+\end{equation*}
+</div>
+<p class="continuation">I need its derivatives to put into the differential equation.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y_p^{\prime} = e^{-t} (C \sin t + D \cos t) +
+te^{-t}((-C-D)\sin t + (-D+C)\cos t)
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y_p^{\prime\prime} = e^{-t} ((-2C-2D) \sin t + (-2D+2C)
+\cos t) + te^{-t}((2D)\sin t + (-2C)\cos t)
+\end{equation*}
+</div>
+<p class="continuation">I put the guess and its derivative into the DE.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+L y_p = e^{-t} ((-2D) \sin t + (2C) \cos t) = 4e^{-t}
+\sin t
+\end{equation*}
+</div>
+<p class="continuation">Comparing the coefficients of sine and cosine on the left and the right produces a system of two equation. The first equation gives the value of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(D\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+-2D = 4 \implies D = -2
+\end{equation*}
+</div>
+<p class="continuation">The second equation gives the value of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(C\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+2C = 0 \implies C = 0
+\end{equation*}
+</div>
+<p class="continuation">I use the coefficients to write the particular solution.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y_p = -2te^{-t} \cos t
+\end{equation*}
+</div>
+<p class="continuation">The general solution is the particular solution added to the homogeneous solution.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y = -2te^{-t} \cos t + e^{-t} (A \sin t + B \cos t)
+\end{equation*}
+</div>
+<p class="continuation">In this result, the full solution still has exponential decay, since the exponential is asymptotically dominant in the <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(te^{-t}\)</span> term. However, the trajectory and behaviour of the decay differs, particular for small <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(t\text{,}\)</span> from the behavour of the homogeneous solution by itself.</p>
+<span class="incontext"><a href="section-undetermined-coefficients.html#p-262">in-context</a></span>
+</body>
+</html>

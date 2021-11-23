@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:15-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dt} + y = Q(t)
+\end{equation*}
+</div>
+<p class="continuation">To add some complication to this particular example, the non-homogeneous piece <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(Q(t)\)</span> here is a step function.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+Q(t) = \left\{ \begin{matrix} 1 \amp 0 \leq t \leq 1 \\ 0
+\amp t &gt; 1 \end{matrix} \right.
+\end{equation*}
+</div>
+<p class="continuation">This is still allowed: often the coefficients and functions involved in DEs are only piecewise continuous and/or piecewise differentiable. I can still work with them. This step function is discontinuous, but still integrable. One of the reasons piecewise-continuous function are allowed is because they are always integrable. The integrating factor is <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\mu(t) = e^{\int 1 dt} = e^t\text{.}\)</span> Since <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(Q(t)\)</span> is discontinuous, I have to work with two different intervals to cover the two different behaviours.  First, I'll look at look at <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\([0,1]\)</span> and apply the standard method of solution: multiplying by the integrating factor and integrating.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\frac{d}{dt} e^t y = e^t \implies e^ty = e^t + c_1
+\implies y = 1 + c_1e^{-t}
+\end{equation*}
+</div>
+<p class="continuation">Second, I'll look at the remainder of the domain, which is the interval <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\((1,\infty)\text{.}\)</span> I apply the same method.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\frac{d}{dt} e^t y = 0 \implies e^ty = t + c_2 \implies y
+= c_2e^{-t}
+\end{equation*}
+</div>
+<p class="continuation">This process gives two pieces of the solution, each with their own constant of integration. However, I want the solution to be continuous. (This is also typical: even with a discontinuous term in the original equation, I expect the result of solving the DE to give me something continuous.) The solution will fail to be differentiable at <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(t=1\text{,}\)</span> but that's alright. There is a sudden change in the situation at that point, so a sharp corner is expected. Continuity at <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(1\)</span> means that the limit from the left and the limit from the right approaching <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(1\)</span> must be equation. If I calculate both of those limits, I get the equation <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(e-c_1 = c_2\text{.}\)</span> This lets me replace <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_2\)</span> with <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(e - c_1\)</span> in the second piece of the function. The result is only one constant, which is the expected behaviour for a first order differential equation. Here is the final solution, a piecewise function with only one parameter <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y = \left\{ \begin{matrix} 1 - ce^{-t} \amp t \in [0,1]
+\\ (e-c)e^{-t} \amp t \in (1,\infty) \end{matrix}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Since there is only one parameter, initial value problems are solvable. If I am given the initial value<span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y(0)
+=0\text{,}\)</span> I find that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c=1\)</span> and I can produce a unique solution.</p>
+<span class="incontext"><a href="section-linear-des.html#p-157">in-context</a></span>
+</body>
+</html>

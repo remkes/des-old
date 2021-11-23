@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:21-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>Consider the spring equation from before.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+my^{\prime \prime} + by^\prime + ky = 0
+\end{equation*}
+</div>
+<p class="continuation">Now, instead of all constants, lets assume this is an aging spring. That is, at time passes, the spring constant decreases. One model is exponential decay, so let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k(t) = ke^{-\alpha
+t}\)</span> for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\alpha &gt; 0\text{.}\)</span> Let's see what happens without friction.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+m y^{\prime \prime} + ke^{-\alpha t} = 0
+\end{equation*}
+</div>
+<p class="continuation">Here's a strange change of variables.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+s \amp = \frac{2}{\alpha} \sqrt{\frac{k}{m}}
+e^{\frac{-\alpha t}{2}}
+\end{align*}
+</div>
+<p class="continuation">I want to know how to change the differential equation. This is pretty difficult to do; I have to go through some derivative acrobatics to make it work. First I differentiate the change of variables function <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(s(t)\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\frac{ds}{dt} \amp = \frac{2}{\alpha} \frac{-\alpha}{2}
+\sqrt{ \frac{4k}{m\alpha^2}} e^{\frac{-\alpha t}{2}} = -
+\sqrt{\frac{k}{m}} e^{-\frac{\alpha t}{2}}\\
+\frac{d^2s}{dt^2} \amp = \frac{\alpha}{2} \sqrt{\frac{k}{m}}
+e^{-\frac{\alpha t}{2}}
+\end{align*}
+</div>
+<p class="continuation">Now I want to find an expression for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\frac{d^2 y}{dt^2}\)</span> in terms of some new function <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x(s)\)</span> instead of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y(t)\text{.}\)</span> The function I need is implicity defined as follows.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+x(s(t)) = y(t)
+\end{equation*}
+</div>
+<p class="continuation">This is implicit; <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x\)</span> is the function that, when compsed with the change of variables <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(s(t)\text{,}\)</span> give the original function <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y\text{.}\)</span> Since the composition is invertible, this function will always exist (assuming reasonable differentiability condition of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y\text{,}\)</span> which are already required since it is the solution of a differential equation.) There is a technical theorem in analysis called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">Implicit Function Theorem</dfn> that guarantees existence of functions like this. In any case, I want to differentiate this new function. I need the chain rule to do so.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\frac{dx}{dt} \amp = \frac{dx}{ds} \frac{ds}{dt}
+\end{align*}
+</div>
+<p class="continuation">Then I want to differentiate again. Here I need the produce rule and the chain rule. After the derivatives, I bracket the result in a useful way.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\frac{d^2 x}{dt^2} \amp = \frac{d}{dt} \left( \frac{dx}{ds}
+\frac{ds}{dt} \right)\\
+\amp = \frac{d^2 s}{dt^2} \frac{dx}{ds} + \frac{ds}{dt}
+\frac{d}{dt} \frac{dx}{ds}\\
+\amp = \frac{d^2 s}{dt^2} \frac{dy}{ds} + \frac{ds}{dt}
+\frac{d^2y}{ds^2} \frac{ds}{dt}\\
+\amp = \frac{d^2 s}{dt^2} \frac{dx}{ds} + \left(
+\frac{ds}{dt} \right)^2 \frac{d^2 x}{ds^2}
+\end{align*}
+</div>
+<p class="continuation">I can calculate the derivatives of the change of variables <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(s(t)\)</span> and replace them in this expression.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\amp = \frac{\alpha}{2} \sqrt{\frac{k}{m}} e^{-\frac{\alpha
+t}{2}} \frac{dx}{ds} + \frac{k}{m} e^{-\alpha t} \frac{d^2
+x}{ds^2}
+\end{align*}
+</div>
+<p class="continuation">Now, the function <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x(s(t)) = y(t)\)</span> is the same as the function <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y(t)\text{,}\)</span> as a function of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(t\text{;}\)</span> that was exactly how it was defined. Therefore, I can replace <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y^{\prime \prime}\)</span> in the original equation with the <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(t\)</span> derivatives of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x\text{.}\)</span> Let me do so, and proceed to do some algebra with the result.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+m y^{\prime \prime} + ke^{-\alpha t} \amp = 0\\
+m \left(\frac{d^2 s}{dt^2} \frac{dx}{ds} + \left(
+\frac{ds}{dt} \right)^2 \frac{d^2 x}{ds^2} \right) +
+ke^{-\alpha t} \amp = 0\\
+\frac{m\alpha}{2} \sqrt{\frac{k}{m}} e^{-\frac{\alpha t}{2}}
+\frac{dx}{ds} + m \frac{k}{m} e^{-\alpha t} + k e^{-\alpha
+t} x \amp = 0
+\end{align*}
+</div>
+<p class="continuation">To write this in nicer way, I divide by <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\alpha^2\)</span> and multiply by <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(4\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\frac{2}{\alpha} \sqrt{\frac{k}{m}} e^{-\frac{\alpha t}{2}}
+\frac{dx}{ds} + \frac{4}{\alpha^2} \frac{k}{m} e^{-\alpha t}
+\frac{d^2 x}{ds^2} + \frac{4k}{m\alpha^2} e^{-\alpha t} y \amp
+= 0
+\end{align*}
+</div>
+<p class="continuation">Then the coefifcient of the second derivative of precisely <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(s(t)^2\)</span> and the coefficient of the first derivative is precisely <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(s(t)\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+s^2 \frac{d^2x}{ds^2} + s \frac{dx}{ds} + s^2 y \amp = 0
+\end{align*}
+</div>
+<p class="continuation">I have now produced a new differential equation for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x(t)\)</span> in the new variable <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(s\text{.}\)</span> If I can solve this equation, then by simply replace <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(s\)</span> with the change of variables expression <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(s(t)\text{,}\)</span> I can recover <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y(t) = x(s(t))\text{.}\)</span></p>
+<span class="incontext"><a href="section-bessel-functions.html#p-379">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:21-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Zero is a ordinary point of the differential equation, so I can use a Taylor series. There are no singular points at all, so I expect solutions which have infinite radius of convergence.  First, I need the derivatives of an unknown series.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+y \amp = \sum_{n=0}^\infty c_n t^n \\
+y^\prime \amp = \sum_{n=1}^\infty c_n n t^{n-1}\\
+y^{\prime\prime}  \amp = \sum_{n=2}^\infty c_n n(n-1) t^{n-2} 
+\end{align*}
+</div>
+<p class="continuation">Then I put these expressions into the differential equation.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+2y^{\prime \prime} + \frac{t}{2} y^\prime - y \amp = 0 \\
+2\sum_{n=2}^\infty c_n n(n-1) t^{n-2} + \frac{1}{2}
+\sum_{n=1}^\infty c_n nt^{n} - \sum_{n=0}^\infty c_n
+t^{n} \amp = 0 
+\end{align*}
+</div>
+<p class="continuation">I shift the sums so that I have the same exponent for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(t\)</span> in each sum.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+2\sum_{n=0}^\infty c_{n+2} (n+2)(n+1) t^n + \frac{1}{2}
+\sum_{n=1}^\infty c_n nt^{n} - \sum_{n=0}^\infty c_n t^{n}
+= 0 
+\end{equation*}
+</div>
+<p class="continuation">Then I pull out terms so that the starting indices are the same for each sum. This lets me combine the sums into one sum.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+4c_2 + c_0 + 2\sum_{n=1}^\infty c_{n+2} (n+2)(n+1) t^n +
+\frac{1}{2} \sum_{n=1}^\infty c_n nt^{n} -
+\sum_{n=1}^\infty c_n t^{n} \amp = 0 \\
+4c_2 + c_0 + \sum_{n=1}^\infty \left[ c_{n+2}
+2(n+2)(n+1) + \frac{1}{2} c_n n - c_n \right] t^{n} \amp
+= 0\\
+4c_2 + c_0 + \sum_{n=1}^\infty \left[ c_{n+2}
+2(n+2)(n+1) + \left( \frac{n}{2} - 1 \right) c_n
+\right] t^{n} \amp = 0
+\end{align*}
+</div>
+<p class="continuation">First I look at the isolated terms. The constant term implies that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_2 = \frac{-c_0}{4}\text{,}\)</span> where <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_0\)</span> is unknown.  Then I look at the general terms and solve for the recurrence relation.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+c_{n+2} = -\frac{\left( \frac{n}{2} - 1 \right)
+c_n}{2(n+2)(n+1)} = -\frac{(n-2) c_n}{4(n+2)(n+1)}
+\end{equation*}
+</div>
+<p class="continuation">This is a second order recurrence relation, so <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_0\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_1\)</span> being unknown is sufficient. I have already calculated <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_2\text{,}\)</span> so the recurrence relation will start calculating at <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_3\text{.}\)</span> Before I start the general calculations, I can notice something interesting about the recurrence relation. the numerator will vanish when <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n=2\text{;}\)</span> on the left, that means that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_4 = 0\text{.}\)</span> After that point, all even coefficients will also be zero by the recurrence relation. Therefore, the solution starting with <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_0\)</span> only has a constant and linear term. I alreacy know those coefficients: <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_0\)</span> is arbitrary and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c_2 = \frac{-c_0}{4}\text{.}\)</span> Therefore, I already have one of the solutions, which is a quadratic polynomial.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y_1 = c_0 \left( 1 - \frac{t^2}{4} \right) 
+\end{equation*}
+</div>
+<p class="continuation">Now I can proceed with calculations. I have already dealt with all the even coefficients, so I'll only calculate the odd.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+c_3 \amp = \frac{-c_1}{4(3)(3)} \\
+c_5 \amp = \frac{-c_3}{4(5)(4)} = \frac{2c_1}{4^2\cdot 5!}  \\
+c_7 \amp = \frac{-c_5}{4(7)(6)} = \frac{-2c_1}{4^3\cdot 7!}  
+\end{align*}
+</div>
+<p class="continuation">From these coefficients, I can intuit a general pattern.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+c_{2k+1} = \frac{(-1)^k 2c_1}{4^k (2k+1)!} 
+\end{equation*}
+</div>
+<p class="continuation">I put this general pattern into the Taylor series form to get the second solution.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y_2 = c_1 \sum_{n=0}^{\infty} \frac{(-1)^k
+t^{2k+1}}{4^k (2k+1)!}
+\end{equation*}
+</div>
+<p class="continuation">The general solution is the linear combination of the two, using the two unknown coefficients from the process.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y = c_0 \left( 1 - \frac{t^2}{4} \right) + c_1
+\sum_{n=0}^{\infty} \frac{(-1)^k t^{2k+1}}{4^k (2k+1)!}
+\end{equation*}
+</div>
+<span class="incontext"><a href="section-series-solutions-activity.html#p-386">in-context</a></span>
+</body>
+</html>

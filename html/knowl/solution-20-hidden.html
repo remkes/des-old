@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:16-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>I follow the standard procedure. First I'll label the coefficient functions.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\amp P(t) = \frac{4}{t} 
+\amp \amp Q(t) = t^2 + 3t + 4 
+\end{align*}
+</div>
+<p class="continuation">Then I'll calculate the integrating factor. (Note that I don't need a constant of integration for the integrating factor).</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\mu(t) = e^{\int \frac{4}{t} dt} = e^{4 \ln t} = t^4 
+\end{equation*}
+</div>
+<p class="continuation">Then I multiply the original equation by the integrating factor.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+t^4 \frac{dy}{dt} + t^4 \frac{4y}{t} = t^4(t^2 + 3t + 4)
+\end{equation*}
+</div>
+<p class="continuation">The left side becomes a product rule derivative.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\frac{d}{dt} (t^4 y) = t^6 + 3t^5 + 4t^4 
+\end{equation*}
+</div>
+<p class="continuation">Then I integrate.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+t^4 y = \frac{t^7}{7} + \frac{t^6}{2} + \frac{4t^5}{5} + c
+\end{equation*}
+</div>
+<p class="continuation">Then I solve for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y\text{.}\)</span> If I want to, I can isolate the particular solution <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y_p\)</span> and the homogeneous solution <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y_h\text{;}\)</span> the homogeneous solution has the paramater and the particular solution does not.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+y \amp = \frac{t^3}{7} + \frac{t^2}{2} + \frac{4t}{5} +
+\frac{c}{t^4} \\
+y_p \amp = \frac{t^3}{7} + \frac{t^2}{2} + \frac{4t}{5} \\
+y_h \amp = \frac{1}{t^4}
+\end{align*}
+</div>
+</div></body>
+</html>

@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:30:35-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Resonance</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\vs{{\it vs. }}
+\def\cf{{\it cf. }}
+\def\viz{{\it viz. }}
+\def\ie{{\it i.e. }}
+\def\etc{{\it etc. }}
+\def\eg{{\it e.g. }}
+\def\etal{{\it et al .}}
+\def\via{{\it via }}
+\def\adhoc{{\it ad hoc }}
+\def\apriori{{\it apriori }}
+\def\Afrak{\mathfrak{A}}
+\def\Bfrak{\mathfrak{B}}
+\def\Cfrak{\mathfrak{C}}
+\def\Dfrak{\mathfrak{D}}
+\def\Efrak{\mathfrak{E}}
+\def\Ffrak{\mathfrak{F}}
+\def\Gfrak{\mathfrak{G}}
+\def\Hfrak{\mathfrak{H}}
+\def\Ifrak{\mathfrak{I}}
+\def\Jfrak{\mathfrak{J}}
+\def\Kfrak{\mathfrak{K}}
+\def\Lfrak{\mathfrak{L}}
+\def\Mfrak{\mathfrak{M}}
+\def\Nfrak{\mathfrak{N}}
+\def\Ofrak{\mathfrak{O}}
+\def\Pfrak{\mathfrak{P}}
+\def\Qfrak{\mathfrak{Q}}
+\def\Rfrak{\mathfrak{R}}
+\def\Sfrak{\mathfrak{S}}
+\def\Tfrak{\mathfrak{T}}
+\def\Ufrak{\mathfrak{U}}
+\def\Vfrak{\mathfrak{V}}
+\def\Wfrak{\mathfrak{W}}
+\def\Xfrak{\mathfrak{X}}
+\def\Yfrak{\mathfrak{Y}}
+\def\Zfrak{\mathfrak{Z}}
+\def\afrak{\mathfrak{a}}
+\def\bfrak{\mathfrak{b}}
+\def\cfrak{\mathfrak{c}}
+\def\dfrak{\mathfrak{d}}
+\def\efrak{\mathfrak{e}}
+\def\ffrak{\mathfrak{f}}
+\def\gfrak{\mathfrak{g}}
+\def\hfrak{\mathfrak{h}}
+\def\ifrak{\mathfrak{i}}
+\def\jfrak{\mathfrak{j}}
+\def\kfrak{\mathfrak{k}}
+\def\lfrak{\mathfrak{l}}
+\def\mfrak{\mathfrak{m}}
+\def\nfrak{\mathfrak{n}}
+\def\ofrak{\mathfrak{o}}
+\def\pfrak{\mathfrak{p}}
+\def\qfrak{\mathfrak{q}}
+\def\rfrak{\mathfrak{r}}
+\def\sfrak{\mathfrak{s}}
+\def\tfrak{\mathfrak{t}}
+\def\ufrak{\mathfrak{u}}
+\def\vfrak{\mathfrak{v}}
+\def\wfrak{\mathfrak{w}}
+\def\xfrak{\mathfrak{x}}
+\def\yfrak{\mathfrak{y}}
+\def\zfrak{\mathfrak{z}}
+\def\AA{\mathbb{A}}
+\def\BB{\mathbb{B}}
+\def\CC{\mathbb{C}}
+\def\DD{\mathbb{D}}
+\def\EE{\mathbb{E}}
+\def\FF{\mathbb{F}}
+\def\GG{\mathbb{G}}
+\def\HH{\mathbb{H}}
+\def\II{\mathbb{I}}
+\def\JJ{\mathbb{J}}
+\def\KK{\mathbb{K}}
+\def\LL{\mathbb{L}}
+\def\MM{\mathbb{M}}
+\def\NN{\mathbb{N}}
+\def\OO{\mathbb{O}}
+\def\PP{\mathbb{P}}
+\def\QQ{\mathbb{Q}}
+\def\RR{\mathbb{R}}
+\def\SS{\mathbb{S}}
+\def\TT{\mathbb{T}}
+\def\UU{\mathbb{U}}
+\def\VV{\mathbb{V}}
+\def\WW{\mathbb{W}}
+\def\XX{\mathbb{X}}
+\def\YY{\mathbb{Y}}
+\def\ZZ{\mathbb{Z}}
+\def\calA{\mathcal{A}}
+\def\calB{\mathcal{B}}
+\def\calC{\mathcal{C}}
+\def\calD{\mathcal{D}}
+\def\calE{\mathcal{E}}
+\def\calF{\mathcal{F}}
+\def\calG{\mathcal{G}}
+\def\calH{\mathcal{H}}
+\def\calI{\mathcal{I}}
+\def\calJ{\mathcal{J}}
+\def\calK{\mathcal{K}}
+\def\calL{\mathcal{L}}
+\def\calM{\mathcal{M}}
+\def\calN{\mathcal{N}}
+\def\calO{\mathcal{O}}
+\def\calP{\mathcal{P}}
+\def\calQ{\mathcal{Q}}
+\def\calR{\mathcal{R}}
+\def\calS{\mathcal{S}}
+\def\calT{\mathcal{T}}
+\def\calU{\mathcal{U}}
+\def\calV{\mathcal{V}}
+\def\calW{\mathcal{W}}
+\def\calX{\mathcal{X}}
+\def\calY{\mathcal{Y}}
+\def\calZ{\mathcal{Z}}
+\def\Ap{A^\prime}
+\def\Bp{B^\prime}
+\def\Cp{C^\prime}
+\def\Dp{D^\prime}
+\def\Ep{E^\prime}
+\def\Fp{F^\prime}
+\def\Gp{G^\prime}
+\def\Hp{H^\prime}
+\def\Ip{I^\prime}
+\def\Jp{J^\prime}
+\def\Kp{K^\prime}
+\def\Lp{L^\prime}
+\def\Mp{M^\prime}
+\def\Mp{N^\prime}
+\def\Op{O^\prime}
+\def\Pp{P^\prime}
+\def\Qp{Q^\prime}
+\def\Rp{R^\prime}
+\def\Sp{S^\prime}
+\def\Tp{T^\prime}
+\def\Up{U^\prime}
+\def\Vp{V^\prime}
+\def\Wp{W^\prime}
+\def\Xp{X^\prime}
+\def\Yp{Y^\prime}
+\def\Zp{Z^\prime}
+\def\ap{a^\prime}
+\def\bp{b^\prime}
+\def\cp{c^\prime}
+\def\dprime{d^\prime}
+\def\ep{e^\prime}
+\def\fp{f^\prime}
+\def\gp{g^\prime}
+\def\hp{h^\prime}
+\def\ip{i^\prime}
+\def\jp{j^\prime}
+\def\kp{k^\prime}
+\def\lp{l^\prime}
+\def\mp{m^\prime}
+\def\np{n^\prime}
+\def\op{o^\prime}
+\def\pp{p^\prime}
+\def\qp{q^\prime}
+\def\rp{r^\prime}
+\def\sp{s^\prime}
+\def\tp{t^\prime}
+\def\up{u^\prime}
+\def\vp{v^\prime}
+\def\wp{w^\prime}
+\def\xp{x^\prime}
+\def\yp{y^\prime}
+\def\zp{z^\prime}
+\def\App{A^{\prime\prime}}
+\def\Bpp{B^{\prime\prime}}
+\def\Cpp{C^{\prime\prime}}
+\def\Dpp{D^{\prime\prime}}
+\def\Epp{E^{\prime\prime}}
+\def\Fpp{F^{\prime\prime}}
+\def\Gpp{G^{\prime\prime}}
+\def\Hpp{H^{\prime\prime}}
+\def\Ipp{I^{\prime\prime}}
+\def\Jpp{J^{\prime\prime}}
+\def\Kpp{K^{\prime\prime}}
+\def\Lpp{L^{\prime\prime}}
+\def\Mpp{M^{\prime\prime}}
+\def\Mpp{N^{\prime\prime}}
+\def\Opp{O^{\prime\prime}}
+\def\Ppp{P^{\prime\prime}}
+\def\Qpp{Q^{\prime\prime}}
+\def\Rpp{R^{\prime\prime}}
+\def\Spp{S^{\prime\prime}}
+\def\Tpp{T^{\prime\prime}}
+\def\Upp{U^{\prime\prime}}
+\def\Vpp{V^{\prime\prime}}
+\def\Wpp{W^{\prime\prime}}
+\def\Xpp{X^{\prime\prime}}
+\def\Ypp{Y^{\prime\prime}}
+\def\Zpp{Z^{\prime\prime}}
+\def\app{a^{\prime\prime}}
+\def\bpp{b^{\prime\prime}}
+\def\cpp{c^{\prime\prime}}
+\def\dpp{d^{\prime\prime}}
+\def\epp{e^{\prime\prime}}
+\def\fpp{f^{\prime\prime}}
+\def\gpp{g^{\prime\prime}}
+\def\hpp{h^{\prime\prime}}
+\def\ipp{i^{\prime\prime}}
+\def\jpp{j^{\prime\prime}}
+\def\kpp{k^{\prime\prime}}
+\def\lpp{l^{\prime\prime}}
+\def\mpp{m^{\prime\prime}}
+\def\npp{n^{\prime\prime}}
+\def\opp{o^{\prime\prime}}
+\def\ppp{p^{\prime\prime}}
+\def\qpp{q^{\prime\prime}}
+\def\rpp{r^{\prime\prime}}
+\def\spp{s^{\prime\prime}}
+\def\tpp{t^{\prime\prime}}
+\def\upp{u^{\prime\prime}}
+\def\vpp{v^{\prime\prime}}
+\def\wpp{w^{\prime\prime}}
+\def\xpp{x^{\prime\prime}}
+\def\ypp{y^{\prime\prime}}
+\def\zpp{z^{\prime\prime}}
+\def\abar{\overline{a}}
+\def\bbar{\overline{b}}
+\def\cbar{\overline{c}}
+\def\dbar{\overline{d}}
+\def\ebar{\overline{e}}
+\def\fbar{\overline{f}}
+\def\gbar{\overline{g}}
+\def\ibar{\overline{i}}
+\def\jbar{\overline{j}}
+\def\kbar{\overline{k}}
+\def\lbar{\overline{l}}
+\def\mbar{\overline{m}}
+\def\nbar{\overline{n}}
+\def\obar{\overline{o}}
+\def\pbar{\overline{p}}
+\def\qbar{\overline{q}}
+\def\rbar{\overline{r}}
+\def\sbar{\overline{s}}
+\def\tbar{\overline{t}}
+\def\ubar{\overline{u}}
+\def\vbar{\overline{v}}
+\def\wbar{\overline{w}}
+\def\xbar{\overline{x}}
+\def\ybar{\overline{y}}
+\def\zbar{\overline{z}}
+\def\Abar{\overline{A}}
+\def\Bbar{\overline{B}}
+\def\Cbar{\overline{C}}
+\def\Dbar{\overline{D}}
+\def\Ebar{\overline{E}}
+\def\Fbar{\overline{F}}
+\def\Gbar{\overline{G}}
+\def\Hbar{\overline{H}}
+\def\Ibar{\overline{I}}
+\def\Jbar{\overline{J}}
+\def\Kbar{\overline{K}}
+\def\Lbar{\overline{L}}
+\def\Mbar{\overline{M}}
+\def\Nbar{\overline{N}}
+\def\Obar{\overline{O}}
+\def\Pbar{\overline{P}}
+\def\Qbar{\overline{Q}}
+\def\Rbar{\overline{R}}
+\def\Sbar{\overline{S}}
+\def\Tbar{\overline{T}}
+\def\Ubar{\overline{U}}
+\def\Vbar{\overline{V}}
+\def\Wbar{\overline{W}}
+\def\Xbar{\overline{X}}
+\def\Ybar{\overline{Y}}
+\def\Zbar{\overline{Z}}
+\def\aunder{\underline{a}}
+\def\bunder{\underline{b}}
+\def\cunder{\underline{c}}
+\def\dunder{\underline{d}}
+\def\eunder{\underline{e}}
+\def\funder{\underline{f}}
+\def\gunder{\underline{g}}
+\def\hunder{\underline{h}}
+\def\iunder{\underline{i}}
+\def\junder{\underline{j}}
+\def\kunder{\underline{k}}
+\def\lunder{\underline{l}}
+\def\munder{\underline{m}}
+\def\nunder{\underline{n}}
+\def\ounder{\underline{o}}
+\def\punder{\underline{p}}
+\def\qunder{\underline{q}}
+\def\runder{\underline{r}}
+\def\sunder{\underline{s}}
+\def\tunder{\underline{t}}
+\def\uunder{\underline{u}}
+\def\vunder{\underline{v}}
+\def\wunder{\underline{w}}
+\def\xunder{\underline{x}}
+\def\yunder{\underline{y}}
+\def\zunder{\underline{z}}
+\def\Aunder{\underline{A}}
+\def\atilde{\widetilde{a}}
+\def\btilde{\widetilde{b}}
+\def\ctilde{\widetilde{c}}
+\def\dtilde{\widetilde{d}}
+\def\etilde{\widetilde{e}}
+\def\ftilde{\widetilde{f}}
+\def\gtilde{\widetilde{g}}
+\def\htilde{\widetilde{h}}
+\def\itilde{\widetilde{i}}
+\def\jtilde{\widetilde{j}}
+\def\ktilde{\widetilde{k}}
+\def\ltilde{\widetilde{l}}
+\def\mtilde{\widetilde{m}}
+\def\ntilde{\widetilde{n}}
+\def\otilde{\widetilde{o}}
+\def\ptilde{\widetilde{p}}
+\def\qtilde{\widetilde{q}}
+\def\rtilde{\widetilde{r}}
+\def\stilde{\widetilde{s}}
+\def\ttilde{\widetilde{t}}
+\def\utilde{\widetilde{u}}
+\def\vtilde{\widetilde{v}}
+\def\wtilde{\widetilde{w}}
+\def\xtilde{\widetilde{x}}
+\def\ytilde{\widetilde{y}}
+\def\ztilde{\widetilde{z}}
+\def\Atilde{\widetilde{A}}
+\def\Btilde{\widetilde{B}}
+\def\Ctilde{\widetilde{C}}
+\def\Dtilde{\widetilde{D}}
+\def\Etilde{\widetilde{E}}
+\def\Ftilde{\widetilde{F}}
+\def\Gtilde{\widetilde{G}}
+\def\Htilde{\widetilde{H}}
+\def\Itilde{\widetilde{I}}
+\def\Jtilde{\widetilde{J}}
+\def\Ktilde{\widetilde{K}}
+\def\Ltilde{\widetilde{L}}
+\def\Mtilde{\widetilde{M}}
+\def\Ntilde{\widetilde{N}}
+\def\Otilde{\widetilde{O}}
+\def\Ptilde{\widetilde{P}}
+\def\Qtilde{\widetilde{Q}}
+\def\Rtilde{\widetilde{R}}
+\def\Stilde{\widetilde{S}}
+\def\Ttilde{\widetilde{T}}
+\def\Utilde{\widetilde{U}}
+\def\Vtilde{\widetilde{V}}
+\def\Wtilde{\widetilde{W}}
+\def\Xtilde{\widetilde{X}}
+\def\Ytilde{\widetilde{Y}}
+\def\Ztilde{\widetilde{Z}}
+\def\Alphatilde{\widetilde{\Alpha}}
+\def\Betatilde{\widetilde{\Beta}}
+\def\Gammatilde{\widetilde{\Gamma}}
+\def\Deltatilde{\widetilde{\Delta}}
+\def\Epsilontilde{\widetilde{\Epsilon}}
+\def\Zetatilde{\widetilde{\Zeta}}
+\def\Etatilde{\widetilde{\Eta}}
+\def\Thetatilde{\widetilde{\Theta}}
+\def\Iotatilde{\widetilde{\Iota}}
+\def\Kappatilde{\widetilde{\Kappa}}
+\def\Lambdatilde{\widetilde{\Lamdba}}
+\def\Mutilde{\widetilde{\Mu}}
+\def\Nutilde{\widetilde{\Nu}}
+\def\Xitilde{\widetilde{\Xi}}
+\def\Omicrontilde{\widetilde{\Omicron}}
+\def\Pitilde{\widetilde{\Pi}}
+\def\Rhotilde{\widetilde{\Rho}}
+\def\Sigmatilde{\widetilde{\Sigma}}
+\def\Tautilde{\widetilde{\Tau}}
+\def\Upsilontilde{\widetilde{\Upsilon}}
+\def\Phitilde{\widetilde{\Phi}}
+\def\Chitilde{\widetilde{\Chi}}
+\def\Psitilde{\widetilde{\Psi}}
+\def\Omegatilde{\widetilde{\Omega}}
+\def\alphatilde{\widetilde{\alpha}}
+\def\betatilde{\widetilde{\beta}}
+\def\gammatilde{\widetilde{\gamma}}
+\def\deltatilde{\widetilde{\delta}}
+\def\epsilontilde{\widetilde{\epsilon}}
+\def\zetatilde{\widetilde{\zeta}}
+\def\etatilde{\widetilde{\eta}}
+\def\thetatilde{\widetilde{\theta}}
+\def\iotatilde{\widetilde{\iota}}
+\def\kappatilde{\widetilde{\kappa}}
+\def\lambdatilde{\widetilde{\lamdba}}
+\def\mutilde{\widetilde{\mu}}
+\def\nutilde{\widetilde{\nu}}
+\def\xitilde{\widetilde{\xi}}
+\def\omicrontilde{\widetilde{\omicron}}
+\def\pitilde{\widetilde{\pi}}
+\def\rhotilde{\widetilde{\rho}}
+\def\sigmatilde{\widetilde{\sigma}}
+\def\tautilde{\widetilde{\tau}}
+\def\upsilontilde{\widetilde{\upsilon}}
+\def\phitilde{\widetilde{\phi}}
+\def\chitilde{\widetilde{\chi}}
+\def\psitilde{\widetilde{\psi}}
+\def\omegatilde{\widetilde{\omega}}
+\def\Alphabar{\bar{\Alpha}}
+\def\Betabar{\bar{\Beta}}
+\def\Gammabar{\bar{\Gamma}}
+\def\Deltabar{\bar{\Delta}}
+\def\Epsilonbar{\bar{\Epsilon}}
+\def\Zetabar{\bar{\Zeta}}
+\def\Etabar{\bar{\Eta}}
+\def\Thetabar{\bar{\Theta}}
+\def\Iotabar{\bar{\Iota}}
+\def\Kappabar{\bar{\Kappa}}
+\def\Lambdabar{\bar{\Lamdba}}
+\def\Mubar{\bar{\Mu}}
+\def\Nubar{\bar{\Nu}}
+\def\Xibar{\bar{\Xi}}
+\def\Omicronbar{\bar{\Omicron}}
+\def\Pibar{\bar{\Pi}}
+\def\Rhobar{\bar{\Rho}}
+\def\Sigmabar{\bar{\Sigma}}
+\def\Taubar{\bar{\Tau}}
+\def\Upsilonbar{\bar{\Upsilon}}
+\def\Phibar{\bar{\Phi}}
+\def\Chibar{\bar{\Chi}}
+\def\Psibar{\bar{\Psi}}
+\def\Omegabar{\bar{\Omega}}
+\def\alphabar{\bar{\alpha}}
+\def\betabar{\bar{\beta}}
+\def\gammabar{\bar{\gamma}}
+\def\deltabar{\bar{\delta}}
+\def\epsilonbar{\bar{\epsilon}}
+\def\zetabar{\bar{\zeta}}
+\def\etabar{\bar{\eta}}
+\def\thetabar{\bar{\theta}}
+\def\iotabar{\bar{\iota}}
+\def\kappabar{\bar{\kappa}}
+\def\lambdabar{\bar{\lamdba}}
+\def\mubar{\bar{\mu}}
+\def\nubar{\bar{\nu}}
+\def\xibar{\bar{\xi}}
+\def\omicronbar{\bar{\omicron}}
+\def\pibar{\bar{\pi}}
+\def\rhobar{\bar{\rho}}
+\def\sigmabar{\bar{\sigma}}
+\def\taubar{\bar{\tau}}
+\def\upsilonbar{\bar{\upsilon}}
+\def\phibar{\bar{\phi}}
+\def\chibar{\bar{\chi}}
+\def\psibar{\bar{\psi}}
+\def\omegabar{\bar{\omega}}
+\def\del{\partial}
+\def\delbar{\overline{\partial}}
+\def\Cech{\check{C}}
+\def\half{\frac{1}{2}}
+\def\defeq{\mathrel{\mathop:}=}
+\def\alg{\mathrm{alg}}
+\def\Alt{\mathrm{Alt}}
+\def\Amp{\mathrm{Amp}}
+\def\Arg{\mathrm{Arg}}
+\def\an{\mathrm{an}}
+\def\anti{\mathrm{anti}}
+\def\Ap{\mathrm{Ap}}
+\def\arcsinh{\mathrm{arcsinh\hspace{0.07cm}}}
+\def\arccosh{\mathrm{arccosh\hspace{0.07cm}}}
+\def\arctanh{\mathrm{arctanh\hspace{0.07cm}}}
+\def\arccsch{\mathrm{arccsch\hspace{0.07cm}}}
+\def\arcsech{\mathrm{arcsech\hspace{0.07cm}}}
+\def\arccoth{\mathrm{arccoth\hspace{0.07cm}}}
+\def\arccsc{\mathrm{arccsc\hspace{0.07cm}}}
+\def\arcsec{\mathrm{arcsec\hspace{0.07cm}}}
+\def\arccot{\mathrm{arccot\hspace{0.07cm}}}
+\def\arg{\mathrm{arg}}
+\def\BC{\mathrm{BC}}
+\def\Bel{\mathrm{Bel}}
+\def\calCH{\mathcal{CH}}
+\def\csch{\mathrm{csch}\hspace{0.07cm}}
+\def\CH{\mathrm{CH}}
+\def\ch{\mathrm{ch}}
+\def\closed{\mathrm{closed}}
+\def\codim{\mathrm{codim}}
+\def\coth{\mathrm{coth}\hspace{0.07cm}}
+\def\Coh{\mathfrak{Coh}}
+\def\Coker{\mathrm{Coker}}
+\def\Cone{\mathrm{Cone}}
+\def\darg{d\mathrm{arg}}
+\def\Db{\mathrm{Db}}
+\def\dclosed{\mathrm{d-closed}}
+\def\deg{\mathrm{deg}}
+\def\dim{\mathrm{dim}}
+\def\divisor{\mathrm{div}}
+\def\dlog{d\mathrm{log}}
+\def\DNE{\mathrm{DNE}}
+\def\DR{\mathrm{DR}}
+\def\DST{\mathrm{DST}}
+\def\exp{\mathrm{exp}}
+\def\FLB{\mathrm{FLB}}
+\def\FLS{\mathrm{FLS}}
+\def\Gr{\mathrm{Gr}}
+\def\Hzar{H_{\mathrm{Zar}}}
+\def\Hol{\mathrm{Hol}}
+\def\Id{\mathrm{Id}}
+\def\Image{\mathrm{Im}}
+\def\Ka{\mathcal{K}_A}
+\def\Ker{\mathrm{Ker}}
+\def\kod{\mathrm{kod}}
+\def\Kx{\mathcal{K}_X}
+\def\Kz{\mathcal{K}_Z}
+\def\log{\mathrm{log}}
+\def\Log{\mathrm{Log}}
+\def\Li{\mathrm{Li}}
+\def\min{\mathrm{min}}
+\def\Mon{\mathrm{Mon}}
+\def\Nef{\mathrm{Nef}}
+\def\NS{\mathrm{NS}}
+\def\Oa{\mathcal{O}_A}
+\def\Ox{\mathcal{O}_X}
+\def\Oz{\mathcal{O}_Z}
+\def\Perp{\mathrm{Perp}}
+\def\Pic{\mathrm{Pic}}
+\def\Proj{\mathrm{Proj}}
+\def\rank{\mathrm{rank}}
+\def\Rat{\mathrm{Rat}}
+\def\Real{\mathrm{Re}}
+\def\reg{\mathrm{reg}}
+\def\Res{\mathrm{Res}}
+\def\res{\mathrm{res}}
+\def\Ric{\mathrm{Ric}}
+\def\sech{\mathrm{sech}\hspace{0.07cm}}
+\def\Span{\mathrm{Span}}
+\def\Spec{\mathrm{Spec}}
+\def\sing{\mathrm{sing}}
+\def\Singx{\mathrm{Sing}(X)}
+\def\sheafKer{\mathcal{\Ker}}
+\def\sheafIm{\mathcal{\Im}}
+\def\Span{\mathrm{Span}}
+\def\Spin{\mathrm{Spin}}
+\def\Str{\mathrm{Str}}
+\def\td{\mathrm{td}}
+\def\tr{\mathrm{tr}}
+\def\Todd{\mathrm{Todd}}
+\def\tor{\mathrm{tor}}
+\def\trdeg{\mathrm{trdeg}}
+\def\Zar{\mathrm{Zar}}
+\def\ZFLS{\mathrm{ZFLS}}
+
+  \usepackage{tikz}
+  \usepackage{tkz-graph}
+  \usepackage{tkz-euclide}
+  \usetikzlibrary{patterns}
+  \usetikzlibrary{positioning}
+  \usetikzlibrary{matrix,arrows}
+  \usetikzlibrary{calc}
+  \usetikzlibrary{shapes}
+  \usetikzlibrary{through,intersections,decorations,shadows,fadings}
+  \usepackage{pgfplots}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Course Notes for Differential Equations</span></a></h1>
+<p class="byline">Remkes Kooistra</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-undetermined-coefficients.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-second-order-odes.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-variation-parameters.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-undetermined-coefficients.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-second-order-odes.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-variation-parameters.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="des.html" data-scroll="des"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon.html" data-scroll="colophon">Colophon</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-prelim.html" data-scroll="chapter-prelim"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-functions.html" data-scroll="section-functions">Functions</a></li>
+<li><a href="section-linear-algebra.html" data-scroll="section-linear-algebra">Linear Algebra</a></li>
+<li><a href="section-taylor-series.html" data-scroll="section-taylor-series">Taylor Series</a></li>
+<li><a href="section-recurrence-relations.html" data-scroll="section-recurrence-relations">Recurrence Relations</a></li>
+<li><a href="section-complex-numbers.html" data-scroll="section-complex-numbers">Complex Numbers</a></li>
+<li><a href="section-note-variables.html" data-scroll="section-note-variables">A Note on Variables</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-first-order-odes.html" data-scroll="chapter-first-order-odes"><span class="codenumber">2</span> <span class="title">First Order DEs</span></a><ul>
+<li><a href="section-what-is-a-de.html" data-scroll="section-what-is-a-de">What is a Differential Equation?</a></li>
+<li><a href="section-qualitative-methods.html" data-scroll="section-qualitative-methods">Qualitative Methods for First Order DEs</a></li>
+<li><a href="section-stability-and-linearization.html" data-scroll="section-stability-and-linearization">Stability and Linearization</a></li>
+<li><a href="section-separable-des.html" data-scroll="section-separable-des">Separable Equations</a></li>
+<li><a href="section-existence-and-uniqueness.html" data-scroll="section-existence-and-uniqueness">Existence and Uniqueness of Solutions</a></li>
+<li><a href="section-linear-des.html" data-scroll="section-linear-des">Linear Equations and Integrating Factors</a></li>
+<li><a href="section-substitutions.html" data-scroll="section-substitutions">Substitutions</a></li>
+<li><a href="section-approximation-methods.html" data-scroll="section-approximation-methods">Approximation Methods and Applications</a></li>
+<li><a href="section-first-order-activity.html" data-scroll="section-first-order-activity">Activities for First Order ODEs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-second-order-odes.html" data-scroll="chapter-second-order-odes"><span class="codenumber">3</span> <span class="title">Second Order DEs</span></a><ul>
+<li><a href="section-constant-coefficients.html" data-scroll="section-constant-coefficients">Linear DEs with Constant Coefficients</a></li>
+<li><a href="section-undetermined-coefficients.html" data-scroll="section-undetermined-coefficients">The Method of Undetermined Coefficients</a></li>
+<li><a href="section-resonance.html" data-scroll="section-resonance" class="active">Resonance</a></li>
+<li><a href="section-variation-parameters.html" data-scroll="section-variation-parameters">Variation of Parameters</a></li>
+<li><a href="section-second-order-activity.html" data-scroll="section-second-order-activity">Activities for Second Order ODEs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-series-solutions.html" data-scroll="chapter-series-solutions"><span class="codenumber">4</span> <span class="title">Series Solutions</span></a><ul>
+<li><a href="section-series-solutions-general.html" data-scroll="section-series-solutions-general">Series Solutions to Linear Differential Equations</a></li>
+<li><a href="ordinary-points.html" data-scroll="ordinary-points">Ordinary Points</a></li>
+<li><a href="section-legendre.html" data-scroll="section-legendre">Legendre Functions</a></li>
+<li><a href="section-issues.html" data-scroll="section-issues">Issues and Next Directions</a></li>
+<li><a href="section-regular-singular-points.html" data-scroll="section-regular-singular-points">Regular Singular Points</a></li>
+<li><a href="section-bessel-functions.html" data-scroll="section-bessel-functions">Bessel Functions</a></li>
+<li><a href="section-series-solutions-activity.html" data-scroll="section-series-solutions-activity">Activities for Series Solutions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-laplace-transforms.html" data-scroll="chapter-laplace-transforms"><span class="codenumber">5</span> <span class="title">Laplace Transforms</span></a><ul>
+<li><a href="section-laplace-definitions.html" data-scroll="section-laplace-definitions">Definitions</a></li>
+<li><a href="section-laplace-properties.html" data-scroll="section-laplace-properties">Properties of the Laplace Transform</a></li>
+<li><a href="distributions.html" data-scroll="distributions">Distributions</a></li>
+<li><a href="section-laplace-derivatives.html" data-scroll="section-laplace-derivatives">Laplace Transforms and Derivatives</a></li>
+<li><a href="section-inverse-transforms.html" data-scroll="section-inverse-transforms">Inverse Laplace Transforms</a></li>
+<li><a href="section-laplace-solving.html" data-scroll="section-laplace-solving">Using Laplace Transforms to Solve Linear DEs</a></li>
+<li><a href="laplace-periodic.html" data-scroll="laplace-periodic">Laplace Transforms of Periodic Functions</a></li>
+<li><a href="section-laplace-algebraic.html" data-scroll="section-laplace-algebraic">Algebraic Properties of the Laplace Transform</a></li>
+<li><a href="section-laplace-examples.html" data-scroll="section-laplace-examples">More Examples of Solving DEs with Laplace Transforms</a></li>
+<li><a href="section-laplace-activity.html" data-scroll="section-laplace-activity">Activities for Laplace Transforms</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-systems.html" data-scroll="chapter-systems"><span class="codenumber">6</span> <span class="title">Systems of Differential Equations</span></a><ul>
+<li><a href="section-systems-key-examples.html" data-scroll="section-systems-key-examples">Systems of Differential Equations</a></li>
+<li><a href="section-systems-qualitative-methods.html" data-scroll="section-systems-qualitative-methods">Qualitative Methods</a></li>
+<li><a href="section-linear-systems.html" data-scroll="section-linear-systems">Linear Systems</a></li>
+<li><a href="section-systems-activity.html" data-scroll="section-systems-activity">Activities for Systems of ODEs</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-pdes.html" data-scroll="chapter-pdes"><span class="codenumber">7</span> <span class="title">Partial Differential Equations</span></a><ul>
+<li><a href="section-pdes-intro.html" data-scroll="section-pdes-intro">Partial Differential Equations</a></li>
+<li><a href="section-heat-equation.html" data-scroll="section-heat-equation">The Heat Equation</a></li>
+<li><a href="section-fourier-series.html" data-scroll="section-fourier-series">Fourier Series</a></li>
+<li><a href="section-heat-equation-boundary.html" data-scroll="section-heat-equation-boundary">Boundary Conditions for the Heat Equation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-assignments.html" data-scroll="chapter-assignments"><span class="codenumber">8</span> <span class="title">Assignments</span></a><ul>
+<li><a href="section-assignment1.html" data-scroll="section-assignment1">Assignment 1</a></li>
+<li><a href="section-assignment2.html" data-scroll="section-assignment2">Assignment 2</a></li>
+<li><a href="section-assignment3.html" data-scroll="section-assignment3">Assignment 3</a></li>
+<li><a href="section-assignment4.html" data-scroll="section-assignment4">Assignment 4</a></li>
+<li><a href="section-assignment5.html" data-scroll="section-assignment5">Assignment 5</a></li>
+<li><a href="section-assignment6.html" data-scroll="section-assignment6">Assignment 6</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-resonance"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Resonance</span>
+</h2>
+<section class="introduction" id="introduction-6"><p id="p-263">The discussion <a href="section-undetermined-coefficients.html" class="internal" title="Section 3.2: The Method of Undetermined Coefficients">Section 3.2</a> about the similarity between forcing terms and the homogeneous solutions leads into the subject of resonance in harmonic sequences. The question of resonance is this: is there a particular frequency for an external force on a harmonic system which produces the strongest effect?</p>
+<p id="p-264">This is an important question in a number of situations. In audio design and acoustics, an engineer may want to design explicitly for resonance. In the safety of structures, an engineer would like to ensure that resonant behaviour is impossible.</p>
+<p id="p-265">I'll start with the SOCCLDE describing an underdamped harmonic system. (Underdamped is necessary to allow for the possibility of resonance, as the calculations will show). Recall that for harmonic systems, the coefficients can be identified as mass <span class="process-math">\(m\text{,}\)</span> spring constant <span class="process-math">\(k\text{,}\)</span> coefficient of friction <span class="process-math">\(b\)</span> and forcing <span class="process-math">\(f(t)\text{.}\)</span></p>
+<div class="displaymath process-math">
+\begin{equation*}
+m y^{\prime \prime} + b y^{\prime} + ky = f(t)
+\end{equation*}
+</div>
+<p class="continuation">Look at the characterstic equation <span class="process-math">\(mr^2 + br + k=0\text{.}\)</span> It has solutions</p>
+<div class="displaymath process-math">
+\begin{equation*}
+r = \frac{-b}{2m} \pm \frac{\sqrt{b^2-4km}}{2m}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">I can define a new constant, called the damping constant, to keep track of the behaviour.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\zeta \defeq \frac{b}{2\sqrt{km}}
+\end{equation*}
+</div>
+<p class="continuation">The damping constant gives a nice measure of the friction. If <span class="process-math">\(\zeta \lt  1\)</span> then the system is underdamped and there is sinusoidal behaviour. If <span class="process-math">\(\zeta = 1\)</span> the situation is critically damped and if <span class="process-math">\(\zeta &gt; 1\text{,}\)</span> the situation is overdamped; in both cases, there is exponential decay without oscillations. The frictionless case is <span class="process-math">\(\zeta = 0\text{.}\)</span> Let me return to the frictionless case for a moment. The solutions when <span class="process-math">\(\zeta = 0\)</span> are</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y = A \cos \sqrt{\frac{k}{m}} t + B \sin \sqrt{\frac{k}{m}} t\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now I will define a second important constant.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\omega \defeq \sqrt{\frac{k}{m}}
+\end{equation*}
+</div>
+<p class="continuation">This constant is called the natural frequency. It represents the frequency of sinusoidal oscillation in a perfect system without friction. (Note that all of the frequencies in this section are not true frequencies: they are off by a factor of <span class="process-math">\(\frac{1}{2\pi}\text{.}\)</span> However, I'll ignore this fact and keep referring to them as frequencies.)</p>
+<p id="p-266">Finally, I'll define a third important constant.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda \defeq \frac{b}{2m}
+\end{equation*}
+</div>
+<p class="continuation">If I look back to the underdamped case, the exponential decay term can be written <span class="process-math">\(e^{-\lambda t}\text{.}\)</span> Therefore, <span class="process-math">\(\lambda\)</span> is called the decay coefficient. With these new constants, the roots of the characteristic equation become <span class="process-math">\(r
+= -\lambda +\pm \imath \sqrt{\omega^2 - \lambda^2}\)</span> and I can rewrite the homogeneous differential equation as</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y^{\prime \prime} + 2\lambda y^\prime + \omega^2 y = 0 \text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now return to the idea of a sinusoidal forcing term <span class="process-math">\(f(t) = F\sin \gamma t\)</span> with some frequency <span class="process-math">\(\gamma\text{.}\)</span> I want to look at four situations to understand the effect of this force and the possibility of resonance.</p></section><section class="subsection" id="subsection-no-friction-no-forcing"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">Situation 1: No Friction, No Forcing</span>
+</h3>
+<p id="p-267">This is the trivial base case, where the system just oscillates forever with frequency <span class="process-math">\(\omega\text{.}\)</span> This frequency is called the natural frequency because it describes the dynamics of this trival base case, even if the ideal frictionless situation isn't particularly natural.</p></section><section class="subsection" id="subsection-no-friction-forcing"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">Situation 2: No Friction, Forcing</span>
+</h3>
+<p id="p-268">The differential equation in this case has the form</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y^{\prime \prime} + \omega^2 y = F \sin \gamma t\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This is something that I can solve with undetermined coefficients in two subcases. In the first sub-case, I assume that <span class="process-math">\(\gamma \neq \omega\text{.}\)</span> Then the forcing term is unlike the homogeneous solutions and I can make the following guess for the particular solution.</p>
+<div class="displaymath process-math">
+\begin{align*}
+y_p \amp = C \sin \gamma t + D \cos \gamma t
+\end{align*}
+</div>
+<p class="continuation">I'll take the derivatives of the particular solution, put them in the differential equation, and compare coefficients to get a system of two equations.</p>
+<div class="displaymath process-math">
+\begin{align*}
+y_p^\prime \amp = \gamma C \cos \gamma t - \gamma D \sin
+\gamma t\\
+y_p^{\prime \prime} \amp = -\gamma^2 C \sin \gamma t -
+\gamma^2 D \cos \gamma t\\
+Ly_p \amp = (-\gamma^2 C + \omega^2 C) \sin \gamma t +
+(-\gamma^2 D + \omega^2 D) \cos \gamma t = F \sin \gamma t\\
+-\gamma^2 C + \omega^2 C \amp = F \implies C =
+\frac{F}{\omega^2 - \gamma^2 }
+\end{align*}
+</div>
+<p class="continuation">The two equations in the system are independent, since the first only <span class="process-math">\(C\)</span> and the second only involves <span class="process-math">\(D\text{.}\)</span> I'll solve them each and use the results to write the particular solution. The full solution is then the homogeneous solution (which is case 1 without forcing, so uses the natural frequency <span class="process-math">\(\omega\)</span>) plus this new particular solution.</p>
+<div class="displaymath process-math">
+\begin{align*}
+-\gamma^2 D + \omega^2 D \amp = 0 \implies D = 0\\
+y_p \amp = \frac{F}{\omega^2 - \gamma^2} \sin \gamma t\\
+y \amp = A \sin \omega t + B \cos \omega t +
+\frac{F}{\omega^2 - \gamma^2} \sin \gamma t
+\end{align*}
+</div>
+<p class="continuation">The particular solution is a sine wave with amplitutde <span class="process-math">\(\frac{F}{\omega^2 - \gamma^2}\text{.}\)</span> The closer the forcing frequency is to the natural frequency, the greater the amplitude of the resulting oscillation. (The restriction <span class="process-math">\(\gamma \neq \omega\)</span> is also obviously important here to avoid division by zero.) If I impose the initial conditions <span class="process-math">\(y(0) = 0\)</span> and <span class="process-math">\(y^\prime(0) = 0\text{,}\)</span> then the system is initially at rest and the only energy in the system comes from the external forcing. In this case, I can calculate that <span class="process-math">\(B=0\)</span> from the first initial condition. The calculation for the second initial condition is as follows.</p>
+<div class="displaymath process-math">
+\begin{align*}
+y^{\prime} \amp = \omega A \cos \omega t + \frac{\gamma
+F}{\omega^2 - \gamma^2} \cos \gamma t\\
+y^\prime (0) \amp = A \omega + \frac{\gamma F}{\omega^2 -
+\gamma^2} = 0 \implies A = \frac{-\gamma F}{\omega(\omega^2
+- \gamma^2)}
+\end{align*}
+</div>
+<p class="continuation">Then I can write the unique solution for this initial value problems. I do a bit of algebra to write it in common denominator.</p>
+<div class="displaymath process-math">
+\begin{align*}
+y \amp = \frac{-\gamma F}{\omega( \omega^2 - \gamma^2)} \sin
+\omega t + \frac{F}{\omega^2 - \gamma^2} \sin \gamma t =
+\frac{-\gamma F \sin \omega t + \omega F \sin \gamma
+t}{\omega (\omega^2 - \gamma^2)}
+\end{align*}
+</div>
+<p class="continuation">Now, to answer the question of resonance, I'll take the limit of this solution as <span class="process-math">\(\gamma \rightarrow \omega\text{.}\)</span> The denominator is undefined, but the numerator also evaluates to <span class="process-math">\(0\text{,}\)</span> so I can apply L'Hôpital's rule to calculate the limit. After the derivative of the numerator and the denominator, the resulting limit can be calculated directly.</p>
+<div class="displaymath process-math">
+\begin{align*}
+\lim_{\gamma \rightarrow \omega} \frac{-\gamma F \sin \omega
+t + \omega F \sin \gamma t}{\omega (\omega^2 - \gamma^2)}
+\amp = \lim_{\gamma \rightarrow \omega} \frac{-F \sin \omega
+t + \omega t F \cos \gamma t}{-2\gamma \omega}\\
+\amp = \frac{-F \sin \omega t + \omega t F \cos \omega t}{-2
+\omega^2}\\
+\amp = \frac{F}{2\omega^2} \sin \omega t - \frac{Ft \cos
+\omega t}{2\omega}
+\end{align*}
+</div>
+<p class="continuation">The result of the limit has a <span class="process-math">\(t \cos \omega t\)</span> term, which is a sinusoidal wave with linear growth in amplitude. The amplidute of the system will grow linearly without bound. This is the ideal (frictionless) understanding of resonance, where the oscillations of the system continue to grow with larger and larger amplitude.</p>
+<p id="p-269">This is a justification, if you want, of why multiplying by <span class="process-math">\(t\)</span> gives the particular solutions when there is a forcing term similar to the homogeneous solutions. When <span class="process-math">\(\gamma =
+\omega\text{,}\)</span> the forcing is already a homogeneous solution That's precisely what happens in the resonant case — in the limit <span class="process-math">\(\gamma \rightarrow \omega\text{.}\)</span> It is also what we would have found if we with <span class="process-math">\(\omega = \gamma\)</span> and used undetermined coefficients, instead of using the limit process. When the forcing term lines up perfectly with the natural frequency, there is an additional linear growth term in the resulting solution, due to resonance.</p></section><section class="subsection" id="subsection-friction-no-forcing"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.3</span> <span class="title">Section 3: Friction, No Forcing</span>
+</h3>
+<p id="p-270">In the third case, I finally include friction. Using the new constant, I can write the general homogeneous SOCCLDE as folllows</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y^{\prime \prime} + 2\lambda y^\prime + \omega^2 y = 0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The characteristic equation is <span class="process-math">\(r^2 + 2\lambda r +
+\omega^2\)</span> with roots <span class="process-math">\(-\lambda \pm \imath \sqrt{\omega^2 -
+\lambda^2}\text{.}\)</span> If I let <span class="process-math">\(\omega_d = \sqrt{\omega^2 -
+\lambda^2}\text{,}\)</span> then the homogeneous solutions are</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y= e^{-\lambda t} (A \cos \omega_d t + B \sin \omega_d t)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The new constant <span class="process-math">\(\omega_d\)</span> is called the damped frequency. It is not the same as the natural frequency, since friction changes the ‘natural’ frequency of oscillations of the system. I can explicitly state the relationship between damped and natural frequency via rewriting the constants. From the definitions of the constants, the following identity is true.</p>
+<div class="displaymath process-math">
+\begin{align*}
+\amp \lambda^2 = \frac{\zeta^2}{\omega^2} \amp \amp \implies 
+\amp \amp \lambda^2 \omega^2 = \zeta^2\text{.}
+\end{align*}
+</div>
+<p class="continuation">Using this, I can write the relationship between the damped frequency and the natural frequency.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\omega_d = \omega \sqrt{1 - \zeta^2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">With friction involved and no forcing, the system will display sinusoidally decaying oscillations where the frequency is this <span class="process-math">\(\omega_d\text{.}\)</span> As an interesting aside, as <span class="process-math">\(\zeta\)</span> approaches <span class="process-math">\(1\)</span> and the systemapproach the critical damped situation with simple exponential decay, this damped frequency approaches zero. This explains the transition from sinusoidal to exponential behaviour, which might have seemed like a strange transition. As friction increases and the system approaches the critically damped situation, the wavelength of the sine wave (which is a reciprocal of frequency) grows to <span class="process-math">\(\infty\text{.}\)</span> The wave stretches out further and further until there isn't any wave left at all, just an exponential decay.</p>
+<p id="p-271">In this third case, the damped frequency completely described the behaviour (along with the decay coefficient). There isn't resonance until a forcing term is added.</p></section><section class="subsection" id="subsection-friction-forcing"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.4</span> <span class="title">Situation 4: Friction and Forcing</span>
+</h3>
+<p id="p-272">If I finally include both friction and a forcing term, I can use the new constant to rewrite the DE as</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y^{\prime\prime} + 2\lambda y^\prime + \omega^2 y = F \sin
+\gamma t
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(\gamma\)</span> again is the forcing frequency. The homogeneous solutions are known from the previous case and depend on the damped frequency.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+y_h = e^{-\lambda t} (A \cos \omega_d t + B \sin \omega_d t)
+\end{equation*}
+</div>
+<p class="continuation">Since the forcing lacks the exponential term, it is not the same as the homogeneous solutions even if <span class="process-math">\(\gamma = \omega_d\text{.}\)</span> I don't need any subcases here: I can use undetermined coefficients without any alteration. Like case 2, I use undetermined coefficients to solve for the particular solution. I start with the guess for the particular solution based on the forcing term.</p>
+<div class="displaymath process-math">
+\begin{align*}
+y_p \amp = C \sin \gamma t + D \cos \gamma t
+\end{align*}
+</div>
+<p class="continuation">Then I differentiate and put the results into the differential equation.</p>
+<div class="displaymath process-math">
+\begin{align*}
+y_p^\prime \amp = C \gamma \cos \gamma t - D \gamma \sin
+\gamma t\\
+y_p^{\prime \prime} \amp = - C \gamma^2 \cos \gamma t - D
+\gamma^2 \sin \gamma t\\
+Ly_p \amp = (-C\gamma^2 - 2\lambda D \gamma + C \omega^2)
+\sin \gamma t + (-D\gamma^2 + 2\lambda C \gamma + D
+\omega^2) \cos \gamma t \\
+\amp = F \sin \gamma t 
+\end{align*}
+</div>
+<p class="continuation">Then I compare the coefficients to get two equations.</p>
+<div class="displaymath process-math">
+\begin{align*}
+-C\gamma^2 - 2\lambda D\gamma + C \omega^2 \amp = F\\
+-D\gamma^2 + 2\lambda C\gamma + D \omega^2 \amp = 0
+\end{align*}
+</div>
+<p class="continuation">This is a bit tricky to manipulate in general. I'll set it up as a matrix system and invert the matrix to solve the system.</p>
+<div class="displaymath process-math">
+\begin{align*}
+\left( \begin{matrix} 
+\omega^2 - \gamma^2 \amp -2\lambda \gamma \\
+2\lambda \gamma \amp \omega^2 - \gamma^2 
+\end{matrix} \right) 
+\left( \begin{matrix} 
+C \\ D 
+\end{matrix} \right) \amp = 
+\left( \begin{matrix} 
+F \\ 0 
+\end{matrix} \right)\\
+M \amp = \left( \begin{matrix} 
+\omega^2 - \gamma^2 \amp -2\lambda \gamma \\
+2\lambda \gamma \amp \omega^2 - \gamma^2 
+\end{matrix} \right)\\
+\det M \amp = (\omega^2 - \gamma^2)^2 + 4 \lambda^2
+\gamma^2\\
+M^{-1} \amp = \frac{1}{ \det M} \left( \begin{matrix}
+\omega^2 - \gamma^2 \amp 2 \lambda \gamma \\
+-2 \lambda \gamma \amp \omega^2 - \gamma^2 
+\end{matrix} \right)\\
+\left( \begin{matrix} 
+C \\ D 
+\end{matrix} \right) \amp = \frac{1}{\det M} \left(
+\begin{matrix}  
+\omega^2 - \gamma^2 \amp 2 \lambda \gamma \\
+-2 \lambda \gamma \amp \omega^2 - \gamma^2 
+\end{matrix} \right) \left( \begin{matrix} 
+F \\ 0 
+\end{matrix} \right)\\
+C \amp = \frac{(\omega^2 - \gamma^2) F}{(\omega^2 -
+\gamma^2)^2 + 4 \lambda^2 \gamma^2}\\
+D \amp = \frac{-2\gamma\lambda F}{(\omega^2 - \gamma^2)^2 +
+4 \lambda^2 \gamma^2}
+\end{align*}
+</div>
+<p class="continuation">Now that I have the coefficients, I can write the particular solution and then the general solution including the homogeneous solution. In the particular solution, the coefficients already have the same denominator, so I can combine the two terms into one fraction.</p>
+<div class="displaymath process-math">
+\begin{align*}
+y_p \amp = \frac{(\omega^2 - \gamma^2) F\sin \gamma t - 2
+\gamma \lambda F \cos \gamma t}{(\omega^2 - \gamma^2)^2 + 4
+\lambda^2 \gamma^2}\\
+y \amp = e^{-\lambda t} (A \cos \omega_d t + B \sin \omega_d
+t) + \frac{(\omega^2 - \gamma^2) F\sin \gamma t - 2 \gamma
+\lambda F \cos \gamma t}{(\omega^2 - \gamma^2) + 4 \lambda^2
+\gamma^2}
+\end{align*}
+</div>
+<p class="continuation">As time passes, the homogeneous solutions fall out and only the term with the forcing frequency <span class="process-math">\(\gamma\)</span> remains. What is its amplitude? The term is a linear combination of a sine and cosine wave with the same frequencies, so I can use <a href="" class="xref" data-knowl="./knowl/proposition-wave-combination.html" title="Proposition 3.1.4">Proposition 3.1.4</a> to combine the result into one sinusoidal wave. What I care about, for the purposes of resonance, is just the amplitude of that wave. Using the proposition, I calculate that amplitude.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+a = F \frac{\sqrt{(\omega^2 - \gamma^2)^2 + 4 \gamma^2
+\lambda^2}}{(\omega^2 - \gamma^2)^2 + 4 \gamma^2 \lambda^2} =
+\frac{F}{\sqrt{(\omega^2 - \gamma^2)^2 + 4 \gamma^2
+\lambda^2}}
+\end{equation*}
+</div>
+<p class="continuation">The question of resonance is this: if the magnitude of the force <span class="process-math">\(F\)</span> is fixed, what is the maximum amplitude can be achieved by altering the forcing frequency? Note this amplitude is always finite — with friction, there is no infinite growth of amplitude as there was in the second case. (This is expected predicted, since I didn't need to multiply by <span class="process-math">\(t\)</span> when we setup the undetermined coefficients.) However, the amplitude can be quite large. This is a optimization problem, so I differentiate the expression for amplitude and find its critical points. (Not that I am looking to optimize by amplitude, so the function and the derivative are in the variable <span class="process-math">\(\gamma\)</span>).</p>
+<div class="displaymath process-math">
+\begin{align*}
+a(\gamma) \amp = \frac{F}{\sqrt{(\omega^2 - \gamma^2)^2 + 4
+\gamma^2 \lambda^2}}\\
+a^\prime(\gamma) \amp  = \frac{-F(2 (\omega^2 - \gamma^2)
+(-2\gamma) + 8 \gamma \lambda^2)}{2((\omega^2 - \gamma^2)^2
++ 4 \gamma^2 \lambda^2)^{\frac{3}{2}}} = 0\\
+4 \gamma (\omega^2 - \gamma^2) \amp = 8 \gamma \lambda^2\\
+\omega^2 - \gamma^2 \amp  = 2 \lambda^2\\
+\gamma^2 \amp  = \omega^2 - 2 \lambda^2\\
+\gamma \amp  = \sqrt{\omega^2 - 2 \lambda^2}
+\end{align*}
+</div>
+<p class="continuation">I'll skip the testing of intervals to classify this critical point; this is, indeed, a maximum for amplitude. Now I want to write this result is a slightly different way. Recall that <span class="process-math">\(\lambda^2 = \omega^2 \zeta^2\text{.}\)</span> I can use that to factor <span class="process-math">\(\omega\)</span> out of the expression for <span class="process-math">\(\gamma\text{.}\)</span></p>
+<div class="displaymath process-math">
+\begin{equation*}
+\gamma = \sqrt{\omega^2 - 2 \zeta^2 \omega^2} = \omega \sqrt{1
+- 2 \zeta^2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This is the resonant frequency. However, how can I be certain that it exists? I need <span class="process-math">\(1-2\zeta^2\)</span> to be positive to define this square root. This implies, certainly, that <span class="process-math">\(\zeta \lt  1\text{,}\)</span> which I assumed when I decided to work with the underdamped case (that assumption is now justified). However, the inequality is stricter.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\zeta^2 \leq \frac{1}{2} \implies \zeta \leq
+\frac{1}{\sqrt{2}}
+\end{equation*}
+</div>
+<p class="continuation">The bound for the damping coefficient is smaller than simply for the underdamped case. I conclude that resonant frequency only exists is the friction is small enough, measured by this <span class="process-math">\(\zeta \lt \frac{1}{\sqrt{2}}\text{.}\)</span> In particular, if I am concerned about safety and want to avoid the situation of resonant frequency, this calculation lets me know the minimum friction I need to build into the system to avoid the possibility of resonance.</p></section></section></div></main>
+</div>
+</body>
+</html>

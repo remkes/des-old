@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:15-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>Let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(L = \frac{d}{dt} + Q(t)\)</span> be as before, and let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y_h\)</span> be a homogeneous solutions (a solution to <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(Ly =
+0\)</span>). The technique I  will use is called <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">variation of parameters</dfn>. This technique says I should look for a particular solution of the type <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y_p = g(t) y_h\text{.}\)</span> (This is part of a very general strategy in solving differential equations: make some kind of reasonable guess for what form the solution should take then investigate that form.) Using this assuming, I have to try to find the new function <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g(t)\text{.}\)</span> In order to do that, I put my assumed solution <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g(t) y_h\)</span> into the equation and do some manipulations.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+Ly_p(t) = L g(t) y_h(t) = Q(t)
+\end{equation*}
+</div>
+<p class="continuation">I need to use the product rule to differentiate <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g(t) y_h\)</span> when I apply the differential operator to the left side</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+g^\prime(t) y_h(t) + g(t) y_h^\prime(t) + g(t) P(t) y_h(t) =
+Q(t)
+\end{equation*}
+</div>
+<p class="continuation">I can factor <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g(t)\)</span> out of two terms.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+g^\prime(t) y_h(t) + g(t) \Big( y_h^\prime(t) + P(t) y_h(t) \Big)
+= Q(t)
+\end{equation*}
+</div>
+<p class="continuation">The expression inside the brackets is precisely the differential operator <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(L\)</span> applied to <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y_h(t)\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+g^\prime(t) y_h(t) + g(t) L y_h = Q(t)
+\end{equation*}
+</div>
+<p class="continuation">Since <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y_h\)</span> is the homogeneous solution, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(L y_h = 0\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+g^\prime(t) y_h(t) + g(t) 0 = Q(t)
+\end{equation*}
+</div>
+<p class="continuation">Now I can solve for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g^\prime(t)\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+g^\prime(t) = \frac{Q(t)}{y_h(t)}
+\end{equation*}
+</div>
+<p class="continuation">Then I can integrate to find <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g(t)\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+g(t) = \int \frac{Q(t)}{y_h(t)}
+\end{equation*}
+</div>
+<p class="continuation">Now I have an expression for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g(t)\text{.}\)</span> Let me write <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y_p\)</span> using this <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g(t)\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y_p = g(t) y_h = \left( \int \frac{Q(t)}{e^{-\int P(t) dt}}
+dt \right) y_h
+\end{equation*}
+</div>
+<p class="continuation">If I want, I can use the fact that the homogeneous solution is <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y = e^{-\int P(t)dt}\)</span> to write all of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(y_p\)</span> in terms of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(Q(t)\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(t)\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y_p = \left( \int \frac{Q(t)}{e^{-\int P(t) dt}} dt \right)
+e^{-\int P(t) dt } = e^{-\int P(t) dt} \int e^{\int P(t) dt}
+Q(t) dt
+\end{equation*}
+</div>
+<p class="continuation">This is a complete solution, and the presentation I've given is the most general presentation and introduces the useful idea of variation of parameters. However, there is a slightly different presentation of the same solution which is common is the literature and turns out to be more efficient for actually solving these DEs. It involves the following definition.</p>
+<span class="incontext"><a href="section-linear-des.html#p-152">in-context</a></span>
+</body>
+</html>

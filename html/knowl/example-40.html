@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:17-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">3.2.2</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span>
+</h3>
+<p>This example lacks initial values. I've skipped over some of the algebra for the sake of brevity.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y^{\prime \prime} + 8 y^\prime + 3y = e^{-2t} \cos 2t
+\end{equation*}
+</div>
+<p class="continuation">The linear differential operator is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+L = \frac{d^2}{dt^2} + 8 \frac{d}{dt} + 3\text{.}
+\end{equation*}
+</div>
+<p class="continuation">I first solve the homogeneous case using the characteristic equation, finding the roots and writing the general solution.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+Ly \amp = 0 \implies r^2 + 8r + 3 = 0\\
+r \amp = -4 \pm \sqrt{13}\\
+y_h \amp = Ae^{(-4+\sqrt{13})t} + B e^{(-4-\sqrt{13})t}
+\end{align*}
+</div>
+<p class="continuation">The force term is <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(e^{-2t} \cos (2t)\text{,}\)</span> which is a product of an exponential and a sinuosoidal term one. The guess for undetermined coefficients has the same pattern.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y_p = e^{-2t} (C \cos 2t + D \sin 2t)
+\end{equation*}
+</div>
+<p class="continuation">I'll need the derivatives of the guess to put it into the differential equation.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+y^\prime \amp = e^{-2t} ( (-2C + 2D) \cos 2t + (-2D
+-2C)\sin 2t)\\
+y^{\prime\prime} \amp = e^{-2t} ( (-8D) \cos 2t + (8C)\sin
+2t)
+\end{align*}
+</div>
+<p class="continuation">I put all the pieces into the non-homogeneous DE.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+L y_p = e^{-2t} ((8D-13C) \cos 2t + (-8C -13D) \sin
+2t) = e^{-2t} \cos 2t
+\end{equation*}
+</div>
+<p class="continuation">I need to compare coefficients. There is a cosine term on the right with coefficient <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(1\text{.}\)</span> There is no sine term on the right, so that coefficient has to be <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(0\text{.}\)</span> This gives a system of two equations.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+8D - 13 C \amp = 1\\
+-8C - 13 D \amp = 0
+\end{align*}
+</div>
+<p class="continuation">First I use the second equation to isolate <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(D\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+D = \frac{-8C}{13}
+\end{equation*}
+</div>
+<p class="continuation">Then I substitute the value of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(D\)</span> in the first equation and solve for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(C\text{.}\)</span> Once I know <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(C\text{,}\)</span> I can use the previous equation to find <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(D\)</span> as well.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+C = \frac{-13}{233} \implies D = \frac{8}{233}
+\end{equation*}
+</div>
+<p class="continuation">Now that I have the coefficients, I know the particular solution.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y_p = e^{-2t} \left( \frac{-13}{233} \cos 2t +
+\frac{8}{233} \sin 2t \right)
+\end{equation*}
+</div>
+<p class="continuation">Finally, the general solution is the particular solution plus the homogeneous solution.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y = Ae^{(-4+\sqrt{13})t} + B e^{(-4-\sqrt{13})t} +
+e^{-2t} \left( \frac{-13}{233} \cos 2t + \frac{8}{233}
+\sin 2t \right)
+\end{equation*}
+</div>
+<p class="continuation">It is useful to go back to the harmonic system interpretation to understand these solutions. There are no oscillations in the homogeneous case here: sufficient friction gives exponential decay. However, there is oscillating forcing, though the forcing is also undering going exponential decay. This forcing is enough to add sinusoidal behaviour to the full solutions, but the decaying forcing terms means that the sinusoidal term will also decay over time. The amplitude of this combination of waves is given by the pythagorean combination: <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\frac{\sqrt{13^2 + 8^2}}{233} =
+\frac{1}{\sqrt{233}}\text{.}\)</span></p></article><span class="incontext"><a href="section-undetermined-coefficients.html#example-40">in-context</a></span>
+</body>
+</html>

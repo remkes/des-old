@@ -5,8 +5,45 @@
   <title>Assignment 6</title>
   <p><ol>
     <li>
-      <p>
-      </p>
+      Calcuulate the Fourier sine series for this function on the domain
+      <m>(0, \pi)</m>. 
+      <me>
+        f(x) = 4 \delta_{\frac{\pi}{2}}(x) 
+      </me>
+      Given an interpretation of this as the initial conditions for
+      the heat equation. Then write down and describe the solution
+      of the heat equation using this initial condition. (8)
+    </li>
+    <li>
+      Calcuulate the Fourier sine series for this function on the domain
+      <m>(0, \pi)</m>. 
+      <me>
+        f(x) = 3u_{\frac{\pi}{2}}(x) 
+      </me>
+      Given an interpretation of this as the initial conditions for
+      the heat equation. Then write down and describe the solution
+      of the heat equation using this initial condition. (8)
+    </li>
+    <li>
+      Calcuulate the Fourier sine series for this function on the domain
+      <m>(0, \pi)</m>. 
+      <me>
+        f(x) = 2 \sin x - \frac{1}{4} \sin (3x) + \frac{1}{5} \sin
+        (7x) + \frac{1}{25} \sin (12 x) - \frac{1}{37} \sin (20x) 
+      </me>
+      Given an interpretation of this as the initial conditions for
+      the heat equation. Then write down and describe the solution
+      of the heat equation using this initial condition. (8)
+    </li>
+    <li>
+      Consider trying to solve the heat equation as describe in this
+      course, but using the initial condition of <m>u(0,t) = 0</m> and
+      <m>u(\pi,t) = 300e^{-\frac{1}{20}t}</m>. Go through the
+      solution step and describe how this change affect the solution.
+      How is the Fourier series and its calculation altered by this?
+      (I don't want you actually complete solve the heat equation with
+      these boundary condition -- just investigate enough to comment
+      on how the process changes and what new challenges arise). (8) 
     </li>
   </ol></p>
 </section>

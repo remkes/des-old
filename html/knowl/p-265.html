@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:17-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<p>I'll start with the SOCCLDE describing an underdamped harmonic system. (Underdamped is necessary to allow for the possibility of resonance, as the calculations will show). Recall that for harmonic systems, the coefficients can be identified as mass <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\text{,}\)</span> spring constant <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k\text{,}\)</span> coefficient of friction <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\)</span> and forcing <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f(t)\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+m y^{\prime \prime} + b y^{\prime} + ky = f(t)
+\end{equation*}
+</div>
+<p class="continuation">Look at the characterstic equation <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(mr^2 + br + k=0\text{.}\)</span> It has solutions</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+r = \frac{-b}{2m} \pm \frac{\sqrt{b^2-4km}}{2m}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">I can define a new constant, called the damping constant, to keep track of the behaviour.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\zeta \defeq \frac{b}{2\sqrt{km}}
+\end{equation*}
+</div>
+<p class="continuation">The damping constant gives a nice measure of the friction. If <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\zeta \lt  1\)</span> then the system is underdamped and there is sinusoidal behaviour. If <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\zeta = 1\)</span> the situation is critically damped and if <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\zeta &gt; 1\text{,}\)</span> the situation is overdamped; in both cases, there is exponential decay without oscillations. The frictionless case is <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\zeta = 0\text{.}\)</span> Let me return to the frictionless case for a moment. The solutions when <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\zeta = 0\)</span> are</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+y = A \cos \sqrt{\frac{k}{m}} t + B \sin \sqrt{\frac{k}{m}} t\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now I will define a second important constant.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\omega \defeq \sqrt{\frac{k}{m}}
+\end{equation*}
+</div>
+<p class="continuation">This constant is called the natural frequency. It represents the frequency of sinusoidal oscillation in a perfect system without friction. (Note that all of the frequencies in this section are not true frequencies: they are off by a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\frac{1}{2\pi}\text{.}\)</span> However, I'll ignore this fact and keep referring to them as frequencies.)</p>
+<span class="incontext"><a href="section-resonance.html#p-265">in-context</a></span>
+</body>
+</html>

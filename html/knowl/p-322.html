@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:19-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<p>Here's a list of further interesting properties.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+P_k(-t) \amp = (-1)^k P_k(t)\\
+\int_{-1}^1 P_k(t) P_l(t) \amp = \frac{2}{2l+1} \delta_{kl}\\
+0 \amp = (k+1)P_{k+1}(t) - (2k+1)tP_k(t) + k P_{k-1}(t) \\
+(2k+1) P_k(t) \amp = \frac{d}{dt} \left( P_{k+1}(t) -
+P_{k-1}(t) \right)\\
+P_k(t) \amp = \sum_{j=0}^k (-1)^j \binom{k}{j}^2 \left(
+\frac{1+t}{2} \right)^{k-j} \left( \frac{1-t}{2} \right)^j
+\end{align*}
+</div>
+<p class="continuation">The <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\delta_{kl}\)</span> in the second property is the Kronecker delta. It evalutes to <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(1\)</span> if <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k=l\)</span> and to <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(0\)</span> otherwise. It's a very useful piece of notation. This second property is an orthogonality property: if I define an inner product of two functions as the integral of their product over <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\([-1,1]\text{,}\)</span> then the Legendre polynomials are all orthogonal to each other. In linear algebra language, they form an orthogonal basis for the infinite dimensional linear space of polynomials (with this particular inner product). Orthogonal bases are nice to work with, another fact that recommends the Legendre polynomials.</p>
+<span class="incontext"><a href="section-legendre.html#p-322">in-context</a></span>
+</body>
+</html>

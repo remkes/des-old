@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:27-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like"><p>I can use an example to see what this looks like with explicit numbers. Set the boundary contidions to be <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(u(0,t) = 1\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(u(\pi, t) = 1 + \pi\)</span> and the initial condition <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(u(x,0) = x^2 + (1-\pi)x + 1\text{.}\)</span> The steady state solution is the line <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(u = x+1\text{.}\)</span> I calculate the Fourier coefficients.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+T_n \amp = \frac{2}{\pi} \int_0^\pi (x^2 - \pi x) \sin nx
+= \frac{2}{\pi} \int_0^\pi x^2 \sin nx - 2 \int_0^\pi
+x\sin nx\\
+\amp = \frac{2}{\pi} \left( \left. \frac{-x^2 \cos nx}{n}
+\right|_0^\pi + \frac{2}{n} \int_0^\pi x \cos nx \right) -
+2 \left( \left. \frac{-x \cos nx}{n} \right|_0^{\pi} +
+\int_0^{\pi} \cos nx dx \right)\\
+\amp = \frac{2}{\pi} \left( \frac{-\pi^2 \cos n\pi}{n} +
+\left. \frac{2}{n} \frac{x \sin nx}{n} \right|_0^\pi -
+\frac{2}{n^2} \int_0^\pi \sin nx \right) - 2 \left(
+\frac{2\pi}{n} + \left. \frac{\sin nx}{n} \right|_0^{\pi}
+\right)\\
+\amp = \frac{2}{\pi} \left( \frac{\pi^2 (-1)^{n+1}}{n} + 0
++ \left. \frac{2\cos nx}{n^3} \right|_0^\pi \right) -
+\frac{4\pi}{n} - 0\\
+\amp = \frac{2}{\pi} \left( \frac{\pi^2 (-1)^{n+1}}{n} +
+\frac{2(-1)^n}{n^3} - \frac{2}{n^3} -
+\frac{2\pi^2}{n}\right)\\
+\amp = \frac{2n^2 \pi^2 (-1)^{n+1} + 2\pi (-1)^n - 2\pi -
+4\pi n^2 }{\pi n^3}
+\end{align*}
+</div>
+<p class="continuation">The general solution uses the Fourier coefficients.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+u(x,t) = 1 + x + \sum_{n=1}^\infty \left[ \frac{2n^2 \pi^2
+(-1)^{n+1} + 2\pi (-1)^n - 2\pi - 4\pi n^2}{\pi n^3} \right]
+e^{-kn^2t} \sin (nx)
+\end{equation*}
+</div>
+<p class="continuation"><a href="" class="xref" data-knowl="./knowl/figure-diffusion2.html" title="Figure 7.4.2">Figure 7.4.2</a> shows this situation.</p></article></body>
+</html>

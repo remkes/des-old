@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-22T21:32:23-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span xmlns:svg="http://www.w3.org/2000/svg" class="space"> </span><span class="codenumber">5.9.2</span><span xmlns:svg="http://www.w3.org/2000/svg" class="period">.</span>
+</h3>
+<p>This examples involves a step function. To transform a step function, I need something like <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(u_a(t) f(t-a)\text{.}\)</span> In this equation, I want to adjust the forcing term to fit this pattern, so that the transform is clear. I do this by adding and subtracting <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(2u_2(t)\)</span> and factoring to fit the pattern.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+y^{\prime \prime} + 6y^\prime + 5y \amp = t - tu_2(t)\\
+y(0) \amp = 1 \\
+y^\prime(0) \amp = 0\\
+y^{\prime \prime} + 6y^\prime + 5y \amp = t - (t-2) u_2(t)
++ 2 u_2(t) \\
+s^2 Y - s + 6sY - 6 + 5Y \amp = \frac{1}{s^2} - e^{-2s}
+\frac{1}{s^2} + 2\frac{e^{-2s}}{s} 
+\end{align*}
+</div>
+<p class="continuation">This is an algebraic equation. I'll solve for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(Y\text{.}\)</span> Along the way, I'll factor the quadratic on the left and expand the terms on the right.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+(s+5)(s+1) Y \amp = \frac{1}{s^2} - \frac{e^{-2s}}{s^2} -
+\frac{2e^{-2s}}{s} + s + 6  \\
+Y \amp = \frac{1}{s^2(s+1)(s+5)} -
+\frac{e^{-2s}}{s^2(s+1)(s+5)} -
+\frac{2e^{-2s}}{s(s+1)(s+5)}  \\
+\amp + \frac{s}{(s+5)(s+1)} +
+\frac{6}{(s+5)(s+1)}  
+\end{align*}
+</div>
+<p class="continuation">I have five rational functions, some of which also have an exponential (which will eventually turn into a shift). I need partial fractions for all five rational functions. I'll to straight to the result.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\amp = \frac{1}{5s^2} + \frac{1}{4(s+1)} -
+\frac{1}{100(s+5)} - \frac{6}{25s} - \frac{e^{-2s}}{5s^2}
+- \frac{e^{-2s}}{4(s+1)} + \frac{e^{-2s}}{100(s+5)}  \\
+\amp + \frac{6e^{-2s}}{25s} -
+\frac{e^{-2s}}{2(s+1)} + \frac{e^{-2s}}{10(s+5)} +
+\frac{2e^{-2s}}{5s} + \frac{5}{4(s+5)} - \frac{1}{4(s+1)}\\
+\amp - \frac{3}{2(s+1)} + \frac{3}{2(s+5)}
+\end{align*}
+</div>
+<p class="continuation">Before doing the inverse transform, I'll gather like terms to save some work and boil down the expression a bit.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+Y \amp = \frac{1}{5s^2} - \frac{6}{25s} +
+\frac{3}{20(s+1)} + \left( \frac{-1}{100} + \frac{5}{4} +
+\frac{3}{2} \right) \frac{1}{s+5}  \\
+\amp + e^{-2s} \left( \frac{1}{5s^2} + \left(
+\frac{6}{25} + \frac{2}{5} \right) \frac{1}{s} + \left(
+\frac{-1}{4} - \frac{1}{2} \right) \frac{1}{s+1} +
+\left(\frac{1}{100} + \frac{1}{10} \right) \frac{1}{s+5}
+\right)  \\
+\amp = \frac{1}{5s^2} - \frac{6}{25s} - \frac{3}{2(s+1)} +
+\frac{137}{50(s+5)}  \\
+\amp + e^{-2s} \left( \frac{1}{5s^2} +
+\frac{16}{25s} - \frac{3}{4(s+1)} + \frac{11}{100(s+5)}
+\right)  
+\end{align*}
+</div>
+<p class="continuation">Now I apply the inverse transform, using the exponentials as shifts. After the inverse transform, I can make at least one small simplification, but the result is still pretty complicated.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+y \amp = \frac{t}{5} - \frac{6}{25} - \frac{3e^{-t}}{2} +
+\frac{137e^{-5t}}{50} + u_2(t) \left[ \frac{(t-2)}{5} +
+\frac{16}{25} - \frac{3e^{2-t}}{4} +
+\frac{11e^{10-5t}}{100} \right]  \\
+y \amp = \frac{t}{5} - \frac{6}{25} - \frac{3e^{-t}}{2} +
+\frac{137e^{-5t}}{50} + u_2(t) \left[ \frac{t}{5} +
+\frac{6}{25} - \frac{3e^{2-t}}{4} +
+\frac{11e^{10-5t}}{100} \right]  
+\end{align*}
+</div></article><span class="incontext"><a href="section-laplace-examples.html#example-70">in-context</a></span>
+</body>
+</html>

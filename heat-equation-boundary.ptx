@@ -1,5 +1,9 @@
 <section xml:id="section-heat-equation-boundary">
   <title>Boundary Conditions for the Heat Equation</title>
+  <p>
+    I want to show how the solutions to the heat equation can vary
+    when the boundary conditions are altered. 
+  </p>
   <figure xml:id="figure-diffusion1">
     <caption>Diffusion to a Linear Steady State</caption>
     <image xml:id="figure43" width="80%">
@@ -27,18 +31,12 @@
     </image>
   </figure>
   <p>
-    The general solution in this case is the sum of this steady There
-    are many pieces to the setup and solution of a PDE. In what we've
-    done so far for the heat equation, we allowed a nearly-arbitrary
-    initial conditions, since any function which has a Fourier series
-    satisfied. However, our boundary conditions were very
-    restrictive. We can get more complicated situations if we relax
-    the boundary conditions. A small increase in complexity comes
-    from constant but non-equal boundary conditions: <m>u(0,t) = A</m>
-    and <m>u(\pi,t) = B</m> for some constants <m>A</m> and <m>B</m>.
-    This is a situation where we will keep the ends of the rod at
-    constant temperature, but those temperatures need not be the
-    same.
+    A small increase in complexity of the solution to the heat
+    equation comes from constant but non-equal boundary conditions:
+    <m>u(0,t) = A</m> and <m>u(\pi,t) = B</m> for some constants
+    <m>A</m> and <m>B</m>.  This is a situation where I will keep the
+    ends of the rod at constant temperature, but those temperatures
+    need not be the same.
   </p>
   <p>
     In this case, seperation of variables when <m>\alpha = 0</m>
@@ -57,7 +55,8 @@
     ref="figure-diffusion1" />.
   </p>
   <p>
-    state with our previous solutions. The linearity of the system
+    Now I need to understand how to combine this linear steady
+    state with the previous solutions. The linearity of the system
     means that the solution with both boundary conditions set to
     <m>0</m> can simply be added to this steady state to give the
     general solution.
@@ -66,14 +65,14 @@
       (nx)
     </me>
     The calculation of the Fourier coefficients <m>T_n</m>, however,
-    needs an adjustment. We need to shift the function back to a
+    needs an adjustment. I need to shift the function back to a
     0-equilibrium situation to repeat the result of the previous
     section. With that shift, the integral that calculates the
-    coefficient is
+    coefficient changes to the following definition.
     <me>
       T_n = \frac{2}{\pi} \int_0^\pi \left( f(x) - \frac{B-A}{\pi} x -
       A \right) \sin nx dx
-    </me>.
+    </me>
   </p>
   <figure xml:id="figure-diffusion2">
     <caption>Heat Equation Examples with Initial Conditions <m>f(x)
@@ -112,12 +111,12 @@
   <example>
     <statement>
       <p>
-        We use an example to see what this looks like with explicit
-        numbers. This example is from Roberts and Marion. Set the
-        boundary contidions to be <m>u(0,t) = 1</m> and <m>u(\pi, t) =
-        1 + \pi</m> and the initial condition <m>u(x,0) = x^2 +
-        (1-\pi)x + 1</m>. The steady state solution is the line <m>u
-        = x+1</m>. We calculate the Fourier coefficients.
+        I can use an example to see what this looks like with explicit
+        numbers. Set the boundary contidions to be <m>u(0,t) = 1</m>
+        and <m>u(\pi, t) = 1 + \pi</m> and the initial condition
+        <m>u(x,0) = x^2 + (1-\pi)x + 1</m>. The steady state solution
+        is the line <m>u = x+1</m>. I calculate the Fourier
+        coefficients.
         <md>
           <mrow>
             T_n \amp = \frac{2}{\pi} \int_0^\pi (x^2 - \pi x) \sin nx
@@ -152,12 +151,12 @@
             4\pi n^2 }{\pi n^3}
           </mrow>
         </md>
-        The general solution is
+        The general solution uses the Fourier coefficients. 
         <me>
           u(x,t) = 1 + x + \sum_{n=1}^\infty \left[ \frac{2n^2 \pi^2
           (-1)^{n+1} + 2\pi (-1)^n - 2\pi - 4\pi n^2}{\pi n^3} \right]
           e^{-kn^2t} \sin (nx)
-        </me>.
+        </me>
         <xref ref="figure-diffusion2" /> shows this situation.
       </p>
     </statement>
