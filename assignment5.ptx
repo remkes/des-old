@@ -94,20 +94,20 @@
               \frac{dS}{dt} \amp = -aS(I + C) - bS(I + C)
             </mrow>
             <mrow>
-              \frac{dI}{dt} \amp = aSI - cI
+              \frac{dI}{dt} \amp = aS(I + C) - cI
             </mrow>
             <mrow>
-              \frac{dC}{dt} \amp = bSI
+              \frac{dC}{dt} \amp = bS(I + C)
             </mrow>
           </md>
         </li>
         <li>
           <md>
             <mrow>
-              \frac{dS}{dt} \amp = aSI - bSI
+              \frac{dS}{dt} \amp = -aSI + bI
             </mrow>
             <mrow>
-              \frac{dI}{dt} \amp = bSI - aSI
+              \frac{dI}{dt} \amp = aSI - bI
             </mrow>
           </md>
         </li>
@@ -120,7 +120,7 @@
               \frac{dI}{dt} \amp = aSI - cI
             </mrow>
             <mrow>
-              \frac{dI}{dt} \amp = bSI
+              \frac{dM}{dt} \amp = bSI
             </mrow>
           </md>
         </li>

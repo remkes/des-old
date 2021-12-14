@@ -7,8 +7,9 @@
         <p>
           Draw the phase diagram for this system of differential
           equation, limited to the first quadrant. Label the
-          trajectories of the regions and make predictuions about the
-          behaviour of the solutions. 
+          trajectories of the regions and make predictions about the
+          behaviour of the solutions. (Only include steady states with
+          <m>x \gt 0</m> and <m>y \gt 0</m>.)
           <md>
             <mrow>
               \frac{dp}{dt} \amp = p(q-4)
@@ -21,7 +22,7 @@
       </statement>
       <solution>
         <p>
-          First I calcluate the nullcines. The nullclines here are
+          First I calcluate the nullclines. The nullclines here are
           <m>p=0</m> (the q-axis), <m>q=0</m> (the p-axis), the
           horizontal line <m>q=4</m> and the vertical line <m>p=3</m>.
           Ignoring the axes, the only steady state is at
@@ -119,8 +120,9 @@
         <p>
           Draw the phase diagram for this system of differential
           equation, limited to the first quadrant. Label the
-          trajectories of the regions and make predictuions about the
-          behaviour of the solutions.
+          trajectories of the regions and make predictions about the
+          behaviour of the solutions. (Only include steady states with
+          <m>x \gt 0</m> and <m>y \gt 0</m>.)
           <md>
             <mrow>
               \frac{dp}{dt} \amp = p(9 - p^2 - q)
@@ -133,7 +135,7 @@
       </statement>
       <solution>
         <p>
-          First I calcluate the nullcines. In addition to teh two
+          First I calcluate the nullclines. In addition to teh two
           axes, there is a quadratic nullcline <m>q = 9 - p^2</m> and
           a linear nullcline <m>q = 4p - 4</m>. The intersection point
           in the first quadrant is at <m>(-2 + \sqrt{17}, -12 + 4
@@ -192,8 +194,9 @@
         <p>
           Draw the phase diagram for this system of differential
           equation, limited to the first quadrant. Label the
-          trajectories of the regions and make predictuions about the
-          behaviour of the solutions.
+          trajectories of the regions and make predictions about the
+          behaviour of the solutions. (Only include steady states with
+          <m>x \gt 0</m> and <m>y \gt 0</m>.)
           <md>
             <mrow>
               \frac{dp}{dt} \amp = q(q - 3)(q - 6)
@@ -206,7 +209,7 @@
       </statement>
       <solution>
         <p>
-          First I calcluate the nullcines. In addition to the p-axis,
+          First I calcluate the nullclines. In addition to the p-axis,
           there are four nullclines. There are two horizontal lines:
           <m>q=3</m> and <m>q=6</m>. There is a quadratic <m>q = p^2 +
           4</m> and a sloped line <m>q = p + 2</m>. There are three
@@ -291,8 +294,9 @@
         <p>
           Draw the phase diagram for this system of differential
           equation, limited to the first quadrant. Label the
-          trajectories of the regions and make predictuions about the
-          behaviour of the solutions.
+          trajectories of the regions and make predictions about the
+          behaviour of the solutions. (Only include steady states with
+          <m>x \gt 0</m> and <m>y \gt 0</m>.)
           <md>
             <mrow>
               \frac{dp}{dt} \amp = q(pq - 5)(pq - 10)
@@ -305,7 +309,7 @@
       </statement>
       <solution>
         <p>
-          First I calcluate the nullcines. In addition to the axes,
+          First I calcluate the nullclines. In addition to the axes,
           there are four nullclines. There are two lines through the
           origin: <m>q = 4p</m> and <m>q = 2p</m>. There are two
           reciprocal graphs: <m>q = \frac{10}{p}</m> and <m>q =
@@ -334,7 +338,7 @@
           trajectories up and to the right of all the steady state and
           divergenc away from the saddle points and the focus is
           mostly growth to large values instead of decay. Even
-          starting with small values, the diagram shows growth even if
+          starting with small values, the diagram shows growth, though
           the exact path around the steady states is hard to
           determine. 
         </p>
@@ -409,8 +413,9 @@
         <p>
           Draw the phase diagram for this system of differential
           equation, limited to the first quadrant. Label the
-          trajectories of the regions and make predictuions about the
-          behaviour of the solutions.
+          trajectories of the regions and make predictions about the
+          behaviour of the solutions. (Only include steady states with
+          <m>x \gt 0</m> and <m>y \gt 0</m>.)
           <md>
             <mrow>
               \frac{dp}{dt} \amp = p((p-4)^2 + (q-4)^2 - 9) 
@@ -423,7 +428,7 @@
       </statement>
       <solution>
         <p>
-          First I calcluate the nullcines. In addition to the axes,
+          First I calcluate the nullclines. In addition to the axes,
           there are two vertical lines <m>p=3</m> and <m>p=5</m>.
           There is also a circle of radius 3 centred at <m>(4,4)</m>
           given by the equation <m>(p-4)^2 + (q-4)^2 = 9</m>. There
@@ -524,7 +529,7 @@
       <statement>
         <p>
           Solve this linear system using Laplace transforms and
-          classify the state state. The initial conditions are <m>x(0)
+          classify the steady state. The initial conditions are <m>x(0)
           = 1</m> and <m>y(0) = 1</m>. 
           <md>
             <mrow>
@@ -583,7 +588,7 @@
       <statement>
         <p>
           Solve this linear system using Laplace transforms and
-          classify the state state. The initial conditions are <m>x(0)
+          classify the steady state. The initial conditions are <m>x(0)
           = 1</m> and <m>y(0) = 1</m>. 
           <md>
             <mrow>
@@ -632,7 +637,7 @@
           Then I reverse the transform.
           <md>
             <mrow>
-              x(t) \amp = e^{2t} \cos (\sqrt{5}t - \sqrt{5} e^{2t}
+              x(t) \amp = e^{2t} \cos (\sqrt{5}t) - \sqrt{5} e^{2t}
               \sin (\sqrt{5}t) 
             </mrow>
             <mrow>
@@ -648,7 +653,7 @@
       <statement>
         <p>
           Solve this linear system using Laplace transforms and
-          classify the state state. The initial conditions are <m>x(0)
+          classify the steady state. The initial conditions are <m>x(0)
           = 1</m> and <m>y(0) = 1</m>. 
           <md>
             <mrow>
@@ -724,7 +729,7 @@
       <statement>
         <p>
           Solve this linear system using Laplace transforms and
-          classify the state state. The initial conditions are <m>x(0)
+          classify the steady state. The initial conditions are <m>x(0)
           = 1</m> and <m>y(0) = 1</m>. 
           <md>
             <mrow>

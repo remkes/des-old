@@ -56,7 +56,7 @@
           I'll take the Laplace transform, using the initial
           conditions given to me. Then I'll solve the system of
           equations by isolating and replacing. After solving for both
-          <m>X</m> and <m>Y</m>, I'll reverse the transform to ge the
+          <m>X</m> and <m>Y</m>, I'll reverse the transform to get the
           original functions back.
           <md>
             <mrow>
@@ -136,7 +136,7 @@
           conditions given to me. Then I'll solve the system of
           equations by isolating and replacing. After solving for both
           <m>X</m> and <m>Y</m>, I'll reverse the transform to ge the
-          original functions back. Partial tractions is needed to
+          original functions back. Partial fractions is needed to
           separate the rational functions that I get for both <m>s</m>
           domain functions. 
           <md>

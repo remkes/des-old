@@ -159,27 +159,31 @@
         I only show the proof of the first of the three statements.
         The proof is to show a particular integral is zero, so I just
         calculate that integral. I use a trig identity to make the
-        product into a sum, so that the integral has a reasonable to
-        find antiderivaitive. 
+        product into a sum, so that the integral has an antiderivative
+        which is reasonable to find.
         <md>
           <mrow>
             \int_{-\pi}^{\pi} \cos (mx) \cos (nx) dx \amp =
             \frac{1}{2} \int_{-\pi}^\pi \cos ((m-n)x) +
-            \cos((m+x)x)dx \amp \amp 
+            \cos((m+x)x)dx 
           </mrow>
           <mrow>
             \amp = \frac{1}{2} \left. \left[ \frac{-\sin((m-n)x)}{m-n}
-            - \frac{-\sin((m+n)x)}{m+n} \right] \right|_{-\pi}^{\pi} =
-            0 \amp \amp \text{ if }  m \neq n
+            - \frac{-\sin((m+n)x)}{m+n} \right] \right|_{-\pi}^{\pi} = 0 
           </mrow>
           <mrow>
-            \amp = \frac{1}{2} \int_{-\pi}^\pi 1 + \cos 2m dx \amp
-            \amp 
+            \amp \text{ if }  m \neq n
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{2} \int_{-\pi}^\pi 1 + \cos 2m dx 
           </mrow>
           <mrow>
             \amp = \frac{1}{4} \left. \left( \frac{-\sin mx}{m}
             \right) + \frac{x}{2} \right|_{\pi}^\pi = 0 +
-            \frac{2\pi}{2} = \pi \amp \amp  \text{ if }  m = n
+            \frac{2\pi}{2} = \pi 
+          </mrow>
+          <mrow>
+            \amp \text{ if }  m = n
           </mrow>
         </md>
       </p>
@@ -267,14 +271,14 @@
             </mrow>
             <mrow>
               \amp = \frac{1}{\pi} \left( \frac{ -\pi \cos n \pi }{n}
-              + \frac{\pi \cos (-n\pi}{n}) + 0 \right)
+              - \frac{ \sin (nx) }{n^2} \Bigg|_{-\pi}^\pi \right) 
             </mrow>
             <mrow>
-              \amp = \frac{1}{\pi} \left( \frac{-2\pi}{n} \right) \cos
-              n\pi = \frac{-2(-1)^n}{n} = (-1)^{n+1}\ \frac{2}{n}
+              \amp = \frac{1}{\pi} \left( \frac{-\pi}{n} \right) \cos
+              n\pi = \frac{-(-1)^n}{n} = (-1)^{n+1}\ \frac{1}{n}
             </mrow>
             <mrow>
-              x \amp = 2 \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} \sin
+              x \amp = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} \sin
               nx
             </mrow>
           </md>
@@ -306,7 +310,7 @@
       u(\pi,t) = 0</m>, is the following function.
       <me>
         u(x,t) = \frac{2}{\pi} \sum_{n=1}^\infty \left[ \int_0^\pi
-        f(x) \sin nx) dx \right] e^{-kn^2t} \sin (nx)
+        f(x) \sin (nx) dx \right] e^{-kn^2t} \sin (nx)
       </me>
     </p>
   </subsection>
